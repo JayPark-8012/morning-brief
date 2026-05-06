@@ -647,7 +647,7 @@
     });
   }
 
-  fetch('/index.json')
+  fetch('/index.json', { cache: 'no-cache' })
     .then(r => r.json())
     .then(data => {
       const archive = data.briefings.slice(1); // 최신(featured) 제외

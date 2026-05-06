@@ -1174,6 +1174,51 @@
   } catch (e) {
     document.querySelectorAll('section').forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });
   }
+
+  // 네비게이션 동적 동기화
+  (function() {
+    const currentFile = location.pathname.split('/').pop();
+    fetch('/index.json', { cache: 'no-cache' })
+      .then(r => r.json())
+      .then(data => {
+        const list = data.briefings;
+        const idx = list.findIndex(b => b.html_path === currentFile);
+        if (idx < 0) return;
+        const prevB = list[idx + 1]; // 이전 = 더 오래된 항목
+        const nextB = list[idx - 1]; // 다음 = 더 최신 항목
+        function fmt(dateStr) {
+          const [, m, d] = dateStr.split('-');
+          return parseInt(m) + '/' + parseInt(d);
+        }
+        document.querySelectorAll('.briefing-nav-link.prev').forEach(el => {
+          if (prevB) {
+            el.href = prevB.html_path;
+            el.classList.remove('is-disabled');
+            el.querySelector('.briefing-nav-arrow').textContent = '← 이전 (' + fmt(prevB.date) + ')';
+            el.querySelector('.briefing-nav-title').textContent = prevB.theme;
+          } else {
+            el.href = '#';
+            el.classList.add('is-disabled');
+            el.querySelector('.briefing-nav-arrow').textContent = '← 이전';
+            el.querySelector('.briefing-nav-title').textContent = '첫 번째 브리핑';
+          }
+        });
+        document.querySelectorAll('.briefing-nav-link.next').forEach(el => {
+          if (nextB) {
+            el.href = nextB.html_path;
+            el.classList.remove('is-disabled');
+            el.querySelector('.briefing-nav-arrow').textContent = '다음 (' + fmt(nextB.date) + ') →';
+            el.querySelector('.briefing-nav-title').textContent = nextB.theme;
+          } else {
+            el.href = '#';
+            el.classList.add('is-disabled');
+            el.querySelector('.briefing-nav-arrow').textContent = '다음 →';
+            el.querySelector('.briefing-nav-title').textContent = '내일 발행 예정';
+          }
+        });
+      })
+      .catch(() => {});
+  })();
 </script>
 
 </body>
