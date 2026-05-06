@@ -375,7 +375,7 @@ HTML 콘텐츠를 마크다운으로 동시 저장
 
 ### 9단계: 텔레그램 발송
 
-`~/briefings/subscribers.json`에서 chat_id 리스트를 읽어 다음 형식으로 발송.
+`send_telegram.py --latest` 를 실행하면 `.env`의 `TELEGRAM_CHANNEL_ID` 채널(`@hwion_morning_brief`)로 자동 발송된다. 구독자 관리는 채널 입장/퇴장으로 처리 — subscribers.json 불필요.
 
 **메시지 템플릿 (정석 - 매일 사용):**
 
@@ -412,7 +412,7 @@ HTML 콘텐츠를 마크다운으로 동시 저장
 - 제목: `📊 [MM/DD] 위클리 정리`
 - 이번 주 시장 요약 + 다음 주 핵심 일정 중심
 
-발송 실패 시 재시도 1회. 그래도 실패하면 로그 기록 후 다음 구독자로 진행.
+발송 실패 시 재시도 1회. 그래도 실패하면 에러 출력 후 종료 (exit code 1).
 
 ---
 
@@ -488,13 +488,13 @@ CPI, FOMC, 빅테크 실적, 한은 금통위 등 시장 결정적 이벤트 당
 스킬을 처음 실행하기 전 다음이 준비됐는지 확인:
 
 ```
-□ ~/briefings/ 폴더 존재
-□ ~/briefings/template.html 파일 존재 (HTML 템플릿)
-□ ~/briefings/subscribers.json 파일 존재 (텔레그램 chat_id 리스트)
-□ ~/briefings/index.json 파일 존재 (빈 배열 [] 이라도)
-□ ~/briefings/events.json 파일 존재 (빅 이벤트 캘린더)
-□ Telegram 플러그인 활성화됨
-□ GitHub repo 연결됨 (선택, GitHub Pages 사용시)
+□ ~/briefings/ 폴더 존재 (writable)
+□ ~/index.json 파일 존재 (valid JSON)
+□ ~/index.html 파일 존재
+□ ~/send_telegram.py 파일 존재
+□ ~/.env 파일에 TELEGRAM_BOT_TOKEN, TELEGRAM_CHANNEL_ID 설정됨
+□ 텔레그램 채널(@hwion_morning_brief)에 봇이 관리자(메시지 게시 권한)로 등록됨
+□ GitHub repo 연결됨 (GitHub Pages 사용 시)
 ```
 
 준비물이 없으면 사용자에게 알리고 워크플로우를 중단한다.

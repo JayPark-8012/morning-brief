@@ -107,6 +107,9 @@ def main():
         text = " ".join(sys.argv[1:])
     else:
         idx = load_index()
+        if not idx.get("briefings"):
+            print("[ERROR] index.json에 브리핑 항목이 없습니다.")
+            sys.exit(1)
         briefing = idx["briefings"][0]
         text = build_briefing_message(briefing)
 
