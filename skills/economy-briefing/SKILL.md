@@ -400,7 +400,7 @@ HTML 콘텐츠를 마크다운으로 동시 저장
 • [날짜] [이벤트]
 
 📄 전체 분석·시나리오·IT/게임 영향
-👉 https://briefing.[도메인].com/YYYY-MM-DD
+👉 https://briefing.hwion.app/briefings/YYYY-MM-DD-morning.html
 ```
 
 **빅 이벤트 데이 템플릿 (CPI/FOMC/실적):**
