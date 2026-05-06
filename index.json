@@ -7,12 +7,29 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 142,
+    "total_issues": 143,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-05-06",
+  "latest": "2026-05-07",
   "briefings": [
+    {
+      "date": "2026-05-07",
+      "weekday": "목",
+      "vol": 143,
+      "theme": "AI Capex Double Down",
+      "tagline": "마이크로소프트가 자본지출을 $190B(컨센서스 $154B)로 대폭 상향하며 AI 인프라 투자 경쟁이 재점화됐습니다. 코스피는 역대 최초로 7,000선을 돌파했고, BTC는 STH 코스트를 상향 돌파했습니다.",
+      "tldr_us": "MSFT 자본지출 $190B 선언(컨센 $154B). AI 인프라 투자 2라운드 개전. S&P +1.66%, Nasdaq +1.43%",
+      "tldr_kr": "코스피 처음으로 7,000 돌파. 외국인 4일 연속 순매수 +8,500억. USD/KRW 1,380 원화 강세 지속",
+      "tldr_crypto": "BTC $82,340 (+2.6%). STH 코스트 $80.7K 돌파. ETF 4일 연속 순유입 +$318M",
+      "us_change": "+1.66",
+      "kr_change": "+2.19",
+      "crypto_change": "+2.6",
+      "tags": ["bull", "event"],
+      "html_path": "2026-05-07-morning.html",
+      "md_path": "2026-05-07-morning.md",
+      "created_at": "2026-05-07T07:00:00+09:00"
+    },
     {
       "date": "2026-05-06",
       "weekday": "수",
