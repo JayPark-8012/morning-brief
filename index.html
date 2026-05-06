@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0F1115">
+<title>Morning Brief — 데일리 경제 브리핑</title>
+<meta name="description" content="매일 아침 7시, 한국·미국 증시와 디지털 자산의 핵심을 5분에 정리합니다">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+
+<style>
+  :root {
+    --bg-base: #0F1115;
+    --bg-elevated: #1A1D24;
+    --bg-card: #1F232C;
+    --bg-hover: #252932;
+    --bg-deeper: #0A0C10;
+
+    --text-primary: #F0EAE0;
+    --text-secondary: #A8A29A;
+    --text-tertiary: #6B6862;
+    --text-muted: #4A4843;
+
+    --gold: #D4A857;
+    --gold-bright: #E8C078;
+    --gold-deep: #A07F3F;
+    --gold-glow: rgba(212, 168, 87, 0.15);
+
+    --bull: #26A69A;
+    --bear: #EF5350;
+    --bull-bg: rgba(38, 166, 154, 0.1);
+    --bear-bg: rgba(239, 83, 80, 0.1);
+
+    --border: #2D3138;
+    --border-strong: #3A3F49;
+    --border-gold: rgba(212, 168, 87, 0.3);
+
+    --font-display: 'Pretendard', sans-serif;
+    --font-body: 'Pretendard', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-serif: 'Pretendard', sans-serif;
+
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3);
+    --shadow-gold: 0 0 24px rgba(212, 168, 87, 0.15);
+  }
+
+  [data-theme="light"] {
+    --bg-base: #FAF8F3;
+    --bg-elevated: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-hover: #F5F1E8;
+    --bg-deeper: #F0EBE0;
+
+    --text-primary: #1A1D24;
+    --text-secondary: #4A4843;
+    --text-tertiary: #6B6862;
+    --text-muted: #A8A29A;
+
+    --gold: #A07F3F;
+    --gold-bright: #C49B52;
+    --gold-deep: #7A5F2F;
+    --gold-glow: rgba(160, 127, 63, 0.1);
+
+    --border: #E5DFD0;
+    --border-strong: #C9C2B0;
+    --border-gold: rgba(160, 127, 63, 0.4);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body { background: var(--bg-base); color: var(--text-primary); font-family: var(--font-body); font-size: 16px; line-height: 1.7; transition: background 0.3s ease, color 0.3s ease; overflow-x: hidden; min-height: 100vh; -webkit-text-size-adjust: 100%; }
+
+  
+
+  /* ============== HEADER ============== */
+  .top-header { position: sticky; top: 0; z-index: 100; background: rgba(15, 17, 21, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); transition: background 0.3s ease; }
+  [data-theme="light"] .top-header { background: rgba(250, 248, 243, 0.85); }
+  .header-inner { max-width: 1100px; margin: 0 auto; padding: 0.85rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .header-brand { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; text-decoration: none; }
+  .brand-mark { font-family: var(--font-body); font-weight: 800; font-size: 1.25rem; color: var(--gold); line-height: 1; letter-spacing: -0.02em; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .brand-text .ko { font-size: 0.7rem; color: var(--text-tertiary); letter-spacing: 0.15em; margin-top: 2px; }
+  .brand-text .en { font-size: 0.95rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.01em; }
+  .header-actions { display: flex; align-items: center; gap: 0.5rem; }
+  .icon-btn { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; font-size: 1rem; }
+  .icon-btn:hover { background: var(--bg-hover); border-color: var(--gold); color: var(--gold); }
+
+  main { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; position: relative; z-index: 2; }
+
+  /* ============== SECTION TITLE ============== */
+  .section-title-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 1.75rem;
+    padding-top: 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+    gap: 1rem;
+  }
+
+  /* 두 번째 이후 섹션은 위 여백 추가 */
+  .archive .section-title-row {
+    padding-top: 3rem;
+  }
+  .section-title-main {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+  }
+  .section-title-num {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--gold);
+  }
+  .section-title-meta {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  /* ============== TODAY'S BRIEFING (FEATURED) ============== */
+  .featured {
+    padding: 3rem 0 2.5rem;
+  }
+  .featured-card {
+    display: block;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-elevated) 100%);
+    border: 1px solid var(--border-gold);
+    border-radius: 12px;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .featured-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-bright), var(--gold));
+  }
+
+  .featured-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(212, 168, 87, 0.15);
+    border-color: var(--gold);
+  }
+
+  .featured-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    position: relative;
+    z-index: 1;
+  }
+  .featured-tag::before {
+    content: '◆';
+    color: var(--gold);
+  }
+
+  .featured-date {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--gold-bright);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+  }
+
+  .featured-theme {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
+  }
+
+  .featured-tagline {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 720px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .featured-changes {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .change-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: var(--bg-deeper);
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .change-pill .flag { font-size: 1.1rem; }
+  .change-pill .label { color: var(--text-tertiary); font-size: 0.75rem; }
+  .change-pill .value.bull { color: var(--bull); font-weight: 700; }
+  .change-pill .value.bear { color: var(--bear); font-weight: 700; }
+
+  .featured-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--gold);
+    color: var(--bg-base);
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+    position: relative;
+    z-index: 1;
+  }
+  .featured-card:hover .featured-cta {
+    background: var(--gold-bright);
+    gap: 0.75rem;
+  }
+
+  /* ============== ARCHIVE LIST ============== */
+  .archive {
+    padding: 1.5rem 0 4rem;
+  }
+
+  .archive-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+  }
+
+  .archive-card {
+    display: block;
+    text-decoration: none;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .archive-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--border);
+    transition: background 0.25s ease;
+  }
+  .archive-card:hover {
+    background: var(--bg-card);
+    border-color: var(--border-gold);
+    transform: translateY(-2px);
+  }
+  .archive-card:hover::before {
+    background: var(--gold);
+  }
+
+  .archive-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+  .archive-vol {
+    color: var(--gold-deep);
+  }
+
+  .archive-theme {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.02em;
+  }
+
+  .archive-snippet {
+    font-size: 0.86rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .archive-changes {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding-top: 0.85rem;
+    border-top: 1px dashed var(--border);
+  }
+  .archive-change-mini {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+  .archive-change-mini .flag { font-size: 0.9rem; }
+  .archive-change-mini .value.bull { color: var(--bull); }
+  .archive-change-mini .value.bear { color: var(--bear); }
+  .archive-change-mini .value.neutral { color: var(--text-tertiary); }
+
+  /* ============== LOAD MORE ============== */
+  .load-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+  }
+  .load-more-btn {
+    padding: 0.85rem 2rem;
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--border-gold);
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .load-more-btn:hover {
+    background: var(--gold);
+    color: var(--bg-base);
+    border-color: var(--gold);
+  }
+
+  /* ============== FILTER BAR ============== */
+  .filter-bar {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .filter-chip:hover {
+    color: var(--gold);
+    border-color: var(--border-gold);
+  }
+  .filter-chip.active {
+    color: var(--bg-base);
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+  .filter-chip .count {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    opacity: 0.7;
+  }
+
+  /* ============== FOOTER ============== */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 3rem 0 4rem;
+    margin-top: 4rem;
+    text-align: center;
+  }
+  .footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+  .footer-brand {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+  .footer-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    flex-wrap: wrap;
+  }
+  .footer-meta a {
+    color: var(--text-tertiary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .footer-meta a:hover { color: var(--gold); }
+
+  /* ============== EMPTY STATE ============== */
+  .empty-state {
+    text-align: center;
+    padding: 4rem 1rem;
+    color: var(--text-tertiary);
+  }
+
+  /* ============== RESPONSIVE ============== */
+  @media (max-width: 640px) {
+    .header-inner { padding: 0.7rem 1.1rem; }
+    main { padding: 0 1.1rem; }
+    .hero { padding: 2.5rem 0 2rem; }
+    .featured-card { padding: 1.75rem 1.5rem; }
+    .featured-changes { gap: 0.5rem; }
+    .change-pill { padding: 0.5rem 0.8rem; font-size: 0.78rem; }
+    .archive-list { grid-template-columns: 1fr; }
+    .hero-stats { gap: 1.5rem; }
+    .hero-stat-value { font-size: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top-header">
+  <div class="header-inner">
+    <a href="/" class="header-brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-text">
+        <div class="en">Morning Brief</div>
+        <div class="ko">데일리 경제 브리핑</div>
+      </div>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" title="테마 변경">🌙</button>
+      <button class="icon-btn" title="구독" onclick="alert('텔레그램 봇 구독: @MorningBriefBot')">🔔</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+    <!-- ============== TODAY'S FEATURED ============== -->
+  <section class="featured">
+    <div class="section-title-row">
+      <h2 class="section-title-main">
+        <span class="section-title-num">[01]</span>
+        오늘의 브리핑
+      </h2>
+      <span class="section-title-meta">Today · 2026.05.06</span>
+    </div>
+
+    <a href="2026-05-06-morning.html" class="featured-card">
+      <div class="featured-tag">Latest Issue · Vol. 142</div>
+      <div class="featured-date">2026년 5월 6일 (수) · 14:30 KST</div>
+      <h3 class="featured-theme">한국 반도체 슈퍼사이클</h3>
+      <p class="featured-tagline">
+        한국 반도체에 외국인 단일 매수 역대 3위 규모(2조 9천억)가 쏟아지며 코스피가 처음으로 6,900을 돌파했습니다. 미국 마이크론은 시총 $700B 돌파, HBM 매진 보도. 어린이날 휴장 후 오늘 코스피는 7,000 시대를 시도합니다.
+      </p>
+      <div class="featured-changes">
+        <span class="change-pill">
+          <span class="flag">🇺🇸</span>
+          <span class="label">S&P</span>
+          <span class="value bull">+0.81%</span>
+        </span>
+        <span class="change-pill">
+          <span class="flag">🇰🇷</span>
+          <span class="label">KOSPI</span>
+          <span class="value bull">+5.12%</span>
+        </span>
+        <span class="change-pill">
+          <span class="flag">₿</span>
+          <span class="label">BTC</span>
+          <span class="value bull">+1.42%</span>
+        </span>
+      </div>
+      <span class="featured-cta">
+        전체 브리핑 읽기 →
+      </span>
+    </a>
+  </section>
+
+  <!-- ============== ARCHIVE ============== -->
+  <section class="archive">
+    <div class="section-title-row">
+      <h2 class="section-title-main">
+        <span class="section-title-num">[02]</span>
+        지난 브리핑
+      </h2>
+      <span class="section-title-meta" id="archiveCount">7 issues</span>
+    </div>
+
+    <div class="filter-bar">
+      <span class="filter-chip active" data-filter="all">전체 <span class="count">7</span></span>
+      <span class="filter-chip" data-filter="bull">🟢 강세장 <span class="count">4</span></span>
+      <span class="filter-chip" data-filter="bear">🔴 조정장 <span class="count">2</span></span>
+      <span class="filter-chip" data-filter="event">⚡ 빅 이벤트 <span class="count">2</span></span>
+    </div>
+
+    <div class="archive-list" id="archiveList">
+      <!-- 5월 5일 -->
+      <a href="#" class="archive-card" data-tags="bull">
+        <div class="archive-meta">
+          <span>2026.05.05 (화)</span>
+          <span class="archive-vol">Vol. 141</span>
+        </div>
+        <h3 class="archive-theme">기술주 어닝 시즌 호조</h3>
+        <p class="archive-snippet">
+          미 기술주 어닝 시즌 절반 통과, 84% 비트. AMD 시간외 +10% 급등, Palantir 어닝 비트했으나 -3% 차익 매물 출회.
+        </p>
+        <div class="archive-changes">
+          <span class="archive-change-mini">
+            <span class="flag">🇺🇸</span>
+            <span class="value bull">+0.78%</span>
+          </span>
+          <span class="archive-change-mini">
+            <span class="flag">🇰🇷</span>
+            <span class="value neutral">휴장</span>
+          </span>
+          <span class="archive-change-mini">
+            <span class="flag">₿</span>
+            <span class="value bull">+1.1%</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- 5월 4일 -->
+      <a href="#" class="archive-card" data-tags="bull event">
+        <div class="archive-meta">
+          <span>2026.05.04 (월)</span>
+          <span class="archive-vol">Vol. 140</span>
+        </div>
+        <h3 class="archive-theme">외국인 단일 +2.9조 매수, 역대 3위</h3>
+        <p class="archive-snippet">
+          외국인 단일 +2.9조 순매수, 2000년 이후 역대 3위. SK하이닉스 +12.52%, 삼성전자 +5.44%로 코스피 첫 6,900 돌파.
+        </p>
+        <div class="archive-changes">
+          <span class="archive-change-mini">
+            <span class="flag">🇺🇸</span>
+            <span class="value bear">-0.41%</span>
+          </span>
+          <span class="archive-change-mini">
+            <span class="flag">🇰🇷</span>
+            <span class="value bull">+5.12%</span>
+          </span>
+          <span class="archive-change-mini">
+            <span class="flag">₿</span>
+            <span class="value bull">+0.6%</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- 5월 2일 -->
+      <a href="#" class="archive-card" data-tags="bull">
+        <div class="archive-meta">
+          <span>2026.05.02 (금)</span>
+          <span class="archive-vol">Vol. 139</span>
+        </div>
+        <h3 class="archive-theme">애플 어닝 비트, 사상 최고 갱신</h3>
+        <p class="archive-snippet">
+          애플 +3% 어닝 비트. S&P·나스닥 사상 최고 갱신, 4월 월간 +6.8% (2020년 이래 최강월). 한국은 어린이날 연휴 진입.
+        </p>
+        <div class="archive-changes">
+          <span class="archive-change-mini">
+            <span class="flag">🇺🇸</span>
+            <span class="value bull">+0.29%</span>
+          </span>
+          <span class="archive-change-mini">
+            <span class="flag">🇰🇷</span>
+            <span class="value bull">+0.52%</span>
+          </span>
+          <span class="archive-change-mini">
+            <span class="flag">₿</span>
+            <span class="value bull">+2.3%</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- 5월 1일 -->
+      <a href="#" class="archive-card" data-tags="bull event">
+        <div class="archive-meta">
+          <span>2026.05.01 (목)</span>
+          <span class="archive-vol">Vol. 138</span>
+        </div>
+        <h3 class="archive-theme">연준 금리 3.75% 동결</h3>
+        <p class="archive-snippet">
+          연준 기준금리 3.75% 동결 (4명 매파 반대). 파월 임기 5월 만료 임박. BTC ETF 단일 +$629M, 5주 연속 순유입.
+        </p>
+        <div class="archive-changes">
+          <span class="archive-change-mini">
+            <span class="flag">🇺🇸</span>
+            <span class="value bull">+1.07%</span>
+          </span>
+          <span class="archive-change-mini">
+            <span class="flag">🇰🇷</span>
+            <span class="value bull">+0.80%</span>
+          </span>
+          <span class="archive-change-mini">
+            <span class="flag">₿</span>
+            <span class="value bull">+3.2%</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- 4월 30일 -->
+      <a href="#" class="archive-card" data-tags="bear">
+        <div class="archive-meta">
+          <span>2026.04.30 (수)</span>
+          <span class="archive-vol">Vol. 137</span>
+        </div>
+        <h3 class="archive-theme">미국 1Q GDP 컨센 하회</h3>
+        <p class="archive-snippet">
+          미국 1Q GDP 컨센 -0.3%p 하회. ISM 서비스 54.0 (전월 56.1)로 둔화. 채권 강세 → 국채 4.20%로 -8bp.
+        </p>
+        <div class="archive-changes">
+          <span class="archive-change-mini">
+            <span class="flag">🇺🇸</span>
+            <span class="value bear">-0.45%</span>
+          </span>
+          <span class="archive-change-mini">
+            <span class="flag">🇰🇷</span>
+            <span class="value bear">-0.62%</span>
+          </span>
+          <span class="archive-change-mini">
+            <span class="flag">₿</span>
+            <span class="value bear">-1.2%</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- 4월 29일 -->
+      <a href="#" class="archive-card" data-tags="bear">
+        <div class="archive-meta">
+          <span>2026.04.29 (화)</span>
+          <span class="archive-vol">Vol. 136</span>
+        </div>
+        <h3 class="archive-theme">호르무즈 긴장 재고조</h3>
+        <p class="archive-snippet">
+          호르무즈 해협 긴장 재고조. UAE 미사일 요격 보도. WTI +5.8% $114 돌파, 인플레 우려 재점화.
+        </p>
+        <div class="archive-changes">
+          <span class="archive-change-mini">
+            <span class="flag">🇺🇸</span>
+            <span class="value bear">-1.13%</span>
+          </span>
+          <span class="archive-change-mini">
+            <span class="flag">🇰🇷</span>
+            <span class="value bear">-1.85%</span>
+          </span>
+          <span class="archive-change-mini">
+            <span class="flag">₿</span>
+            <span class="value bear">-2.4%</span>
+          </span>
+        </div>
+      </a>
+
+      <!-- 4월 28일 -->
+      <a href="#" class="archive-card" data-tags="bull">
+        <div class="archive-meta">
+          <span>2026.04.28 (월)</span>
+          <span class="archive-vol">Vol. 135</span>
+        </div>
+        <h3 class="archive-theme">매그 7 어닝 비트, 한은 신총재 취임</h3>
+        <p class="archive-snippet">
+          매그니피센트 7 중 5종목 어닝 비트. 한은 신현송 신임 총재 4/21 취임 후 첫 경제부총리 회동.
+        </p>
+        <div class="archive-changes">
+          <span class="archive-change-mini">
+            <span class="flag">🇺🇸</span>
+            <span class="value bull">+0.55%</span>
+          </span>
+          <span class="archive-change-mini">
+            <span class="flag">🇰🇷</span>
+            <span class="value bull">+1.20%</span>
+          </span>
+          <span class="archive-change-mini">
+            <span class="flag">₿</span>
+            <span class="value bull">+1.5%</span>
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <div class="load-more">
+      <button class="load-more-btn">+ 더 많은 브리핑 보기</button>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">M · Morning Brief</div>
+    <div>
+      매일 아침 7시 KST · 한국·미국·디지털 자산 · 데이터 기반 애널리스트 시각<br>
+      ⚠️ 본 브리핑은 정보 제공 목적이며 투자 권유나 자문이 아닙니다
+    </div>
+    <div class="footer-meta">
+      <a href="#">텔레그램 구독</a>
+      <span>·</span>
+      <a href="#">RSS</a>
+      <span>·</span>
+      <a href="#">아카이브</a>
+      <span>·</span>
+      <a href="#">소개</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 테마 토글
+  const themeToggle = document.getElementById('themeToggle');
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  themeToggle.textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+  themeToggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+  });
+
+  // 필터
+  const filterChips = document.querySelectorAll('.filter-chip');
+  const archiveCards = document.querySelectorAll('.archive-card');
+
+  filterChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      filterChips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+
+      const filter = chip.dataset.filter;
+      let visibleCount = 0;
+
+      archiveCards.forEach(card => {
+        if (filter === 'all') {
+          card.style.display = '';
+          visibleCount++;
+        } else {
+          const tags = (card.dataset.tags || '').split(' ');
+          if (tags.includes(filter)) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+
+      document.getElementById('archiveCount').textContent = visibleCount + ' issues';
+    });
+  });
+
+  // 더보기 버튼 (데모)
+  document.querySelector('.load-more-btn').addEventListener('click', (e) => {
+    e.target.textContent = '✓ 더 이상 브리핑이 없습니다';
+    e.target.disabled = true;
+    e.target.style.opacity = '0.5';
+    e.target.style.cursor = 'default';
+  });
+</script>
+</body>
+</html>

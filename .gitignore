@@ -1,0 +1,35 @@
+# 민감 정보
+.env
+.env.local
+secrets.json
+telegram-token.txt
+
+# Claude 스킬 작업 캐시
+.claude-cache/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 에디터
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 임시 파일
+*.tmp
+*.log
+*.bak
+~$*
+
+# 노드 (혹시 사용 시)
+node_modules/
+package-lock.json
+
+# 파이썬 (혹시 사용 시)
+__pycache__/
+*.pyc
+.venv/
+venv/

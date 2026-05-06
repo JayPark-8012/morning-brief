@@ -1,0 +1,24 @@
+{
+  "subscribers": [
+    {
+      "chat_id": "REPLACE_WITH_YOUR_CHAT_ID",
+      "name": "제이",
+      "active": true,
+      "preferences": {
+        "format": "full",
+        "include_crypto": true,
+        "morning_only": true
+      },
+      "added_at": "2026-05-06"
+    }
+  ],
+  "_instructions": {
+    "how_to_get_chat_id": "텔레그램에서 @userinfobot에게 /start 메시지를 보내면 본인 chat_id가 나옴. 그 숫자를 위 chat_id 자리에 입력.",
+    "preferences": {
+      "format": "'full' 또는 'summary'. summary는 30% 분량 축약",
+      "include_crypto": "false면 코인 섹션 제외하고 발송",
+      "morning_only": "true면 아침 브리핑만, false면 빅 이벤트 데이 추가 발송도 받음"
+    },
+    "active": "false로 설정하면 발송 일시 중단 (삭제 안 하고 보존)"
+  }
+}
