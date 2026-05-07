@@ -31,8 +31,26 @@ jobs:
             exit 0
           fi
           
+          # 한국어 요일
+          WEEKDAY_NUM=$(TZ='Asia/Seoul' date -d "$DATE" +%u)
+          case $WEEKDAY_NUM in
+            1) WEEKDAY="월" ;;
+            2) WEEKDAY="화" ;;
+            3) WEEKDAY="수" ;;
+            4) WEEKDAY="목" ;;
+            5) WEEKDAY="금" ;;
+            6) WEEKDAY="토" ;;
+            7) WEEKDAY="일" ;;
+          esac
+          
+          # 짧은 날짜 (5/7 형식)
+          MONTH=$(echo "$DATE" | cut -d'-' -f2 | sed 's/^0//')
+          DAY=$(echo "$DATE" | cut -d'-' -f3 | sed 's/^0//')
+          SHORT_DATE="${MONTH}/${DAY}(${WEEKDAY})"
+          
           echo "skip=false" >> $GITHUB_OUTPUT
           echo "date=$DATE" >> $GITHUB_OUTPUT
+          echo "short_date=$SHORT_DATE" >> $GITHUB_OUTPUT
           echo "theme=$THEME" >> $GITHUB_OUTPUT
           echo "vol=$VOL" >> $GITHUB_OUTPUT
           
@@ -60,30 +78,34 @@ jobs:
           BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
           DATE: ${{ steps.brief.outputs.date }}
+          SHORT_DATE: ${{ steps.brief.outputs.short_date }}
           THEME: ${{ steps.brief.outputs.theme }}
           VOL: ${{ steps.brief.outputs.vol }}
           TLDR_US: ${{ steps.brief.outputs.tldr_us }}
           TLDR_KR: ${{ steps.brief.outputs.tldr_kr }}
           TLDR_CRYPTO: ${{ steps.brief.outputs.tldr_crypto }}
         run: |
-          MESSAGE="📊 <b>${DATE} 데일리 경제 브리핑 (Vol.${VOL})</b>%0A%0A"
-          MESSAGE+="<b>${THEME}</b>%0A%0A"
+          # 진짜 줄바꿈으로 메시지 작성 (heredoc 방식)
+          MESSAGE=$(cat <<EOF
+          📊 <b>[${SHORT_DATE}] 데일리 경제 브리핑 (Vol.${VOL})</b>
           
-          if [ ! -z "$TLDR_US" ]; then
-            MESSAGE+="🇺🇸 ${TLDR_US}%0A"
-          fi
-          if [ ! -z "$TLDR_KR" ]; then
-            MESSAGE+="🇰🇷 ${TLDR_KR}%0A"
-          fi
-          if [ ! -z "$TLDR_CRYPTO" ]; then
-            MESSAGE+="₿ ${TLDR_CRYPTO}%0A"
-          fi
+          「${THEME}」
           
-          MESSAGE+="%0A📖 <b>전체 브리핑:</b>%0A"
-          MESSAGE+="https://briefing.hwion.app/briefings/${DATE}-morning.html%0A%0A"
-          MESSAGE+="🏠 <b>아카이브:</b>%0A"
-          MESSAGE+="https://briefing.hwion.app"
+          🇺🇸 ${TLDR_US}
+          🇰🇷 ${TLDR_KR}
+          ₿ ${TLDR_CRYPTO}
           
+          📖 <b>전체 브리핑:</b>
+          https://briefing.hwion.app/briefings/${DATE}-morning.html
+          
+          🏠 <b>아카이브:</b>
+          https://briefing.hwion.app
+          
+          ⚠️ <i>본 브리핑은 정보 제공 목적이며 투자 권유가 아닙니다.</i>
+          EOF
+          )
+          
+          # curl로 발송 (--data-urlencode가 자동으로 줄바꿈 처리)
           curl -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
             -d "chat_id=${CHANNEL_ID}" \
             --data-urlencode "text=${MESSAGE}" \
@@ -98,6 +120,7 @@ jobs:
           else
             echo "## ✅ Notification Sent" >> $GITHUB_STEP_SUMMARY
             echo "- Date: ${{ steps.brief.outputs.date }}" >> $GITHUB_STEP_SUMMARY
+            echo "- Short Date: ${{ steps.brief.outputs.short_date }}" >> $GITHUB_STEP_SUMMARY
             echo "- Vol: ${{ steps.brief.outputs.vol }}" >> $GITHUB_STEP_SUMMARY
             echo "- Theme: ${{ steps.brief.outputs.theme }}" >> $GITHUB_STEP_SUMMARY
             echo "- URL: https://briefing.hwion.app/briefings/${{ steps.brief.outputs.date }}-morning.html" >> $GITHUB_STEP_SUMMARY
