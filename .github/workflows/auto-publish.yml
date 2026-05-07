@@ -1,0 +1,124 @@
+name: Auto Publish Daily Brief
+
+on:
+  push:
+    branches:
+      - 'claude/daily-*'
+
+jobs:
+  merge-and-notify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      # 1. Checkout (전체 히스토리 필요)
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      # 2. claude/ 브랜치 이름 추출
+      - name: Get branch info
+        id: branch
+        run: |
+          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
+          echo "name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          echo "Branch: $BRANCH_NAME"
+      
+      # 3. main으로 머지
+      - name: Merge to main
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git fetch origin
+          git checkout main
+          git merge --no-ff origin/${{ steps.branch.outputs.name }} \
+            -m "Auto-merge: ${{ steps.branch.outputs.name }}"
+          git push origin main
+      
+      # 4. 최신 브리핑 메타데이터 추출
+      - name: Extract briefing metadata
+        id: brief
+        run: |
+          DATE=$(jq -r '.latest' index.json)
+          THEME=$(jq -r '.briefings[0].theme // "오늘의 브리핑"' index.json)
+          TLDR_US=$(jq -r '.briefings[0].tldr_us // ""' index.json)
+          TLDR_KR=$(jq -r '.briefings[0].tldr_kr // ""' index.json)
+          TLDR_CRYPTO=$(jq -r '.briefings[0].tldr_crypto // ""' index.json)
+          VOL=$(jq -r '.briefings[0].vol // ""' index.json)
+          
+          echo "date=$DATE" >> $GITHUB_OUTPUT
+          echo "theme=$THEME" >> $GITHUB_OUTPUT
+          echo "vol=$VOL" >> $GITHUB_OUTPUT
+          
+          # 멀티라인은 EOF 방식으로
+          {
+            echo "tldr_us<<EOF"
+            echo "$TLDR_US"
+            echo "EOF"
+          } >> $GITHUB_OUTPUT
+          
+          {
+            echo "tldr_kr<<EOF"
+            echo "$TLDR_KR"
+            echo "EOF"
+          } >> $GITHUB_OUTPUT
+          
+          {
+            echo "tldr_crypto<<EOF"
+            echo "$TLDR_CRYPTO"
+            echo "EOF"
+          } >> $GITHUB_OUTPUT
+      
+      # 5. 텔레그램 메시지 발송
+      - name: Send Telegram notification
+        env:
+          BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
+          DATE: ${{ steps.brief.outputs.date }}
+          THEME: ${{ steps.brief.outputs.theme }}
+          VOL: ${{ steps.brief.outputs.vol }}
+          TLDR_US: ${{ steps.brief.outputs.tldr_us }}
+          TLDR_KR: ${{ steps.brief.outputs.tldr_kr }}
+          TLDR_CRYPTO: ${{ steps.brief.outputs.tldr_crypto }}
+        run: |
+          MESSAGE="📊 <b>${DATE} 데일리 경제 브리핑 (Vol.${VOL})</b>%0A%0A"
+          MESSAGE+="<b>${THEME}</b>%0A%0A"
+          
+          if [ ! -z "$TLDR_US" ]; then
+            MESSAGE+="🇺🇸 ${TLDR_US}%0A"
+          fi
+          if [ ! -z "$TLDR_KR" ]; then
+            MESSAGE+="🇰🇷 ${TLDR_KR}%0A"
+          fi
+          if [ ! -z "$TLDR_CRYPTO" ]; then
+            MESSAGE+="₿ ${TLDR_CRYPTO}%0A"
+          fi
+          
+          MESSAGE+="%0A📖 <b>전체 브리핑:</b>%0A"
+          MESSAGE+="https://briefing.hwion.app/briefings/${DATE}-morning.html%0A%0A"
+          MESSAGE+="🏠 <b>아카이브:</b>%0A"
+          MESSAGE+="https://briefing.hwion.app"
+          
+          curl -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
+            -d "chat_id=${CHANNEL_ID}" \
+            --data-urlencode "text=${MESSAGE}" \
+            -d "parse_mode=HTML" \
+            -d "disable_web_page_preview=false"
+      
+      # 6. 사용한 claude/ 브랜치 삭제
+      - name: Cleanup claude branch
+        run: |
+          git push origin --delete ${{ steps.branch.outputs.name }} || \
+            echo "Branch already deleted"
+      
+      # 7. 결과 요약
+      - name: Summary
+        run: |
+          echo "## ✅ Daily Brief Published" >> $GITHUB_STEP_SUMMARY
+          echo "- Date: ${{ steps.brief.outputs.date }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Vol: ${{ steps.brief.outputs.vol }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Theme: ${{ steps.brief.outputs.theme }}" >> $GITHUB_STEP_SUMMARY
+          echo "- URL: https://briefing.hwion.app/briefings/${{ steps.brief.outputs.date }}-morning.html" >> $GITHUB_STEP_SUMMARY
