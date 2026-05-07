@@ -1,44 +1,18 @@
-name: Auto Publish Daily Brief
+name: Daily Telegram Notification
 
 on:
-  push:
-    branches:
-      - 'claude/daily-*'
+  schedule:
+    - cron: '0 22 * * *'   # UTC 22:00 = KST 07:00
+  workflow_dispatch:        # 수동 실행 허용
 
 jobs:
-  merge-and-notify:
+  notify:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     
     steps:
-      # 1. Checkout (전체 히스토리 필요)
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
       
-      # 2. claude/ 브랜치 이름 추출
-      - name: Get branch info
-        id: branch
-        run: |
-          BRANCH_NAME="${GITHUB_REF#refs/heads/}"
-          echo "name=$BRANCH_NAME" >> $GITHUB_OUTPUT
-          echo "Branch: $BRANCH_NAME"
-      
-      # 3. main으로 머지
-      - name: Merge to main
-        run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
-          git fetch origin
-          git checkout main
-          git merge --no-ff origin/${{ steps.branch.outputs.name }} \
-            -m "Auto-merge: ${{ steps.branch.outputs.name }}"
-          git push origin main
-      
-      # 4. 최신 브리핑 메타데이터 추출
       - name: Extract briefing metadata
         id: brief
         run: |
@@ -49,11 +23,19 @@ jobs:
           TLDR_CRYPTO=$(jq -r '.briefings[0].tldr_crypto // ""' index.json)
           VOL=$(jq -r '.briefings[0].vol // ""' index.json)
           
+          # 오늘 날짜와 일치하는지 검증 (KST 기준)
+          TODAY=$(TZ='Asia/Seoul' date +%Y-%m-%d)
+          if [ "$DATE" != "$TODAY" ]; then
+            echo "::warning::Latest briefing date ($DATE) doesn't match today ($TODAY). Skipping notification."
+            echo "skip=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          echo "skip=false" >> $GITHUB_OUTPUT
           echo "date=$DATE" >> $GITHUB_OUTPUT
           echo "theme=$THEME" >> $GITHUB_OUTPUT
           echo "vol=$VOL" >> $GITHUB_OUTPUT
           
-          # 멀티라인은 EOF 방식으로
           {
             echo "tldr_us<<EOF"
             echo "$TLDR_US"
@@ -72,8 +54,8 @@ jobs:
             echo "EOF"
           } >> $GITHUB_OUTPUT
       
-      # 5. 텔레그램 메시지 발송
       - name: Send Telegram notification
+        if: steps.brief.outputs.skip != 'true'
         env:
           BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
@@ -108,17 +90,15 @@ jobs:
             -d "parse_mode=HTML" \
             -d "disable_web_page_preview=false"
       
-      # 6. 사용한 claude/ 브랜치 삭제
-      - name: Cleanup claude branch
-        run: |
-          git push origin --delete ${{ steps.branch.outputs.name }} || \
-            echo "Branch already deleted"
-      
-      # 7. 결과 요약
       - name: Summary
         run: |
-          echo "## ✅ Daily Brief Published" >> $GITHUB_STEP_SUMMARY
-          echo "- Date: ${{ steps.brief.outputs.date }}" >> $GITHUB_STEP_SUMMARY
-          echo "- Vol: ${{ steps.brief.outputs.vol }}" >> $GITHUB_STEP_SUMMARY
-          echo "- Theme: ${{ steps.brief.outputs.theme }}" >> $GITHUB_STEP_SUMMARY
-          echo "- URL: https://briefing.hwion.app/briefings/${{ steps.brief.outputs.date }}-morning.html" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.brief.outputs.skip }}" = "true" ]; then
+            echo "## ⏭️ Skipped" >> $GITHUB_STEP_SUMMARY
+            echo "Latest briefing date doesn't match today (KST)" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "## ✅ Notification Sent" >> $GITHUB_STEP_SUMMARY
+            echo "- Date: ${{ steps.brief.outputs.date }}" >> $GITHUB_STEP_SUMMARY
+            echo "- Vol: ${{ steps.brief.outputs.vol }}" >> $GITHUB_STEP_SUMMARY
+            echo "- Theme: ${{ steps.brief.outputs.theme }}" >> $GITHUB_STEP_SUMMARY
+            echo "- URL: https://briefing.hwion.app/briefings/${{ steps.brief.outputs.date }}-morning.html" >> $GITHUB_STEP_SUMMARY
+          fi
