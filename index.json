@@ -7,12 +7,32 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 143,
+    "total_issues": 144,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-05-07",
+  "latest": "2026-05-09",
   "briefings": [
+    {
+      "date": "2026-05-09",
+      "weekday": "토",
+      "vol": 144,
+      "theme": "Goldilocks Returns",
+      "tagline": "美 4월 NFP +115K(컨센 +62K) 핫 비트에도 10Y 수익률 -2bp 하락, S&P 500·Nasdaq·러셀2K 동시 신고가 경신. 한 주만에 유가 -6%(WTI $102.5→$95.9)가 인플레 경로를 빠르게 낮춰 채권·주식 동반 강세 구도. 코스피는 외국인 -5.59조 폭탄 매도에도 개인·기관이 받아내며 7,498(+0.11%)로 종가 신고가 또 경신. 다음 분수령은 5/12 4월 CPI와 5/14-15 미-이란·미중 정상회담입니다.",
+      "tldr_us": "S&P 500 +0.41%(신고가), Nasdaq +0.66%(신고가). NFP +115K(컨센 +62K) 핫 비트에도 10Y -2bp 하락. 유가 $95대 안착이 인플레 우려 차단",
+      "tldr_kr": "코스피 7,498.00(+0.11%) 종가 신고가 또 경신. 외국인 -5.59조 폭탄 매도에도 개인 +3.97조 + 기관 +1.55조 방어. SK하이닉스 +3%대",
+      "tldr_crypto": "BTC $80,103(-1.7%, 24h). ETH $2,283(-2.5%). 4월 BTC ETF 누적 +$1.97B. 강한 NFP에 단기 위험자산 차익실현",
+      "us_change": "+0.41",
+      "kr_change": "+0.11",
+      "crypto_change": "-1.7",
+      "tags": [
+        "bull",
+        "event"
+      ],
+      "html_path": "2026-05-09-morning.html",
+      "md_path": "2026-05-09-morning.md",
+      "created_at": "2026-05-09T07:00:00+09:00"
+    },
     {
       "date": "2026-05-07",
       "weekday": "목",

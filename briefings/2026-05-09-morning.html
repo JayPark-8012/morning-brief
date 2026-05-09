@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0F1115">
+<title>2026년 5월 9일 데일리 브리핑 — Goldilocks Returns</title>
+<meta name="description" content="한국·미국 증시와 디지털 자산의 매일 아침 7시 브리핑 — 2026년 5월 9일">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+<style>
+  /* ============== TOKENS ============== */
+  :root {
+    --bg-base: #0F1115;
+    --bg-elevated: #1A1D24;
+    --bg-card: #1F232C;
+    --bg-hover: #252932;
+    --bg-deeper: #0A0C10;
+
+    --text-primary: #F0EAE0;
+    --text-secondary: #A8A29A;
+    --text-tertiary: #6B6862;
+    --text-muted: #4A4843;
+
+    --gold: #D4A857;
+    --gold-bright: #E8C078;
+    --gold-deep: #A07F3F;
+    --gold-glow: rgba(212, 168, 87, 0.15);
+
+    --bull: #26A69A;
+    --bear: #EF5350;
+    --bull-bg: rgba(38, 166, 154, 0.1);
+    --bear-bg: rgba(239, 83, 80, 0.1);
+
+    --border: #2D3138;
+    --border-strong: #3A3F49;
+    --border-gold: rgba(212, 168, 87, 0.3);
+
+    --accent-link: #5B9BD5;
+
+    --font-display: 'Pretendard', sans-serif;
+    --font-body: 'Pretendard', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --font-serif: 'Pretendard', sans-serif;
+
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2.5rem;
+    --space-2xl: 4rem;
+
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3);
+    --shadow-gold: 0 0 24px rgba(212, 168, 87, 0.15);
+  }
+
+  [data-theme="light"] {
+    --bg-base: #FAF8F3;
+    --bg-elevated: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-hover: #F5F1E8;
+    --bg-deeper: #F0EBE0;
+
+    --text-primary: #1A1D24;
+    --text-secondary: #4A4843;
+    --text-tertiary: #6B6862;
+    --text-muted: #A8A29A;
+
+    --gold: #A07F3F;
+    --gold-bright: #C49B52;
+    --gold-deep: #7A5F2F;
+    --gold-glow: rgba(160, 127, 63, 0.1);
+
+    --border: #E5DFD0;
+    --border-strong: #C9C2B0;
+    --border-gold: rgba(160, 127, 63, 0.4);
+
+    --shadow-card: 0 1px 3px rgba(0,0,0,0.05), 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 100px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body { background: var(--bg-base); color: var(--text-primary); font-family: var(--font-body); font-size: 16px; line-height: 1.7; transition: background 0.3s ease, color 0.3s ease; overflow-x: hidden; min-height: 100vh; -webkit-text-size-adjust: 100%; }
+
+  .top-header { position: sticky; top: 0; z-index: 100; background: rgba(15, 17, 21, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); transition: background 0.3s ease; }
+  [data-theme="light"] .top-header { background: rgba(250, 248, 243, 0.85); }
+  .header-inner { max-width: 920px; margin: 0 auto; padding: 0.75rem 1.25rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+  .header-brand { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; text-decoration: none; }
+  .brand-mark { font-family: var(--font-body); font-weight: 800; font-size: 1.25rem; color: var(--gold); line-height: 1; letter-spacing: -0.02em; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .brand-text .ko { font-size: 0.7rem; color: var(--text-tertiary); letter-spacing: 0.15em; margin-top: 2px; }
+  .brand-text .en { font-size: 0.95rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.01em; }
+  .header-actions { display: flex; align-items: center; gap: 0.5rem; }
+  .icon-btn { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; font-size: 1rem; }
+  .icon-btn:hover { background: var(--bg-hover); border-color: var(--gold); color: var(--gold); }
+
+  .section-nav { position: sticky; top: 64px; z-index: 99; background: rgba(15, 17, 21, 0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  [data-theme="light"] .section-nav { background: rgba(250, 248, 243, 0.92); }
+  .section-nav::-webkit-scrollbar { display: none; }
+  .nav-inner { max-width: 920px; margin: 0 auto; padding: 0 1.25rem; display: flex; gap: 0.25rem; white-space: nowrap; }
+  .nav-link { padding: 0.75rem 0.85rem; color: var(--text-tertiary); text-decoration: none; font-size: 0.85rem; font-weight: 500; border-bottom: 2px solid transparent; transition: all 0.2s ease; flex-shrink: 0; }
+  .nav-link:hover, .nav-link.active { color: var(--gold); border-bottom-color: var(--gold); }
+
+  main { max-width: 920px; margin: 0 auto; padding: 0 1.25rem; position: relative; z-index: 2; }
+  section { padding: 3rem 0 2rem; border-bottom: 1px dashed var(--border); scroll-margin-top: 120px; }
+  section:last-of-type { border-bottom: none; }
+
+  .hero { padding: 2.5rem 0 2rem; border-bottom: 1px solid var(--border); }
+  .hero-meta { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.15em; }
+  .hero-meta::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+  .hero-date { color: var(--gold-bright); }
+  .hero-theme { font-family: var(--font-body); font-weight: 700; font-size: clamp(1.6rem, 4.5vw, 2.2rem); line-height: 1.3; letter-spacing: -0.01em; color: var(--text-primary); margin-bottom: 1rem; }
+  .hero-tagline { font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 2.5rem; max-width: 620px; line-height: 1.7; }
+  .tldr-grid { display: grid; gap: 1rem; }
+  .tldr-card { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; padding: 1.1rem 1.25rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 4px; transition: all 0.25s ease; }
+  .tldr-card:hover { background: var(--bg-card); border-left-color: var(--gold-bright); transform: translateX(2px); }
+  .tldr-flag { font-size: 1.5rem; line-height: 1; }
+  .tldr-content { flex: 1; min-width: 0; }
+  .tldr-label { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.25rem; }
+  .tldr-text { font-size: 0.95rem; color: var(--text-primary); line-height: 1.5; }
+  .tldr-text strong { color: var(--gold); font-weight: 700; }
+  .tldr-change { font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; padding: 0.4rem 0.7rem; border-radius: 4px; flex-shrink: 0; }
+  .change-bull { color: var(--bull); background: var(--bull-bg); }
+  .change-bear { color: var(--bear); background: var(--bear-bg); }
+
+  .section-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+  .section-num { font-family: var(--font-mono); font-weight: 600; font-size: 0.78rem; color: var(--gold); line-height: 1; padding: 0.25rem 0.5rem; background: var(--gold-glow); border-radius: 3px; letter-spacing: 0.05em; }
+  .section-title { font-family: var(--font-body); font-weight: 700; font-size: 1.4rem; color: var(--text-primary); letter-spacing: -0.01em; }
+  .section-subtitle { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-tertiary); margin-left: auto; text-transform: uppercase; letter-spacing: 0.15em; }
+
+  .macro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.5rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; padding: 0.5rem; }
+  .macro-cell { padding: 0.85rem 1rem; border-radius: 4px; background: var(--bg-card); border: 1px solid transparent; transition: all 0.2s ease; }
+  .macro-cell:hover { border-color: var(--border-gold); background: var(--bg-hover); }
+  .macro-label { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+  .macro-value { font-family: var(--font-mono); font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.3rem; letter-spacing: -0.02em; }
+  .macro-change { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 500; }
+  .text-bull { color: var(--bull); }
+  .text-bear { color: var(--bear); }
+  .macro-note { font-size: 0.78rem; color: var(--text-tertiary); margin-top: 0.4rem; line-height: 1.4; }
+
+  .index-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.75rem; margin-bottom: 2rem; }
+  .index-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.1rem; position: relative; overflow: hidden; transition: all 0.25s ease; }
+  .index-card:hover { border-color: var(--border-gold); transform: translateY(-2px); }
+  .index-card.is-bull { border-top: 2px solid var(--bull); }
+  .index-card.is-bear { border-top: 2px solid var(--bear); }
+  .index-name { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.35rem; }
+  .index-value { font-family: var(--font-mono); font-size: 1.55rem; font-weight: 700; color: var(--text-primary); line-height: 1; margin-bottom: 0.5rem; letter-spacing: -0.02em; }
+  .index-change { font-family: var(--font-mono); font-size: 0.9rem; font-weight: 600; margin-bottom: 0.7rem; }
+  .spark-wrap { height: 32px; width: 100%; position: relative; }
+  .spark { display: block !important; max-height: 32px !important; height: 32px !important; width: 100% !important; }
+
+  .flow-bar { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; padding: 1rem 1.25rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 2rem; }
+  .flow-item { display: flex; flex-direction: column; gap: 0.25rem; }
+  .flow-label { font-size: 0.75rem; color: var(--text-tertiary); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.1em; }
+  .flow-value { font-family: var(--font-mono); font-size: 1rem; font-weight: 600; }
+
+  .stories { display: grid; gap: 1rem; }
+  .story { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: all 0.25s ease; }
+  .story:hover { border-color: var(--border-gold); }
+  .story-summary { padding: 1.25rem 1.4rem; cursor: pointer; list-style: none; display: flex; align-items: flex-start; gap: 1rem; user-select: none; }
+  .story-summary::-webkit-details-marker { display: none; }
+  .story-summary::marker { display: none; }
+  .story-rank { font-family: var(--font-mono); font-weight: 700; font-size: 0.85rem; color: var(--gold); line-height: 1; flex-shrink: 0; margin-top: 4px; padding: 0.3rem 0.5rem; background: var(--gold-glow); border-radius: 3px; min-width: 28px; text-align: center; }
+  .story-title-wrap { flex: 1; min-width: 0; }
+  .story-headline { font-size: 1.05rem; font-weight: 700; color: var(--text-primary); line-height: 1.45; margin-bottom: 0.35rem; letter-spacing: -0.01em; }
+  .story-teaser { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; }
+  .chevron { color: var(--text-tertiary); flex-shrink: 0; transition: transform 0.3s ease; margin-top: 4px; }
+  details[open] .chevron { transform: rotate(180deg); }
+  .story-detail { padding: 0 1.4rem 1.4rem; border-top: 1px dashed var(--border); padding-top: 1.4rem; animation: fadeIn 0.4s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+  .detail-block { margin-bottom: 1.2rem; }
+  .detail-block:last-child { margin-bottom: 0; }
+  .detail-label { font-family: var(--font-mono); font-size: 0.7rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.4rem; font-weight: 700; }
+  .detail-text { font-size: 0.93rem; color: var(--text-primary); line-height: 1.65; }
+  .detail-text strong { color: var(--gold-bright); font-weight: 700; }
+  .detail-meta { margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed var(--border); display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; font-size: 0.78rem; color: var(--text-tertiary); }
+  .source-tag { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.25rem 0.55rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 3px; font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-secondary); }
+  .change-track { margin-top: 1rem; padding: 0.75rem 1rem; background: var(--bg-deeper); border-left: 2px solid var(--gold); border-radius: 3px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
+  .change-track::before { content: '📊 변화 추적: '; color: var(--gold); font-weight: 600; }
+
+  .onchain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem; margin-bottom: 1.5rem; }
+  .onchain-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; padding: 1rem; }
+  .onchain-card-title { font-family: var(--font-mono); font-size: 0.72rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.6rem; font-weight: 700; }
+  .onchain-value { font-family: var(--font-mono); font-size: 1.15rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.3rem; }
+  .onchain-context { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; }
+
+  .analyst-box { position: relative; padding: 2.5rem 2rem 2rem; background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-elevated) 100%); border: 1px solid var(--border-gold); border-radius: 8px; overflow: hidden; }
+  .analyst-mark { font-family: var(--font-mono); font-size: 0.7rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+  .analyst-mark::before { content: ''; width: 24px; height: 1px; background: var(--gold); }
+  .analyst-text { font-family: var(--font-body); font-size: 0.98rem; line-height: 1.8; color: var(--text-primary); margin-bottom: 1.5rem; }
+  .analyst-text strong { color: var(--gold-bright); font-weight: 700; }
+  .scenarios { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.5rem; }
+  .scenario { padding: 1rem 1.1rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 6px; }
+  .scenario.is-base { border-left: 3px solid var(--bull); }
+  .scenario.is-risk { border-left: 3px solid var(--bear); }
+  .scenario-label { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 0.5rem; font-weight: 700; }
+  .scenario.is-base .scenario-label { color: var(--bull); }
+  .scenario.is-risk .scenario-label { color: var(--bear); }
+  .scenario-prob { font-family: var(--font-mono); font-size: 1.5rem; font-weight: 700; color: var(--text-primary); line-height: 1; margin-bottom: 0.5rem; }
+  .scenario-prob .pct { font-family: var(--font-mono); font-style: normal; font-size: 0.95rem; color: var(--text-tertiary); margin-left: 0.3rem; }
+  .scenario-text { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5; }
+
+  .timeline { position: relative; padding-left: 1.5rem; }
+  .timeline::before { content: ''; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 1px; background: var(--border); }
+  .event { position: relative; padding: 1rem 0 1rem 1rem; margin-bottom: 0.5rem; }
+  .event::before { content: ''; position: absolute; left: -1.5rem; top: 1.5rem; width: 13px; height: 13px; border-radius: 50%; background: var(--bg-base); border: 2px solid var(--gold); }
+  .event.is-critical::before { background: var(--gold); box-shadow: 0 0 12px var(--gold-glow); }
+  .event-date { font-family: var(--font-mono); font-size: 0.8rem; color: var(--gold); font-weight: 600; margin-bottom: 0.25rem; letter-spacing: 0.05em; }
+  .event-title { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.3rem; }
+  .event-detail { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5; }
+  .event-tag { display: inline-block; padding: 0.15rem 0.5rem; margin-left: 0.5rem; background: var(--gold); color: var(--bg-base); border-radius: 3px; font-size: 0.7rem; font-weight: 700; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; }
+
+  .briefing-nav { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 1.5rem 0 0; align-items: stretch; }
+  .briefing-nav-link { display: flex; flex-direction: column; justify-content: center; gap: 0.3rem; padding: 0.85rem 1rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; text-decoration: none; transition: all 0.2s ease; min-height: 64px; }
+  .briefing-nav-link:hover { border-color: var(--border-gold); background: var(--bg-card); }
+  .briefing-nav-link.is-disabled { opacity: 0.4; pointer-events: none; }
+  .briefing-nav-link.next { text-align: right; }
+  .briefing-nav-arrow { font-family: var(--font-mono); font-size: 0.7rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; }
+  .briefing-nav-title { font-size: 0.92rem; color: var(--text-primary); font-weight: 600; line-height: 1.3; }
+  .briefing-nav-home { display: flex; align-items: center; justify-content: center; width: 64px; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; color: var(--text-secondary); text-decoration: none; font-size: 1.1rem; transition: all 0.2s ease; }
+  .briefing-nav-home:hover { border-color: var(--gold); color: var(--gold); background: var(--bg-card); }
+
+  .footer { padding: 3rem 0 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+  .disclaimer { padding: 1.25rem 1.5rem; background: var(--bg-deeper); border-left: 3px solid var(--bear); border-radius: 4px; font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem; }
+  .footer-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-tertiary); margin-bottom: 1rem; }
+  .footer-meta span:not(:last-child)::after { content: '·'; margin-left: 0.5rem; color: var(--text-muted); }
+  .next-briefing { padding: 1.25rem 1.5rem; background: var(--bg-elevated); border: 1px solid var(--border-gold); border-radius: 6px; text-align: center; }
+  .next-briefing-label { font-family: var(--font-mono); font-size: 0.75rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.4rem; }
+  .next-briefing-time { font-family: var(--font-body); font-size: 1.1rem; font-weight: 700; color: var(--text-primary); }
+
+  .news-categories { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; padding: 0.85rem 1rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; }
+  .news-cat-label { font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.12em; padding: 0.3rem 0.5rem; margin-right: 0.25rem; }
+  .news-chip { display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.35rem 0.75rem; font-size: 0.8rem; font-weight: 600; color: var(--text-secondary); background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; cursor: pointer; transition: all 0.2s ease; }
+  .news-chip:hover { color: var(--gold); border-color: var(--gold); }
+  .news-chip.active { color: var(--bg-base); background: var(--gold); border-color: var(--gold); }
+  .news-chip .count { font-family: var(--font-mono); font-size: 0.7rem; opacity: 0.7; }
+
+  .news-deep { background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-elevated) 100%); border: 1px solid var(--border-gold); border-radius: 8px; padding: 1.75rem 1.75rem 1.5rem; margin-bottom: 1.5rem; position: relative; overflow: hidden; }
+  .news-deep::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold), var(--gold-bright), var(--gold)); }
+  .news-deep-tag { display: inline-flex; align-items: center; gap: 0.4rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700; margin-bottom: 0.85rem; }
+  .news-deep-tag::before { content: '◆'; color: var(--gold); }
+  .news-deep-headline { font-family: var(--font-body); font-size: 1.15rem; font-weight: 700; color: var(--text-primary); line-height: 1.4; letter-spacing: -0.01em; margin-bottom: 1rem; }
+  .news-deep-body { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 1.25rem; }
+  .news-deep-body strong { color: var(--gold-bright); font-weight: 700; }
+  .news-deep-impact { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.75rem; padding: 1rem; background: var(--bg-deeper); border-radius: 6px; }
+  .impact-item { display: flex; flex-direction: column; gap: 0.3rem; }
+  .impact-label { font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.1em; }
+  .impact-value { font-size: 0.9rem; font-weight: 700; color: var(--text-primary); }
+  .impact-value.bull { color: var(--bull); }
+  .impact-value.bear { color: var(--bear); }
+
+  .headline-list { display: grid; gap: 0.5rem; }
+  .headline-item { display: grid; grid-template-columns: auto 1fr auto; gap: 0.85rem; align-items: center; padding: 0.85rem 1rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; transition: all 0.2s ease; cursor: default; }
+  .headline-item:hover { border-color: var(--border-gold); background: var(--bg-card); transform: translateX(2px); }
+  .headline-cat { display: inline-flex; align-items: center; padding: 0.2rem 0.55rem; font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700; color: var(--gold); background: var(--gold-glow); border: 1px solid var(--border-gold); border-radius: 3px; text-transform: uppercase; letter-spacing: 0.1em; flex-shrink: 0; }
+  .headline-cat.macro { color: #5B9BD5; background: rgba(91, 155, 213, 0.1); border-color: rgba(91, 155, 213, 0.3); }
+  .headline-cat.industry { color: #B07ACF; background: rgba(176, 122, 207, 0.1); border-color: rgba(176, 122, 207, 0.3); }
+  .headline-cat.geo { color: #E78D4F; background: rgba(231, 141, 79, 0.1); border-color: rgba(231, 141, 79, 0.3); }
+  .headline-cat.korea { color: #4FB573; background: rgba(79, 181, 115, 0.1); border-color: rgba(79, 181, 115, 0.3); }
+  .headline-text { font-size: 0.93rem; color: var(--text-primary); line-height: 1.5; }
+  .headline-text strong { color: var(--gold); font-weight: 700; }
+  .headline-impact { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; padding: 0.25rem 0.55rem; border-radius: 3px; flex-shrink: 0; white-space: nowrap; }
+  .headline-impact.bull { color: var(--bull); background: var(--bull-bg); }
+  .headline-impact.bear { color: var(--bear); background: var(--bear-bg); }
+  .headline-impact.neutral { color: var(--text-tertiary); background: var(--bg-deeper); }
+
+  .fab-top { position: fixed; bottom: 1.5rem; right: 1.5rem; width: 44px; height: 44px; border-radius: 50%; background: var(--gold); color: var(--bg-base); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; font-weight: 700; z-index: 50; opacity: 0; pointer-events: none; transition: all 0.3s ease; box-shadow: var(--shadow-gold); }
+  .fab-top.visible { opacity: 1; pointer-events: auto; }
+  .fab-top:hover { transform: translateY(-3px); background: var(--gold-bright); }
+
+  @media (max-width: 640px) {
+    .header-inner { padding: 0.6rem 1rem; }
+    .tldr-card { grid-template-columns: auto 1fr; gap: 0.75rem; }
+    .tldr-change { grid-column: 2; justify-self: end; font-size: 0.95rem; }
+    main { padding: 0 1rem; }
+    .index-grid { grid-template-columns: repeat(2, 1fr); }
+    .scenarios { grid-template-columns: 1fr; }
+    .analyst-box { padding: 2rem 1.25rem 1.5rem; }
+    .briefing-nav { grid-template-columns: 1fr 48px 1fr; gap: 0.5rem; }
+    .briefing-nav-link { padding: 0.7rem 0.85rem; min-height: 56px; }
+    .briefing-nav-home { width: 48px; }
+    .headline-item { grid-template-columns: auto 1fr; gap: 0.5rem; row-gap: 0.4rem; }
+    .headline-impact { grid-column: 2; justify-self: end; font-size: 0.72rem; }
+  }
+
+  .js-reveal-enabled .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .js-reveal-enabled .reveal.is-visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<header class="top-header">
+  <div class="header-inner">
+    <a href="/" class="header-brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-text">
+        <div class="en">Morning Brief</div>
+        <div class="ko">데일리 경제 브리핑</div>
+      </div>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" title="테마 변경">🌙</button>
+      <button class="icon-btn" title="공유" onclick="navigator.share && navigator.share({title: document.title, url: location.href})">↗</button>
+    </div>
+  </div>
+</header>
+
+<nav class="section-nav">
+  <div class="nav-inner">
+    <a href="#tldr" class="nav-link active">핵심</a>
+    <a href="#macro" class="nav-link">거시</a>
+    <a href="#news" class="nav-link">경제뉴스</a>
+    <a href="#us" class="nav-link">미국</a>
+    <a href="#kr" class="nav-link">한국</a>
+    <a href="#crypto" class="nav-link">코인</a>
+    <a href="#analyst" class="nav-link">애널리스트</a>
+    <a href="#catalyst" class="nav-link">일정</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============== BRIEFING NAV (TOP) ============== -->
+<nav class="briefing-nav">
+  <a href="2026-05-07-morning.html" class="briefing-nav-link prev">
+    <span class="briefing-nav-arrow">← 이전 (5/7)</span>
+    <span class="briefing-nav-title">Peace Rally</span>
+  </a>
+  <a href="/index.html" class="briefing-nav-home" title="브리핑 목록">
+    <span>☰</span>
+  </a>
+  <a href="#" class="briefing-nav-link next is-disabled">
+    <span class="briefing-nav-arrow">다음 (5/10) →</span>
+    <span class="briefing-nav-title">내일 발행 예정</span>
+  </a>
+</nav>
+
+<!-- ============== HERO / TL;DR ============== -->
+<section class="hero" id="tldr">
+  <div class="hero-meta">
+    <span class="hero-date">2026.05.09 (토)</span>
+    <span>·</span>
+    <span>VOL.144</span>
+    <span>·</span>
+    <span>KST 07:00</span>
+  </div>
+
+  <h1 class="hero-theme">Goldilocks Returns</h1>
+
+  <p class="hero-tagline">
+    美 4월 NFP가 <strong>+115K</strong>(컨센 +62K)로 핫 비트했음에도 10Y 수익률은 -2bp 하락하고 S&amp;P 500·Nasdaq·러셀2K가 동시에 신고가를 경신했습니다. 한 주만에 유가 -6%(WTI $102.5→$95.9) 하락이 인플레 경로를 빠르게 낮춰 채권·주식 동반 강세 구도를 만들었습니다. 코스피는 외국인 -5.59조 폭탄 매도에도 개인·기관이 받아내며 7,498(+0.11%)로 종가 신고가를 또 경신했습니다. 다음 분수령은 5/12 4월 CPI와 5/14-15 미-이란·미중 정상회담입니다.
+  </p>
+
+  <div class="tldr-grid">
+    <div class="tldr-card">
+      <div class="tldr-flag">🇺🇸</div>
+      <div class="tldr-content">
+        <div class="tldr-label">United States · 5/8 Close</div>
+        <div class="tldr-text">NFP <strong>+115K</strong>(컨센 +62K) 핫 비트에도 10Y -2bp. S&amp;P +0.41%(신고가), Nasdaq +0.66%(신고가), 러셀2K 신고가. 유가 $95대 안착이 인플레 우려 차단</div>
+      </div>
+      <div class="tldr-change change-bull">+0.41%</div>
+    </div>
+
+    <div class="tldr-card">
+      <div class="tldr-flag">🇰🇷</div>
+      <div class="tldr-content">
+        <div class="tldr-label">Korea · 5/8 Close</div>
+        <div class="tldr-text">코스피 <strong>7,498.00</strong>(+0.11%) 종가 신고가 또 경신. 외국인 -5.59조 폭탄 매도에도 개인 +3.97조 + 기관 +1.55조 방어. SK하이닉스 +3%대</div>
+      </div>
+      <div class="tldr-change change-bull">+0.11%</div>
+    </div>
+
+    <div class="tldr-card">
+      <div class="tldr-flag">₿</div>
+      <div class="tldr-content">
+        <div class="tldr-label">Crypto · 24h</div>
+        <div class="tldr-text">BTC <strong>$80,103</strong>(-1.7%). ETH $2,283(-2.5%). NFP 핫 비트 + Iran 군사충돌 헤드라인에 단기 차익실현. STH 코스트 $80.7K 재테스트</div>
+      </div>
+      <div class="tldr-change change-bear">-1.7%</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== MACRO ============== -->
+<section id="macro">
+  <header class="section-head">
+    <div class="section-num">[01]</div>
+    <h2 class="section-title">거시 환경</h2>
+    <span class="section-subtitle">Macro Pulse · 5/8 Close</span>
+  </header>
+
+  <div class="macro-grid">
+    <div class="macro-cell">
+      <div class="macro-label">美 10Y 국채</div>
+      <div class="macro-value">4.36%</div>
+      <div class="macro-change text-bull">▼ -2bp</div>
+      <div class="macro-note">NFP 핫 비트에도 유가 하락이 인플레 우려 차단</div>
+    </div>
+    <div class="macro-cell">
+      <div class="macro-label">DXY 달러지수</div>
+      <div class="macro-value">98.16</div>
+      <div class="macro-change text-bull">▼ -0.1%</div>
+      <div class="macro-note">달러 박스권. NFP 강세에도 Iran 평화 기대가 우위</div>
+    </div>
+    <div class="macro-cell">
+      <div class="macro-label">WTI 유가</div>
+      <div class="macro-value">$95.9</div>
+      <div class="macro-change text-bear">▲ +1.2%</div>
+      <div class="macro-note">5/6 $102.5→5/8 $95대로 한 주 -6%. 호르무즈 정상화 선반영</div>
+    </div>
+    <div class="macro-cell">
+      <div class="macro-label">금</div>
+      <div class="macro-value">$4,610</div>
+      <div class="macro-change text-bull">▼ -0.3%</div>
+      <div class="macro-note">위험선호 유지. 안전자산 수요 미온적</div>
+    </div>
+    <div class="macro-cell">
+      <div class="macro-label">USD/KRW</div>
+      <div class="macro-value">1,476</div>
+      <div class="macro-change text-bear">▲ +17원</div>
+      <div class="macro-note">외국인 5조 순매도 + NFP 강세 선반영으로 원화 약세</div>
+    </div>
+    <div class="macro-cell">
+      <div class="macro-label">VIX 변동성</div>
+      <div class="macro-value">16.2</div>
+      <div class="macro-change text-bear">▲ +0.4p</div>
+      <div class="macro-note">NFP 데이 변동성 소폭 확대. 17 미만 안정권</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ECONOMY NEWS ============== -->
+<section id="news">
+  <header class="section-head">
+    <div class="section-num">[02]</div>
+    <h2 class="section-title">🌍 경제 주요 뉴스</h2>
+    <span class="section-subtitle">Five Things You Should Know</span>
+  </header>
+
+  <div class="news-categories">
+    <span class="news-cat-label">Categories</span>
+    <span class="news-chip active">전체 <span class="count">10</span></span>
+    <span class="news-chip">거시·정책 <span class="count">3</span></span>
+    <span class="news-chip">산업·기업 <span class="count">2</span></span>
+    <span class="news-chip">지정학 <span class="count">2</span></span>
+    <span class="news-chip">한국경제 <span class="count">3</span></span>
+  </div>
+
+  <!-- 심층 분석 -->
+  <div class="news-deep">
+    <div class="news-deep-tag">DEEP DIVE · 오늘의 핵심 이슈</div>
+    <h3 class="news-deep-headline">4월 NFP +115K(컨센 +62K) 핫 비트 — 그런데도 채권·주식 동반 강세, "Goldilocks Returns"</h3>
+    <div class="news-deep-body">
+      미국 4월 비농업 고용이 <strong>+115K</strong>로 컨센서스 +62K를 +53K 상회했습니다. 헬스케어 +37K, 운수창고 +30K, 소매 +22K가 견인. 실업률 4.3% 유지, 시간당 임금 +0.3% MoM은 컨센 부합. 정부 고용은 -9K로 감소세 지속, 정보·제조업도 소폭 감소했습니다. (BLS, MarketPulse, TheStreet)<br><br>
+      일반적으로 NFP 핫 비트는 "고용 강세 → 인플레 우려 → 10Y 수익률 상승 → 달러 강세"로 이어집니다. 그러나 5/8은 정반대 — 10Y가 4.39%→<strong>4.36%(-2bp)</strong>로 하락했고 S&amp;P·Nasdaq·러셀2K가 동시에 신고가를 경신했습니다. 시장 해석은 명확합니다: ① 유가가 한 주만에 $102.5→$95.9로 -6% 하락하며 인플레 압박이 빠르게 후퇴, ② 이란 평화 기대가 헤드라인 인플레 경로를 낮춤, ③ ADP +109K 후 컨센이 이미 +62K로 상향 조정됐던 상태였음.<br><br>
+      한국 IT/게임 사업자 관점에서 핵심 메시지: 워시 체제 6월 첫 FOMC 인상 우려가 일단 후퇴했습니다. 클라우드·AWS 비용 안정화, 자금조달 여건 개선, 환율 변동성 축소로 해외 매출 기업의 단기 환경은 우호적. 단, 환율은 외국인 한국 매도 압력으로 +17원 급등하여 1,476원 — 1,500원 박스 진입 시 환차익 헤지 검토 권장.
+    </div>
+    <div class="news-deep-impact">
+      <div class="impact-item">
+        <div class="impact-label">10Y 수익률</div>
+        <div class="impact-value bull">-2bp 하락</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-label">Fed 인상 경계</div>
+        <div class="impact-value bull">일단 후퇴</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-label">한국 환율</div>
+        <div class="impact-value bear">+17원 급등</div>
+      </div>
+      <div class="impact-item">
+        <div class="impact-label">다음 분기점</div>
+        <div class="impact-value">5/12 4월 CPI</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 헤드라인 리스트 -->
+  <div class="headline-list">
+    <div class="headline-item">
+      <span class="headline-cat macro">거시·정책</span>
+      <div class="headline-text">美 4월 NFP <strong>+115K</strong>(컨센 +62K) 핫 비트, 실업률 4.3% 유지. 헬스케어 +37K, 운수 +30K 견인. 12월 인하 확률 48%→<strong>42%</strong>로 소폭 하향</div>
+      <span class="headline-impact neutral">10Y -2bp</span>
+    </div>
+
+    <div class="headline-item">
+      <span class="headline-cat macro">거시·정책</span>
+      <div class="headline-text">5/12 美 4월 CPI 발표 — Cleveland Fed 나우캐스트 <strong>+3.6% YoY</strong> 예측. Core +0.3% MoM 컨센 부합 시 채권 추가 강세 가능. +0.4% 이상 시 첫 조정 트리거</div>
+      <span class="headline-impact neutral">CPI 다음 시험대</span>
+    </div>
+
+    <div class="headline-item">
+      <span class="headline-cat macro">거시·정책</span>
+      <div class="headline-text">5/11(월) 상원 Kevin Warsh Fed 의장 전체 표결 임박. 가결 시 5/15 공식 취임. 첫 발언 논조에 따라 6월 FOMC 방향성 결정</div>
+      <span class="headline-impact neutral">정책 전환 임박</span>
+    </div>
+
+    <div class="headline-item">
+      <span class="headline-cat industry">산업·기업</span>
+      <div class="headline-text">S&amp;P 500 1Q 어닝 시즌 마무리 — 90% 보고 완료, EPS 성장률 <strong>+13.4%</strong>(컨센 +11% 상회). 빅테크 + AI 인프라가 성장 주도. AMD MI300X $4.2B, MSFT Azure +35% YoY가 견인</div>
+      <span class="headline-impact bull">밸류에이션 상쇄</span>
+    </div>
+
+    <div class="headline-item">
+      <span class="headline-cat industry">산업·기업</span>
+      <div class="headline-text">SK하이닉스 <strong>+3%대</strong>, 삼성전자 <strong>+2%대</strong> — 외국인 폭탄 매도 속에도 반도체 투톱 견조. AMD MI300X $4.2B 어닝 후속 모멘텀 + ADR 6월 상장 기대 지속</div>
+      <span class="headline-impact bull">반도체 견조</span>
+    </div>
+
+    <div class="headline-item">
+      <span class="headline-cat geo">지정학</span>
+      <div class="headline-text">미-이란 군사 충돌 소식 재발생 — 호르무즈 해협 인근 단발 무력 교환 보도. 그러나 시장은 5/14-15 정상회담 우선시 → 유가 박스권 유지($95~96)</div>
+      <span class="headline-impact neutral">유가 박스권</span>
+    </div>
+
+    <div class="headline-item">
+      <span class="headline-cat geo">지정학</span>
+      <div class="headline-text">미중 제네바 5/14-15 무역 회담 — 미국 145%→30%, 중국 125%→10% 잠정 합의 협상 진행. 반도체 장비·AI 칩 수출 제한 완화 여부가 한국에 직결되는 핵심 쟁점</div>
+      <span class="headline-impact bull">EM 통화 영향</span>
+    </div>
+
+    <div class="headline-item">
+      <span class="headline-cat korea">한국경제</span>
+      <div class="headline-text">코스피 <strong>7,498.00</strong>(+0.11%) 종가 신고가 또 경신 — 장중 -1.82% 하락 후 후반 반등. 변동성 확대 속 신고가 흐름 유지</div>
+      <span class="headline-impact bull">KOSPI 신고가</span>
+    </div>
+
+    <div class="headline-item">
+      <span class="headline-cat korea">한국경제</span>
+      <div class="headline-text">외국인 5/8 <strong>-5.59조</strong> 순매도(2일 연속), 누적 -7.5조 — 단 5월 누적 기준은 여전히 순매수 우위. 개인 +3.97조 + 기관 +1.55조가 받아냄</div>
+      <span class="headline-impact bear">외국인 차익실현</span>
+    </div>
+
+    <div class="headline-item">
+      <span class="headline-cat korea">한국경제</span>
+      <div class="headline-text">한국 4월 수출 잠정치 발표 임박 — 반도체 +25% YoY, 단일월 $80B+ 2개월 연속 가능성. 무역수지 +$200억 안팎 흑자 지속 전망</div>
+      <span class="headline-impact bull">수출 견조</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============== US MARKET ============== -->
+<section id="us">
+  <header class="section-head">
+    <div class="section-num">[03]</div>
+    <h2 class="section-title">🇺🇸 미국 시장</h2>
+    <span class="section-subtitle">5/8 Close · NFP 핫 비트 + 신고가</span>
+  </header>
+
+  <div class="index-grid">
+    <div class="index-card is-bull">
+      <div class="index-name">S&amp;P 500</div>
+      <div class="index-value">7,395</div>
+      <div class="index-change text-bull">+0.41%</div>
+      <div class="spark-wrap"><canvas class="spark" data-color="bull" data-points="7259,7283,7320,7365,7375,7395"></canvas></div>
+    </div>
+    <div class="index-card is-bull">
+      <div class="index-name">나스닥</div>
+      <div class="index-value">26,010</div>
+      <div class="index-change text-bull">+0.66%</div>
+      <div class="spark-wrap"><canvas class="spark" data-color="bull" data-points="25326,25420,25600,25839,25840,26010"></canvas></div>
+    </div>
+    <div class="index-card is-bull">
+      <div class="index-name">DOW</div>
+      <div class="index-value">50,095</div>
+      <div class="index-change text-bull">+0.37%</div>
+      <div class="spark-wrap"><canvas class="spark" data-color="bull" data-points="49298,49420,49650,49911,49910,50095"></canvas></div>
+    </div>
+    <div class="index-card is-bull">
+      <div class="index-name">RUSSELL 2K</div>
+      <div class="index-value">2,855</div>
+      <div class="index-change text-bull">+0.53%</div>
+      <div class="spark-wrap"><canvas class="spark" data-color="bull" data-points="2810,2795,2818,2825,2840,2855"></canvas></div>
+    </div>
+  </div>
+
+  <div class="stories">
+    <details class="story" open>
+      <summary class="story-summary">
+        <div class="story-rank">01</div>
+        <div class="story-title-wrap">
+          <div class="story-headline">NFP +115K 핫 비트에도 신고가 — Goldilocks Returns</div>
+          <div class="story-teaser">컨센 +62K 대비 +85% 상회. 그러나 10Y -2bp, 신고가 동시 갱신 — 드문 조합.</div>
+        </div>
+        <span class="chevron">▼</span>
+      </summary>
+      <div class="story-detail">
+        <div class="detail-block">
+          <div class="detail-label">What</div>
+          <div class="detail-text">
+            美 4월 NFP가 <strong>+115K</strong>로 컨센 +62K를 +53K 상회했습니다. 헬스케어 +37K, 운수창고 +30K, 소매 +22K 견인. 실업률 4.3% 유지, 시간당 임금 +0.3% MoM 부합. 그러나 10Y는 4.39%→<strong>4.36%(-2bp)</strong> 하락하며 S&amp;P +0.41%·Nasdaq +0.66%·러셀2K 동시 신고가 경신. 핵심 동인은 한 주만에 -6%(WTI $102.5→$95.9) 하락한 유가가 인플레 경로를 빠르게 낮춘 것. (BLS, MarketPulse, TheStreet)
+          </div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Why it matters (제이 관점)</div>
+          <div class="detail-text">
+            핫 NFP인데 채권이 강세인 이유는 시장이 NFP보다 유가·이란 변수에 더 민감하다는 신호입니다. 한국 IT/게임 사업자에게 핵심 메시지: <strong>워시 체제 6월 첫 FOMC 인상 우려가 일단 후퇴</strong> → 클라우드·AWS 비용 안정화, 자금조달 여건 개선, 변동성 축소. 단, 외국인 한국 매도 압력으로 USD/KRW +17원 급등 → 1,500원 박스 진입 시 환차익 헤지 검토 권장.
+          </div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">So what</div>
+          <div class="detail-text">
+            <strong>5/12 4월 CPI가 진짜 시험대</strong>. Cleveland Fed 나우캐스트 +3.6% YoY, Core +0.3% MoM 컨센 부합 시 7,400+ 추가 시도. Core +0.4% 이상 핫이면 첫 조정 트리거. 5/14-15 미-이란 정상회담 결과가 단기 최대 변곡점.
+          </div>
+        </div>
+        <div class="change-track">변화 추적: 5/6 ADP +109K → 5/8 NFP +115K로 상방 리스크 시나리오 일부 실현. 그러나 시장 반응은 정반대(채권 강세, 신고가) — "유가가 NFP를 누른 한 주"</div>
+        <div class="detail-meta">
+          <span class="source-tag">📰 TheStreet</span>
+          <span class="source-tag">📰 MarketPulse</span>
+          <span class="source-tag">📊 BLS</span>
+        </div>
+      </div>
+    </details>
+
+    <details class="story">
+      <summary class="story-summary">
+        <div class="story-rank">02</div>
+        <div class="story-title-wrap">
+          <div class="story-headline">1Q 어닝 시즌 마무리 — S&amp;P 500 EPS 성장률 +13.4%(컨센 +11%)</div>
+          <div class="story-teaser">90% 보고 완료. 빅테크 + AI 인프라가 성장 주도. 밸류에이션 부담 일부 상쇄.</div>
+        </div>
+        <span class="chevron">▼</span>
+      </summary>
+      <div class="story-detail">
+        <div class="detail-block">
+          <div class="detail-label">What</div>
+          <div class="detail-text">
+            FactSet 5/8 기준 S&amp;P 500의 90% 기업 1Q 실적 보고 완료. 가중평균 EPS 성장률 <strong>+13.4%</strong>로 컨센 +11%를 +2.4%p 상회. 빅테크 + AI 인프라가 성장 주도 — AMD MI300X $4.2B(서프라이즈), MSFT Azure +35% YoY, META 광고 +21% YoY가 견인. 가이던스도 다수 상향. (FactSet)
+          </div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Why it matters (제이 관점)</div>
+          <div class="detail-text">
+            EPS 성장 +13.4%는 S&amp;P 500의 PER 22x 밸류에이션 부담을 일부 상쇄합니다. 한국 반도체에 직결: <strong>AI Capex가 어닝으로 검증 완료</strong> → SK하이닉스 HBM 수요 구조적 확인. 게임/IT는 다른 결: 미국 빅테크 클라우드 자본지출이 곧 한국의 GPU·메모리 수출이 되는 사이클이 견고하다는 의미.
+          </div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">So what</div>
+          <div class="detail-text">
+            <strong>5/20 NVDA 실적</strong>이 마지막 분수령. DC 매출 컨센 $40B+ 부합 또는 상회 시 SK하이닉스·삼성 추가 모멘텀. 가이던스 약세 시 단기 차익실현 트리거.
+          </div>
+        </div>
+        <div class="change-track">변화 추적: 5/7 브리핑에서 AMD MI300X $4.2B 단일 데이터 → 오늘 시즌 종합으로 사이클 전체 검증 확장. NVDA만 남음</div>
+        <div class="detail-meta">
+          <span class="source-tag">📰 FactSet</span>
+          <span class="source-tag">📰 Yahoo Finance</span>
+          <span class="source-tag">📰 CNBC</span>
+        </div>
+      </div>
+    </details>
+
+    <details class="story">
+      <summary class="story-summary">
+        <div class="story-rank">03</div>
+        <div class="story-title-wrap">
+          <div class="story-headline">5/11 워시 인준 표결 + CLARITY Act 마크업 — Fed 정책 전환 임박</div>
+          <div class="story-teaser">가결 시 5/15 공식 취임. 첫 발언 논조가 6월 FOMC 방향성 결정.</div>
+        </div>
+        <span class="chevron">▼</span>
+      </summary>
+      <div class="story-detail">
+        <div class="detail-block">
+          <div class="detail-label">What</div>
+          <div class="detail-text">
+            5/11(월) 美 상원 Kevin Warsh Fed 의장 전체 표결 진행. 4/21 은행위 청문회 통과 후 본회의 단계. 가결 시 5/15 공식 취임으로 Powell 임기 종료와 동시에 정책 결정자 교체. 같은 주 CLARITY Act(디지털 자산 시장 구조 법안) 상원 은행위 마크업 일정도 진행 — Tillis-Alsobrooks 타협안 기준. (Kiplinger, CFR, CoinDesk)
+          </div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Why it matters (제이 관점)</div>
+          <div class="detail-text">
+            워시 첫 발언 논조가 매파면 → 달러 강세·신흥국 자금 이탈 → 코스피 외국인 추가 매도 명분. 비둘기면 → 위험자산 추가 랠리. CLARITY Act 마크업 통과 시 코인 결제 인프라 법적 기반 확보 → 한국 게임·IT 사업자의 글로벌 결제 비용 1/30 절감 가능성 단계적 현실화.
+          </div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">So what</div>
+          <div class="detail-text">
+            <strong>5/11 표결 결과 + 5/15 첫 발언이 6월 FOMC 방향성 확정</strong>. 정책 변동성 구간이므로 5/11~5/15 단기 포지션 추가는 신중. CLARITY Act 마크업 통과 여부는 코인 단기 모멘텀 결정.
+          </div>
+        </div>
+        <div class="change-track">변화 추적: 4/21 은행위 청문회 → 5/11 본회의 표결로 절차 진행. 시장은 인준을 기정사실로 가격 반영 중 — 변수는 첫 발언 논조</div>
+        <div class="detail-meta">
+          <span class="source-tag">📰 Kiplinger</span>
+          <span class="source-tag">📰 CFR</span>
+          <span class="source-tag">📰 CoinDesk</span>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ============== KOREA MARKET ============== -->
+<section id="kr">
+  <header class="section-head">
+    <div class="section-num">[04]</div>
+    <h2 class="section-title">🇰🇷 한국 시장</h2>
+    <span class="section-subtitle">5/8 Close · 외국인 -5.59조에도 종가 신고가</span>
+  </header>
+
+  <div class="index-grid">
+    <div class="index-card is-bull">
+      <div class="index-name">KOSPI</div>
+      <div class="index-value">7,498</div>
+      <div class="index-change text-bull">+0.11%</div>
+      <div class="spark-wrap"><canvas class="spark" data-color="bull" data-points="7050,7150,7250,7320,7384,7498"></canvas></div>
+    </div>
+    <div class="index-card is-bear">
+      <div class="index-name">KOSDAQ</div>
+      <div class="index-value">1,205</div>
+      <div class="index-change text-bear">-0.4%</div>
+      <div class="spark-wrap"><canvas class="spark" data-color="bear" data-points="1218,1215,1213,1212,1210,1205"></canvas></div>
+    </div>
+    <div class="index-card is-bear">
+      <div class="index-name">USD/KRW</div>
+      <div class="index-value">1,476</div>
+      <div class="index-change text-bear">▲ +17원</div>
+      <div class="spark-wrap"><canvas class="spark" data-color="bear" data-points="1485,1480,1477,1475,1459,1476"></canvas></div>
+    </div>
+    <div class="index-card is-bull">
+      <div class="index-name">SK하이닉스</div>
+      <div class="index-value">1,650,000</div>
+      <div class="index-change text-bull">+3.0%</div>
+      <div class="spark-wrap"><canvas class="spark" data-color="bull" data-points="1400000,1447000,1520000,1560000,1601000,1650000"></canvas></div>
+    </div>
+  </div>
+
+  <div class="flow-bar">
+    <div class="flow-item">
+      <div class="flow-label">외국인 (KOSPI)</div>
+      <div class="flow-value text-bear">-5조5,900억</div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-label">개인 (KOSPI)</div>
+      <div class="flow-value text-bull">+3조9,753억</div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-label">기관 (KOSPI)</div>
+      <div class="flow-value text-bull">+1조5,475억</div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-label">2일 누적 외국인</div>
+      <div class="flow-value text-bear">-7.5조</div>
+    </div>
+  </div>
+
+  <div class="stories">
+    <details class="story" open>
+      <summary class="story-summary">
+        <div class="story-rank">01</div>
+        <div class="story-title-wrap">
+          <div class="story-headline">외국인 -5.59조 폭탄 매도에도 개인·기관 방어 — 코스피 종가 신고가 7,498</div>
+          <div class="story-teaser">장 시작 -1.82%, 장중 7,318까지 밀린 뒤 후반 반등 → +0.11% 신고가 마감.</div>
+        </div>
+        <span class="chevron">▼</span>
+      </summary>
+      <div class="story-detail">
+        <div class="detail-block">
+          <div class="detail-label">What</div>
+          <div class="detail-text">
+            코스피가 장 시작 -1.82%(7,353)에서 장중 <strong>7,318</strong>까지 밀린 뒤 후반 상승 전환, 종가 <strong>7,498.00(+0.11%)</strong>으로 신고가를 재경신했습니다. 외국인은 단일일 <strong>-5조5,900억원</strong> 폭탄 순매도(2일 연속), 2일 누적 -7.5조. 반면 개인 +3.97조, 기관 +1.55조가 받아내며 지수 방어. SK하이닉스 +3%대, 삼성전자 +2%대로 반도체 투톱은 견조. (Investing.com, 머니투데이, 굿모닝경제)
+          </div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Why it matters (제이 관점)</div>
+          <div class="detail-text">
+            외국인 차익실현이 본격화되는 변곡점일 수 있습니다. 단, 개인·기관이 5.5조를 받아내며 지수를 형성한 것은 <strong>한국 자체 매수 베이스가 두텁다</strong>는 긍정 시그널. 5/7까지 누적 +5.1조가 5/7-8 양일간 거의 토해졌지만 5월 누적은 여전히 순매수 우위. 게임주는 여전히 소외 — 반도체 외 종목군은 이번 랠리에서 후행 중.
+          </div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">So what</div>
+          <div class="detail-text">
+            NFP 강세로 USD/KRW +17원(1,476원) → 외국인 추가 차익실현 명분 형성. <strong>5/12 CPI까지 외국인 수급 방향 확인이 핵심</strong>. 누적 -10조 진입 시 7,300대 조정 시나리오 활성화. 반대로 -7~8조 선에서 진정 시 개인·기관 매수 스토리로 재진입 가능.
+          </div>
+        </div>
+        <div class="change-track">변화 추적: 5/7까지 외국인 4일 누적 +5.1조 → 5/7-8 양일간 -7.5조 매도로 전환. 코스피 종가는 신고가 유지하지만 수급 구조는 크게 바뀜 — "외국인 매수 → 개인·기관 매수"로 동인 교체</div>
+        <div class="detail-meta">
+          <span class="source-tag">📰 머니투데이</span>
+          <span class="source-tag">📰 Investing.com</span>
+          <span class="source-tag">📰 굿모닝경제</span>
+        </div>
+      </div>
+    </details>
+
+    <details class="story">
+      <summary class="story-summary">
+        <div class="story-rank">02</div>
+        <div class="story-title-wrap">
+          <div class="story-headline">SK하이닉스 +3%대, 삼성전자 +2%대 — HBM 모멘텀 외국인 매도 무관</div>
+          <div class="story-teaser">반도체 투톱 견조. 외국인이 차익실현한 종목은 반도체가 아닌 다른 대형주.</div>
+        </div>
+        <span class="chevron">▼</span>
+      </summary>
+      <div class="story-detail">
+        <div class="detail-block">
+          <div class="detail-label">What</div>
+          <div class="detail-text">
+            외국인 -5.59조 폭탄 매도 속에서도 SK하이닉스가 <strong>+3%대</strong>(약 1,650,000원), 삼성전자가 <strong>+2%대</strong>로 견조했습니다. AMD MI300X $4.2B 어닝 후속 모멘텀 + 6월 미국 ADR 상장 기대가 받침. 시총 기준 SK하이닉스는 1,000조원 돌파 임박. (한국경제)
+          </div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Why it matters (제이 관점)</div>
+          <div class="detail-text">
+            외국인이 -5.59조를 매도한 종목 중 반도체 비중이 낮다는 의미는 <strong>HBM 사이클이 외국인 수급 변동에도 견조</strong>하다는 신호입니다. 한국 AI 인프라 위치 재확인 — 글로벌 펀드의 "한국=반도체" 핵심 포지션은 유지되고 있고, 차익실현은 다른 섹터(금융·자동차 등)에서 발생.
+          </div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">So what</div>
+          <div class="detail-text">
+            <strong>5/20 NVDA 실적 + 5/15 워시 취임</strong>이 다음 분수령. SK하이닉스 시총 1,000조 돌파 임박 — 돌파 시 외신 보도 증가 → 추가 외국인 매수 명분. NVDA DC $40B+ 부합 시 6월까지 추가 모멘텀.
+          </div>
+        </div>
+        <div class="change-track">변화 추적: 5/7 SK하이닉스 1,601,000원 → 5/8 1,650,000원대(+3%대). 외국인 매도 거품 속에서도 반도체 펀더멘털 견조 확인</div>
+        <div class="detail-meta">
+          <span class="source-tag">📰 한국경제</span>
+          <span class="source-tag">📰 머니투데이</span>
+          <span class="source-tag">📊 KRX</span>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ============== CRYPTO ============== -->
+<section id="crypto">
+  <header class="section-head">
+    <div class="section-num">[05]</div>
+    <h2 class="section-title">₿ 디지털 자산</h2>
+    <span class="section-subtitle">24h Window</span>
+  </header>
+
+  <div class="index-grid">
+    <div class="index-card is-bear">
+      <div class="index-name">BTC</div>
+      <div class="index-value">$80,103</div>
+      <div class="index-change text-bear">-1.7% (24h)</div>
+      <div class="spark-wrap"><canvas class="spark" data-color="bear" data-points="78500,80289,80700,81499,82340,80103"></canvas></div>
+    </div>
+    <div class="index-card is-bear">
+      <div class="index-name">ETH</div>
+      <div class="index-value">$2,283</div>
+      <div class="index-change text-bear">-2.5% (24h)</div>
+      <div class="spark-wrap"><canvas class="spark" data-color="bear" data-points="2310,2370,2395,2405,2412,2283"></canvas></div>
+    </div>
+    <div class="index-card is-bear">
+      <div class="index-name">전체 시총</div>
+      <div class="index-value">$3.0T</div>
+      <div class="index-change text-bear">-1.5%</div>
+      <div class="spark-wrap"><canvas class="spark" data-color="bear" data-points="2.88,2.94,2.97,3.01,3.06,3.00"></canvas></div>
+    </div>
+    <div class="index-card is-bear">
+      <div class="index-name">F&amp;G Index</div>
+      <div class="index-value">51</div>
+      <div class="index-change text-bear">▼ -3p</div>
+      <div class="spark-wrap"><canvas class="spark" data-color="bear" data-points="37,43,46,50,54,51"></canvas></div>
+    </div>
+  </div>
+
+  <div class="onchain-grid">
+    <div class="onchain-card">
+      <div class="onchain-card-title">4월 BTC ETF 누적</div>
+      <div class="onchain-value text-bull">+$1.97B</div>
+      <div class="onchain-context">3월 -$300M에서 반전. BlackRock IBIT 주도. 5월 첫 주도 순유입 흐름 지속. 기관 수요 바닥 확인 (Coinglass, AInvest)</div>
+    </div>
+    <div class="onchain-card">
+      <div class="onchain-card-title">STH 코스트 재테스트</div>
+      <div class="onchain-value">$80,103 vs $80,700</div>
+      <div class="onchain-context">단기 보유자(STH) 평균 매입가 $80,700 하향 이탈 직전. 사수 시 $86K 재시도, 이탈 시 $76~78K 패닉 셀 트리거 가능</div>
+    </div>
+    <div class="onchain-card">
+      <div class="onchain-card-title">4월 ETH ETF 누적</div>
+      <div class="onchain-value text-bull">+$356M</div>
+      <div class="onchain-context">5개월 만의 순유입 전환. BlackRock ETHA 주도. ETH/BTC 상대 강도 회복 관찰 중이었으나 5/8은 단기 -2.5% 조정</div>
+    </div>
+    <div class="onchain-card">
+      <div class="onchain-card-title">단기 동인</div>
+      <div class="onchain-value">차익실현</div>
+      <div class="onchain-context">NFP +115K 핫 비트 + Iran 군사 충돌 헤드라인이 단기 위험자산 차익실현 트리거. 5/11 CLARITY Act 마크업 통과 시 반등 명분</div>
+    </div>
+  </div>
+
+  <div class="stories">
+    <details class="story" open>
+      <summary class="story-summary">
+        <div class="story-rank">01</div>
+        <div class="story-title-wrap">
+          <div class="story-headline">BTC $80K 지지선 — STH 코스트 $80.7K 재테스트, 5/11 CLARITY 마크업 분수령</div>
+          <div class="story-teaser">2일간 -2.7% 조정. NFP 핫 비트 + Iran 군사 충돌 헤드라인이 단기 트리거.</div>
+        </div>
+        <span class="chevron">▼</span>
+      </summary>
+      <div class="story-detail">
+        <div class="detail-block">
+          <div class="detail-label">What</div>
+          <div class="detail-text">
+            BTC가 5/6 $82,340 → 5/8 <strong>$80,103(-2.7%, 이틀)</strong>으로 하락. STH(단기 보유자) 평균 매입가 $80,700 직전까지 후퇴 — 하향 이탈 시 패닉 셀 트리거 가능. ETH도 $2,412 → $2,283(-5.3%, 이틀). 4월 BTC ETF 누적 +$1.97B, ETH ETF +$356M(5개월 만의 순유입 전환)으로 펀더멘털은 양호하나, 5/8 NFP 핫 비트 + Iran 군사 충돌 헤드라인이 단기 차익실현 트리거. (Yahoo Finance, Coinglass)
+          </div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">Why it matters (제이 관점)</div>
+          <div class="detail-text">
+            <strong>5/11 CLARITY Act 상원 은행위 마크업</strong>이 코인 단기 모멘텀 결정. 통과 시 스테이블코인 결제 인프라 법적 기반 → 한국 게임·IT 사업자 글로벌 결제 비용 1/30 절감 가능성 단계 진입. 마크업 지연 또는 부결 시 추가 단기 조정 가능성. ETF 자금 5월 첫 주 흐름 확인 필요.
+          </div>
+        </div>
+        <div class="detail-block">
+          <div class="detail-label">So what</div>
+          <div class="detail-text">
+            <strong>$80K 사수 시 $86K 재시도, 이탈 시 $76~78K 구간 테스트</strong>. Coinbase(COIN) 주가가 선행 지표 — CLARITY Act 뉴스에 가장 민감. 5/11 마크업 + 5/12 CPI 조합이 단기 변곡점.
+          </div>
+        </div>
+        <div class="change-track">변화 추적: 5/7 BTC $82,340(STH 코스트 +$1.6K 위) → 5/8 $80,103(STH 코스트 +$0.4K 위)으로 후퇴. 5/11 CLARITY Act 마크업 통과 확률(Polymarket) 64% 유지 중</div>
+        <div class="detail-meta">
+          <span class="source-tag">📰 Yahoo Finance</span>
+          <span class="source-tag">📊 Coinglass</span>
+          <span class="source-tag">📊 Polymarket</span>
+        </div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ============== ANALYST ============== -->
+<section id="analyst">
+  <header class="section-head">
+    <div class="section-num">[06]</div>
+    <h2 class="section-title">🧠 애널리스트 시각</h2>
+    <span class="section-subtitle">Macro View</span>
+  </header>
+
+  <div class="analyst-box">
+    <div class="analyst-mark">20년차 매크로 + IT 사업가의 눈으로</div>
+    <div class="analyst-text">
+      오늘의 핵심: <strong>"Goldilocks Returns"</strong>. NFP +115K 핫 비트에도 채권·주식 동반 강세 — 유가 -6%(주간) 효과로 인플레 경로가 빠르게 낮아진 결과입니다. 시장이 NFP보다 유가·이란 변수에 더 민감하게 반응한다는 것이 확인됐고, 이는 5/14-15 정상회담을 시장의 단기 최대 변곡점으로 굳힙니다. 채권 강세 속 신고가는 흔치 않은 조합 — 시장이 인플레 종료 + 성장 유지 시나리오를 적극 가격에 반영하고 있습니다.<br><br>
+      한국 시장은 신고가를 찍었지만 구조가 바뀌었습니다. 외국인이 5/7-8 -7.5조를 매도하며 4일 누적 +5.1조 매수를 거의 토해냈고, 개인·기관이 받아냈습니다. 이것은 "한국 자체 매수 베이스가 두텁다"는 긍정 시그널이지만, 동시에 외국인 차익실현이 본격화될 수 있다는 경계 신호이기도 합니다. 환율 1,476원으로 +17원 급등은 외국인 자금 유출 압력의 가격 반영. 단, SK하이닉스·삼성전자 견조 — 외국인이 매도한 종목은 반도체가 아닌 다른 섹터로 추정.<br><br>
+      다음 1주일 핵심 이벤트: ① 5/11 워시 인준 표결 + CLARITY Act 마크업, ② 5/12 4월 CPI(컨센 +0.3% MoM, +3.6% YoY), ③ 5/14-15 미-이란 정상회담 + 미중 제네바 무역 회담, ④ 5/15 워시 공식 취임 + 첫 발언, ⑤ 5/20 NVDA 실적. 이 5개 이벤트가 향후 1개월 시장 방향을 결정합니다. 특히 워시 첫 발언 논조가 매파면 달러 강세·외국인 추가 매도 시나리오 활성화 — 5/15 전후 변동성 구간 경계 필요.<br><br>
+      IT/게임 사업자 실용 액션: ① 환율 1,475~1,500원 박스 진입 시 해외 매출 환차익 헤지 검토. ② 5/14-15 정상회담 결과 확인 후 클라우드·서버 비용 가격 정책 점검. ③ CLARITY Act 5/11 마크업 통과 시 스테이블코인 결제 인프라 PoC 검토 시점.
+    </div>
+
+    <div class="scenarios">
+      <div class="scenario is-base">
+        <div class="scenario-label">Base Case</div>
+        <div class="scenario-prob">60<span class="pct">%</span></div>
+        <div class="scenario-text">5/12 CPI Core +0.3% 컨센 부합 + 이란 협상 5/14-15 진전 → 코스피 7,500 안착, S&amp;P 7,500 시도, BTC $84K 회복, 외국인 매도 진정. 워시 인준 + 중립 톤 첫 발언</div>
+      </div>
+      <div class="scenario is-risk">
+        <div class="scenario-label">Risk Case</div>
+        <div class="scenario-prob">40<span class="pct">%</span></div>
+        <div class="scenario-text">CPI Core +0.4%+ 또는 이란 협상 결렬 또는 워시 첫 발언 매파 → 10Y 4.6%+ 재진입, 코스피 -3% 조정 7,250, BTC $76K 테스트, 외국인 추가 -5조 매도</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CATALYST ============== -->
+<section id="catalyst">
+  <header class="section-head">
+    <div class="section-num">[07]</div>
+    <h2 class="section-title">📍 다음 캐틸리스트</h2>
+    <span class="section-subtitle">Watch List</span>
+  </header>
+
+  <div class="timeline">
+    <div class="event is-critical">
+      <div class="event-date">월 5/11</div>
+      <div class="event-title">美 상원 Kevin Warsh Fed 의장 표결 + CLARITY Act 마크업<span class="event-tag">최우선</span></div>
+      <div class="event-detail">워시 인준 가결 시 5/15 공식 취임. 첫 발언 논조(매파/중립)에 따라 금리 선물 시장 급변 가능. CLARITY Act 상원 은행위 마크업 통과 시 코인 결제 인프라 법적 기반 진전.</div>
+    </div>
+    <div class="event is-critical">
+      <div class="event-date">화 5/12 · 21:30 KST</div>
+      <div class="event-title">美 4월 CPI<span class="event-tag">최우선</span></div>
+      <div class="event-detail">컨센 Headline +0.3% MoM / Core +0.3% MoM, +3.6% YoY. Cleveland Fed 나우캐스트 +3.6% 일치. 유가 -6% 하락 효과 반영 여부 핵심. Core +0.4% 이상 시 10Y 4.6%+ 돌파 + 코스피 조정 촉발. +0.2% 이하 시 추가 랠리.</div>
+    </div>
+    <div class="event">
+      <div class="event-date">수 5/13 · 21:30 KST</div>
+      <div class="event-title">美 4월 PPI</div>
+      <div class="event-detail">컨센 +0.2% MoM. CPI 다음 날 발표로 인플레 경로 재확인. 코어 PPI는 핵심 PCE 선행 지표.</div>
+    </div>
+    <div class="event is-critical">
+      <div class="event-date">목~금 5/14-15</div>
+      <div class="event-title">미-이란 정상회담 + 미중 제네바 무역 회담<span class="event-tag">최우선</span></div>
+      <div class="event-detail">이란 핵 딜 최종 서명 여부 + 미중 관세 인하 로드맵 확정. 두 회담 동시 성사 시 유가 $90 이하 + EM 강세 + 한국 7,500+ 가능. 결렬 시 유가 $110+ 재진입.</div>
+    </div>
+    <div class="event is-critical">
+      <div class="event-date">금 5/15</div>
+      <div class="event-title">Kevin Warsh 공식 취임 · Powell 임기 만료<span class="event-tag">최우선</span></div>
+      <div class="event-detail">취임 성명 및 첫 공개 발언 예정. "인플레 강경 대응" 기조 재확인 시 달러 강세 + 신흥국 자금 이탈 경계. 첫 발언이 6월 FOMC 방향성 확정.</div>
+    </div>
+    <div class="event">
+      <div class="event-date">수 5/20 · 장 후</div>
+      <div class="event-title">NVIDIA Q1 FY2027 실적 발표</div>
+      <div class="event-detail">데이터센터 컨센 $40B+. 가이던스가 핵심 — 상향 시 삼성·SK하이닉스 HBM 추가 주문 기대감 강화. AMD MI300X $4.2B 이후 NVDA 쉐어 방어 여부 확인.</div>
+    </div>
+    <div class="event">
+      <div class="event-date">5월 말 (TBA)</div>
+      <div class="event-title">한국 4월 ICT/수출 확정치 발표</div>
+      <div class="event-detail">반도체 +25% YoY 컨센. 단일월 $80B+ 2개월 연속 가능성. 무역수지 +$200억 안팎 흑자 지속 여부.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== BRIEFING NAV ============== -->
+<nav class="briefing-nav">
+  <a href="2026-05-07-morning.html" class="briefing-nav-link prev">
+    <span class="briefing-nav-arrow">← 이전 (5/7)</span>
+    <span class="briefing-nav-title">Peace Rally</span>
+  </a>
+  <a href="/index.html" class="briefing-nav-home" title="브리핑 목록">
+    <span>☰</span>
+  </a>
+  <a href="#" class="briefing-nav-link next is-disabled">
+    <span class="briefing-nav-arrow">다음 (5/10) →</span>
+    <span class="briefing-nav-title">내일 발행 예정</span>
+  </a>
+</nav>
+
+<!-- ============== HERO (DUPLICATE TOP NAV FOR SCROLL) ============== -->
+
+<footer class="site-footer">
+  <div class="footer-disclaimer">
+    본 브리핑은 투자 권유나 금융 조언이 아닙니다. 모든 투자 결정은 본인의 판단과 책임 하에 이루어져야 합니다.
+  </div>
+  <div class="footer-sources">
+    <span>주요 출처:</span>
+    <span>Bloomberg</span> <span>·</span>
+    <span>Reuters</span> <span>·</span>
+    <span>CNBC</span> <span>·</span>
+    <span>Yahoo Finance</span> <span>·</span>
+    <span>한국경제</span> <span>·</span>
+    <span>CoinDesk</span> <span>·</span>
+    <span>Investing.com</span> <span>·</span>
+    <span>KRX</span> <span>·</span>
+    <span>ADP</span> <span>·</span>
+    <span>FRED</span>
+  </div>
+
+  <div class="next-briefing">
+    <div class="next-briefing-label">Next Briefing</div>
+    <div class="next-briefing-time">5월 10일 (일) — 위클리 정리 (5/11 워시 표결 + 5/12 CPI 프리뷰)</div>
+  </div>
+</footer>
+
+</main>
+
+<button class="fab-top" id="fabTop" title="맨 위로" aria-label="맨 위로">↑</button>
+  };
+
+  newsChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      newsChips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const label = chip.textContent.trim().split(' ')[0];
+      const targetCat = catMap[label];
+      headlineItems.forEach(item => {
+        if (!targetCat) {
+          item.style.display = '';
+        } else {
+          const cat = item.querySelector('.headline-cat');
+          item.style.display = cat && cat.classList.contains(targetCat) ? '' : 'none';
+        }
+      });
+    });
+  });
+
+  document.querySelectorAll('.spark').forEach(canvas => {
+    try {
+      const parent = canvas.parentElement;
+      const w = parent.clientWidth || 150;
+      canvas.width = w;
+      canvas.height = 32;
+      canvas.style.width = w + 'px';
+      canvas.style.height = '32px';
+      const points = canvas.dataset.points.split(',').map(parseFloat);
+      const color = canvas.dataset.color === 'bull' ? '#26A69A' : '#EF5350';
+      new Chart(canvas, {
+        type: 'line',
+        data: {
+          labels: points.map((_, i) => i),
+          datasets: [{
+            data: points,
+            borderColor: color,
+            borderWidth: 1.6,
+            tension: 0.35,
+            fill: true,
+            backgroundColor: color + '20',
+            pointRadius: 0,
+            pointHoverRadius: 0,
+          }]
+        },
+        options: {
+          responsive: false,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false }, tooltip: { enabled: false } },
+          scales: { x: { display: false }, y: { display: false } },
+          animation: { duration: 800 }
+        }
+      });
+    } catch (e) {
+      console.warn('Spark chart failed:', e);
+      canvas.style.display = 'none';
+    }
+  });
+
+  const fab = document.getElementById('fabTop');
+  window.addEventListener('scroll', () => { fab.classList.toggle('visible', window.scrollY > 600); });
+  fab.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  try {
+    if ('IntersectionObserver' in window) {
+      document.documentElement.classList.add('js-reveal-enabled');
+      const revealEls = document.querySelectorAll('section');
+      revealEls.forEach(el => el.classList.add('reveal'));
+      const hero = document.getElementById('tldr');
+      if (hero) hero.classList.add('is-visible');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.05, rootMargin: '0px 0px -10% 0px' });
+      revealEls.forEach(el => revealObserver.observe(el));
+    }
+  } catch (e) {
+    document.querySelectorAll('section').forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; });
+  }
+
+  // 네비게이션 동적 동기화
+  (function() {
+    const currentFile = location.pathname.split('/').pop();
+    fetch('/index.json', { cache: 'no-cache' })
+      .then(r => r.json())
+      .then(data => {
+        const list = data.briefings;
+        const idx = list.findIndex(b => b.html_path === currentFile);
+        if (idx < 0) return;
+        const prevB = list[idx + 1]; // 이전 = 더 오래된 항목
+        const nextB = list[idx - 1]; // 다음 = 더 최신 항목
+        function fmt(dateStr) {
+          const [, m, d] = dateStr.split('-');
+          return parseInt(m) + '/' + parseInt(d);
+        }
+        document.querySelectorAll('.briefing-nav-link.prev').forEach(el => {
+          if (prevB) {
+            el.href = prevB.html_path;
+            el.classList.remove('is-disabled');
+            el.querySelector('.briefing-nav-arrow').textContent = '← 이전 (' + fmt(prevB.date) + ')';
+            el.querySelector('.briefing-nav-title').textContent = prevB.theme;
+          } else {
+            el.href = '#';
+            el.classList.add('is-disabled');
+            el.querySelector('.briefing-nav-arrow').textContent = '← 이전';
+            el.querySelector('.briefing-nav-title').textContent = '첫 번째 브리핑';
+          }
+        });
+        document.querySelectorAll('.briefing-nav-link.next').forEach(el => {
+          if (nextB) {
+            el.href = nextB.html_path;
+            el.classList.remove('is-disabled');
+            el.querySelector('.briefing-nav-arrow').textContent = '다음 (' + fmt(nextB.date) + ') →';
+            el.querySelector('.briefing-nav-title').textContent = nextB.theme;
+          } else {
+            el.href = '#';
+            el.classList.add('is-disabled');
+            el.querySelector('.briefing-nav-arrow').textContent = '다음 →';
+            el.querySelector('.briefing-nav-title').textContent = '내일 발행 예정';
+          }
+        });
+      })
+      .catch(() => {});
+  })();
+</script>
+
+</body>
+</html>
