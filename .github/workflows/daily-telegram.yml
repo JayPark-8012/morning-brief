@@ -26,41 +26,30 @@ jobs:
           TLDR_US=$(jq -r '.briefings[0].tldr_us // ""' index.json)
           TLDR_KR=$(jq -r '.briefings[0].tldr_kr // ""' index.json)
           TLDR_CRYPTO=$(jq -r '.briefings[0].tldr_crypto // ""' index.json)
-
           MACRO_US_10Y=$(jq -r '.briefings[0].macro.us_10y // ""' index.json)
           MACRO_DXY=$(jq -r '.briefings[0].macro.dxy // ""' index.json)
           MACRO_WTI=$(jq -r '.briefings[0].macro.wti // ""' index.json)
           MACRO_GOLD=$(jq -r '.briefings[0].macro.gold // ""' index.json)
           MACRO_USDKRW=$(jq -r '.briefings[0].macro.usdkrw // ""' index.json)
           MACRO_VIX=$(jq -r '.briefings[0].macro.vix // ""' index.json)
-
           TOP1_TITLE=$(jq -r '.briefings[0].telegram_top3[0].title // ""' index.json)
           TOP1_BODY=$(jq -r '.briefings[0].telegram_top3[0].body // ""' index.json)
           TOP2_TITLE=$(jq -r '.briefings[0].telegram_top3[1].title // ""' index.json)
           TOP2_BODY=$(jq -r '.briefings[0].telegram_top3[1].body // ""' index.json)
           TOP3_TITLE=$(jq -r '.briefings[0].telegram_top3[2].title // ""' index.json)
           TOP3_BODY=$(jq -r '.briefings[0].telegram_top3[2].body // ""' index.json)
-
           SCENARIO_MAIN_PROB=$(jq -r '.briefings[0].scenarios.main.probability // 60' index.json)
           SCENARIO_MAIN_TITLE=$(jq -r '.briefings[0].scenarios.main.title // ""' index.json)
           SCENARIO_MAIN_DESC=$(jq -r '.briefings[0].scenarios.main.description // ""' index.json)
           SCENARIO_RISK_PROB=$(jq -r '.briefings[0].scenarios.risk.probability // 40' index.json)
           SCENARIO_RISK_TITLE=$(jq -r '.briefings[0].scenarios.risk.title // ""' index.json)
           SCENARIO_RISK_DESC=$(jq -r '.briefings[0].scenarios.risk.description // ""' index.json)
-
-          CALENDAR_TEXT=$(jq -r '.briefings[0].calendar // [] | map(
-            (if .importance == "warning" then "🟨"
-             elif .importance == "info" then "🟦"
-             else "⬜" end) + " " + .date + " " + .event +
-            (if .consensus then "\n   <i>" + .consensus + "</i>" else "" end)
-          ) | join("\n")' index.json)
-
+          CALENDAR_TEXT=$(jq -r '.briefings[0].calendar // [] | map((if .importance == "warning" then "🟨" elif .importance == "info" then "🟦" else "⬜" end) + " " + .date + " " + .event + (if .consensus then "\n   <i>" + .consensus + "</i>" else "" end)) | join("\n")' index.json)
           TODAY=$(TZ='Asia/Seoul' date +%Y-%m-%d)
           if [ "$DATE" != "$TODAY" ]; then
             echo "skip=true" >> $GITHUB_OUTPUT
             exit 0
           fi
-
           WEEKDAY_NUM=$(TZ='Asia/Seoul' date -d "$DATE" +%u)
           case $WEEKDAY_NUM in
             1) WEEKDAY="월" ;;
@@ -74,7 +63,6 @@ jobs:
           MONTH=$(echo "$DATE" | cut -d'-' -f2 | sed 's/^0//')
           DAY=$(echo "$DATE" | cut -d'-' -f3 | sed 's/^0//')
           SHORT_DATE="${MONTH}/${DAY}(${WEEKDAY})"
-
           echo "skip=false" >> $GITHUB_OUTPUT
           echo "date=$DATE" >> $GITHUB_OUTPUT
           echo "short_date=$SHORT_DATE" >> $GITHUB_OUTPUT
@@ -154,65 +142,14 @@ jobs:
           SCENARIO_RISK_DESC: ${{ steps.brief.outputs.scenario_risk_desc }}
           CALENDAR_TEXT: ${{ steps.brief.outputs.calendar_text }}
         run: |
-          MESSAGE="📊 <b>[${SHORT_DATE}] 데일리 경제 브리핑 (Vol.${VOL})</b>
-
-「${THEME}」
-${TAGLINE}
-
-━━━━━━━━━━━━━━━━━━━━
-🌤️ <b>오늘의 시장 한눈에</b>
-
-🇺🇸 <b>미국</b>
-${TLDR_US}
-
-🇰🇷 <b>한국</b>
-${TLDR_KR}
-
-₿ <b>코인</b>
-${TLDR_CRYPTO}
-
-━━━━━━━━━━━━━━━━━━━━
-📊 <b>거시 환경</b>
-
-10년물 ${MACRO_US_10Y} · DXY ${MACRO_DXY}
-WTI ${MACRO_WTI}
-금 ${MACRO_GOLD} · VIX ${MACRO_VIX}
-USD/KRW ${MACRO_USDKRW}
-
-━━━━━━━━━━━━━━━━━━━━
-🔥 <b>오늘의 핵심 3가지</b>
-
-1️⃣ <b>${TOP1_TITLE}</b>
-${TOP1_BODY}
-
-2️⃣ <b>${TOP2_TITLE}</b>
-${TOP2_BODY}
-
-3️⃣ <b>${TOP3_TITLE}</b>
-${TOP3_BODY}
-
-━━━━━━━━━━━━━━━━━━━━
-📅 <b>이번 주 꼭 봐야 할 일정</b>
-
-${CALENDAR_TEXT}
-
-━━━━━━━━━━━━━━━━━━━━
-🔮 <b>다음 주 전망</b>
-
-📈 <b>메인 (${SCENARIO_MAIN_PROB}%)</b>: ${SCENARIO_MAIN_TITLE}
-${SCENARIO_MAIN_DESC}
-
-📉 <b>리스크 (${SCENARIO_RISK_PROB}%)</b>: ${SCENARIO_RISK_TITLE}
-${SCENARIO_RISK_DESC}
-
-━━━━━━━━━━━━━━━━━━━━
-📖 <b>전체 분석</b>
-👉 https://briefing.hwion.app/briefings/${DATE}-morning.html
-
-🏠 https://briefing.hwion.app
-
-⚠️ <i>본 브리핑은 정보 제공 목적이며 투자 권유가 아닙니다.</i>"
-
+          MESSAGE=$(cat <<'MSGEND'
+          HEADER_LINE_1
+          HEADER_LINE_2
+          HEADER_LINE_3
+          MSGEND
+          )
+          MESSAGE="📊 <b>[${SHORT_DATE}] 데일리 경제 브리핑 (Vol.${VOL})</b>%0A%0A「${THEME}」%0A${TAGLINE}%0A%0A━━━━━━━━━━━━━━━━━━━━%0A🌤️ <b>오늘의 시장 한눈에</b>%0A%0A🇺🇸 <b>미국</b>%0A${TLDR_US}%0A%0A🇰🇷 <b>한국</b>%0A${TLDR_KR}%0A%0A₿ <b>코인</b>%0A${TLDR_CRYPTO}%0A%0A━━━━━━━━━━━━━━━━━━━━%0A📊 <b>거시 환경</b>%0A%0A10년물 ${MACRO_US_10Y} · DXY ${MACRO_DXY}%0AWTI ${MACRO_WTI}%0A금 ${MACRO_GOLD} · VIX ${MACRO_VIX}%0AUSD/KRW ${MACRO_USDKRW}%0A%0A━━━━━━━━━━━━━━━━━━━━%0A🔥 <b>오늘의 핵심 3가지</b>%0A%0A1️⃣ <b>${TOP1_TITLE}</b>%0A${TOP1_BODY}%0A%0A2️⃣ <b>${TOP2_TITLE}</b>%0A${TOP2_BODY}%0A%0A3️⃣ <b>${TOP3_TITLE}</b>%0A${TOP3_BODY}%0A%0A━━━━━━━━━━━━━━━━━━━━%0A📅 <b>이번 주 꼭 봐야 할 일정</b>%0A%0A${CALENDAR_TEXT}%0A%0A━━━━━━━━━━━━━━━━━━━━%0A🔮 <b>다음 주 전망</b>%0A%0A📈 <b>메인 (${SCENARIO_MAIN_PROB}%25)</b>: ${SCENARIO_MAIN_TITLE}%0A${SCENARIO_MAIN_DESC}%0A%0A📉 <b>리스크 (${SCENARIO_RISK_PROB}%25)</b>: ${SCENARIO_RISK_TITLE}%0A${SCENARIO_RISK_DESC}%0A%0A━━━━━━━━━━━━━━━━━━━━%0A📖 <b>전체 분석</b>%0A👉 https://briefing.hwion.app/briefings/${DATE}-morning.html%0A%0A🏠 https://briefing.hwion.app%0A%0A⚠️ <i>본 브리핑은 정보 제공 목적이며 투자 권유가 아닙니다.</i>"
+          MESSAGE=$(echo "$MESSAGE" | sed 's/%0A/\n/g' | sed 's/%25/%/g')
           curl -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
             -d "chat_id=${CHANNEL_ID}" \
             --data-urlencode "text=${MESSAGE}" \
