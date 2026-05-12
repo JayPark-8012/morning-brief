@@ -482,7 +482,7 @@
 
 <header class="top-header">
   <div class="header-inner">
-    <a href="/" class="header-brand">
+    <a href="/index.html" class="header-brand">
       <div class="brand-mark">M</div>
       <div class="brand-text">
         <div class="en">Morning Brief</div>
@@ -491,7 +491,7 @@
     </a>
     <div class="header-actions">
       <button class="icon-btn" id="themeToggle" title="테마 변경">🌙</button>
-      <button class="icon-btn" title="구독" onclick="alert('텔레그램 봇 구독: @MorningBriefBot')">🔔</button>
+      <button class="icon-btn" title="공유" onclick="navigator.share && navigator.share({title: document.title, url: location.href})">↗</button>
     </div>
   </div>
 </header>

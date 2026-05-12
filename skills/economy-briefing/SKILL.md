@@ -840,12 +840,14 @@ web_search 결과에서 추출한 직접 URL 사용:
 □ 애널리스트 시각에 종합 한 문단 + 시나리오 2개(확률 합 100%)가 있는가?
 □ 각 뉴스/이벤트마다 시간대 + 출처(클릭 가능한 링크)가 명시됐는가?
 
-[HTML 무결성 - 5개] ⚠️ 위반 시 페이지 깨짐
+[HTML 무결성 - 7개] ⚠️ 위반 시 페이지 깨짐
 □ <script> 시작 태그와 </script> 종료 태그가 모두 짝지어 있는가?
 □ 모든 JavaScript 코드가 <script> 태그 내부에 있는가? (페이지 하단에 코드 노출 X)
 □ 테마 토글 JavaScript가 포함됐는가? (localStorage 'theme' 키 사용)
 □ <style>, </style> 태그가 모두 짝지어 있는가?
 □ <html>, <head>, <body> 태그가 모두 짝지어 닫혀있는가?
+□ 헤더가 index.html과 100% 동일한 코드인가?
+□ 헤더 로고가 href="/index.html"로 메인 이동 가능한가?
 
 [텔레그램 메시지용 데이터 - 4개] ⭐ v3.5 신규 - 위반 시 텔레그램 메시지 깨짐
 □ index.json의 macro 필드 6지표 모두 채웠는가? (us_10y/dxy/wti/gold/usdkrw/vix)
@@ -986,6 +988,52 @@ CSS 변수가 양쪽 모드에서 모두 정의돼야 토글이 의미가 있음
 ```
 
 기존 검증된 파일에서 시작하면 무결성 버그 위험 최소화.
+
+##### 규칙 6: 헤더는 index.html과 동일한 디자인 사용
+
+브리핑 HTML의 `<header class="top-header">` 영역은 다음 코드를 **정확히** 사용:
+
+```html
+<header class="top-header">
+  <div class="header-inner">
+    <a href="/index.html" class="header-brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-text">
+        <div class="en">Morning Brief</div>
+        <div class="ko">데일리 경제 브리핑</div>
+      </div>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" title="테마 변경">🌙</button>
+      <button class="icon-btn" title="공유" onclick="navigator.share && navigator.share({title: document.title, url: location.href})">↗</button>
+    </div>
+  </div>
+</header>
+```
+
+**이유**:
+- 사용자가 어느 페이지에서든 같은 헤더로 일관된 경험
+- 헤더 로고 클릭으로 메인 페이지 이동 보장 (`/index.html` 절대 경로로 안정성 확보)
+- 디자인 변경 시 한 곳만 수정하면 모든 페이지 통일
+
+**필요한 CSS** (없으면 추가):
+
+```css
+.header-brand { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; text-decoration: none; }
+.brand-mark { font-weight: 800; font-size: 1.25rem; color: var(--gold); line-height: 1; letter-spacing: -0.02em; }
+.brand-text { display: flex; flex-direction: column; line-height: 1; }
+.brand-text .ko { font-size: 0.7rem; color: var(--text-tertiary); letter-spacing: 0.15em; margin-top: 2px; }
+.brand-text .en { font-size: 0.95rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.01em; }
+.header-actions { display: flex; align-items: center; gap: 0.5rem; }
+.icon-btn { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; font-size: 1rem; }
+.icon-btn:hover { border-color: var(--gold); color: var(--gold); }
+```
+
+**셀프 체크 추가**:
+```
+□ 헤더가 index.html과 100% 동일한 코드인가?
+□ 헤더 로고가 href="/index.html"로 메인 이동 가능한가?
+```
 
 ---
 

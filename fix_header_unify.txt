@@ -1,0 +1,65 @@
+세 가지 작업을 차례로 해줘.
+
+[작업 1] 모든 브리핑 HTML의 헤더를 index.html과 동일하게 통일
+
+briefings/ 폴더의 모든 *.html 파일에서:
+
+1. index.html의 헤더 영역을 먼저 읽기 (483-497줄 부근)
+   <header class="top-header">...</header> 전체 코드
+
+2. 각 브리핑 HTML 파일에서 기존 헤더 (<header class="top-header">...</header>) 를 
+   index.html과 동일한 헤더 코드로 교체
+
+3. 헤더의 a 태그는 다음과 같이 통일:
+   <a href="/index.html" class="header-brand">
+   (절대 경로로 안정성 확보)
+
+4. 헤더 오른쪽 버튼은 다음 2개로 통일:
+   - 테마 토글: <button class="icon-btn" id="themeToggle" title="테마 변경">🌙</button>
+   - 공유: <button class="icon-btn" title="공유" onclick="navigator.share && navigator.share({title: document.title, url: location.href})">↗</button>
+
+[작업 2] SKILL.md에 헤더 디자인 명시 추가
+
+skills/economy-briefing/SKILL.md의 HTML 무결성 규칙 섹션에 새 규칙 추가:
+
+규칙 6: 헤더는 index.html과 동일한 디자인 사용
+
+브리핑 HTML의 <header class="top-header"> 영역은 다음 코드를 정확히 사용:
+
+<header class="top-header">
+  <div class="header-inner">
+    <a href="/index.html" class="header-brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-text">
+        <div class="en">Morning Brief</div>
+        <div class="ko">데일리 경제 브리핑</div>
+      </div>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" title="테마 변경">🌙</button>
+      <button class="icon-btn" title="공유" onclick="navigator.share && navigator.share({title: document.title, url: location.href})">↗</button>
+    </div>
+  </div>
+</header>
+
+이유: 
+- 사용자가 어느 페이지에서든 같은 헤더로 일관된 경험
+- 헤더 로고 클릭으로 메인 페이지 이동 보장
+- 디자인 변경 시 한 곳만 수정하면 모든 페이지 통일
+
+셀프 체크에 추가:
+□ 헤더가 index.html과 100% 동일한 코드인가?
+□ 헤더 로고가 href="/index.html"로 메인 이동 가능한가?
+
+[작업 3] git push
+
+- 모든 변경 파일 add
+- commit: "fix: unify header design across all pages"
+- push origin main
+
+작업 흐름:
+1. index.html 헤더 영역 읽기 (정확한 코드 추출)
+2. briefings/*.html 각 파일에서 헤더 영역 찾아서 교체
+3. SKILL.md에 규칙 6 추가
+4. 결과 보고 (몇 개 파일 수정)
+5. git push

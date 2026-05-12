@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0F1115">
-<title>2026년 5월 11일 데일리 브리핑 v3.4 — Memory Supercycle</title>
-<meta name="description" content="한국·미국 증시와 디지털 자산 매일 아침 7시 브리핑 — 2026년 5월 11일 (v3.4 9-레이어, 데이터 검증 강화)">
+<title>2026년 5월 11일 데일리 브리핑 v3.2 — Memory Supercycle</title>
+<meta name="description" content="한국·미국 증시와 디지털 자산 매일 아침 7시 브리핑 — 2026년 5월 11일 (v3.2 테스트)">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,21 +104,7 @@
   .sec-title { font-weight: 700; font-size: 1.35rem; letter-spacing: -.01em; }
   .sec-sub { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); margin-left: auto; letter-spacing: .12em; text-transform: uppercase; }
 
-  /* Layer 3: Macro Table */
-  .macro-table { width: 100%; border-collapse: collapse; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; font-size: .92rem; }
-  .macro-table th, .macro-table td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
-  .macro-table thead th { background: var(--bg-deeper); font-family: var(--font-mono); font-size: .75rem; color: var(--text-tertiary); letter-spacing: .1em; text-transform: uppercase; font-weight: 600; }
-  .macro-table tbody tr:last-child td { border-bottom: none; }
-  .macro-table tbody tr:hover { background: var(--bg-hover); }
-  .macro-name { font-weight: 700; color: var(--gold-bright); font-family: var(--font-mono); font-size: .88rem; }
-  .macro-value { font-family: var(--font-mono); font-weight: 600; }
-  .macro-chg { font-family: var(--font-mono); font-weight: 600; font-size: .88rem; }
-  .macro-up { color: var(--bear); }
-  .macro-down { color: var(--bull); }
-  .macro-note { font-size: .85rem; color: var(--text-secondary); }
-  .macro-summary { margin-top: 1rem; padding: .9rem 1.1rem; background: var(--info-bg); border-left: 3px solid var(--info-border); border-radius: 4px; font-size: .9rem; line-height: 1.65; color: var(--text-primary); }
-
-  /* Layer 4: Deep Dive */
+  /* Layer 3: Deep Dive */
   .deep { background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 10px; padding: 1.8rem 1.6rem; }
   .deep-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .18em; margin-bottom: 1rem; }
   .deep-title { font-weight: 800; font-size: 1.35rem; line-height: 1.4; margin-bottom: 1.2rem; }
@@ -136,7 +122,7 @@
   .source-chip { display: inline-block; padding: .25rem .65rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); font-size: .72rem; color: var(--text-secondary) !important; border-bottom: none !important; }
   .source-chip:hover { border-color: var(--gold); color: var(--gold) !important; }
 
-  /* Layer 5: Five Things */
+  /* Layer 4: Five Things */
   .five { display: grid; gap: 1rem; }
   .news-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.4rem 1.5rem; transition: border-color .25s; }
   .news-card:hover { border-color: var(--border-gold); }
@@ -154,28 +140,7 @@
   .news-sources a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; }
   .news-sources a:hover { color: var(--gold); }
 
-  /* Layer 6: Market Snapshots */
-  .markets { display: grid; gap: 1.2rem; }
-  .market-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.3rem 1.4rem; }
-  .market-card.us { border-top: 3px solid #5B9BD5; }
-  .market-card.kr { border-top: 3px solid #D4A857; }
-  .market-card.crypto { border-top: 3px solid #F7931A; }
-  .market-head { display: flex; align-items: baseline; gap: .6rem; margin-bottom: .9rem; }
-  .market-flag { font-size: 1.4rem; }
-  .market-title { font-weight: 700; font-size: 1.05rem; }
-  .market-time { margin-left: auto; font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
-  .mkt-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-bottom: .8rem; }
-  .mkt-table th, .mkt-table td { padding: .55rem .7rem; text-align: left; border-bottom: 1px solid var(--border); }
-  .mkt-table thead th { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); letter-spacing: .08em; text-transform: uppercase; font-weight: 600; background: var(--bg-deeper); }
-  .mkt-table tbody tr:last-child td { border-bottom: none; }
-  .mkt-table .mkt-name { font-weight: 600; }
-  .mkt-table .mkt-val { font-family: var(--font-mono); font-weight: 600; }
-  .mkt-table .mkt-chg { font-family: var(--font-mono); font-weight: 700; }
-  .mkt-flow { font-size: .85rem; color: var(--text-secondary); padding: .55rem .8rem; background: var(--bg-deeper); border-radius: 4px; margin-bottom: .7rem; line-height: 1.55; }
-  .mkt-comment { padding: .7rem .9rem; background: var(--gold-glow); border-left: 3px solid var(--gold); border-radius: 4px; font-size: .88rem; line-height: 1.6; color: var(--text-primary); }
-  .mkt-comment::before { content: '💬 '; }
-
-  /* Layer 7: Headlines */
+  /* Layer 5: Headlines */
   .filter-bar { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.2rem; font-size: .8rem; color: var(--text-tertiary); }
   .filter-chip { padding: .3rem .7rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); }
   .headline-list { display: grid; gap: .7rem; }
@@ -186,26 +151,16 @@
   .h-meta { font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
   .h-meta a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; font-size: .72rem; }
 
-  /* Layer 8: Analyst View */
-  .analyst-box { padding: 1.5rem 1.6rem; background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 8px; margin-bottom: 1.2rem; }
-  .analyst-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .15em; margin-bottom: .8rem; }
-  .analyst-body { font-size: .96rem; line-height: 1.85; color: var(--text-primary); }
-  .analyst-body p { margin-bottom: .8rem; }
-  .analyst-body p:last-child { margin-bottom: 0; }
-  .scenarios { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem; }
+  /* Layer 6: Scenarios */
+  .scenarios { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .sc-card { padding: 1.4rem 1.5rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; }
   .sc-card.main { border-left: 3px solid var(--bull); }
   .sc-card.alt { border-left: 3px solid var(--bear); }
   .sc-prob { font-family: var(--font-mono); font-size: .8rem; color: var(--gold); letter-spacing: .1em; margin-bottom: .5rem; }
   .sc-title { font-weight: 700; font-size: 1.05rem; margin-bottom: .7rem; line-height: 1.4; }
   .sc-body { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
-  .action-box { padding: 1.1rem 1.3rem; background: var(--bg-deeper); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; }
-  .action-title { font-weight: 700; font-size: .92rem; color: var(--gold); margin-bottom: .6rem; }
-  .action-list { list-style: none; padding: 0; margin: 0; }
-  .action-list li { padding: .35rem 0; padding-left: 1.2rem; position: relative; font-size: .9rem; line-height: 1.6; color: var(--text-primary); }
-  .action-list li::before { content: '▸'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
 
-  /* Layer 9: Calendar */
+  /* Layer 7: Calendar */
   .cal-grid { display: grid; gap: .7rem; }
   .cal-item { display: grid; grid-template-columns: 110px 1fr; gap: 1rem; padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--info-border); border-radius: 6px; align-items: center; }
   .cal-item.warn { border-left-color: var(--warn-border); background: var(--warn-bg); }
@@ -222,8 +177,6 @@
     .tldr-card { grid-template-columns: auto 1fr; }
     .tldr-change { grid-column: 2; justify-self: start; margin-top: .3rem; }
     .cal-item { grid-template-columns: 1fr; gap: .3rem; }
-    .macro-table th, .macro-table td { padding: .6rem .55rem; font-size: .82rem; }
-    .mkt-table th, .mkt-table td { padding: .45rem .5rem; font-size: .82rem; }
   }
 </style>
 </head>
@@ -250,7 +203,7 @@
 <!-- ============== [1] HERO ============== -->
 <section class="hero">
   <div class="hero-meta">
-    <span class="vol">Vol.145</span> · 2026.05.11 (월) · 📖 14분 읽기 · v3.4
+    <span class="vol">Vol.145</span> · 2026.05.11 (월) · 📖 12분 읽기 · v3.2
   </div>
   <h1 class="hero-title">JP모건이 코스피 강세 목표를 10,000으로 올렸어요 — "메모리 슈퍼사이클" 첫 7,800 돌파</h1>
   <p class="hero-sub">금요일 미국 신고가의 흥분이 채 가시기 전에, 한국 시장이 사상 첫 7,800선을 뚫고 매수 사이드카까지 발동했어요. 하지만 주말 트럼프가 이란 평화안을 거절하면서 국제 유가가 다시 $100을 넘었습니다. 5/12 미국 4월 소비자물가지수(CPI)가 이 흥분과 우려의 균형을 결정할 거예요.</p>
@@ -267,88 +220,26 @@
     <div class="tldr-card">
       <div class="tldr-flag">🇰🇷</div>
       <div>
-        <div class="tldr-label">한국 (5/11 종가)</div>
-        <div class="tldr-text">코스피 <strong>7,822.24</strong> 사상 첫 7,800 돌파(장중 고가 7,856.67), 매수 사이드카 발동 — 평소 ±0.5%가 보통인데 8.6배 큰 움직임</div>
+        <div class="tldr-label">한국 (5/11 장중)</div>
+        <div class="tldr-text">코스피 <strong>7,856.67</strong> 사상 첫 7,800 돌파, 매수 사이드카 발동 — 평소 ±0.5%가 보통인데 9.5배 큰 움직임</div>
       </div>
-      <div class="tldr-change change-bull">+4.32%</div>
+      <div class="tldr-change change-bull">+4.78%</div>
     </div>
     <div class="tldr-card">
       <div class="tldr-flag">₿</div>
       <div>
-        <div class="tldr-label">코인 (5/11 08:47 UTC)</div>
-        <div class="tldr-text">BTC <strong>$80,601</strong>, 비트코인 상장지수펀드(ETF)로 4주 연속 자금 유입 (주간 +$1.2B)</div>
+        <div class="tldr-label">코인 (5/11 06:00 KST)</div>
+        <div class="tldr-text">BTC <strong>$103,200</strong>, 비트코인 상장지수펀드(ETF)로 4주 연속 자금 유입</div>
       </div>
-      <div class="tldr-change change-bull">+0.5%</div>
+      <div class="tldr-change change-bull">+2.6%</div>
     </div>
   </div>
 </section>
 
-<!-- ============== [3] MACRO TABLE (v3.3 부활) ============== -->
-<section id="macro">
-  <div class="sec-head">
-    <div class="sec-num">[03]</div>
-    <h2 class="sec-title">📊 거시 환경 한눈에</h2>
-    <span class="sec-sub">Macro Dashboard · 6 Indicators</span>
-  </div>
-
-  <table class="macro-table">
-    <thead>
-      <tr>
-        <th>지표</th>
-        <th>현재값</th>
-        <th>전일 대비</th>
-        <th>시사점 (한 줄)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="macro-name">美 10Y</span></td>
-        <td class="macro-value">4.38%</td>
-        <td class="macro-chg macro-up">▲ +6bp (주간)</td>
-        <td class="macro-note">유가 충격에 인플레 우려 재발</td>
-      </tr>
-      <tr>
-        <td><span class="macro-name">DXY</span></td>
-        <td class="macro-value">98.7</td>
-        <td class="macro-chg macro-up">▲ +0.3%</td>
-        <td class="macro-note">안전선호 + 유가 강세 동반</td>
-      </tr>
-      <tr>
-        <td><span class="macro-name">WTI</span></td>
-        <td class="macro-value">$100.04</td>
-        <td class="macro-chg macro-up">▲ +4.8%</td>
-        <td class="macro-note">$100 재돌파, 한 주만에 원위치</td>
-      </tr>
-      <tr>
-        <td><span class="macro-name">금</span></td>
-        <td class="macro-value">$4,730</td>
-        <td class="macro-chg macro-up">▲ +0.4%</td>
-        <td class="macro-note">안전자산 수요 부활</td>
-      </tr>
-      <tr>
-        <td><span class="macro-name">USD/KRW</span></td>
-        <td class="macro-value">1,470.7원</td>
-        <td class="macro-chg macro-up">▲ +3원 (주간)</td>
-        <td class="macro-note">반도체 호재에도 달러 강세 우세</td>
-      </tr>
-      <tr>
-        <td><span class="macro-name">VIX</span></td>
-        <td class="macro-value">17.19</td>
-        <td class="macro-chg macro-up">▲ +0.6%</td>
-        <td class="macro-note">변동성 ↑ but 우려 수준은 아직</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="macro-summary">
-    한 줄 종합 — <strong>유가·금·달러·美 10Y가 동반 강세(안전선호 + 인플레 헤지)</strong>. 한국 메모리주는 "들썩"이지만 환율은 여전히 1,470원대 — 외국인 자금 본격 유입 신호는 아직. 5/12 미국 소비자물가지수(CPI)가 거시 "조심"과 한국 "들썩"의 분기(divergence)를 어디로 봉합할지 관건.
-  </div>
-</section>
-
-<!-- ============== [4] DEEP DIVE ============== -->
+<!-- ============== [3] DEEP DIVE ============== -->
 <section id="deep-dive">
   <div class="sec-head">
-    <div class="sec-num">[04]</div>
+    <div class="sec-num">[03]</div>
     <h2 class="sec-title">⭐ 오늘의 깊은 이야기</h2>
     <span class="sec-sub">Deep Dive · 🕒 5/11 (월) 장중</span>
   </div>
@@ -360,13 +251,13 @@
     <div class="deep-body">
       <p>JP모건이 5월 11일 한국 주식 전략 보고서에서 코스피 기본 시나리오 목표를 <strong>9,000</strong>, 강세 시나리오 목표를 기존 8,500에서 <strong>10,000</strong>으로 한 번에 1,500포인트 올렸어요. 금요일 종가(7,498) 대비 33% 추가 상승 여지를 보는 건데, 외국계 IB(투자은행) 중 가장 공격적인 숫자입니다. 핵심 논거 세 가지 — ① AI 수요가 메모리 공급을 구조적으로 초과, ② 고대역폭 메모리(HBM, AI 칩에 필수인 차세대 D램)가 다년 계약으로 묶여있음, ③ 재고가 타이트해서 가격 결정력이 메모리 회사 쪽으로.</p>
 
-      <p>이 보고서 발표 직후 코스피는 장 초반 +3.7%로 7,775에서 출발 → 9시 2분에 사상 첫 <strong>7,800선 돌파</strong> → 오전 10시 58분 장중 고가 <strong>7,856.67</strong>까지 찍은 뒤 <strong>7,822.24(+4.32%)</strong>로 마감했어요. 참고로 코스피가 하루에 ±0.5% 움직이는 게 평소 수준이니, 오늘은 <strong>약 8.6배 큰 움직임</strong>입니다. 매수 사이드카(과열로 인한 일시 매수 호가 차단)까지 발동됐어요(올해 8번째). 사이드카는 1년에 몇 번 안 나오는 이벤트입니다.</p>
+      <p>이 보고서 발표 직후 코스피는 장 초반 +3.7%로 7,775에서 출발 → 9시 2분에 사상 첫 <strong>7,800선 돌파</strong> → 오전 10시 58분에 <strong>7,856.67(+4.78%)</strong>까지 추가 상승했어요. 참고로 코스피가 하루에 ±0.5% 움직이는 게 평소 수준이니, 오늘은 <strong>거의 10배 큰 움직임</strong>입니다. 매수 사이드카(과열로 인한 일시 매수 호가 차단)까지 발동됐어요. 사이드카는 1년에 몇 번 안 나오는 이벤트입니다.</p>
 
       <div class="stat-cards">
         <div class="stat-card">
-          <div class="stat-label">KOSPI 종가</div>
-          <div class="stat-value">7,822.24</div>
-          <div class="stat-note">사상 첫 7,800 돌파 (+4.32%, 장중 고가 7,856.67)</div>
+          <div class="stat-label">KOSPI 장중 고가</div>
+          <div class="stat-value">7,856.67</div>
+          <div class="stat-note">사상 첫 7,800 돌파 (+4.78%)</div>
         </div>
         <div class="stat-card">
           <div class="stat-label">JP모건 강세 목표</div>
@@ -391,7 +282,7 @@
     </div>
 
     <div class="so-what">
-      한국 IT/게임 사업자라면 → 환율은 1,470원대로 여전히 약세(주간 +3원), 즉 해외 매출 기업의 환차익은 유지. 외국인 자금 재유입은 아직 환율로 확인되지 않음 — 게임주(엔씨·크래프톤 등) "재평가 낙수효과"는 다음 주 CPI 후 본격화 가능. 한국 주식 보유자라면 → 추격 매수는 사이드카 발동 후라 신중하게. 5/12 미국 소비자물가지수(CPI) 결과 보고 판단해도 늦지 않아요.
+      한국 IT/게임 사업자라면 → 환율이 1,455원으로 -21원 급반전(5/8 1,476원 → 5/11 1,455원)해서 해외 매출 기업의 단기 환차익은 줄지만, 외국인 자금 재유입 기대로 게임주(엔씨·크래프톤 등) "재평가 낙수효과" 진입 가능 구간. 한국 주식 보유자라면 → 추격 매수는 사이드카 발동 후라 신중하게. 5/12 미국 소비자물가지수(CPI) 결과 보고 판단해도 늦지 않아요.
     </div>
 
     <div class="deep-sources">
@@ -404,10 +295,10 @@
   </article>
 </section>
 
-<!-- ============== [5] FIVE THINGS ============== -->
+<!-- ============== [4] FIVE THINGS ============== -->
 <section id="five-things">
   <div class="sec-head">
-    <div class="sec-num">[05]</div>
+    <div class="sec-num">[04]</div>
     <h2 class="sec-title">📌 오늘의 5가지</h2>
     <span class="sec-sub">Five Things You Should Know</span>
   </div>
@@ -473,11 +364,11 @@
         <span class="news-cat">🇰🇷 한국 시장</span>
         <span class="news-time">🕒 5/11 (월) 09:00~11:00 KST</span>
       </div>
-      <h3 class="news-headline">SK하이닉스 +10.97% '190만닉스' 진입, 삼성전자 29만원선 돌파 — 둘 다 사상 최고가</h3>
+      <h3 class="news-headline">SK하이닉스 +9.91%, 삼성전자 +6.52% — 둘 다 사상 최고가</h3>
       <div class="news-body">
-        <p>SK하이닉스가 장 초반 <strong>1,871,000원(+10.97%)</strong>까지 급등하며 사상 처음으로 '190만닉스'에 진입(전일 종가 1,686,000원). 삼성전자도 5/9 268,500원 종가 대비 <strong>29만원선</strong>을 돌파하며 동반 사상 최고가를 경신했어요. SK하이닉스의 시가총액은 한국 증시에서 삼성전자에 이어 두 번째 "천조 클럽" 진입을 굳혔습니다.</p>
+        <p>SK하이닉스가 <strong>1,853,000원(+9.91%)</strong>, 삼성전자가 <strong>286,000원(+6.52%)</strong>로 동반 사상 최고가를 경신했어요. SK하이닉스 시가총액은 <strong>1,031조원</strong>으로, 한국 증시에서 두 번째 "천조 클럽" 진입. 참고로 삼성전자에 이어 두 번째예요.</p>
 
-        <p>코스피가 사이드카 발동 후에도 결국 +4.32%로 마감한 핵심 동력은 외국인 + 기관 동시 매수예요. 외국인이 지난 4월 -5조 폭탄 매도 후 첫 본격 유턴 시그널 — 다만 환율이 1,470원대에 머물러 자금 본격 유입은 다음 단계 확인 필요.</p>
+        <p>외국인은 오전 9시 15분 기준 -4,138억원 매도 중이었는데, 개인이 +4,814억원으로 그걸 다 받아냈어요. 평소 한국 개인 투자자가 하루 1,000억 사면 큰 매수인데, 오전에만 거의 5배 규모. 외국인이 단기 차익 실현하는 사이 국내 개미가 "이번엔 우리 차례"라며 들어온 분위기예요.</p>
 
         <p>직접 트리거는 미국 상장 D램(DRAM) 메모리 상장지수펀드 — 삼성·하이닉스를 각각 20% 이상 담은 상품이 5/8 +13% 강세. 글로벌 자금이 ETF로 한국 메모리에 베팅 → 본장 오픈하자마자 직접 매수세로 옮겨붙은 흐름. 사이드카(매수 호가 일시 차단)는 단기 과열 신호로도 해석해야 해요.</p>
       </div>
@@ -525,13 +416,13 @@
         <span class="news-cat">₿ 코인·규제</span>
         <span class="news-time">🕒 5/10 (토) 한 주 누적</span>
       </div>
-      <h3 class="news-headline">BTC $80,601 횡보 — ETF 2일 연속 +$1B 근접 매집</h3>
+      <h3 class="news-headline">디지털 자산 ETF로 4주 연속 자금 유입 — 주간 +$1.2B</h3>
       <div class="news-body">
-        <p>비트코인이 <strong>$80,601(+0.5%, 24h)</strong>에서 횡보 중이에요. 5/8 $80K 저항선을 돌파한 후 큰 추가 상승 없이 안정적인 흐름 — 공포·탐욕 지수 49는 "공포" 구간으로, 시장이 흥분하지 않은 채 가격이 유지되고 있다는 뜻이에요.</p>
+        <p>코인쉐어스(CoinShares) 주간 보고서에 따르면 디지털 자산 투자상품(주로 비트코인·이더리움 상장지수펀드)으로 <strong>+$1.2B(약 1조 6천억 원)</strong>가 순유입됐어요. 이게 <strong>4주 연속 유입</strong>이에요. 그중 비트코인(BTC)에 +$933M(약 1조 2천억 원), 이더리움(ETH)에는 5개월 만에 처음으로 순유입 전환된 흐름이 5월 첫 주에도 지속.</p>
 
-        <p>오히려 의미 있는 변화는 ETF 자금 흐름이에요. 美 비트코인 현물 ETF가 <strong>월요일 +$532M, 화요일 +$467M</strong>로 2거래일 연속 거의 +$1B 가까운 유입을 기록. 출시 이래 가장 강한 2일 연속 유입 중 하나로 꼽혀요. 기관 ETF 보유 비중도 1년 전 24%에서 38%까지 올라온 상태예요. 가격은 안 움직이는데 기관이 조용히 매집하는 전형적 구조.</p>
+        <p>이더리움 ETF는 <strong>10일 연속 순유입</strong>이라는 출시 이래 최장 기록까지 작성. 이게 왜 중요하냐면 — 이더리움은 비트코인보다 "위험한 자산"으로 분류돼서, 기관 자금이 이더리움 ETF까지 사는 건 위험 선호가 본격 돌아왔다는 신호로 해석돼요. 한 주에 비트코인 ETF만 1조 사는 정도는 큰 뉴스가 아니지만, 이더리움까지 동시에 사는 건 "구조적 흐름"의 신호.</p>
 
-        <p>다음 단기 분수령은 5/14(목) 미국 상원 은행위원회의 <strong>CLARITY Act(디지털 자산 시장 명확성 법안)</strong> 마크업 심사. 통과 시 알트코인 ETF 신청이 가속화될 가능성. 부결 시 단기 차익실현으로 BTC $76K 테스트 가능.</p>
+        <p>다음 단기 분수령은 5/14(목) 미국 상원 은행위원회의 <strong>CLARITY Act(코인 시장 구조 법안)</strong> 마크업 심사. 통과 시 블랙록·피델리티 등의 알트코인 ETF 신청이 가속화될 가능성. 부결 시 단기 차익실현으로 BTC $96K 테스트 가능.</p>
       </div>
       <div class="news-conclusion">
         코인 투자자라면 5/14 CLARITY Act 마크업까지는 관망 추천. 통과 시 알트코인 ETF 기대로 추가 자금 유입, 부결 시 단기 -7~-10% 조정 가능.
@@ -547,90 +438,10 @@
   </div>
 </section>
 
-<!-- ============== [6] MARKET SNAPSHOTS (v3.3 부활) ============== -->
-<section id="markets">
-  <div class="sec-head">
-    <div class="sec-num">[06]</div>
-    <h2 class="sec-title">📈 시장별 스냅샷</h2>
-    <span class="sec-sub">Market Snapshots · 🇺🇸 🇰🇷 ₿</span>
-  </div>
-
-  <div class="markets">
-
-    <!-- US -->
-    <div class="market-card us">
-      <div class="market-head">
-        <span class="market-flag">🇺🇸</span>
-        <span class="market-title">미국 시장</span>
-        <span class="market-time">5/8 마감 / 5/11 선물 압박</span>
-      </div>
-      <table class="mkt-table">
-        <thead>
-          <tr><th>지수</th><th>종가/현재</th><th>변동</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="mkt-name">S&amp;P 500</td><td class="mkt-val">7,399</td><td class="mkt-chg macro-down">+0.8%</td></tr>
-          <tr><td class="mkt-name">Nasdaq</td><td class="mkt-val">26,247</td><td class="mkt-chg macro-down">+1.7%</td></tr>
-          <tr><td class="mkt-name">Dow Jones</td><td class="mkt-val">50,200</td><td class="mkt-chg macro-down">+0.4%</td></tr>
-          <tr><td class="mkt-name">Russell 2000</td><td class="mkt-val">2,860</td><td class="mkt-chg macro-down">+0.5%</td></tr>
-          <tr><td class="mkt-name">S&amp;P 500 선물 (월)</td><td class="mkt-val">7,355</td><td class="mkt-chg macro-up">-0.6%</td></tr>
-        </tbody>
-      </table>
-      <div class="mkt-comment">신고가 마감의 여운이 가시기 전에 월요일 선물이 유가 충격으로 하방 압박을 받는 중. VIX 17.5는 아직 우려 수준 아니지만 분위기는 확실히 식었어요.</div>
-    </div>
-
-    <!-- KR -->
-    <div class="market-card kr">
-      <div class="market-head">
-        <span class="market-flag">🇰🇷</span>
-        <span class="market-title">한국 시장</span>
-        <span class="market-time">5/11 장중 (오전 11시)</span>
-      </div>
-      <table class="mkt-table">
-        <thead>
-          <tr><th>지수/종목</th><th>현재가</th><th>변동</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="mkt-name">KOSPI</td><td class="mkt-val">7,822.24</td><td class="mkt-chg macro-down">+4.32%</td></tr>
-          <tr><td class="mkt-name">KOSDAQ</td><td class="mkt-val">1,207.34</td><td class="mkt-chg macro-down">flat</td></tr>
-          <tr><td class="mkt-name">SK하이닉스(장중)</td><td class="mkt-val">1,871,000원</td><td class="mkt-chg macro-down">+10.97%</td></tr>
-          <tr><td class="mkt-name">삼성전자(장중)</td><td class="mkt-val">290,000원대</td><td class="mkt-chg macro-down">+8%대</td></tr>
-          <tr><td class="mkt-name">USD/KRW</td><td class="mkt-val">1,470.7원</td><td class="mkt-chg macro-up">▲ +3원(주간)</td></tr>
-        </tbody>
-      </table>
-      <div class="mkt-flow"><strong>수급 (09:15 기준)</strong> · 개인 <span style="color:var(--bull)">+4,814억</span> / 외국인 <span style="color:var(--bear)">-4,138억</span> / 기관 <span style="color:var(--bear)">-787억</span> — 평소 개인 1,000억이 큰 매수인데 거의 5배 규모</div>
-      <div class="mkt-comment">사이드카(매수 호가 일시 차단) 발동, JP모건 코스피 강세 목표 10,000 상향. 외국인 차익실현을 국내 개미가 통째로 받아내는 그림. 단기 과열 신호 동반.</div>
-    </div>
-
-    <!-- Crypto -->
-    <div class="market-card crypto">
-      <div class="market-head">
-        <span class="market-flag">₿</span>
-        <span class="market-title">디지털 자산</span>
-        <span class="market-time">5/11 06:00 KST</span>
-      </div>
-      <table class="mkt-table">
-        <thead>
-          <tr><th>자산</th><th>현재가</th><th>변동 (24h)</th></tr>
-        </thead>
-        <tbody>
-          <tr><td class="mkt-name">BTC</td><td class="mkt-val">$80,601</td><td class="mkt-chg macro-down">+0.5%</td></tr>
-          <tr><td class="mkt-name">ETH</td><td class="mkt-val">$2,334</td><td class="mkt-chg macro-down">+0.3%</td></tr>
-          <tr><td class="mkt-name">BTC 도미넌스</td><td class="mkt-val">58.5%</td><td class="mkt-chg macro-up">+0.3%p</td></tr>
-          <tr><td class="mkt-name">공포·탐욕 지수</td><td class="mkt-val">49 (공포)</td><td class="mkt-chg macro-up">▼ -2p</td></tr>
-        </tbody>
-      </table>
-      <div class="mkt-flow"><strong>온체인 / ETF 흐름</strong> · 美 비트코인 현물 ETF 2일 누적 <span style="color:var(--bull)">+$1B</span> 근접 (월 +$532M, 화 +$467M). 디지털 자산 ETF 주간 +$1.2B(BTC +$933M)</div>
-      <div class="mkt-comment">BTC가 $80K 근처에서 횡보 중 — 공포·탐욕 지수 49(공포)는 시장이 흥분하지 않은 채 기관 자금이 들어오는 "조용한 매집" 구도. 5/14 CLARITY Act 마크업이 다음 분수령.</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ============== [7] HEADLINES ============== -->
+<!-- ============== [5] HEADLINES ============== -->
 <section id="headlines">
   <div class="sec-head">
-    <div class="sec-num">[07]</div>
+    <div class="sec-num">[05]</div>
     <h2 class="sec-title">📰 헤드라인 더보기</h2>
     <span class="sec-sub">More Headlines</span>
   </div>
@@ -682,8 +493,8 @@
     </div>
 
     <div class="h-item">
-      <div class="h-title">🇰🇷 USD/KRW 환율 1,470.7원 — 반도체 랠리에도 달러 강세 우세</div>
-      <div class="h-desc">코스피 +4.32% 폭등에도 원화는 1,470원대를 유지. 미국 10년 국채 금리 4.38% + 유가 +4.8%로 달러 강세 동력이 더 우세한 모양. 한국 IT/게임 사업자는 해외 매출 환차익 유지, 클라우드(AWS·GCP) 비용 부담도 지속. 1,460원 이탈 시 외국인 자금 본격 유입 신호로 봐도 됨.</div>
+      <div class="h-title">🇰🇷 USD/KRW 환율 1,455원대 — 5/8 1,476원에서 -21원 급반전</div>
+      <div class="h-desc">반도체 랠리 + 외국인 단기 유턴 기대로 원화가 강세 전환. 단 하루에 21원 움직이는 건 평소 ±5원의 4배 규모예요. 한국 IT/게임 사업자는 해외 매출 환차익이 단기 축소되지만, 클라우드(AWS·GCP) 비용 부담은 일시 완화. 1,450원 이탈 시 외국인 자금 본격 유입 신호.</div>
       <div class="h-meta">🕒 5/11 11:00 KST ·
         <a href="https://www.google.com/search?q=%EC%9B%90%EB%8B%AC%EB%9F%AC+%ED%99%98%EC%9C%A8+1455%EC%9B%90+2026+5%EC%9B%94" target="_blank" rel="noopener">연합뉴스</a> ·
         <a href="https://www.google.com/search?q=USD+KRW+1455+May+11+2026" target="_blank" rel="noopener">Bloomberg</a>
@@ -700,8 +511,8 @@
     </div>
 
     <div class="h-item">
-      <div class="h-title">🇰🇷 코스피200 선물 +5.10% 사이드카 발동 — 올해 8번째</div>
-      <div class="h-desc">코스피200 선물지수가 1210.54로 전일 종가 1151.72 대비 +5.10% 급등하면서 매수 사이드카(프로그램 매수호가 5분 일시 정지) 발동. 사이드카는 1년에 몇 번 안 나오는 이벤트인데 올해 벌써 8번째 — 한국 시장 상승 모멘텀이 그만큼 강하다는 뜻이지만, 동시에 단기 과열 신호이기도 해요.</div>
+      <div class="h-title">🇰🇷 코스피 외국인 -4,138억 매도에도 개인 +4,814억 견인</div>
+      <div class="h-desc">오전 9시 15분 기준 외국인이 4,138억 매도 중인데 개인이 4,814억 매수로 다 받아냈어요. 평소 한국 개인이 하루 1,000억 사도 큰 뉴스인데, 오전에만 5배 규모. 5/9 브리핑에서 다뤘던 "국내 자금 풍부" 테마의 정점 — 다만 사이드카 발동은 단기 과열 신호이기도.</div>
       <div class="h-meta">🕒 5/11 09:15 KST ·
         <a href="https://www.google.com/search?q=%EC%BD%94%EC%8A%A4%ED%94%BC+%EA%B0%9C%EC%9D%B8+%EC%88%9C%EB%A7%A4%EC%88%98+5%EC%9B%94+11%EC%9D%BC" target="_blank" rel="noopener">매일경제</a> ·
         <a href="https://www.google.com/search?q=KOSPI+retail+foreign+flow+May+11+2026" target="_blank" rel="noopener">Reuters</a>
@@ -718,8 +529,8 @@
     </div>
 
     <div class="h-item">
-      <div class="h-title">🇺🇸 변동성 지수(VIX) 17.19 — 평소 12~15보다 높지만 우려 수준은 아직</div>
-      <div class="h-desc">월스트리트의 공포 지수로 불리는 변동성 지수(VIX)가 17.19(+0.6%)로 상승. 평소 12~15가 일반적이고, 20 이상부터 본격 우려 구간이에요. 유가 충격을 시장이 일부 가격에 반영했지만, 패닉 모드는 아직 아니라는 신호. 단, 18 이상 진입 시 단기 추가 변동성 경계 필요.</div>
+      <div class="h-title">🇺🇸 변동성 지수(VIX) 17.5로 상승 — 평소 12~15보다 높지만 우려 수준은 아직</div>
+      <div class="h-desc">월스트리트의 공포 지수로 불리는 변동성 지수(VIX)가 17.5(+1.3p)로 상승. 평소 12~15가 일반적이고, 20 이상부터 본격 우려 구간이에요. 유가 충격을 시장이 일부 가격에 반영했지만, 패닉 모드는 아직 아니라는 신호. 단, 18 이상 진입 시 단기 추가 변동성 경계 필요.</div>
       <div class="h-meta">🕒 5/8 (NY 마감) ·
         <a href="https://www.google.com/search?q=VIX+17.5+May+8+2026+volatility" target="_blank" rel="noopener">CBOE</a> ·
         <a href="https://www.google.com/search?q=VIX+volatility+May+2026+oil+shock" target="_blank" rel="noopener">MarketWatch</a>
@@ -729,58 +540,34 @@
   </div>
 </section>
 
-<!-- ============== [8] ANALYST VIEW (v3.3 부활) ============== -->
-<section id="analyst">
+<!-- ============== [6] SCENARIOS ============== -->
+<section id="scenarios">
   <div class="sec-head">
-    <div class="sec-num">[08]</div>
-    <h2 class="sec-title">🧠 애널리스트 시각</h2>
-    <span class="sec-sub">Analyst Take · Week of 5/12-5/16</span>
+    <div class="sec-num">[06]</div>
+    <h2 class="sec-title">🔮 다음 주는 어떻게 될까요?</h2>
+    <span class="sec-sub">Scenarios · Week of 5/12-5/16</span>
   </div>
 
-  <!-- 종합 한 문단 -->
-  <div class="analyst-box">
-    <div class="analyst-tag">▍ 종합 분석</div>
-    <div class="analyst-body">
-      <p>오늘의 핵심 — <strong>Memory Supercycle vs. Oil Shock의 줄다리기</strong>. JP모건이 코스피 강세 목표를 10,000으로 올린 5/11, 코스피가 사상 처음 7,800선을 돌파하고 종가 7,822.24(+4.32%, 장중 고가 7,856.67)로 마감하며 매수 사이드카까지 발동시켰어요. SK하이닉스 장중 +10.97%(1,871,000원 '190만닉스' 진입), 삼성전자 29만원선 돌파로 동반 사상 최고가. 단순 반도체 랠리가 아니라 AI 메모리 슈퍼사이클의 구조적 확인 + 코리아 디스카운트 해소가 동시에 작동하는 국면이에요. 다만 환율은 1,470원대를 유지 — 외국인 자금이 본격 들어오는 단계는 아직 아닙니다.</p>
-
-      <p>그러나 미국 쪽은 정반대 신호. 트럼프가 이란 평화안을 거절하면서 국제 유가(WTI)가 +4.8% 급등해 $100을 재돌파, 지난주 미국 신고가의 동력이었던 "유가 -6% → 인플레 부담 ↓" 흐름이 단 하루 만에 흔들리는 중. 거시 환경 표에서 보듯 美 10Y 4.38% / 달러 +0.3% / 금 $4,730 / VIX 17.19가 동시에 오르는 건 시장이 "안전선호 + 인플레 재발 우려"를 한꺼번에 가격에 반영하고 있다는 뜻입니다.</p>
-
-      <p>요약하면 <strong>한국=강세 모멘텀 정점 / 미국=조심 모드</strong>의 분기(divergence) 국면. 이 분기를 5/12 미국 4월 소비자물가지수(CPI)가 어디로 봉합할지가 이번 주의 게임이에요. 코어 +0.3% 부합이면 한국 강세가 미국까지 끌어올리고, +0.4% 이상이면 한국 단기 과열이 동반 조정 트리거로 작용할 가능성. 단기 변동성 확대를 전제로 한 포지셔닝이 필요합니다.</p>
-    </div>
-  </div>
-
-  <!-- 시나리오 2개 -->
   <div class="scenarios">
     <div class="sc-card main">
       <div class="sc-prob">메인 시나리오 · 확률 60%</div>
-      <h3 class="sc-title">"CPI 흡수 + 메모리 슈퍼사이클 지속"</h3>
-      <p class="sc-body">5/12 미국 4월 소비자물가지수(CPI) 코어가 +0.3% 부합 → 유가 +5% 충격이 시장에서 일시 흡수. 워시 신임 연준 의장이 5/15 취임 후 비둘기 또는 중립 톤. 한국 메모리 슈퍼사이클 모멘텀 지속, 코스피 8,000선 시도. SK하이닉스·삼성전자 사상 최고가 추가 갱신. 5/20 NVDA 실적이 다음 트리거.</p>
+      <h3 class="sc-title">"CPI가 흡수, 메모리 슈퍼사이클 지속"</h3>
+      <p class="sc-body">5/12 미국 4월 소비자물가지수(CPI) 코어가 +0.3% 부합 → 유가 +5% 충격이 시장에서 일시 흡수. 워시 신임 연준 의장이 5/15 취임 후 비둘기 또는 중립 톤. 한국 메모리 슈퍼사이클 모멘텀 지속, 코스피가 8,000선 시도. SK하이닉스·삼성전자 사상 최고가 추가 갱신 가능. NVDA 5/20 실적이 다음 트리거.</p>
     </div>
     <div class="sc-card alt">
       <div class="sc-prob">대안 시나리오 · 확률 40%</div>
       <h3 class="sc-title">"CPI 핫 + 유가 $100+ 유지 → 첫 본격 조정"</h3>
-      <p class="sc-body">5/12 CPI 코어가 +0.4% 이상 핫하게 나오고 유가가 $100+ 유지 → 인플레 재발 + 금리 인하 기대 약화 → 미국·한국 동반 -3~-5% 조정. 코스피 7,500선 테스트, S&amp;P 500 7,200선 후퇴. 5/14-15 미·이란 정상회담 결렬 시 유가 $110 가능. CLARITY Act 부결까지 겹치면 코인 동반 약세.</p>
+      <p class="sc-body">5/12 CPI 코어가 +0.4% 이상 핫하게 나오고 유가가 $100+ 유지 → 인플레 재발 + 금리 인하 기대 약화 → 미국·한국 동반 -3~-5% 조정. 코스피 7,500선 테스트, S&amp;P 500 7,200선 후퇴. 5/14-15 미·이란 정상회담 결렬 시 유가 $110 가능 → 더 깊은 조정. CLARITY Act 부결까지 겹치면 코인 동반 약세.</p>
     </div>
-  </div>
-
-  <!-- IT/게임 사업자 액션 -->
-  <div class="action-box">
-    <div class="action-title">🎯 IT/게임 사업자 실용 액션</div>
-    <ul class="action-list">
-      <li>환율 1,470원대 유지 → 해외 매출 비중 큰 기업(크래프톤·시프트업 등) 환차익 유지. 1,460원 이탈해야 외국인 본격 유입 신호 — 게임주 낙수효과는 그 후 본격화 가능</li>
-      <li>5/12 미국 CPI 결과 전까지 신규 진입 보수적 운영 — 결과 본 뒤 분할 매수 정석</li>
-      <li>5/14 CLARITY Act 통과 시 스테이블코인 결제 인프라 시범사업(PoC) 검토 시점 — 한국 게임 결제 인프라에 직접 영향</li>
-      <li>AWS·GCP 클라우드 비용은 원화 약세 지속으로 부담 유지 — 헤지 비중 점검 시점</li>
-    </ul>
   </div>
 </section>
 
-<!-- ============== [9] CALENDAR ============== -->
+<!-- ============== [7] CALENDAR ============== -->
 <section id="calendar">
   <div class="sec-head">
-    <div class="sec-num">[09]</div>
+    <div class="sec-num">[07]</div>
     <h2 class="sec-title">📅 다음 주 꼭 봐야 할 일정</h2>
-    <span class="sec-sub">Key Events · 5/12 - 5/20</span>
+    <span class="sec-sub">Key Events · 5/12 - 5/16</span>
   </div>
 
   <div class="cal-grid">
