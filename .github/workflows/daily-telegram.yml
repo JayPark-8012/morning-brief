@@ -4,70 +4,63 @@ on:
   push:
     branches: [main]
     paths:
-      - 'index.json'      # index.json 변경 시 자동 트리거
+      - 'index.json'
   schedule:
-    - cron: '0 23 * * *'   # UTC 23:00 = KST 08:00 (백업)
-  workflow_dispatch:        # 수동 실행
+    - cron: '0 23 * * *'
+  workflow_dispatch:
 
 jobs:
   notify:
     runs-on: ubuntu-latest
-    
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
+
       - name: Extract briefing metadata
         id: brief
         run: |
-          # 기본 필드
           DATE=$(jq -r '.latest' index.json)
           VOL=$(jq -r '.briefings[0].vol // ""' index.json)
-          THEME=$(jq -r '.briefings[0].theme // "오늘의 브리핑"' index.json)
+          THEME=$(jq -r '.briefings[0].theme // ""' index.json)
           TAGLINE=$(jq -r '.briefings[0].tagline // ""' index.json)
           TLDR_US=$(jq -r '.briefings[0].tldr_us // ""' index.json)
           TLDR_KR=$(jq -r '.briefings[0].tldr_kr // ""' index.json)
           TLDR_CRYPTO=$(jq -r '.briefings[0].tldr_crypto // ""' index.json)
-          US_CHANGE=$(jq -r '.briefings[0].us_change // ""' index.json)
-          KR_CHANGE=$(jq -r '.briefings[0].kr_change // ""' index.json)
-          CRYPTO_CHANGE=$(jq -r '.briefings[0].crypto_change // ""' index.json)
-          
-          # 거시 6지표
+
           MACRO_US_10Y=$(jq -r '.briefings[0].macro.us_10y // ""' index.json)
           MACRO_DXY=$(jq -r '.briefings[0].macro.dxy // ""' index.json)
           MACRO_WTI=$(jq -r '.briefings[0].macro.wti // ""' index.json)
           MACRO_GOLD=$(jq -r '.briefings[0].macro.gold // ""' index.json)
           MACRO_USDKRW=$(jq -r '.briefings[0].macro.usdkrw // ""' index.json)
           MACRO_VIX=$(jq -r '.briefings[0].macro.vix // ""' index.json)
-          
-          # Top3 뉴스
+
           TOP1_TITLE=$(jq -r '.briefings[0].telegram_top3[0].title // ""' index.json)
           TOP1_BODY=$(jq -r '.briefings[0].telegram_top3[0].body // ""' index.json)
           TOP2_TITLE=$(jq -r '.briefings[0].telegram_top3[1].title // ""' index.json)
           TOP2_BODY=$(jq -r '.briefings[0].telegram_top3[1].body // ""' index.json)
           TOP3_TITLE=$(jq -r '.briefings[0].telegram_top3[2].title // ""' index.json)
           TOP3_BODY=$(jq -r '.briefings[0].telegram_top3[2].body // ""' index.json)
-          
-          # 시나리오
+
           SCENARIO_MAIN_PROB=$(jq -r '.briefings[0].scenarios.main.probability // 60' index.json)
           SCENARIO_MAIN_TITLE=$(jq -r '.briefings[0].scenarios.main.title // ""' index.json)
           SCENARIO_MAIN_DESC=$(jq -r '.briefings[0].scenarios.main.description // ""' index.json)
           SCENARIO_RISK_PROB=$(jq -r '.briefings[0].scenarios.risk.probability // 40' index.json)
           SCENARIO_RISK_TITLE=$(jq -r '.briefings[0].scenarios.risk.title // ""' index.json)
           SCENARIO_RISK_DESC=$(jq -r '.briefings[0].scenarios.risk.description // ""' index.json)
-          
-          # 일정 (최대 6개)
-          CALENDAR_JSON=$(jq -c '.briefings[0].calendar // []' index.json)
-          
-          # 오늘 날짜 검증
+
+          CALENDAR_TEXT=$(jq -r '.briefings[0].calendar // [] | map(
+            (if .importance == "warning" then "🟨"
+             elif .importance == "info" then "🟦"
+             else "⬜" end) + " " + .date + " " + .event +
+            (if .consensus then "\n   <i>" + .consensus + "</i>" else "" end)
+          ) | join("\n")' index.json)
+
           TODAY=$(TZ='Asia/Seoul' date +%Y-%m-%d)
           if [ "$DATE" != "$TODAY" ]; then
-            echo "::warning::Latest briefing date ($DATE) doesn't match today ($TODAY). Skipping."
             echo "skip=true" >> $GITHUB_OUTPUT
             exit 0
           fi
-          
-          # 한국어 요일 + 짧은 날짜
+
           WEEKDAY_NUM=$(TZ='Asia/Seoul' date -d "$DATE" +%u)
           case $WEEKDAY_NUM in
             1) WEEKDAY="월" ;;
@@ -81,137 +74,54 @@ jobs:
           MONTH=$(echo "$DATE" | cut -d'-' -f2 | sed 's/^0//')
           DAY=$(echo "$DATE" | cut -d'-' -f3 | sed 's/^0//')
           SHORT_DATE="${MONTH}/${DAY}(${WEEKDAY})"
-          
-          # 모든 변수 출력
+
           echo "skip=false" >> $GITHUB_OUTPUT
           echo "date=$DATE" >> $GITHUB_OUTPUT
           echo "short_date=$SHORT_DATE" >> $GITHUB_OUTPUT
           echo "vol=$VOL" >> $GITHUB_OUTPUT
           echo "theme=$THEME" >> $GITHUB_OUTPUT
-          
-          {
-            echo "tagline<<EOF"
-            echo "$TAGLINE"
-            echo "EOF"
-          } >> $GITHUB_OUTPUT
-          
-          {
-            echo "tldr_us<<EOF"
-            echo "$TLDR_US"
-            echo "EOF"
-          } >> $GITHUB_OUTPUT
-          
-          {
-            echo "tldr_kr<<EOF"
-            echo "$TLDR_KR"
-            echo "EOF"
-          } >> $GITHUB_OUTPUT
-          
-          {
-            echo "tldr_crypto<<EOF"
-            echo "$TLDR_CRYPTO"
-            echo "EOF"
-          } >> $GITHUB_OUTPUT
-          
-          # 거시 6지표
+          echo "tagline=$TAGLINE" >> $GITHUB_OUTPUT
+          echo "tldr_us=$TLDR_US" >> $GITHUB_OUTPUT
+          echo "tldr_kr=$TLDR_KR" >> $GITHUB_OUTPUT
+          echo "tldr_crypto=$TLDR_CRYPTO" >> $GITHUB_OUTPUT
           echo "macro_us_10y=$MACRO_US_10Y" >> $GITHUB_OUTPUT
           echo "macro_dxy=$MACRO_DXY" >> $GITHUB_OUTPUT
           echo "macro_wti=$MACRO_WTI" >> $GITHUB_OUTPUT
           echo "macro_gold=$MACRO_GOLD" >> $GITHUB_OUTPUT
           echo "macro_usdkrw=$MACRO_USDKRW" >> $GITHUB_OUTPUT
           echo "macro_vix=$MACRO_VIX" >> $GITHUB_OUTPUT
-          
-          # Top3
           echo "top1_title=$TOP1_TITLE" >> $GITHUB_OUTPUT
-          {
-            echo "top1_body<<EOF"
-            echo "$TOP1_BODY"
-            echo "EOF"
-          } >> $GITHUB_OUTPUT
-          
+          echo "top1_body=$TOP1_BODY" >> $GITHUB_OUTPUT
           echo "top2_title=$TOP2_TITLE" >> $GITHUB_OUTPUT
-          {
-            echo "top2_body<<EOF"
-            echo "$TOP2_BODY"
-            echo "EOF"
-          } >> $GITHUB_OUTPUT
-          
+          echo "top2_body=$TOP2_BODY" >> $GITHUB_OUTPUT
           echo "top3_title=$TOP3_TITLE" >> $GITHUB_OUTPUT
-          {
-            echo "top3_body<<EOF"
-            echo "$TOP3_BODY"
-            echo "EOF"
-          } >> $GITHUB_OUTPUT
-          
-          # 시나리오
+          echo "top3_body=$TOP3_BODY" >> $GITHUB_OUTPUT
           echo "scenario_main_prob=$SCENARIO_MAIN_PROB" >> $GITHUB_OUTPUT
           echo "scenario_main_title=$SCENARIO_MAIN_TITLE" >> $GITHUB_OUTPUT
-          {
-            echo "scenario_main_desc<<EOF"
-            echo "$SCENARIO_MAIN_DESC"
-            echo "EOF"
-          } >> $GITHUB_OUTPUT
-          
+          echo "scenario_main_desc=$SCENARIO_MAIN_DESC" >> $GITHUB_OUTPUT
           echo "scenario_risk_prob=$SCENARIO_RISK_PROB" >> $GITHUB_OUTPUT
           echo "scenario_risk_title=$SCENARIO_RISK_TITLE" >> $GITHUB_OUTPUT
+          echo "scenario_risk_desc=$SCENARIO_RISK_DESC" >> $GITHUB_OUTPUT
           {
-            echo "scenario_risk_desc<<EOF"
-            echo "$SCENARIO_RISK_DESC"
-            echo "EOF"
-          } >> $GITHUB_OUTPUT
-          
-          # 일정 (최대 6개를 텍스트로)
-          CALENDAR_TEXT=""
-          for i in 0 1 2 3 4 5; do
-            EVENT_DATE=$(echo "$CALENDAR_JSON" | jq -r ".[$i].date // empty")
-            if [ -z "$EVENT_DATE" ]; then break; fi
-            
-            EVENT_NAME=$(echo "$CALENDAR_JSON" | jq -r ".[$i].event // empty")
-            EVENT_IMP=$(echo "$CALENDAR_JSON" | jq -r ".[$i].importance // \"info\"")
-            EVENT_CONS=$(echo "$CALENDAR_JSON" | jq -r ".[$i].consensus // empty")
-            
-            # 중요도별 이모지
-            case "$EVENT_IMP" in
-              warning) ICON="🟨" ;;
-              info) ICON="🟦" ;;
-              *) ICON="⬜" ;;
-            esac
-            
-            CALENDAR_TEXT="${CALENDAR_TEXT}${ICON} ${EVENT_DATE} ${EVENT_NAME}"
-            if [ -n "$EVENT_CONS" ]; then
-              CALENDAR_TEXT="${CALENDAR_TEXT}
-   <i>컨센: ${EVENT_CONS}</i>"
-            fi
-            CALENDAR_TEXT="${CALENDAR_TEXT}
-"
-          done
-          
-          {
-            echo "calendar_text<<EOF"
+            echo "calendar_text<<DELIMITER"
             echo "$CALENDAR_TEXT"
-            echo "EOF"
+            echo "DELIMITER"
           } >> $GITHUB_OUTPUT
-      
-      - name: Check if already notified today
+
+      - name: Check duplicate
         if: steps.brief.outputs.skip != 'true'
         id: dedup
         run: |
-          # 24시간 내 성공 실행이 있으면 중복으로 판단
-          RECENT_RUNS=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/daily-telegram.yml/runs?status=success&per_page=5" \
-            | jq -r ".workflow_runs[] | select(.created_at > \"$(date -u -d '23 hours ago' +'%Y-%m-%dT%H:%M:%SZ')\") | .id" 2>/dev/null || echo "")
-          
-          MY_RUN_ID="${{ github.run_id }}"
-          OTHER_RUNS=$(echo "$RECENT_RUNS" | grep -v "$MY_RUN_ID" || true)
-          
-          if [ -n "$OTHER_RUNS" ]; then
-            echo "::notice::Already notified within 24 hours. Skipping."
+          RECENT=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" "https://api.github.com/repos/${{ github.repository }}/actions/workflows/daily-telegram.yml/runs?status=success&per_page=5" | jq -r ".workflow_runs[] | select(.created_at > \"$(date -u -d '23 hours ago' +'%Y-%m-%dT%H:%M:%SZ')\") | .id" 2>/dev/null || echo "")
+          MY_ID="${{ github.run_id }}"
+          OTHERS=$(echo "$RECENT" | grep -v "$MY_ID" || true)
+          if [ -n "$OTHERS" ]; then
             echo "duplicate=true" >> $GITHUB_OUTPUT
           else
             echo "duplicate=false" >> $GITHUB_OUTPUT
           fi
-      
-      - name: Send Telegram notification (rich format)
+
+      - name: Send Telegram notification
         if: steps.brief.outputs.skip != 'true' && steps.dedup.outputs.duplicate != 'true'
         env:
           BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -244,86 +154,67 @@ jobs:
           SCENARIO_RISK_DESC: ${{ steps.brief.outputs.scenario_risk_desc }}
           CALENDAR_TEXT: ${{ steps.brief.outputs.calendar_text }}
         run: |
-          MESSAGE=$(cat <<EOF
-          📊 <b>[${SHORT_DATE}] 데일리 경제 브리핑 (Vol.${VOL})</b>
-          
-          「${THEME}」
-          ${TAGLINE}
-          
-          ━━━━━━━━━━━━━━━━━━━━
-          🌤️ <b>오늘의 시장 한눈에</b>
-          
-          🇺🇸 <b>미국</b>
-          ${TLDR_US}
-          
-          🇰🇷 <b>한국</b>
-          ${TLDR_KR}
-          
-          ₿ <b>코인</b>
-          ${TLDR_CRYPTO}
-          
-          ━━━━━━━━━━━━━━━━━━━━
-          📊 <b>거시 환경</b>
-          
-          10년물 ${MACRO_US_10Y} · DXY ${MACRO_DXY}
-          WTI ${MACRO_WTI}
-          금 ${MACRO_GOLD} · VIX ${MACRO_VIX}
-          USD/KRW ${MACRO_USDKRW}
-          
-          ━━━━━━━━━━━━━━━━━━━━
-          🔥 <b>오늘의 핵심 3가지</b>
-          
-          1️⃣ <b>${TOP1_TITLE}</b>
-          ${TOP1_BODY}
-          
-          2️⃣ <b>${TOP2_TITLE}</b>
-          ${TOP2_BODY}
-          
-          3️⃣ <b>${TOP3_TITLE}</b>
-          ${TOP3_BODY}
-          
-          ━━━━━━━━━━━━━━━━━━━━
-          📅 <b>이번 주 꼭 봐야 할 일정</b>
-          
-          ${CALENDAR_TEXT}
-          ━━━━━━━━━━━━━━━━━━━━
-          🔮 <b>다음 주 전망</b>
-          
-          📈 <b>메인 (${SCENARIO_MAIN_PROB}%)</b>: ${SCENARIO_MAIN_TITLE}
-          ${SCENARIO_MAIN_DESC}
-          
-          📉 <b>리스크 (${SCENARIO_RISK_PROB}%)</b>: ${SCENARIO_RISK_TITLE}
-          ${SCENARIO_RISK_DESC}
-          
-          ━━━━━━━━━━━━━━━━━━━━
-          📖 <b>전체 분석</b> (Deep Dive · Five Things 5개 · 헤드라인 10개 · 애널리스트 시각)
-          👉 https://briefing.hwion.app/briefings/${DATE}-morning.html
-          
-          🏠 아카이브: https://briefing.hwion.app
-          
-          ⚠️ <i>본 브리핑은 정보 제공 목적이며 투자 권유가 아닙니다.</i>
-          EOF
-          )
-          
+          MESSAGE="📊 <b>[${SHORT_DATE}] 데일리 경제 브리핑 (Vol.${VOL})</b>
+
+「${THEME}」
+${TAGLINE}
+
+━━━━━━━━━━━━━━━━━━━━
+🌤️ <b>오늘의 시장 한눈에</b>
+
+🇺🇸 <b>미국</b>
+${TLDR_US}
+
+🇰🇷 <b>한국</b>
+${TLDR_KR}
+
+₿ <b>코인</b>
+${TLDR_CRYPTO}
+
+━━━━━━━━━━━━━━━━━━━━
+📊 <b>거시 환경</b>
+
+10년물 ${MACRO_US_10Y} · DXY ${MACRO_DXY}
+WTI ${MACRO_WTI}
+금 ${MACRO_GOLD} · VIX ${MACRO_VIX}
+USD/KRW ${MACRO_USDKRW}
+
+━━━━━━━━━━━━━━━━━━━━
+🔥 <b>오늘의 핵심 3가지</b>
+
+1️⃣ <b>${TOP1_TITLE}</b>
+${TOP1_BODY}
+
+2️⃣ <b>${TOP2_TITLE}</b>
+${TOP2_BODY}
+
+3️⃣ <b>${TOP3_TITLE}</b>
+${TOP3_BODY}
+
+━━━━━━━━━━━━━━━━━━━━
+📅 <b>이번 주 꼭 봐야 할 일정</b>
+
+${CALENDAR_TEXT}
+
+━━━━━━━━━━━━━━━━━━━━
+🔮 <b>다음 주 전망</b>
+
+📈 <b>메인 (${SCENARIO_MAIN_PROB}%)</b>: ${SCENARIO_MAIN_TITLE}
+${SCENARIO_MAIN_DESC}
+
+📉 <b>리스크 (${SCENARIO_RISK_PROB}%)</b>: ${SCENARIO_RISK_TITLE}
+${SCENARIO_RISK_DESC}
+
+━━━━━━━━━━━━━━━━━━━━
+📖 <b>전체 분석</b>
+👉 https://briefing.hwion.app/briefings/${DATE}-morning.html
+
+🏠 https://briefing.hwion.app
+
+⚠️ <i>본 브리핑은 정보 제공 목적이며 투자 권유가 아닙니다.</i>"
+
           curl -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
             -d "chat_id=${CHANNEL_ID}" \
             --data-urlencode "text=${MESSAGE}" \
             -d "parse_mode=HTML" \
             -d "disable_web_page_preview=true"
-      
-      - name: Summary
-        run: |
-          if [ "${{ steps.brief.outputs.skip }}" = "true" ]; then
-            echo "## ⏭️ Skipped (date mismatch)" >> $GITHUB_STEP_SUMMARY
-            echo "Latest briefing date doesn't match today (KST)" >> $GITHUB_STEP_SUMMARY
-          elif [ "${{ steps.dedup.outputs.duplicate }}" = "true" ]; then
-            echo "## ⏭️ Skipped (duplicate)" >> $GITHUB_STEP_SUMMARY
-            echo "Already notified within 24 hours" >> $GITHUB_STEP_SUMMARY
-          else
-            echo "## ✅ Rich Notification Sent" >> $GITHUB_STEP_SUMMARY
-            echo "- Trigger: ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
-            echo "- Date: ${{ steps.brief.outputs.date }}" >> $GITHUB_STEP_SUMMARY
-            echo "- Vol: ${{ steps.brief.outputs.vol }}" >> $GITHUB_STEP_SUMMARY
-            echo "- Theme: ${{ steps.brief.outputs.theme }}" >> $GITHUB_STEP_SUMMARY
-            echo "- URL: https://briefing.hwion.app/briefings/${{ steps.brief.outputs.date }}-morning.html" >> $GITHUB_STEP_SUMMARY
-          fi
