@@ -1,10 +1,10 @@
 ---
 name: economy-briefing
 description: 한국과 미국의 경제·증시·암호화폐 뉴스를 수집하여 친근하지만 깊이 있는 데일리 브리핑을 생성하고, 마크다운/HTML 파일로 저장한 뒤 main 브랜치에 push하는 워크플로우. 매일 정해진 시간에 PC의 Claude Code headless 모드로 자동 실행되도록 설계됨.
-version: 3.4
+version: 3.5
 ---
 
-# 📊 데일리 경제 브리핑 스킬 v3.4
+# 📊 데일리 경제 브리핑 스킬 v3.5
 
 ## 🎯 미션
 
@@ -802,12 +802,12 @@ web_search 결과에서 추출한 직접 URL 사용:
 [7] 다음 주 일정 4-6개 → 색상 코딩 (info/warning/secondary)
 ```
 
-### 5단계: 셀프 체크 30개 (절대 규칙)
+### 5단계: 셀프 체크 34개 (절대 규칙)
 
 **1개라도 미달 시 즉시 중단, push하지 않음**.
 
 ```
-[데이터 검증 - 6개] ⚠️⚠️ v3.4 최우선 - 위반 시 잘못된 정보 발송
+[데이터 검증 - 6개] ⚠️⚠️ 최우선 - 위반 시 잘못된 정보 발송
 □ BTC, ETH 가격을 web_search로 직접 검증했는가? (CoinGecko/CoinMarketCap)
 □ 미국 지수(S&P, Nasdaq, Dow)의 종가를 검증했는가? (Yahoo Finance 등)
 □ 한국 지수(KOSPI, KOSDAQ)의 종가를 검증했는가? (KRX, 한국경제 등)
@@ -846,6 +846,12 @@ web_search 결과에서 추출한 직접 URL 사용:
 □ 테마 토글 JavaScript가 포함됐는가? (localStorage 'theme' 키 사용)
 □ <style>, </style> 태그가 모두 짝지어 있는가?
 □ <html>, <head>, <body> 태그가 모두 짝지어 닫혀있는가?
+
+[텔레그램 메시지용 데이터 - 4개] ⭐ v3.5 신규 - 위반 시 텔레그램 메시지 깨짐
+□ index.json의 macro 필드 6지표 모두 채웠는가? (us_10y/dxy/wti/gold/usdkrw/vix)
+□ index.json의 telegram_top3 필드에 정확히 3개의 핵심 뉴스가 있는가? (title+body)
+□ index.json의 calendar 필드에 4-6개의 일정이 있는가? (date+event+importance)
+□ index.json의 scenarios 필드에 메인+리스크 시나리오가 있는가? (확률 합 100%)
 ```
 
 미달 항목은 명시적으로 보고하고 종료 (push 안 함).
@@ -854,7 +860,8 @@ web_search 결과에서 추출한 직접 URL 사용:
 
 1. **데이터 검증 6개**: 1개라도 미달 시 **즉시 중단**. 잘못된 가격이 발송되는 것보다 발행 안 하는 게 낫다.
 2. **HTML 무결성 5개**: 위반 시 페이지가 깨져서 사용자에게 노출됨. 파일 끝 100줄 재검증.
-3. **나머지 19개**: 톤/콘텐츠/구조 — 미달 시 해당 부분 수정 후 재발행.
+3. **텔레그램 메시지용 데이터 4개**: 위반 시 텔레그램 메시지가 빈 칸으로 발송됨. index.json의 v3.5 신규 필드 모두 채워야 함.
+4. **나머지 19개**: 톤/콘텐츠/구조 — 미달 시 해당 부분 수정 후 재발행.
 
 ### 6단계: HTML 파일 생성
 
@@ -988,7 +995,7 @@ CSS 변수가 양쪽 모드에서 모두 정의돼야 토글이 의미가 있음
 
 ### 8단계: index.json + index.html 갱신
 
-**index.json**:
+**index.json** (v3.5 확장):
 ```json
 {
   "latest": "YYYY-MM-DD",
@@ -1003,21 +1010,152 @@ CSS 변수가 양쪽 모드에서 모두 정의돼야 토글이 의미가 있음
       "vol": <호수>,
       "theme": "{영문 테마}",
       "tagline": "{한국어 한 줄 헤드라인}",
+      
       "tldr_us": "...",
       "tldr_kr": "...",
       "tldr_crypto": "...",
       "us_change": "+1.46",
       "kr_change": "+0.11",
       "crypto_change": "+2.60",
+      
       "tags": ["bull|bear|neutral", "event(선택)"],
       "html_path": "YYYY-MM-DD-morning.html",
       "md_path": "YYYY-MM-DD-morning.md",
-      "created_at": "{ISO 8601 KST}"
+      "created_at": "{ISO 8601 KST}",
+      
+      // ⭐ v3.5 신규: 텔레그램 풍부 메시지용 필드
+      
+      "macro": {
+        "us_10y": "4.40% (+4bp)",
+        "dxy": "98.5",
+        "wti": "$100.04 (+4.8%)",
+        "gold": "$4,640",
+        "usdkrw": "1,455원 (-21원)",
+        "vix": "17.5"
+      },
+      
+      "telegram_top3": [
+        {
+          "title": "JP모건 KOSPI 목표 10,000 상향",
+          "body": "강세 시나리오 8,500→10,000 상향. AI 메모리 수요가 공급을 구조적으로 초과한다는 진단. 단순 반도체 랠리가 아닌 시장 재평가."
+        },
+        {
+          "title": "트럼프 \"이란 응답 거절\" → 유가 +4.8%",
+          "body": "한 주 만에 $100 재돌파. 5/9 Goldilocks 전제 무너짐. 5/14-15 정상회담이 분수령."
+        },
+        {
+          "title": "SK하이닉스 +9.91% 시총 1,031조",
+          "body": "미 DRAM ETF +13% 직접 견인. 100조 클럽 진입. AMD 실적 + NVDA 5/20 누적 모멘텀."
+        }
+      ],
+      
+      "calendar": [
+        {
+          "date": "5/11(월)",
+          "event": "美 상원 워시 Fed 의장 표결",
+          "importance": "info"
+        },
+        {
+          "date": "5/12(화) 21:30",
+          "event": "美 4월 CPI",
+          "importance": "warning",
+          "consensus": "헤드라인 +0.6%, 코어 +0.3%"
+        },
+        {
+          "date": "5/13(수)",
+          "event": "PPI 발표",
+          "importance": "info"
+        },
+        {
+          "date": "5/14(목)",
+          "event": "CLARITY Act 마크업 + 미·이란 정상회담",
+          "importance": "warning"
+        },
+        {
+          "date": "5/20(수)",
+          "event": "NVIDIA 실적 (DC 매출 $40B+)",
+          "importance": "info"
+        }
+      ],
+      
+      "scenarios": {
+        "main": {
+          "probability": 60,
+          "title": "상승 분위기 이어짐",
+          "description": "CPI 코어 +0.3% 부합 + 이란 진전 → 코스피 7,800~8,000 안착, S&P 7,500 시도"
+        },
+        "risk": {
+          "probability": 40,
+          "title": "조정 가능성",
+          "description": "CPI 코어 +0.4%+ 또는 이란 결렬 → 코스피 -5~7% 사이드카 조정 (7,300~7,400)"
+        }
+      }
     },
     ...기존
   ]
 }
 ```
+
+**각 필드 작성 규칙**:
+
+#### `macro` (거시 6지표)
+
+```
+- 거시 환경 표(레이어 [3])의 6지표를 객체로 정리
+- 형식: "값 (변동)" 또는 "값 (단위 변동)"
+- 예시: "us_10y": "4.40% (+4bp)", "wti": "$100.04 (+4.8%)"
+- 단위 통일: 환율은 "1,455원", 유가는 "$100.04", 금리는 "%"
+```
+
+#### `telegram_top3` (텔레그램용 핵심 3가지)
+
+```
+- Five Things 5개 중 가장 중요한 3개 선별
+- 또는 Deep Dive + Five Things 중에서 핵심 3개
+- 각 항목:
+  · title: 14-20자, 직관적 헤드라인
+  · body: 2-3줄 (총 80-120자), 핵심만 압축
+- 텔레그램에서 화면 잘림 없이 보이는 분량
+```
+
+#### `calendar` (다음 주 일정)
+
+```
+- 일정 4-6개
+- 각 항목:
+  · date: 형식 "M/D(요일)" 또는 "M/D(요일) HH:MM"
+  · event: 30-40자 이내 이벤트명
+  · importance: "info" | "warning" | "secondary"
+  · consensus: (선택) 컨센서스 수치
+- importance 분류:
+  · warning: CPI, FOMC, 큰 정상회담 등 변동성 매우 큰 이벤트
+  · info: 일반 중요 이벤트
+  · secondary: 참고용
+```
+
+#### `scenarios` (시나리오)
+
+```
+- 메인 + 리스크 2개
+- 각:
+  · probability: 합이 100인 정수 (60+40 또는 65+35)
+  · title: 한 줄 제목 (10-15자)
+  · description: 한 줄 설명 (40-60자)
+- 텔레그램용이라 짧게. 사이트의 상세 분석은 [8] 레이어에서.
+```
+
+**왜 이 필드들이 필요한가**:
+
+GitHub Actions가 매일 텔레그램 메시지를 자동 생성할 때 이 필드들을 사용함:
+
+```yaml
+# yml에서 사용 예시
+$(jq -r '.briefings[0].macro.us_10y' index.json)
+$(jq -r '.briefings[0].telegram_top3[0].title' index.json)
+$(jq -r '.briefings[0].calendar[0].event' index.json)
+```
+
+따라서 이 필드들이 비어있으면 텔레그램 메시지가 깨지거나 정보가 누락됨. **반드시 모두 채워야 함**.
 
 **tags 분류**:
 - `bull`: S&P 500 또는 KOSPI 둘 중 +0.5% 이상
@@ -1190,6 +1328,15 @@ GitHub Pages 자동 배포 (1-2분 후 briefing.hwion.app 반영).
 큰 변경은 한 번에 30줄 이상 X. 작은 변경을 점진적으로.
 
 ---
+
+*v3.5 변경 사항 (2026-05-11 추가) - 텔레그램 풍부 메시지 지원*
+*- index.json 구조 확장: macro, telegram_top3, calendar, scenarios 4개 필드 신설*
+*  · macro: 6지표 압축 (us_10y/dxy/wti/gold/usdkrw/vix)*
+*  · telegram_top3: Five Things 중 핵심 3개 (title+body)*
+*  · calendar: 다음 주 일정 4-6개 (date+event+importance)*
+*  · scenarios: 메인+리스크 시나리오 (probability+description)*
+*- 셀프 체크 30개 → 34개 (텔레그램 메시지용 데이터 4개 추가)*
+*- 효과: 텔레그램 메시지만 봐도 사이트의 70% 정보 파악 가능*
 
 *v3.4 변경 사항 (2026-05-11 추가) - 데이터 검증 강화 최종*
 *- 🚨 데이터 검증 의무 섹션을 최상위(미션 다음)에 신설*
