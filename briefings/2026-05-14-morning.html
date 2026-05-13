@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0F1115">
+<title>2026년 5월 14일 데일리 브리핑 v3.5 — Hot PPI, Cool Reaction</title>
+<meta name="description" content="한국·미국 증시와 디지털 자산 매일 아침 7시 브리핑 — 2026년 5월 14일 (v3.5 9-레이어)">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg-primary: #0F1115;
+    --bg-elevated: #1A1D24;
+    --bg-card: #1F232C;
+    --bg-hover: #252932;
+    --bg-deeper: #0A0C10;
+    --text-primary: #F0EAE0;
+    --text-secondary: #A8A29A;
+    --text-tertiary: #6B6862;
+    --gold: #D4A857;
+    --gold-bright: #E8C078;
+    --gold-glow: rgba(212,168,87,0.15);
+    --bull: #26A69A;
+    --bear: #EF5350;
+    --bull-bg: rgba(38,166,154,0.1);
+    --bear-bg: rgba(239,83,80,0.1);
+    --border: #2D3138;
+    --border-strong: #3A3F49;
+    --border-gold: rgba(212,168,87,0.3);
+    --info-bg: rgba(91,155,213,0.1);
+    --info-border: #5B9BD5;
+    --warn-bg: rgba(232,192,120,0.12);
+    --warn-border: #E8C078;
+    --font-body: 'Pretendard', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  [data-theme="light"] {
+    --bg-primary: #FAF8F3;
+    --bg-elevated: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-hover: #F5F1E8;
+    --bg-deeper: #F0EBE0;
+    --text-primary: #1A1D24;
+    --text-secondary: #4A4843;
+    --text-tertiary: #6B6862;
+    --gold: #A07F3F;
+    --gold-bright: #7A5F2F;
+    --gold-glow: rgba(160,127,63,0.1);
+    --border: #E5DFD0;
+    --border-strong: #C9C2B0;
+    --border-gold: rgba(160,127,63,0.4);
+    --info-bg: rgba(91,155,213,0.08);
+    --warn-bg: rgba(160,127,63,0.1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-body); font-size: 16px; line-height: 1.7; transition: background .3s, color .3s; }
+  a { color: var(--gold-bright); text-decoration: none; border-bottom: 1px dotted var(--gold); }
+  a:hover { color: var(--gold); border-bottom-style: solid; }
+  strong { color: var(--gold-bright); font-weight: 700; }
+
+  .top-header { position: sticky; top: 0; z-index: 100; background: rgba(15,17,21,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+  [data-theme="light"] .top-header { background: rgba(250,248,243,0.9); }
+  .header-inner { max-width: 920px; margin: 0 auto; padding: .75rem 1.25rem; display: flex; align-items: center; justify-content: space-between; }
+  .header-brand { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; text-decoration: none; }
+  .brand-mark { font-weight: 800; font-size: 1.25rem; color: var(--gold); line-height: 1; letter-spacing: -0.02em; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .brand-text .ko { font-size: 0.7rem; color: var(--text-tertiary); letter-spacing: 0.15em; margin-top: 2px; }
+  .brand-text .en { font-size: 0.95rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.01em; }
+  .header-actions { display: flex; align-items: center; gap: 0.5rem; }
+  .icon-btn { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; font-size: 1rem; }
+  .icon-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+  main { max-width: 920px; margin: 0 auto; padding: 0 1.25rem; }
+  section { padding: 2.5rem 0; border-bottom: 1px dashed var(--border); }
+  section:last-child { border-bottom: none; }
+
+  .hero { padding-top: 2.5rem; }
+  .hero-meta { font-family: var(--font-mono); font-size: .8rem; color: var(--text-tertiary); letter-spacing: .12em; margin-bottom: 1.25rem; }
+  .hero-meta .vol { color: var(--gold); }
+  .hero-title { font-weight: 800; font-size: clamp(1.7rem, 4.5vw, 2.3rem); line-height: 1.3; letter-spacing: -.01em; margin-bottom: .8rem; }
+  .hero-sub { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 680px; }
+
+  .tldr-grid { display: grid; gap: .75rem; margin-top: 2rem; }
+  .tldr-card { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 4px; }
+  .tldr-flag { font-size: 1.6rem; }
+  .tldr-label { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); letter-spacing: .1em; margin-bottom: .2rem; }
+  .tldr-text { font-size: .95rem; line-height: 1.5; }
+  .tldr-change { font-family: var(--font-mono); font-size: 1.05rem; font-weight: 700; padding: .35rem .65rem; border-radius: 4px; }
+  .change-bull { color: var(--bull); background: var(--bull-bg); }
+  .change-bear { color: var(--bear); background: var(--bear-bg); }
+
+  .sec-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: .8rem; border-bottom: 1px solid var(--border); }
+  .sec-num { font-family: var(--font-mono); font-weight: 700; font-size: .78rem; color: var(--gold); padding: .25rem .5rem; background: var(--gold-glow); border-radius: 3px; }
+  .sec-title { font-weight: 700; font-size: 1.35rem; letter-spacing: -.01em; }
+  .sec-sub { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); margin-left: auto; letter-spacing: .12em; text-transform: uppercase; }
+
+  .macro-table { width: 100%; border-collapse: collapse; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; font-size: .92rem; }
+  .macro-table th, .macro-table td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+  .macro-table thead th { background: var(--bg-deeper); font-family: var(--font-mono); font-size: .75rem; color: var(--text-tertiary); letter-spacing: .1em; text-transform: uppercase; font-weight: 600; }
+  .macro-table tbody tr:last-child td { border-bottom: none; }
+  .macro-table tbody tr:hover { background: var(--bg-hover); }
+  .macro-name { font-weight: 700; color: var(--gold-bright); font-family: var(--font-mono); font-size: .88rem; }
+  .macro-value { font-family: var(--font-mono); font-weight: 600; }
+  .macro-chg { font-family: var(--font-mono); font-weight: 600; font-size: .88rem; }
+  .macro-up { color: var(--bear); }
+  .macro-down { color: var(--bull); }
+  .macro-note { font-size: .85rem; color: var(--text-secondary); }
+  .macro-summary { margin-top: 1rem; padding: .9rem 1.1rem; background: var(--info-bg); border-left: 3px solid var(--info-border); border-radius: 4px; font-size: .9rem; line-height: 1.65; color: var(--text-primary); }
+
+  .deep { background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 10px; padding: 1.8rem 1.6rem; }
+  .deep-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .18em; margin-bottom: 1rem; }
+  .deep-title { font-weight: 800; font-size: 1.35rem; line-height: 1.4; margin-bottom: 1.2rem; }
+  .deep-body { font-size: .96rem; line-height: 1.8; color: var(--text-primary); margin-bottom: 1.2rem; }
+  .deep-body p { margin-bottom: 1rem; }
+  .stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .6rem; margin: 1.3rem 0; }
+  .stat-card { padding: .9rem 1rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 6px; }
+  .stat-label { font-family: var(--font-mono); font-size: .68rem; color: var(--text-tertiary); letter-spacing: .1em; margin-bottom: .3rem; }
+  .stat-value { font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; color: var(--gold-bright); }
+  .stat-note { font-size: .75rem; color: var(--text-secondary); margin-top: .3rem; line-height: 1.4; }
+  .so-what { padding: 1rem 1.2rem; background: var(--info-bg); border-left: 3px solid var(--info-border); border-radius: 4px; margin-top: 1rem; font-size: .92rem; line-height: 1.65; }
+  .so-what::before { content: '🎯 그래서 나한테 무슨 의미?'; display: block; font-weight: 700; color: var(--info-border); margin-bottom: .4rem; font-size: .82rem; }
+  .deep-sources { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-top: 1.2rem; padding-top: 1rem; border-top: 1px dashed var(--border); font-size: .82rem; color: var(--text-tertiary); }
+  .deep-sources strong { color: var(--text-secondary); font-weight: 600; margin-right: .3rem; }
+  .source-chip { display: inline-block; padding: .25rem .65rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); font-size: .72rem; color: var(--text-secondary) !important; border-bottom: none !important; }
+  .source-chip:hover { border-color: var(--gold); color: var(--gold) !important; }
+
+  .five { display: grid; gap: 1rem; }
+  .news-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.4rem 1.5rem; transition: border-color .25s; }
+  .news-card:hover { border-color: var(--border-gold); }
+  .news-meta { display: flex; align-items: center; gap: .6rem; margin-bottom: .7rem; font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .news-rank { color: var(--gold); font-weight: 700; padding: .2rem .45rem; background: var(--gold-glow); border-radius: 3px; }
+  .news-cat { color: var(--text-secondary); letter-spacing: .08em; }
+  .news-time { margin-left: auto; }
+  .news-headline { font-weight: 700; font-size: 1.1rem; line-height: 1.45; margin-bottom: .8rem; }
+  .news-body { font-size: .93rem; line-height: 1.8; color: var(--text-primary); }
+  .news-body p { margin-bottom: .7rem; }
+  .news-body p:last-child { margin-bottom: 0; }
+  .news-conclusion { margin-top: 1rem; padding: .8rem 1rem; background: var(--bg-deeper); border-left: 3px solid var(--gold); border-radius: 4px; font-size: .9rem; line-height: 1.55; }
+  .news-conclusion::before { content: '→ 그래서 뭐? '; color: var(--gold); font-weight: 700; }
+  .news-sources { margin-top: .9rem; padding-top: .7rem; border-top: 1px dashed var(--border); font-size: .8rem; color: var(--text-tertiary); }
+  .news-sources a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; }
+  .news-sources a:hover { color: var(--gold); }
+
+  .markets { display: grid; gap: 1.2rem; }
+  .market-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.3rem 1.4rem; }
+  .market-card.us { border-top: 3px solid #5B9BD5; }
+  .market-card.kr { border-top: 3px solid #D4A857; }
+  .market-card.crypto { border-top: 3px solid #F7931A; }
+  .market-head { display: flex; align-items: baseline; gap: .6rem; margin-bottom: .9rem; }
+  .market-flag { font-size: 1.4rem; }
+  .market-title { font-weight: 700; font-size: 1.05rem; }
+  .market-time { margin-left: auto; font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .mkt-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-bottom: .8rem; }
+  .mkt-table th, .mkt-table td { padding: .55rem .7rem; text-align: left; border-bottom: 1px solid var(--border); }
+  .mkt-table thead th { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); letter-spacing: .08em; text-transform: uppercase; font-weight: 600; background: var(--bg-deeper); }
+  .mkt-table tbody tr:last-child td { border-bottom: none; }
+  .mkt-table .mkt-name { font-weight: 600; }
+  .mkt-table .mkt-val { font-family: var(--font-mono); font-weight: 600; }
+  .mkt-table .mkt-chg { font-family: var(--font-mono); font-weight: 700; }
+  .mkt-flow { font-size: .85rem; color: var(--text-secondary); padding: .55rem .8rem; background: var(--bg-deeper); border-radius: 4px; margin-bottom: .7rem; line-height: 1.55; }
+  .mkt-comment { padding: .7rem .9rem; background: var(--gold-glow); border-left: 3px solid var(--gold); border-radius: 4px; font-size: .88rem; line-height: 1.6; color: var(--text-primary); }
+  .mkt-comment::before { content: '💬 '; }
+
+  .filter-bar { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.2rem; font-size: .8rem; color: var(--text-tertiary); }
+  .filter-chip { padding: .3rem .7rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); }
+  .headline-list { display: grid; gap: .7rem; }
+  .h-item { padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; transition: all .2s; }
+  .h-item:hover { border-color: var(--border-gold); transform: translateX(2px); }
+  .h-title { font-weight: 600; font-size: .98rem; margin-bottom: .4rem; line-height: 1.4; }
+  .h-desc { font-size: .87rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: .5rem; }
+  .h-meta { font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .h-meta a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; font-size: .72rem; }
+
+  .analyst-box { padding: 1.5rem 1.6rem; background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 8px; margin-bottom: 1.2rem; }
+  .analyst-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .15em; margin-bottom: .8rem; }
+  .analyst-body { font-size: .96rem; line-height: 1.85; color: var(--text-primary); }
+  .analyst-body p { margin-bottom: .8rem; }
+  .analyst-body p:last-child { margin-bottom: 0; }
+  .scenarios { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem; }
+  .sc-card { padding: 1.4rem 1.5rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; }
+  .sc-card.main { border-left: 3px solid var(--bull); }
+  .sc-card.alt { border-left: 3px solid var(--bear); }
+  .sc-prob { font-family: var(--font-mono); font-size: .8rem; color: var(--gold); letter-spacing: .1em; margin-bottom: .5rem; }
+  .sc-title { font-weight: 700; font-size: 1.05rem; margin-bottom: .7rem; line-height: 1.4; }
+  .sc-body { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+  .action-box { padding: 1.1rem 1.3rem; background: var(--bg-deeper); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; }
+  .action-title { font-weight: 700; font-size: .92rem; color: var(--gold); margin-bottom: .6rem; }
+  .action-list { list-style: none; padding: 0; margin: 0; }
+  .action-list li { padding: .35rem 0; padding-left: 1.2rem; position: relative; font-size: .9rem; line-height: 1.6; color: var(--text-primary); }
+  .action-list li::before { content: '▸'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+
+  .cal-grid { display: grid; gap: .7rem; }
+  .cal-item { display: grid; grid-template-columns: 110px 1fr; gap: 1rem; padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--info-border); border-radius: 6px; align-items: center; }
+  .cal-item.warn { border-left-color: var(--warn-border); background: var(--warn-bg); }
+  .cal-item.info { border-left-color: var(--info-border); background: var(--info-bg); }
+  .cal-date { font-family: var(--font-mono); font-size: .85rem; font-weight: 700; color: var(--gold-bright); }
+  .cal-event { font-weight: 600; margin-bottom: .25rem; font-size: .98rem; }
+  .cal-desc { font-size: .85rem; color: var(--text-secondary); line-height: 1.55; }
+
+  .disclaimer { margin-top: 2rem; padding: 1rem 1.2rem; background: var(--bg-deeper); border: 1px dashed var(--border); border-radius: 6px; font-size: .78rem; color: var(--text-tertiary); line-height: 1.6; }
+
+  @media (max-width: 720px) {
+    .scenarios { grid-template-columns: 1fr; }
+    .tldr-card { grid-template-columns: auto 1fr; }
+    .tldr-change { grid-column: 2; justify-self: start; margin-top: .3rem; }
+    .cal-item { grid-template-columns: 1fr; gap: .3rem; }
+    .macro-table th, .macro-table td { padding: .6rem .55rem; font-size: .82rem; }
+    .mkt-table th, .mkt-table td { padding: .45rem .5rem; font-size: .82rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top-header">
+  <div class="header-inner">
+    <a href="/index.html" class="header-brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-text">
+        <div class="en">Morning Brief</div>
+        <div class="ko">데일리 경제 브리핑</div>
+      </div>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" title="테마 변경">🌙</button>
+      <button class="icon-btn" title="공유" onclick="navigator.share && navigator.share({title: document.title, url: location.href})">↗</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============== [1] HERO ============== -->
+<section class="hero">
+  <div class="hero-meta">
+    <span class="vol">Vol.148</span> · 2026.05.14 (목) · 📖 14분 읽기 · v3.5
+  </div>
+  <h1 class="hero-title">PPI 더 핫했는데, 시장은 어깨를 으쓱했어요</h1>
+  <p class="hero-sub">어제 5/13 미국 4월 생산자물가지수(PPI)가 전월 대비 <strong>+1.4%</strong>(컨센 +0.4%)·전년 대비 <strong>+6.0%</strong>(컨센 +4.9%) — 2022년 3월 이후 최고치로 충격적으로 핫. 그런데 S&amp;P 500은 <strong>+0.58%(7,444.25)</strong>, Nasdaq <strong>+1.20%(26,402.34)</strong>로 <strong>오히려 신고가</strong> 마감. 코스피는 더 극적이에요 — 개장 -1.69%(7,513.65)까지 빠졌다가 <strong>V자 반등 +2.63%(7,844.01)</strong> 사상 첫 7,800대 종가 돌파. 인플레 공포는 어제 하루로 끝났다는 분위기. 다만 외국인은 5거래일 연속 매도 누적 + 오늘 밤 CLARITY Act·미·이란 회담이 양방향 최대 변수.</p>
+
+  <div class="tldr-grid">
+    <div class="tldr-card">
+      <div class="tldr-flag">🇺🇸</div>
+      <div>
+        <div class="tldr-label">미국 (5/13 종가)</div>
+        <div class="tldr-text">S&amp;P 500 <strong>7,444.25</strong>(+0.58%)·Nasdaq <strong>26,402.34</strong>(+1.20%) 동반 신고가. PPI YoY +6.0% 핫 비트에도 기술주 주도 회복</div>
+      </div>
+      <div class="tldr-change change-bull">+1.20%</div>
+    </div>
+    <div class="tldr-card">
+      <div class="tldr-flag">🇰🇷</div>
+      <div>
+        <div class="tldr-label">한국 (5/13 종가)</div>
+        <div class="tldr-text">KOSPI <strong>7,844.01</strong>(+2.63%) 사상 첫 7,800대 종가. SK하이닉스 <strong>+7.68%</strong>(1,976,000원) 시총 1위 등극. 외국인 -3.72조 매도 vs 개인+기관 매수 방어</div>
+      </div>
+      <div class="tldr-change change-bull">+2.63%</div>
+    </div>
+    <div class="tldr-card">
+      <div class="tldr-flag">₿</div>
+      <div>
+        <div class="tldr-label">코인 (5/14 새벽)</div>
+        <div class="tldr-text">BTC <strong>$80,611</strong>(+0.3%), ETH $2,300(+0.9%). PPI 충격 흡수, $80K 지지선 유지. 오늘 밤 5/14 23:30 KST CLARITY Act 표결이 양방향 최대 이벤트</div>
+      </div>
+      <div class="tldr-change change-bull">+0.3%</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== [3] MACRO TABLE ============== -->
+<section id="macro">
+  <div class="sec-head">
+    <div class="sec-num">[03]</div>
+    <h2 class="sec-title">📊 거시 환경 한눈에</h2>
+    <span class="sec-sub">Macro Dashboard · 6 Indicators</span>
+  </div>
+
+  <table class="macro-table">
+    <thead>
+      <tr>
+        <th>지표</th>
+        <th>현재값</th>
+        <th>전일 대비</th>
+        <th>시사점 (한 줄)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="macro-name">美 10Y</span></td>
+        <td class="macro-value">4.465%</td>
+        <td class="macro-chg macro-up">▲ +5bp</td>
+        <td class="macro-note">PPI 핫에도 추가 상승 제한적</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">DXY</span></td>
+        <td class="macro-value">98.5</td>
+        <td class="macro-chg macro-up">▲ +0.3%</td>
+        <td class="macro-note">달러 강세 둔화, 위험선호 복귀</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">WTI</span></td>
+        <td class="macro-value">$101.8</td>
+        <td class="macro-chg macro-down">▼ -0.4%</td>
+        <td class="macro-note">$102 부근 횡보, 오늘 회담 대기</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">금</span></td>
+        <td class="macro-value">$4,686</td>
+        <td class="macro-chg macro-down">▼ -0.4%</td>
+        <td class="macro-note">위험선호 복귀에 안전자산 후퇴</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">USD/KRW</span></td>
+        <td class="macro-value">1,488.5원</td>
+        <td class="macro-chg macro-up">▲ +2.4원</td>
+        <td class="macro-note">1,490 시야, 외국인 매도 지속 영향</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">VIX</span></td>
+        <td class="macro-value">17.99</td>
+        <td class="macro-chg macro-down">▼ -0.4p</td>
+        <td class="macro-note">공포 후퇴, 합리적 재평가 진행</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="macro-summary">
+    한 줄 종합 — <strong>거시 6지표가 어제(CPI 충격)와 정반대로 안정 방향 정렬</strong>. 미국 10년 국채 금리는 PPI YoY +6% 초대형 핫에도 +5bp만 추가 상승하며 4.465%에 안착(전일 4.49% 인트라데이 고점 후 진정). VIX는 17.99로 -0.4p 하락하며 20선보다 한참 아래 — 시장이 인플레 충격을 일시적 노이즈로 분류한 흐름이에요. 흥미로운 건 6월 FOMC 금리 인하 기대가 오히려 다시 살아나는 모습(폴리마켓 일부 트레이더는 30%대 회복) — "PPI는 7월 휘발유 가격 폭등의 일회성 반영"이라는 해석이 우세. 다만 30년물 미국 국채 금리는 5% 위로 거래 — 장기 인플레 우려는 여전히 잠재해 있어요. 한국 기준 환율 1,488원 + 외국인 5거래일 연속 매도가 단기 부담 요인.
+  </div>
+</section>
+
+<!-- ============== [4] DEEP DIVE ============== -->
+<section id="deep-dive">
+  <div class="sec-head">
+    <div class="sec-num">[04]</div>
+    <h2 class="sec-title">⭐ 오늘의 깊은 이야기</h2>
+    <span class="sec-sub">Deep Dive · 🕒 5/13 (수) PPI 발표 이후</span>
+  </div>
+
+  <article class="deep">
+    <div class="deep-tag">DEEP DIVE · 인플레 vs 시장 심리 · 🕒 5/13 (수) 21:30 KST</div>
+    <h3 class="deep-title">PPI YoY +6.0% 충격, 그런데 시장은 신고가 — "이번 인플레는 일회성"이라는 베팅</h3>
+
+    <div class="deep-body">
+      <p>어제(5/13) 21:30 KST 미국 노동통계국(BLS)이 발표한 4월 생산자물가지수(PPI)는 <strong>충격 그 자체</strong>였어요. 헤드라인 전월 대비 <strong>+1.4%</strong>(컨센 +0.4%) — <strong>2022년 3월 이후 4년 1개월 만에 최대 월간 상승폭</strong>. 전년 대비는 <strong>+6.0%</strong>(컨센 +4.9%)로 2022년 12월 이후 최고치. 식품·에너지 제외 코어 PPI도 전월 대비 +1.0%(컨센 +0.4%), 전년 대비 +4.4%로 동반 핫. CPI(소비자물가) +3.8%로도 놀랐는데, 그 선행 지표인 PPI는 훨씬 더 큰 충격이 나온 셈이에요.</p>
+
+      <p>여기서 시장이 보인 반응이 진짜 흥미로워요. 발표 직후 미국 10년 국채 금리가 <strong>4.49%까지 급등</strong>(7월 이후 최고)하고 30년물은 5% 위 진입. 보통 같으면 빅테크 PER 30배+ 종목들이 우수수 빠져야 정상이에요. 그런데 NY 마감 종가는 <strong>S&amp;P 500 +0.58%(7,444.25 신고가)·Nasdaq +1.20%(26,402.34 신고가)</strong>. 무슨 일이 벌어진 걸까요?</p>
+
+      <div class="stat-cards">
+        <div class="stat-card">
+          <div class="stat-label">PPI MoM</div>
+          <div class="stat-value">+1.4%</div>
+          <div class="stat-note">컨센 +0.4%의 3.5배, 2022년 3월 이후 최대</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">PPI YoY</div>
+          <div class="stat-value">+6.0%</div>
+          <div class="stat-note">2022년 12월 이후 최고, 컨센 +4.9% 상회</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">S&amp;P 500 반응</div>
+          <div class="stat-value">+0.58%</div>
+          <div class="stat-note">신고가 마감 — 시장이 흡수</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">VIX</div>
+          <div class="stat-value">17.99</div>
+          <div class="stat-note">-0.4p, 어제 패닉이 하루로 끝</div>
+        </div>
+      </div>
+
+      <p>핵심은 <strong>"가격 폭등의 출처"</strong>에 대한 해석이에요. PPI 상승분의 약 75%가 에너지 가격(휘발유 +15.6% MoM, 에너지 지수 +7.8%)에서 나왔어요. 4월 한 달간 미국 휘발유 가격이 갤런당 $4 이상으로 폭등한 게 직접 원인. 이게 미·이란 전쟁으로 인한 호르무즈 해협 공급 차질의 일회성 결과라면, 회담 진전 시 5월부터 가격은 자연 후퇴할 수 있어요. 즉 시장은 "이번 PPI 충격은 일시적 노이즈, 구조적 인플레가 아니다"에 베팅한 거예요.</p>
+
+      <p>두 번째 동력은 <strong>"PPI 핫 = 금리 인하 명분"</strong>이라는 역설적 해석. 인플레가 너무 핫하면 → 소비 둔화 → 경기 침체 우려 → 연준이 결국 인하해야 한다는 흐름. 그래서 어제 단기 국채(2년물) 시장에서는 오히려 인하 기대가 일부 복귀했어요. 빅테크 종목(NVDA·META·MSFT) 매수세에는 또 다른 동력 — 젠슨 황 엔비디아 CEO가 트럼프 중국 방문 동행 발표로 반도체 수출 규제 완화 기대 — 가 더해진 결과. 결국 어제 시장은 <strong>"매크로 악재 + 마이크로 호재"의 줄다리기에서 마이크로가 이긴 날</strong>이었어요.</p>
+    </div>
+
+    <div class="so-what">
+      미국 주식 보유자라면 → 인플레 공포가 하루로 끝났다고 단정하긴 일러요. 30년 국채 금리 5% 위는 잠재 부담 신호 — 단, 단기적으로는 어제 매수세가 강했던 만큼 추가 상승 여력 존재. 한국 주식 보유자 → KOSPI V자 반등에 따라가는 추격 매수는 신중. 외국인은 5거래일 연속 매도 누적인 만큼 다음 변동성 시 다시 빠질 가능성. 한국 게임/IT 사업자 → 환율 1,488원은 해외 매출 환차익 우호 지속, 다만 AWS·GCP·AI API 달러 비용 부담도 동반. 오늘 밤(5/14 23:30 KST) CLARITY Act 표결이 코인 결제 인프라 도입 검토의 분기점 — 통과 시 스테이블코인 PoC 가속, 부결 시 6개월~1년 지연 예상.
+    </div>
+
+    <div class="deep-sources">
+      <strong>📰 출처:</strong>
+      <a href="https://www.bls.gov/news.release/archives/ppi_05132026.htm" target="_blank" rel="noopener" class="source-chip">BLS</a>
+      <a href="https://www.cnbc.com/2026/05/13/ppi-inflation-report-april-2026-.html" target="_blank" rel="noopener" class="source-chip">CNBC</a>
+      <a href="https://www.thestreet.com/latest-news/stock-market-today-may-13-2026-updates" target="_blank" rel="noopener" class="source-chip">TheStreet</a>
+      <a href="https://www.bloomberg.com/news/articles/2026-05-13/us-10-year-treasury-yield-hits-highest-since-july-after-ppi-data" target="_blank" rel="noopener" class="source-chip">Bloomberg</a>
+      <a href="https://finance.yahoo.com/news/producer-inflation-shock-ppi-spikes-124325191.html" target="_blank" rel="noopener" class="source-chip">Yahoo</a>
+    </div>
+  </article>
+</section>
+
+<!-- ============== [5] FIVE THINGS ============== -->
+<section id="five-things">
+  <div class="sec-head">
+    <div class="sec-num">[05]</div>
+    <h2 class="sec-title">📌 오늘의 5가지</h2>
+    <span class="sec-sub">Five Things You Should Know</span>
+  </div>
+
+  <div class="five">
+
+    <!-- 01: 미국 시장 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">01</span>
+        <span class="news-cat">🇺🇸 미국 시장</span>
+        <span class="news-time">🕒 5/14 (목) 05:00 KST (NY 마감)</span>
+      </div>
+      <h3 class="news-headline">S&amp;P 500 +0.58%·Nasdaq +1.20% — PPI 충격에도 신고가 마감</h3>
+      <div class="news-body">
+        <p>어제 5/13 뉴욕 시장에서 S&amp;P 500이 <strong>7,444.25</strong>로 +43포인트(+0.58%) 상승하며 <strong>또 하나의 신고가</strong>를 갱신, Nasdaq은 <strong>26,402.34</strong>로 +313포인트(+1.20%) 상승하며 마찬가지로 신고가를 기록했어요. 다우는 +0.4%, 러셀 2000은 +0.7%. 같은 날 발표된 4월 PPI가 전월 대비 +1.4%(컨센 +0.4%의 3.5배)로 엄청나게 핫했는데, 시장은 "그래서 뭐?"라며 어깨만 으쓱한 흐름이에요.</p>
+
+        <p>왜 이런 흐름이 나왔을까요? 세 가지 이유가 동시 작동했어요. ① <strong>일회성 해석</strong> — PPI 상승분의 75%가 에너지(휘발유 +15.6% MoM)에서 나와 미·이란 전쟁 관련 일시적 충격으로 분류, ② <strong>역설적 인하 명분</strong> — 인플레가 너무 핫 → 소비 둔화 → 결국 인하 시점이 미뤄질 뿐 방향은 유지, ③ <strong>젠슨 황 방중 호재</strong> — 엔비디아 CEO가 트럼프 중국 방문 동행 발표로 반도체 수출 규제 완화 기대, NVDA·AMD 등 AI 반도체주 동반 강세. 빅테크가 지수를 끌어올렸어요.</p>
+
+        <p>다만 위험 신호도 있어요. 30년 국채 금리가 <strong>5% 위로 거래</strong> — 장기 인플레 우려는 여전. 10년 금리도 인트라데이 4.49%(7월 이후 최고)까지 찍었다가 4.465%로 진정. 일부 트레이더는 "오늘 밤 CLARITY Act + 미·이란 회담이 변수가 될 수 있다"고 경고. CBOE 변동성 지수(VIX, "월스트리트의 공포 지수")는 17.99로 -0.4p 하락 — 시장이 안정을 되찾았지만, 큰 이벤트 전 깔린 안도감일 가능성도.</p>
+      </div>
+      <div class="news-conclusion">
+        미국 빅테크 신규 진입은 5/14 밤 두 이벤트(CLARITY Act + 미·이란 회담) 확인 후. 어제 매수세가 강했던 만큼 단기 추가 +1~2% 여력 있지만, 30년물 5% 위는 잠재 부담. NVDA는 5/20 실적까지 변동성 큰 구간.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.thestreet.com/latest-news/stock-market-today-may-13-2026-updates" target="_blank" rel="noopener">TheStreet</a> ·
+        <a href="https://www.cnbc.com/2026/05/13/ppi-inflation-report-april-2026-.html" target="_blank" rel="noopener">CNBC</a> ·
+        <a href="https://www.bloomberg.com/news/articles/2026-05-13/us-10-year-treasury-yield-hits-highest-since-july-after-ppi-data" target="_blank" rel="noopener">Bloomberg</a>
+      </div>
+    </article>
+
+    <!-- 02: 한국 시장 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">02</span>
+        <span class="news-cat">🇰🇷 한국 시장</span>
+        <span class="news-time">🕒 5/13 (수) 종가</span>
+      </div>
+      <h3 class="news-headline">KOSPI +2.63%(7,844.01) — 개장 -1.69%에서 V자 반등, 사상 첫 7,800대 종가</h3>
+      <div class="news-body">
+        <p>어제(5/13) 코스피가 시가 <strong>7,513.65(-1.69%)</strong>로 출발 — 미국 CPI 핫 비트 영향 + 외국인 매도 우려로 7,400대까지 위협받는 흐름이었어요. 그런데 오전 중 <strong>완전한 분위기 반전</strong>. 개인·기관의 강력한 저가 매수세에 V자 반등하며 종가는 <strong>7,844.01(+2.63%)</strong> — 사상 첫 7,800대 종가를 깔끔하게 돌파. 일중 변동 폭만 330포인트(+4.4%)인 매우 드라마틱한 하루였어요.</p>
+
+        <p>가장 큰 동력은 <strong>SK하이닉스 +7.68%(1,976,000원)</strong>. 인트라데이로 1,990,000원까지 찍으며 200만원 돌파를 시야에 두었고, 시가총액 약 1,438조원으로 <strong>삼성전자를 제치고 코스피 시총 1위에 등극</strong>(시가총액 기준 한국 증시 역사상 처음). 삼성전자도 +1.79%(284,000원) 동반 상승. 현대차도 +9%대 급등 — 메모리·자동차 양 축 동시 회복. AI 메모리 슈퍼사이클이 일시적 조정이 아니라 구조적 흐름이라는 메시지가 시장에 다시 각인된 하루.</p>
+
+        <p>흥미로운 건 수급 구조 — <strong>외국인은 5거래일 연속 매도 누적 -3.72조원</strong>(어제 하루만)이었어요. 그런데 개인 +1.88조·기관 +1.69조 매수가 외국인 매도 전량을 흡수. "외국인이 빠지면 무너진다"는 좁은 랠리 위험이 어제는 일단 해소된 모습이에요. 다만 외국인 매도 누적이 계속되면 언젠가는 압박이 되돌아올 수 있어요 — 환율 1,488원·DXY 98대 환경에서 외국인 자금 본격 유입까지는 아직 갈 길이 멀어요.</p>
+      </div>
+      <div class="news-conclusion">
+        KOSPI 7,800선 위 신규 추격 매수는 신중. 외국인 5거래일 연속 매도 누적은 잠재 압력 — 다음 변동성 시 차익실현 다시 나올 가능성. 다년 메모리 슈퍼사이클은 더 명확히 확인된 만큼, 7,500선 재테스트 시 분할 매수 유효. JP모건 KOSPI 10,000 시나리오는 5/20 NVDA 실적이 다음 검증 포인트.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://en.sedaily.com/finance/2026/05/13/sk-hynix-valuation-overtakes-samsung-electronics-for-first" target="_blank" rel="noopener">Seoul Economic Daily</a> ·
+        <a href="https://www.koreatimes.co.kr/economy/others/20260513/kospi-rebounds-as-bargain-hunting-offsets-foreign-selling" target="_blank" rel="noopener">Korea Times</a> ·
+        <a href="https://www.ftoday.co.kr/news/articleView.html?idxno=358893" target="_blank" rel="noopener">파이낸셜투데이</a>
+      </div>
+    </article>
+
+    <!-- 03: 거시·인플레 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">03</span>
+        <span class="news-cat">🌍 거시·경제 지표</span>
+        <span class="news-time">🕒 5/13 (수) 21:30 KST</span>
+      </div>
+      <h3 class="news-headline">美 4월 PPI YoY +6.0% 충격 — 컨센 +4.9% 크게 상회, 4년 만의 최대 폭증</h3>
+      <div class="news-body">
+        <p>4월 PPI는 모든 측면에서 컨센서스를 압도했어요. 전월 대비 <strong>+1.4%</strong>(컨센 +0.4%의 3.5배) — <strong>2022년 3월 이후 4년 1개월 만의 최대 월간 상승</strong>. 전년 대비 <strong>+6.0%</strong>(컨센 +4.9%) — <strong>2022년 12월 이후 23개월 만의 최고치</strong>. 식품·에너지 제외 코어 PPI도 전월 +1.0%(컨센 +0.4%), 전년 +4.4%로 모든 라인이 핫. CPI(+3.8% YoY)에 이어 PPI까지 핫하게 나오면서 인플레 우려가 한 번 더 무게를 더한 상황.</p>
+
+        <p>구조 살펴보면 — 에너지가 헤드라인 상승의 약 75%를 끌어올렸어요(에너지 지수 +7.8% MoM, 휘발유 +15.6%). 4월 한 달간 미국 휘발유 가격이 갤런당 $4를 넘어선 게 직접 원인. 미·이란 전쟁으로 인한 호르무즈 해협 공급 차질 + WTI $100+ 진입 효과. 서비스 가격도 +1.2% MoM으로 상승 — 헤드라인의 60%가 서비스 기여라는 점이 코어 인플레의 끈적함을 확인.</p>
+
+        <p>시장 반응은 두 갈래로 갈렸어요. 채권 시장은 어느 정도 충격을 반영 — 미국 2년물 금리 +5.1bp(3.998%), 10년물 +5.3bp(4.465%), <strong>30년물은 5% 위로 거래</strong>. 그런데 주식 시장은 PPI를 일회성으로 분류하며 신고가 마감. 결국 "PPI 폭등은 5월 휘발유 가격 정상화와 함께 자연 후퇴할 일회성 노이즈"라는 베팅이 우위. 다만 PPI는 일반적으로 미래 CPI의 선행 지표라는 점에서, 5월 CPI(6월 발표 예정)에서도 핫한 결과가 나오면 시장 해석이 다시 바뀔 수 있어요.</p>
+      </div>
+      <div class="news-conclusion">
+        인플레 일회성 vs 구조적 논쟁은 5월 CPI(6월 발표)가 분기점. PPI가 미래 CPI 선행 지표라는 점에서 5월 CPI도 핫하면 7월 FOMC까지 인하 시점 추가 후퇴 가능. 단, 어제 시장이 PPI 충격을 이미 흡수한 만큼 같은 패턴 반복 가능성도.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.bls.gov/news.release/archives/ppi_05132026.htm" target="_blank" rel="noopener">BLS</a> ·
+        <a href="https://www.cnbc.com/2026/05/13/ppi-inflation-report-april-2026-.html" target="_blank" rel="noopener">CNBC</a> ·
+        <a href="https://www.cnn.com/2026/05/13/economy/us-ppi-wholesale-inflation-april" target="_blank" rel="noopener">CNN Business</a>
+      </div>
+    </article>
+
+    <!-- 04: 기업/AI - SK하이닉스 시총 1위 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">04</span>
+        <span class="news-cat">💼 기업·AI</span>
+        <span class="news-time">🕒 5/13 (수) 한국 종가</span>
+      </div>
+      <h3 class="news-headline">SK하이닉스 +7.68%(1,976,000원) — 한국 증시 사상 첫 시총 1위 등극</h3>
+      <div class="news-body">
+        <p>어제(5/13) SK하이닉스가 +7.68% 급등해 <strong>1,976,000원</strong>으로 마감. 인트라데이 1,990,000원까지 찍으며 <strong>200만원 돌파를 코앞에</strong>. 시가총액 약 1,438조원으로 삼성전자(시총 약 1,420조원)를 제치고 <strong>한국 증시 사상 처음 시총 1위에 등극</strong>했어요. 1980년 KOSPI 출범 이후 삼성전자가 줄곧 차지했던 자리예요 — 이게 얼마나 상징적 사건인지 감이 오시죠?</p>
+
+        <p>왜 갑자기 이런 일이 가능했을까요? 핵심은 <strong>HBM(고대역폭 메모리, AI 칩용 핵심 부품) 독점적 지위</strong>. NVIDIA H200·B200·B300 칩에 들어가는 HBM3E 12단 제품을 SK하이닉스가 사실상 단독 공급 중. 매출 비중에서 D램이 90% 이상으로 HBM 수요와 즉시 연동돼요. 반면 삼성전자는 D램·낸드·파운드리·모바일·가전·디스플레이 등 다양한 사업부로 분산돼 있어 HBM 호황에 직접 노출도가 상대적으로 낮은 구조.</p>
+
+        <p>씨티는 어제 SK하이닉스 목표주가를 310만원으로 상향(현재 대비 +57%), SK증권도 300만원(+52%) 제시. 둘 다 "AI 메모리 슈퍼사이클이 최소 2027년까지 지속"이라는 전제. 다만 단기 리스크는 두 가지 — ① 외국인 5거래일 연속 매도 누적 + 차익실현 압력, ② 5/20 NVDA 실적이 컨센 미달 시 메모리 동조 조정. 결국 SK하이닉스의 다음 큰 분기점은 5/20 NVDA 매출 가이던스($78~80B 컨센) 결과에 달려 있어요.</p>
+      </div>
+      <div class="news-conclusion">
+        SK하이닉스 200만원 돌파 임박 — 다년 보유자는 일부 차익실현 검토 시점. 신규 진입은 5/20 NVDA 실적 후. 단기 -5% 조정 시 1,870,000원대 분할 매수 유효. 다년 시총 1위 등극은 한국 게임/IT 사업자에도 시그널 — 메모리·AI 인프라 사업의 구조적 호황이 게임/플랫폼 클라우드 비용에도 영향.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://en.sedaily.com/finance/2026/05/13/sk-hynix-valuation-overtakes-samsung-electronics-for-first" target="_blank" rel="noopener">Seoul Economic Daily</a> ·
+        <a href="https://www.mt.co.kr/amp/stock/2026/05/12/2026051215510184699" target="_blank" rel="noopener">머니투데이</a> ·
+        <a href="https://www.fool.com/investing/2026/05/13/nvidia-reports-its-fiscal-2027-q1-earnings-may-20/" target="_blank" rel="noopener">Motley Fool</a>
+      </div>
+    </article>
+
+    <!-- 05: 코인 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">05</span>
+        <span class="news-cat">₿ 코인·규제</span>
+        <span class="news-time">🕒 5/14 (목) 새벽 + 23:30 KST 이벤트</span>
+      </div>
+      <h3 class="news-headline">BTC $80,611·ETH $2,300 회복 — 오늘 밤 23:30 KST CLARITY Act 마크업</h3>
+      <div class="news-body">
+        <p>비트코인이 어제 PPI 충격을 흡수하며 <strong>$80,611</strong> 부근(전일 대비 +0.3%)에서 안정, 이더리움도 $2,300대로 회복했어요. CPI·PPI 연속 충격에도 BTC $80K 심리적 지지선이 굳건히 유지된 게 인상적. 미국 비트코인 현물 상장지수펀드(ETF, "주식처럼 거래되는 펀드")는 9거래일 연속 순유입 +$2.7B 누적이 매수 쿠션 역할을 한 결과예요.</p>
+
+        <p>오늘 밤이 진짜 분기점 — <strong>5/14 23:30 KST(오후 10:30 ET) 미국 상원 은행위원회 디지털 자산 시장 명확성 법안(CLARITY Act) 마크업 표결</strong>. 309페이지 최종안이 공개됐고, 더크슨 빌딩 538호에서 진행. 폴리마켓 트레이더들의 통과 확률은 <strong>75%</strong> 수준 유지. 통과 시 → SEC(증권)·CFTC(상품) 관할 명확화 → 알트코인 ETF 신청 가속, 부결 시 → BTC 단기 -7~-10% 조정 + 6개월~1년 입법 지연 가능성. 백악관 목표인 7월 4일 통과 마감까지 마지막 윈도우.</p>
+
+        <p>두 가지 주요 변수 — ① <strong>윤리 조항 부재</strong>: 정부 고위 관계자가 디지털 자산 산업 규제하면서 본인 보유 자산으로 이익을 보지 못하도록 하는 조항이 빠져서 민주당 일부 반대 가능, ② <strong>은행 협회 우려</strong>: ICBA·BPI·ABA 3대 은행 협회가 스테이블코인 발행 관련 Tillis-Alsobrooks 합의안 거부. 13명 공화당 + 11명 민주당 구성에서 공화당 13표 모두 필요. 한국 시간으로 자정 직전 결과가 나오니, 깨어 있다면 실시간 확인 가능.</p>
+      </div>
+      <div class="news-conclusion">
+        오늘 밤 23:30 KST CLARITY Act 표결이 5월 코인 최대 분수령. 통과 시 알트코인 +20~30% 모멘텀, 부결 시 BTC -7~-10% 조정. 양방향 옵션 헤지 + 분할 매수 진입 시점. 한국 게임/IT 사업자라면 통과 시 USDC·USDT 결제 인프라 PoC 6개월 내 준비 가능 — 비즈니스 컨틴전시 양 시나리오 모두 검토.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.coindesk.com/policy/2026/05/11/clarity-act-in-the-flesh-unveiled-by-u-s-senate-banking-committee-before-hearing" target="_blank" rel="noopener">CoinDesk</a> ·
+        <a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-wednesday-may-13-2026-prices-holding-as-china-summit-kicks-off-112415535.html" target="_blank" rel="noopener">Yahoo Finance</a> ·
+        <a href="https://www.cryptotimes.io/2026/05/12/breaking-down-the-309-page-clarity-act-ethics-yield-and-the-may-14-markup/" target="_blank" rel="noopener">Crypto Times</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============== [6] MARKET SNAPSHOTS ============== -->
+<section id="markets">
+  <div class="sec-head">
+    <div class="sec-num">[06]</div>
+    <h2 class="sec-title">📈 시장별 스냅샷</h2>
+    <span class="sec-sub">Market Snapshots · 🇺🇸 🇰🇷 ₿</span>
+  </div>
+
+  <div class="markets">
+
+    <div class="market-card us">
+      <div class="market-head">
+        <span class="market-flag">🇺🇸</span>
+        <span class="market-title">미국 시장</span>
+        <span class="market-time">5/13 (수) NY 마감</span>
+      </div>
+      <table class="mkt-table">
+        <thead>
+          <tr><th>지수</th><th>종가</th><th>변동</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mkt-name">S&amp;P 500</td><td class="mkt-val">7,444.25</td><td class="mkt-chg macro-down">+0.58%</td></tr>
+          <tr><td class="mkt-name">Nasdaq</td><td class="mkt-val">26,402.34</td><td class="mkt-chg macro-down">+1.20%</td></tr>
+          <tr><td class="mkt-name">Dow Jones</td><td class="mkt-val">50,360</td><td class="mkt-chg macro-down">+0.4%</td></tr>
+          <tr><td class="mkt-name">Russell 2000</td><td class="mkt-val">2,872</td><td class="mkt-chg macro-down">+0.7%</td></tr>
+          <tr><td class="mkt-name">VIX</td><td class="mkt-val">17.99</td><td class="mkt-chg macro-up">-2.1%</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-comment">PPI YoY +6% 충격에도 S&amp;P·Nasdaq 동반 신고가. 30년물 5% 위 진입은 부담 신호지만 단기 회복 흐름이 우위. 오늘 밤 CLARITY Act + 미·이란 회담이 변수.</div>
+    </div>
+
+    <div class="market-card kr">
+      <div class="market-head">
+        <span class="market-flag">🇰🇷</span>
+        <span class="market-title">한국 시장</span>
+        <span class="market-time">5/13 (수) 종가</span>
+      </div>
+      <table class="mkt-table">
+        <thead>
+          <tr><th>지수/종목</th><th>종가</th><th>변동</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mkt-name">KOSPI</td><td class="mkt-val">7,844.01</td><td class="mkt-chg macro-down">+2.63%</td></tr>
+          <tr><td class="mkt-name">KOSDAQ</td><td class="mkt-val">~1,206</td><td class="mkt-chg macro-down">+2.3%</td></tr>
+          <tr><td class="mkt-name">SK하이닉스</td><td class="mkt-val">1,976,000원</td><td class="mkt-chg macro-down">+7.68%</td></tr>
+          <tr><td class="mkt-name">삼성전자</td><td class="mkt-val">284,000원</td><td class="mkt-chg macro-down">+1.79%</td></tr>
+          <tr><td class="mkt-name">USD/KRW</td><td class="mkt-val">1,488.5원</td><td class="mkt-chg macro-up">▲ +2.4원</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-flow"><strong>수급</strong> · 외국인 -3.72조 매도(5거래일 연속) vs 개인 +1.88조·기관 +1.69조 매수. 좁은 랠리 구조 일부 해소되며 V자 반등. 사이드카 발동 X</div>
+      <div class="mkt-comment">개장 -1.69%에서 종가 +2.63%로 일중 변동 폭 4.4% — 매우 드라마틱. SK하이닉스 한국 증시 사상 첫 시총 1위 등극. 다년 메모리 슈퍼사이클 구조적 확인 + 외국인 매도 누적의 잠재 압력은 유지.</div>
+    </div>
+
+    <div class="market-card crypto">
+      <div class="market-head">
+        <span class="market-flag">₿</span>
+        <span class="market-title">디지털 자산</span>
+        <span class="market-time">5/14 (목) 새벽</span>
+      </div>
+      <table class="mkt-table">
+        <thead>
+          <tr><th>자산</th><th>현재가</th><th>변동 (24h)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mkt-name">BTC</td><td class="mkt-val">$80,611</td><td class="mkt-chg macro-down">+0.3%</td></tr>
+          <tr><td class="mkt-name">ETH</td><td class="mkt-val">$2,300</td><td class="mkt-chg macro-down">+0.9%</td></tr>
+          <tr><td class="mkt-name">BTC 도미넌스</td><td class="mkt-val">58.7%</td><td class="mkt-chg macro-down">▼ -0.1%p</td></tr>
+          <tr><td class="mkt-name">공포·탐욕 지수</td><td class="mkt-val">50 (중립)</td><td class="mkt-chg macro-down">▲ +2p</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-flow"><strong>온체인 / ETF 흐름</strong> · 美 비트코인 현물 ETF 9거래일 연속 순유입 +$2.7B 누적 유지. PPI 충격에도 기관 매수 흐름 견고. 알트 도미넌스 소폭 회복</div>
+      <div class="mkt-comment">PPI 충격 흡수하며 $80K 사수 — 위험자산 회복 흐름의 일부. 오늘 밤 5/14 23:30 KST CLARITY Act 표결이 양방향 최대 이벤트(통과 +20% / 부결 -7%).</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== [7] HEADLINES ============== -->
+<section id="headlines">
+  <div class="sec-head">
+    <div class="sec-num">[07]</div>
+    <h2 class="sec-title">📰 헤드라인 더보기</h2>
+    <span class="sec-sub">More Headlines</span>
+  </div>
+
+  <div class="filter-bar">
+    <span class="filter-chip">전체 8</span>
+    <span class="filter-chip">🇺🇸 3</span>
+    <span class="filter-chip">🇰🇷 2</span>
+    <span class="filter-chip">🌍 2</span>
+    <span class="filter-chip">₿ 1</span>
+  </div>
+
+  <div class="headline-list">
+
+    <div class="h-item">
+      <div class="h-title">🇺🇸 美 30년 국채 금리 5% 위 거래 — 장기 인플레 우려 잠재</div>
+      <div class="h-desc">PPI YoY +6% 발표 후 미국 30년 국채 금리가 5% 위로 거래. 10년 금리도 인트라데이 4.49%(7월 이후 최고)까지 찍힘. 단기적으로는 진정됐지만 장기 인플레 기대치(BEI)는 상승 — 다년 빅테크 PER 30배+ 종목엔 잠재 부담.</div>
+      <div class="h-meta">🕒 5/13 NY 마감 ·
+        <a href="https://www.bloomberg.com/news/articles/2026-05-13/us-10-year-treasury-yield-hits-highest-since-july-after-ppi-data" target="_blank" rel="noopener">Bloomberg</a> ·
+        <a href="https://fred.stlouisfed.org/series/DGS30" target="_blank" rel="noopener">FRED</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇺🇸 젠슨 황 트럼프 중국 방문 동행 — 반도체 수출 규제 완화 기대</div>
+      <div class="h-desc">엔비디아 젠슨 황 CEO가 트럼프 대통령 중국 방문에 동행 발표. NVDA·AMD·AVGO 등 AI 반도체주 어제 동반 강세 — Nasdaq +1.20% 견인 핵심 동력. 중국향 H20·B20 칩 수출 제한 완화 가능성으로 해석. 한국 SK하이닉스·삼성전자도 동조 상승.</div>
+      <div class="h-meta">🕒 5/13 장중 ·
+        <a href="https://www.newspim.com/news/view/20260513001360" target="_blank" rel="noopener">뉴스핌</a> ·
+        <a href="https://earezki.com/ai-financial-news/2026-05-12-nvda/" target="_blank" rel="noopener">Dev Journal</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇺🇸 6월 FOMC 인하 기대 일부 복귀 — "PPI는 일회성 노이즈" 해석</div>
+      <div class="h-desc">PPI 핫에도 단기 국채 시장에서는 6월 인하 기대 일부 복귀. CME 페드워치 기준 인하 확률 25% → 30%대로 소폭 반등. 시장 해석은 "에너지 일회성 + 코어 끈적함 일부 + 침체 우려로 결국 인하 시점은 늦춰질 뿐"이라는 흐름.</div>
+      <div class="h-meta">🕒 5/13 22:00 KST ·
+        <a href="https://www.cnbc.com/2026/05/13/ppi-inflation-report-april-2026-.html" target="_blank" rel="noopener">CNBC</a> ·
+        <a href="https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html" target="_blank" rel="noopener">CME FedWatch</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇰🇷 SK하이닉스 한국 증시 사상 첫 시총 1위 등극 — 1,438조원</div>
+      <div class="h-desc">SK하이닉스 +7.68%(1,976,000원)로 시가총액 약 1,438조원 — 삼성전자(약 1,420조원)를 추월하며 1980년 KOSPI 출범 이후 최초 시총 1위 변동. HBM 독점적 지위 + AI 메모리 슈퍼사이클이 구조적 우위로 평가. 씨티 목표가 310만원·SK증권 300만원.</div>
+      <div class="h-meta">🕒 5/13 종가 ·
+        <a href="https://en.sedaily.com/finance/2026/05/13/sk-hynix-valuation-overtakes-samsung-electronics-for-first" target="_blank" rel="noopener">Seoul Economic Daily</a> ·
+        <a href="https://www.mt.co.kr/amp/stock/2026/05/12/2026051215510184699" target="_blank" rel="noopener">머니투데이</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇰🇷 외국인 5거래일 연속 매도 누적 — 단기 압박 잠재 변수</div>
+      <div class="h-desc">5/13 하루 외국인 KOSPI 순매도 -3.72조원으로 5거래일 연속 매도 누적. 개인+기관 매수가 모두 흡수했지만, 외국인 매도가 7~10거래일 이상 이어지면 다음 변동성 구간에서 압박 증폭 가능. 환율 1,488원·DXY 98대가 외국인 매수 복귀의 큰 장벽.</div>
+      <div class="h-meta">🕒 5/13 종가 ·
+        <a href="https://en.sedaily.com/markets/2026/05/13/foreign-ownership-of-kospi-rises-despite-heavy-net-selling" target="_blank" rel="noopener">Seoul Economic Daily</a> ·
+        <a href="https://www.koreatimes.co.kr/economy/others/20260513/kospi-rebounds-as-bargain-hunting-offsets-foreign-selling" target="_blank" rel="noopener">Korea Times</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🌍 WTI $101.8 부근 횡보 — 오늘 미·이란 정상회담 결과 대기</div>
+      <div class="h-desc">서부 텍사스산 원유(WTI) 어제 3거래일 랠리 후 약보합 마감 $101.8 부근. 호르무즈 해협 봉쇄가 여전히 글로벌 공급의 20% 차단 중. 오늘(5/14-15) 미·이란 정상회담이 다음 변곡점 — 결렬 시 $108~110, 합의 진전 시 $90 후퇴 시나리오.</div>
+      <div class="h-meta">🕒 5/13 NY 마감 ·
+        <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank" rel="noopener">Trading Economics</a> ·
+        <a href="https://www.cnbc.com/2026/05/13/oil-price-spike-turmoil-iea-iran-war.html" target="_blank" rel="noopener">CNBC</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🌍 일본 Nikkei 63,272(+0.84%) — 신고가 행진 지속</div>
+      <div class="h-desc">일본 Nikkei 225가 어제 +0.84%(63,272.11), Topix +1.01%(3,912.14)로 동반 상승. 0.67% 하락 출발 후 회복 — 한국과 비슷한 V자 패턴. 엔 약세(USD/JPY 158대) + 메모리·반도체 호조가 매수 동력. 한국·일본 아시아 반도체 동조 강세 분위기.</div>
+      <div class="h-meta">🕒 5/13 (수) 종가 ·
+        <a href="https://qna.org.qa/en/news/news-details?id=japans-nikkei-closes-higher&date=13%2F05%2F2026" target="_blank" rel="noopener">QNA</a> ·
+        <a href="https://finance.yahoo.com/quote/%5EN225/" target="_blank" rel="noopener">Yahoo Finance</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">₿ CLARITY Act 마크업 D-DAY — 오늘 밤 23:30 KST 표결</div>
+      <div class="h-desc">미국 상원 은행위원회가 오늘(5/14) 10:30 ET(한국 5/14 23:30) 디지털 자산 시장 명확성 법안 마크업 표결. 폴리마켓 통과 확률 75% 유지. 윤리 조항 부재가 민주당 반대 변수, 은행 협회 스테이블코인 합의안 거부도 변수. 통과 시 알트코인 ETF 가속, 부결 시 BTC -7~-10%.</div>
+      <div class="h-meta">🕒 5/14 23:30 KST ·
+        <a href="https://www.coindesk.com/policy/2026/05/11/clarity-act-in-the-flesh-unveiled-by-u-s-senate-banking-committee-before-hearing" target="_blank" rel="noopener">CoinDesk</a> ·
+        <a href="https://phemex.com/blogs/clarity-act-senate-markup-possible-outcomes" target="_blank" rel="noopener">Phemex</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== [8] ANALYST VIEW ============== -->
+<section id="analyst">
+  <div class="sec-head">
+    <div class="sec-num">[08]</div>
+    <h2 class="sec-title">🧠 애널리스트 시각</h2>
+    <span class="sec-sub">Analyst Take · PPI Shrug</span>
+  </div>
+
+  <div class="analyst-box">
+    <div class="analyst-tag">▍ 종합 분석</div>
+    <div class="analyst-body">
+      <p>오늘의 핵심 — <strong>"Hot PPI, Cool Reaction"(뜨거운 PPI, 차분한 반응)</strong>. 어제 5/13 미국 4월 생산자물가지수(PPI)가 전월 대비 +1.4%(컨센 +0.4%의 3.5배)·전년 대비 +6.0%(2022년 12월 이후 최고)로 충격적으로 핫하게 나왔는데, 시장은 어깨를 으쓱하고 신고가로 응답했어요. S&amp;P 500 +0.58%(7,444.25 신고가)·Nasdaq +1.20%(26,402.34 신고가)·KOSPI +2.63%(7,844.01 사상 첫 7,800대 종가). 어제 그제 "리스크 시나리오 45%"라고 했던 우려가 빗나간 셈이에요.</p>
+
+      <p>시장 해석의 핵심은 세 가지 — ① <strong>일회성 분류</strong>: PPI 상승의 75%가 에너지(휘발유 +15.6% MoM)에서 나와 미·이란 전쟁의 일시적 충격으로 분류, ② <strong>역설적 인하 명분</strong>: 인플레 핫 → 소비 둔화 → 결국 인하 시점만 늦춰질 뿐 방향은 유지, ③ <strong>마이크로 호재 우위</strong>: 젠슨 황 방중 동행 발표로 반도체 수출 규제 완화 기대 + SK하이닉스 시총 1위 등극의 상징적 메시지. 거시 6지표도 어제 정반대 방향 — 10Y 4.465%(인트라데이 4.49% 후 진정), VIX 17.99(-0.4p), DXY 98.5 — 모두 안정 방향 정렬.</p>
+
+      <p>그러나 단기 변수가 만만치 않아요. <strong>오늘 밤 5/14 23:30 KST CLARITY Act 마크업 표결</strong>(폴리마켓 통과 75%) + <strong>5/14-15 미·이란·미·중 정상회담</strong>이 양방향 최대 변동성. 외국인 KOSPI 5거래일 연속 매도 누적 -3.72조원도 잠재 압력. 다년 메모리 슈퍼사이클은 어제 SK하이닉스 시총 1위 등극으로 구조적으로 확인된 흐름 — JP모건 KOSPI 10,000 시나리오는 5/20 NVDA 실적이 다음 검증 분기점. 단기로는 "어제 V자 반등을 신뢰할 것인가, 차익실현할 것인가"의 판단이 5/14-15 두 회담 결과로 결정.</p>
+    </div>
+  </div>
+
+  <div class="scenarios">
+    <div class="sc-card main">
+      <div class="sc-prob">메인 시나리오 · 확률 60%</div>
+      <h3 class="sc-title">"CLARITY 통과 + 이란 진전 → 상승 분위기 연장"</h3>
+      <p class="sc-body">오늘 밤 5/14 23:30 KST CLARITY Act 통과(폴리마켓 75%) + 5/14-15 미·이란 회담에서 일부 평화안 진전 → 코인 +5~10% + 미국 신고가 행진 연장. 한국은 V자 반등 다음 단계로 KOSPI 7,900~8,000 시도. SK하이닉스 200만원 돌파 임박. 다만 신고가 추격 매수는 신중 — 5/20 NVDA 실적까지 변동성 큰 구간으로 인식하고 분할 진입 정석.</p>
+    </div>
+    <div class="sc-card alt">
+      <div class="sc-prob">대안 시나리오 · 확률 40%</div>
+      <h3 class="sc-title">"CLARITY 부결 또는 이란 결렬 → 차익실현 트리거"</h3>
+      <p class="sc-body">CLARITY Act 부결 시 BTC 단기 -7~-10% 조정 + 알트코인 -15%까지 가능, 백악관 목표 7월 4일 통과 마감 윈도우 놓침. 미·이란 결렬 시 WTI $108~110 → 인플레 우려 재점화 → 외국인 매도 가속. KOSPI 7,500선 테스트, SK하이닉스 1,870,000원대 후퇴. 단, 다년 메모리 슈퍼사이클 자체는 무너지지 않음 — 이 구간이 오히려 분할 매수 적기 형성 가능.</p>
+    </div>
+  </div>
+
+  <div class="action-box">
+    <div class="action-title">🎯 IT/게임 사업자 실용 액션</div>
+    <ul class="action-list">
+      <li>환율 1,488원 약세 지속 → 해외 매출 비중 큰 기업(크래프톤·시프트업·넥슨게임즈) 환차익 우호 지속. 다만 AWS·GCP 클라우드 비용 + AI API 호출 비용(달러 표시) 동반 부담 — 환헤지 비중 점검 필수</li>
+      <li>SK하이닉스 시총 1위 등극은 한국 IT/AI 생태계 신호 — 메모리·AI 인프라 사업 구조적 호황 + 클라우드 비용 추가 인상 가능성 양면. 다년 사업 계획에 메모리 가격·AI API 가격 동반 인상 가능성 반영</li>
+      <li>오늘 밤 23:30 KST CLARITY Act 통과 시(폴리마켓 75%) → 한국 게임 결제 인프라 USDC·USDT 시범 통합 PoC 6개월 내 준비 검토. 부결 시 → 입법 지연 6개월~1년 가정 후 사업 계획 분기</li>
+      <li>외국인 5거래일 연속 매도 누적 + 환율 1,488원 환경에서 외국인 한국 시장 본격 유입은 5월 내내 어려움. 빅테크 PER 30배+ 종목 신규 진입은 보수적, 한국 메모리는 다년 슈퍼사이클 관점 분할 매수 유효</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============== [9] CALENDAR ============== -->
+<section id="calendar">
+  <div class="sec-head">
+    <div class="sec-num">[09]</div>
+    <h2 class="sec-title">📅 이번 주·다음 주 꼭 봐야 할 일정</h2>
+    <span class="sec-sub">Key Events · 5/14 - 5/20</span>
+  </div>
+
+  <div class="cal-grid">
+    <div class="cal-item warn">
+      <div class="cal-date">5/14 (목)</div>
+      <div>
+        <div class="cal-event">🟨 미국 상원 은행위 CLARITY Act 마크업 표결 — 오늘 밤</div>
+        <div class="cal-desc">23:30 KST(10:30 ET) 더크슨 빌딩 538호. 309페이지 최종안, 윤리 조항 부재 + 은행 협회 스테이블코인 합의 거부가 막판 변수. 폴리마켓 통과 확률 75%. 통과 시 알트코인 +20~30%, 부결 시 BTC -7~-10% — 양방향 최대 변동성 이벤트.</div>
+      </div>
+    </div>
+    <div class="cal-item warn">
+      <div class="cal-date">5/14-15</div>
+      <div>
+        <div class="cal-event">🟨 미·이란 정상회담 + 미·중 제네바 무역 회담</div>
+        <div class="cal-desc">미·이란: 결렬 시 WTI $108~110 가능(인플레 추가 압박), 평화안 진전 시 $90 후퇴. 미·중: 반도체 장비 수출 제한 완화 여부가 한국 반도체 중국 공장 가동률 핵심. 젠슨 황 동행 변수.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">5/15 (금)</div>
+      <div>
+        <div class="cal-event">🟦 미국 4월 소매판매·산업생산 발표</div>
+        <div class="cal-desc">21:30 KST. 소매판매 컨센 +0.3% MoM, 산업생산 +0.2%. CPI·PPI에 이은 4월 매크로 마무리. 소비 둔화 신호 → 6월 FOMC 인하 기대 일부 복귀 가능, 강한 소비 → 인플레 우려 재점화 변수.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">5/16 (토)</div>
+      <div>
+        <div class="cal-event">🟦 미시간 5월 소비자심리 예비치</div>
+        <div class="cal-desc">23:00 KST. 5년 기대 인플레가 핵심 — 직전 3.4% 수준에서 추가 상승 시 연준 경계 신호. PPI YoY +6% 발표 직후 첫 소비자 심리 조사라 시장 민감도 큰 지표.</div>
+      </div>
+    </div>
+    <div class="cal-item warn">
+      <div class="cal-date">5/20 (화)</div>
+      <div>
+        <div class="cal-event">🟨 엔비디아(NVDA) 분기 실적 발표</div>
+        <div class="cal-desc">미국 장 마감 후. 컨센 매출 $78.8B(YoY +78%), 일부 분석가 $80B 전망. 데이터센터 매출 + 블랙웰 출하·HBM 코멘트가 한국 메모리주 직접 영향. 옵션 시장 예상 변동폭 ±7%. JP모건 KOSPI 10,000 시나리오 유효성 검증 분기점.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ 본 브리핑은 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단의 책임은 본인에게 있습니다. 인용된 수치·뉴스는 발행 시점 기준이며, 시장 상황은 빠르게 변할 수 있어요. 미국 시장 데이터는 5/13 (수) NY 마감 기준, 한국 시장은 5/13 (수) 종가 기준입니다. 출처 링크는 새 탭으로 열립니다.
+  </div>
+</section>
+
+</main>
+
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    if (!themeToggle) return;
+
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+  });
+</script>
+
+</body>
+</html>
