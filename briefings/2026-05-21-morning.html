@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0F1115">
+<title>2026년 5월 21일 데일리 브리핑 v3.6 — NVDA Blowout, Q2 $91B</title>
+<meta name="description" content="한국·미국 증시와 디지털 자산 매일 아침 7시 브리핑 — 2026년 5월 21일 (목) NVDA Q2 가이던스 $91B 휘스퍼 $90B 초과, S&P/Nasdaq +1%대, KOSPI 7,208.95, BTC $77,400대 회복">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg-primary: #0F1115;
+    --bg-elevated: #1A1D24;
+    --bg-card: #1F232C;
+    --bg-hover: #252932;
+    --bg-deeper: #0A0C10;
+    --text-primary: #F0EAE0;
+    --text-secondary: #A8A29A;
+    --text-tertiary: #6B6862;
+    --gold: #D4A857;
+    --gold-bright: #E8C078;
+    --gold-glow: rgba(212,168,87,0.15);
+    --bull: #26A69A;
+    --bear: #EF5350;
+    --bull-bg: rgba(38,166,154,0.1);
+    --bear-bg: rgba(239,83,80,0.1);
+    --border: #2D3138;
+    --border-strong: #3A3F49;
+    --border-gold: rgba(212,168,87,0.3);
+    --info-bg: rgba(91,155,213,0.1);
+    --info-border: #5B9BD5;
+    --warn-bg: rgba(232,192,120,0.12);
+    --warn-border: #E8C078;
+    --font-body: 'Pretendard', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  [data-theme="light"] {
+    --bg-primary: #FAF8F3;
+    --bg-elevated: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-hover: #F5F1E8;
+    --bg-deeper: #F0EBE0;
+    --text-primary: #1A1D24;
+    --text-secondary: #4A4843;
+    --text-tertiary: #6B6862;
+    --gold: #A07F3F;
+    --gold-bright: #7A5F2F;
+    --gold-glow: rgba(160,127,63,0.1);
+    --border: #E5DFD0;
+    --border-strong: #C9C2B0;
+    --border-gold: rgba(160,127,63,0.4);
+    --info-bg: rgba(91,155,213,0.08);
+    --warn-bg: rgba(160,127,63,0.1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-body); font-size: 16px; line-height: 1.7; transition: background .3s, color .3s; }
+  a { color: var(--gold-bright); text-decoration: none; border-bottom: 1px dotted var(--gold); }
+  a:hover { color: var(--gold); border-bottom-style: solid; }
+  strong { color: var(--gold-bright); font-weight: 700; }
+
+  .top-header { position: sticky; top: 0; z-index: 100; background: rgba(15,17,21,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+  [data-theme="light"] .top-header { background: rgba(250,248,243,0.9); }
+  .header-inner { max-width: 920px; margin: 0 auto; padding: .75rem 1.25rem; display: flex; align-items: center; justify-content: space-between; }
+  .header-brand { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; text-decoration: none; }
+  .brand-mark { font-weight: 800; font-size: 1.25rem; color: var(--gold); line-height: 1; letter-spacing: -0.02em; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .brand-text .ko { font-size: 0.7rem; color: var(--text-tertiary); letter-spacing: 0.15em; margin-top: 2px; }
+  .brand-text .en { font-size: 0.95rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.01em; }
+  .header-actions { display: flex; align-items: center; gap: 0.5rem; }
+  .icon-btn { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; font-size: 1rem; }
+  .icon-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+  main { max-width: 920px; margin: 0 auto; padding: 0 1.25rem; }
+  section { padding: 2.5rem 0; border-bottom: 1px dashed var(--border); }
+  section:last-child { border-bottom: none; }
+
+  .hero { padding-top: 2.5rem; }
+  .hero-meta { font-family: var(--font-mono); font-size: .8rem; color: var(--text-tertiary); letter-spacing: .12em; margin-bottom: 1.25rem; }
+  .hero-meta .vol { color: var(--gold); }
+  .hero-title { font-weight: 800; font-size: clamp(1.7rem, 4.5vw, 2.3rem); line-height: 1.3; letter-spacing: -.01em; margin-bottom: .8rem; }
+  .hero-sub { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 680px; }
+
+  .tldr-grid { display: grid; gap: .75rem; margin-top: 2rem; }
+  .tldr-card { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 4px; }
+  .tldr-flag { font-size: 1.6rem; }
+  .tldr-label { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); letter-spacing: .1em; margin-bottom: .2rem; }
+  .tldr-text { font-size: .95rem; line-height: 1.5; }
+  .tldr-change { font-family: var(--font-mono); font-size: 1.05rem; font-weight: 700; padding: .35rem .65rem; border-radius: 4px; }
+  .change-bull { color: var(--bull); background: var(--bull-bg); }
+  .change-bear { color: var(--bear); background: var(--bear-bg); }
+
+  .sec-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: .8rem; border-bottom: 1px solid var(--border); }
+  .sec-num { font-family: var(--font-mono); font-weight: 700; font-size: .78rem; color: var(--gold); padding: .25rem .5rem; background: var(--gold-glow); border-radius: 3px; }
+  .sec-title { font-weight: 700; font-size: 1.35rem; letter-spacing: -.01em; }
+  .sec-sub { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); margin-left: auto; letter-spacing: .12em; text-transform: uppercase; }
+
+  .macro-table { width: 100%; border-collapse: collapse; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; font-size: .92rem; }
+  .macro-table th, .macro-table td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+  .macro-table thead th { background: var(--bg-deeper); font-family: var(--font-mono); font-size: .75rem; color: var(--text-tertiary); letter-spacing: .1em; text-transform: uppercase; font-weight: 600; }
+  .macro-table tbody tr:last-child td { border-bottom: none; }
+  .macro-table tbody tr:hover { background: var(--bg-hover); }
+  .macro-name { font-weight: 700; color: var(--gold-bright); font-family: var(--font-mono); font-size: .88rem; }
+  .macro-value { font-family: var(--font-mono); font-weight: 600; }
+  .macro-chg { font-family: var(--font-mono); font-weight: 600; font-size: .88rem; }
+  .macro-up { color: var(--bear); }
+  .macro-down { color: var(--bull); }
+  .macro-note { font-size: .85rem; color: var(--text-secondary); }
+  .macro-summary { margin-top: 1rem; padding: .9rem 1.1rem; background: var(--info-bg); border-left: 3px solid var(--info-border); border-radius: 4px; font-size: .9rem; line-height: 1.65; color: var(--text-primary); }
+
+  .deep { background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 10px; padding: 1.8rem 1.6rem; }
+  .deep-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .18em; margin-bottom: 1rem; }
+  .deep-title { font-weight: 800; font-size: 1.35rem; line-height: 1.4; margin-bottom: 1.2rem; }
+  .deep-body { font-size: .96rem; line-height: 1.8; color: var(--text-primary); margin-bottom: 1.2rem; }
+  .deep-body p { margin-bottom: 1rem; }
+  .stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .6rem; margin: 1.3rem 0; }
+  .stat-card { padding: .9rem 1rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 6px; }
+  .stat-label { font-family: var(--font-mono); font-size: .68rem; color: var(--text-tertiary); letter-spacing: .1em; margin-bottom: .3rem; }
+  .stat-value { font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; color: var(--gold-bright); }
+  .stat-note { font-size: .75rem; color: var(--text-secondary); margin-top: .3rem; line-height: 1.4; }
+  .so-what { padding: 1rem 1.2rem; background: var(--info-bg); border-left: 3px solid var(--info-border); border-radius: 4px; margin-top: 1rem; font-size: .92rem; line-height: 1.65; }
+  .so-what::before { content: '🎯 그래서 나한테 무슨 의미?'; display: block; font-weight: 700; color: var(--info-border); margin-bottom: .4rem; font-size: .82rem; }
+  .deep-sources { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-top: 1.2rem; padding-top: 1rem; border-top: 1px dashed var(--border); font-size: .82rem; color: var(--text-tertiary); }
+  .deep-sources strong { color: var(--text-secondary); font-weight: 600; margin-right: .3rem; }
+  .source-chip { display: inline-block; padding: .25rem .65rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); font-size: .72rem; color: var(--text-secondary) !important; border-bottom: none !important; }
+  .source-chip:hover { border-color: var(--gold); color: var(--gold) !important; }
+
+  .five { display: grid; gap: 1rem; }
+  .news-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.4rem 1.5rem; transition: border-color .25s; }
+  .news-card:hover { border-color: var(--border-gold); }
+  .news-meta { display: flex; align-items: center; gap: .6rem; margin-bottom: .7rem; font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .news-rank { color: var(--gold); font-weight: 700; padding: .2rem .45rem; background: var(--gold-glow); border-radius: 3px; }
+  .news-cat { color: var(--text-secondary); letter-spacing: .08em; }
+  .news-time { margin-left: auto; }
+  .news-headline { font-weight: 700; font-size: 1.1rem; line-height: 1.45; margin-bottom: .8rem; }
+  .news-body { font-size: .93rem; line-height: 1.8; color: var(--text-primary); }
+  .news-body p { margin-bottom: .7rem; }
+  .news-body p:last-child { margin-bottom: 0; }
+  .news-conclusion { margin-top: 1rem; padding: .8rem 1rem; background: var(--bg-deeper); border-left: 3px solid var(--gold); border-radius: 4px; font-size: .9rem; line-height: 1.55; }
+  .news-conclusion::before { content: '→ 그래서 뭐? '; color: var(--gold); font-weight: 700; }
+  .news-sources { margin-top: .9rem; padding-top: .7rem; border-top: 1px dashed var(--border); font-size: .8rem; color: var(--text-tertiary); }
+  .news-sources a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; }
+  .news-sources a:hover { color: var(--gold); }
+
+  .markets { display: grid; gap: 1.2rem; }
+  .market-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.3rem 1.4rem; }
+  .market-card.us { border-top: 3px solid #5B9BD5; }
+  .market-card.kr { border-top: 3px solid #D4A857; }
+  .market-card.crypto { border-top: 3px solid #F7931A; }
+  .market-head { display: flex; align-items: baseline; gap: .6rem; margin-bottom: .9rem; }
+  .market-flag { font-size: 1.4rem; }
+  .market-title { font-weight: 700; font-size: 1.05rem; }
+  .market-time { margin-left: auto; font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .mkt-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-bottom: .8rem; }
+  .mkt-table th, .mkt-table td { padding: .55rem .7rem; text-align: left; border-bottom: 1px solid var(--border); }
+  .mkt-table thead th { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); letter-spacing: .08em; text-transform: uppercase; font-weight: 600; background: var(--bg-deeper); }
+  .mkt-table tbody tr:last-child td { border-bottom: none; }
+  .mkt-table .mkt-name { font-weight: 600; }
+  .mkt-table .mkt-val { font-family: var(--font-mono); font-weight: 600; }
+  .mkt-table .mkt-chg { font-family: var(--font-mono); font-weight: 700; }
+  .mkt-flow { font-size: .85rem; color: var(--text-secondary); padding: .55rem .8rem; background: var(--bg-deeper); border-radius: 4px; margin-bottom: .7rem; line-height: 1.55; }
+  .mkt-comment { padding: .7rem .9rem; background: var(--gold-glow); border-left: 3px solid var(--gold); border-radius: 4px; font-size: .88rem; line-height: 1.6; color: var(--text-primary); }
+  .mkt-comment::before { content: '💬 '; }
+
+  .filter-bar { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.2rem; font-size: .8rem; color: var(--text-tertiary); }
+  .filter-chip { padding: .3rem .7rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); }
+  .headline-list { display: grid; gap: .7rem; }
+  .h-item { padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; transition: all .2s; }
+  .h-item:hover { border-color: var(--border-gold); transform: translateX(2px); }
+  .h-title { font-weight: 600; font-size: .98rem; margin-bottom: .4rem; line-height: 1.4; }
+  .h-desc { font-size: .87rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: .5rem; }
+  .h-meta { font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .h-meta a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; font-size: .72rem; }
+
+  .re-snapshot { padding: 1.1rem 1.3rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 1.2rem; font-size: .9rem; line-height: 1.7; }
+  .re-snapshot strong { color: var(--gold-bright); }
+  .re-grid { display: grid; gap: 1rem; }
+  .re-card { padding: 1.3rem 1.4rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; }
+  .re-title { font-weight: 700; font-size: 1.02rem; margin-bottom: .6rem; line-height: 1.4; }
+  .re-body { font-size: .92rem; line-height: 1.75; color: var(--text-primary); }
+  .re-body p { margin-bottom: .55rem; }
+  .re-body p:last-child { margin-bottom: 0; }
+  .re-sources { margin-top: .8rem; padding-top: .7rem; border-top: 1px dashed var(--border); font-size: .78rem; color: var(--text-tertiary); }
+  .re-sources a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; }
+
+  .analyst-box { padding: 1.5rem 1.6rem; background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 8px; margin-bottom: 1.2rem; }
+  .analyst-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .15em; margin-bottom: .8rem; }
+  .analyst-body { font-size: .96rem; line-height: 1.85; color: var(--text-primary); }
+  .analyst-body p { margin-bottom: .8rem; }
+  .analyst-body p:last-child { margin-bottom: 0; }
+  .scenarios { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem; }
+  .sc-card { padding: 1.4rem 1.5rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; }
+  .sc-card.main { border-left: 3px solid var(--bull); }
+  .sc-card.alt { border-left: 3px solid var(--bear); }
+  .sc-prob { font-family: var(--font-mono); font-size: .8rem; color: var(--gold); letter-spacing: .1em; margin-bottom: .5rem; }
+  .sc-title { font-weight: 700; font-size: 1.05rem; margin-bottom: .7rem; line-height: 1.4; }
+  .sc-body { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+  .action-box { padding: 1.1rem 1.3rem; background: var(--bg-deeper); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; }
+  .action-title { font-weight: 700; font-size: .92rem; color: var(--gold); margin-bottom: .6rem; }
+  .action-list { list-style: none; padding: 0; margin: 0; }
+  .action-list li { padding: .35rem 0; padding-left: 1.2rem; position: relative; font-size: .9rem; line-height: 1.6; color: var(--text-primary); }
+  .action-list li::before { content: '▸'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+
+  .cal-grid { display: grid; gap: .7rem; }
+  .cal-item { display: grid; grid-template-columns: 110px 1fr; gap: 1rem; padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--info-border); border-radius: 6px; align-items: center; }
+  .cal-item.warn { border-left-color: var(--warn-border); background: var(--warn-bg); }
+  .cal-item.info { border-left-color: var(--info-border); background: var(--info-bg); }
+  .cal-date { font-family: var(--font-mono); font-size: .85rem; font-weight: 700; color: var(--gold-bright); }
+  .cal-event { font-weight: 600; margin-bottom: .25rem; font-size: .98rem; }
+  .cal-desc { font-size: .85rem; color: var(--text-secondary); line-height: 1.55; }
+
+  .disclaimer { margin-top: 2rem; padding: 1rem 1.2rem; background: var(--bg-deeper); border: 1px dashed var(--border); border-radius: 6px; font-size: .78rem; color: var(--text-tertiary); line-height: 1.6; }
+
+  @media (max-width: 720px) {
+    .scenarios { grid-template-columns: 1fr; }
+    .tldr-card { grid-template-columns: auto 1fr; }
+    .tldr-change { grid-column: 2; justify-self: start; margin-top: .3rem; }
+    .cal-item { grid-template-columns: 1fr; gap: .3rem; }
+    .macro-table th, .macro-table td { padding: .6rem .55rem; font-size: .82rem; }
+    .mkt-table th, .mkt-table td { padding: .45rem .5rem; font-size: .82rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top-header">
+  <div class="header-inner">
+    <a href="/index.html" class="header-brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-text">
+        <div class="en">Morning Brief</div>
+        <div class="ko">데일리 경제 브리핑</div>
+      </div>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" title="테마 변경">🌙</button>
+      <button class="icon-btn" title="공유" onclick="navigator.share && navigator.share({title: document.title, url: location.href})">↗</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============== [1] HERO ============== -->
+<section class="hero">
+  <div class="hero-meta">
+    <span class="vol">Vol.154</span> · 2026.05.21 (목) · 📖 14분 읽기 · v3.6
+  </div>
+  <h1 class="hero-title">NVDA Blowout — Q2 $91B, 휘스퍼 $90B마저 초과 · Vera Rubin $200B 신호탄</h1>
+  <p class="hero-sub">수요일(5/20) 미국 시장은 NVDA 실적 발표 직전 안도 랠리를 만들었어요. S&amp;P +1%·Nasdaq/Dow +1.2%로 3거래일 약세를 끊었고, 마감 후 발표된 NVDA가 시장 기대를 모두 넘었어요 — <strong>Q1 매출 $81.62B(컨센 $79.2B 초과)·EPS $1.87(vs $1.78)</strong>, 그리고 진짜 핵심인 <strong>Q2 가이던스 $91B</strong>로 휘스퍼 넘버 $90B마저 뚫었어요. Vera Rubin은 <strong>"새로운 $200억 달러 시장"</strong>이라는 CFO 멘트, 소버린 AI 매출은 FY26 $30B(+3배 YoY) 돌파. 한국은 5/20 KOSPI <strong>-0.86% 7,208.95</strong>로 외국인 -2.879조 11일 연속 매도 신기록을 갱신했지만, 환율 1,509원·NVDA 가이던스 호조로 <strong>5/21 V자 반등 시도가 열렸어요</strong>. 코인은 BTC $77,400대로 $76K 박스 상단 돌파. 단, 10년물은 여전히 4.67% 16개월 최고 — 가이던스 호조가 채권시장의 재정 우려까지 풀어줄지가 다음 분기점.</p>
+
+  <div class="tldr-grid">
+    <div class="tldr-card">
+      <div class="tldr-flag">🇺🇸</div>
+      <div>
+        <div class="tldr-label">미국 (5/20 수 종가 + 시간외)</div>
+        <div class="tldr-text">S&amp;P <strong>+1%</strong>·Nasdaq/Dow <strong>+1.2%</strong> NVDA 직전 안도 랠리. 마감 후 NVDA <strong>Q2 $91B</strong> 휘스퍼 초과</div>
+      </div>
+      <div class="tldr-change change-bull">+1.0%</div>
+    </div>
+    <div class="tldr-card">
+      <div class="tldr-flag">🇰🇷</div>
+      <div>
+        <div class="tldr-label">한국 (5/20 수 종가)</div>
+        <div class="tldr-text">KOSPI <strong>7,208.95</strong>(-0.86%, -62.71p) 외국인 <strong>-2.879조 11일 연속</strong>. 단, NVDA 호조로 5/21 반등 기대</div>
+      </div>
+      <div class="tldr-change change-bear">-0.86%</div>
+    </div>
+    <div class="tldr-card">
+      <div class="tldr-flag">₿</div>
+      <div>
+        <div class="tldr-label">코인 (5/21 목 새벽)</div>
+        <div class="tldr-text">BTC <strong>$77,428</strong>(+1.2% 24h) $76K 박스 상단 돌파, ETH $2,128. NVDA 호조 + ETF 9일+ 누적</div>
+      </div>
+      <div class="tldr-change change-bull">+1.2%</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== [3] MACRO TABLE ============== -->
+<section id="macro">
+  <div class="sec-head">
+    <div class="sec-num">[03]</div>
+    <h2 class="sec-title">📊 거시 환경 한눈에</h2>
+    <span class="sec-sub">Macro Dashboard · 6 Indicators</span>
+  </div>
+
+  <table class="macro-table">
+    <thead>
+      <tr>
+        <th>지표</th>
+        <th>현재값</th>
+        <th>변동</th>
+        <th>시사점 (한 줄)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="macro-name">美 10Y</span></td>
+        <td class="macro-value">4.67%</td>
+        <td class="macro-chg macro-down">▼ -1bp</td>
+        <td class="macro-note">16개월 최고권 유지, NVDA 후 후퇴 시도</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">DXY</span></td>
+        <td class="macro-value">99.27</td>
+        <td class="macro-chg macro-down">▼ -0.23%</td>
+        <td class="macro-note">강달러 일부 완화, 환율 1,509원</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">WTI</span></td>
+        <td class="macro-value">$101.27</td>
+        <td class="macro-chg macro-down">▼ -0.29%</td>
+        <td class="macro-note">$100 위 횡보, 협상 진행 중</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">금</span></td>
+        <td class="macro-value">$4,504</td>
+        <td class="macro-chg macro-down">▲ +0.6%</td>
+        <td class="macro-note">소폭 반등, 강달러 완화 효과</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">USD/KRW</span></td>
+        <td class="macro-value">1,509원</td>
+        <td class="macro-chg macro-up">▲ +8원</td>
+        <td class="macro-note">1,510 근접, NVDA 후 후퇴 가능</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">VIX</span></td>
+        <td class="macro-value">17.5</td>
+        <td class="macro-chg macro-down">▼ -0.46p</td>
+        <td class="macro-note">NVDA 통과 후 추가 진정 기대</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="macro-summary">
+    한 줄 종합 — <strong>"NVDA가 채권시장에 처방전을 내밀었어요"</strong>. 수요일(5/20)은 미국 시장이 NVDA 직전 안도 랠리(S&amp;P +1%·Nasdaq +1.2%)를 만들었고, 마감 후 NVDA Q2 가이던스 <strong>$91B</strong>(휘스퍼 $90B 초과)로 끝판왕급 결과. 10년물은 4.67%로 1bp 후퇴했지만 여전히 16개월 최고권에서 머무르는 중 — 가이던스 호조가 채권시장 발작까지 풀어줄지는 5/21~22 흐름이 결정. DXY는 99.27로 -0.23% 완화, 환율은 1,509원으로 1,510 근접. 한국 시장은 5/20 KOSPI -0.86% 외국인 11일 연속 매도였지만 <strong>5/21 NVDA 첫 반응 거래일은 V자 시도 환경</strong>이 갖춰진 상태. SK하이닉스가 SOCAMM2 Vera Rubin 전용 메모리 대량생산 발표로 프리마켓 +3.4%로 출발 — NVDA $91B가 직접 한국 메모리에 전이되는 가시적 신호.
+  </div>
+</section>
+
+<!-- ============== [4] DEEP DIVE ============== -->
+<section id="deep-dive">
+  <div class="sec-head">
+    <div class="sec-num">[04]</div>
+    <h2 class="sec-title">⭐ 오늘의 깊은 이야기</h2>
+    <span class="sec-sub">Deep Dive · 🕒 NVDA Day</span>
+  </div>
+
+  <article class="deep">
+    <div class="deep-tag">DEEP DIVE · AI 슈퍼사이클 재확인 · 🕒 5/20 (수) NY 마감 후</div>
+    <h3 class="deep-title">NVDA Q2 $91B — 휘스퍼 $90B마저 뚫었고, Vera Rubin이 새 $200B 시장을 열었어요</h3>
+
+    <div class="deep-body">
+      <p>5/20 수요일 NY 마감 후 NVDA가 발표한 FY27 1분기 실적은 <strong>모든 기대선을 위로 깬 결과</strong>예요. 매출 <strong>$81.62B</strong>로 컨센 $79.2B를 $2.4B 초과(YoY +84%), 비-GAAP EPS <strong>$1.87</strong>로 컨센 $1.78 초과. 그러나 진짜 사건은 Q2 가이던스 — <strong>$91B</strong>로 컨센 $86.84B는 물론 시장이 속으로 기대했던 휘스퍼 넘버 $90B마저 뛰어넘었어요. 휘스퍼란 컨센서스보다 트레이더들이 진짜 기대하는 비공식 추정치인데, 이걸 넘기는 게 진짜 "블로아웃" 기준이에요.</p>
+
+      <p>핵심 메시지는 세 가지. ① <strong>Vera Rubin "tremendous start"</strong> — CEO 젠슨 황이 컨퍼런스콜에서 "Vera-Rubin이 굉장히 좋은 출발"이라 발언, Anthropic·OpenAI·SpaceX·Oracle에 첫 Vera CPU를 직접 핸드 딜리버리. CFO Colette Kress는 Vera CPU가 <strong>"NVIDIA에게 완전히 새로운 $2,000억(=$200B) 시장을 연다"</strong>고 발언. 올해 CPU 매출만 $20B 예상. ② <strong>소버린 AI $30B</strong> — FY26 누적 소버린 AI(국가 단위 AI 인프라) 매출이 $30B 돌파, YoY +3배. 전체 매출의 14% 비중으로 새로운 성장축 부상. ③ <strong>Blackwell→Vera Rubin 전환 매끄러움</strong> — Blackwell 출하는 점진 감소, Vera Rubin 양산 가속. 시장이 우려했던 전환 공백 우려 해소.</p>
+
+      <div class="stat-cards">
+        <div class="stat-card">
+          <div class="stat-label">Q1 매출</div>
+          <div class="stat-value">$81.62B</div>
+          <div class="stat-note">컨센 $79.2B · YoY +84%</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Q1 EPS</div>
+          <div class="stat-value">$1.87</div>
+          <div class="stat-note">컨센 $1.78 · 베이트 5%</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Q2 가이던스</div>
+          <div class="stat-value">$91B</div>
+          <div class="stat-note">컨센 $86.84B · 휘스퍼 $90B 초과</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Vera 시장</div>
+          <div class="stat-value">$200B</div>
+          <div class="stat-note">CFO 발언, 신규 CPU TAM</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">소버린 AI</div>
+          <div class="stat-value">$30B</div>
+          <div class="stat-note">FY26 누적, YoY +3배, 비중 14%</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">S&amp;P 500</div>
+          <div class="stat-value">+1.0%</div>
+          <div class="stat-note">5/20 마감, 3거래일 약세 끊음</div>
+        </div>
+      </div>
+
+      <p>그런데 흥미로운 디테일 — NVDA 주가 자체는 시간외에서 -0.3~0.7% 소폭 하락. 폴리마켓 비트 97%가 가격에 이미 반영됐고, 워낙 강한 결과라 "기대치 이상의 기대치"가 형성됐던 거예요. 그러나 <strong>실물 시장 영향은 훨씬 큼</strong>. SK하이닉스 ADR이 5/21 프리마켓에서 +3.4%(SOCAMM2 Vera Rubin 전용 메모리 대량생산 발표 합쳐), 삼성도 동조 상승 신호. KOSPI 선물도 V자 반등 시도 — 5/20 종가 7,208에서 7,400~7,500선 복귀 시도 가능한 환경. 환율은 1,509원에서 후퇴 시도, 외국인 매도 11일 연속도 끊길 가능성.</p>
+
+      <p>다만 채권시장은 별개 문제예요. 10년물이 4.67%로 1bp 후퇴했지만 여전히 16개월 최고권에서 머무는 중. 30년물 5.20% 18년 최고는 그대로. NVDA 가이던스가 AI 슈퍼사이클 재확인이라는 측면에서 성장 우려를 일부 풀어줬지만, <strong>재정 적자 우려(트럼프 감세 + 국방비)는 NVDA 한 발로 해결 안 됨</strong>. 다음 분기점은 5/22 美 4월 신규 주택판매와 다음 주 PCE 물가. 그동안은 NVDA 모멘텀이 채권 발작을 압도할 수 있을지가 게임.</p>
+    </div>
+
+    <div class="so-what">
+      한국 주식 보유자라면 → <strong>5/21(목)은 NVDA 첫 반응 거래일, V자 시도 환경</strong>. SK하이닉스 1,900,000원 재시도·삼성 290,000원 복귀 가능. 단, 외국인 11일 연속 매도가 단번에 풀린다는 보장은 없으니 추격 매수보다 분할 매수가 안전. 미국 주식 보유자 → NVDA 자체는 가격 반영 끝, 대신 AVGO·AMD·TSMC 등 인프라 동조 상승 가능. 채권 ETF(TLT)는 여전히 보수적 — 10년물 4.55% 이탈 전엔 회복 신호 약함. 코인 → BTC $77,400 박스 상단 돌파 = 단기 신호 긍정, $82~85K 시도 가능. ETH $2,200 회복 모색. CLARITY Act 상원 은행위 15-9 통과 모멘텀도 추가 호재. IT/게임 사업자 → <strong>USD/KRW 1,509원은 환차익 사상 최고권, 1,510 돌파 가능성</strong>. 크래프톤·시프트업·넥슨게임즈 등 해외 매출 큰 게임사 2분기 환차익 확정. AI API 비용은 여전히 정점이지만 NVDA 공급 정상화로 단가 압력 일부 완화 기대.
+    </div>
+
+    <div class="deep-sources">
+      <strong>📰 출처:</strong>
+      <a href="https://www.cnbc.com/2026/05/20/nvidia-nvda-earnings-report-q1-2027.html" target="_blank" rel="noopener" class="source-chip">CNBC NVDA</a>
+      <a href="https://www.kiplinger.com/investing/live/nvidia-earnings-live-updates-and-commentary-may-2026" target="_blank" rel="noopener" class="source-chip">Kiplinger</a>
+      <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/261902589-nvidia-q1-fy2027-earnings-may-20-nvda-a-buy-at-224-before-most-important-print-tradingkey" target="_blank" rel="noopener" class="source-chip">TradingKey</a>
+      <a href="https://stocktwits.com/news-articles/markets/equity/nvda-stock-dips-premarket-chip-giant-hand-delivers-next-gen-vera-cp-us-to-anthropic-open-ai-space-x-oracle/cZXujOeReZL" target="_blank" rel="noopener" class="source-chip">Stocktwits Vera</a>
+      <a href="https://www.heygotrade.com/en/blog/nvidia-q1-fy27-earnings-preview-may-20-2026/" target="_blank" rel="noopener" class="source-chip">HeyGoTrade</a>
+    </div>
+  </article>
+</section>
+
+<!-- ============== [5] FIVE THINGS ============== -->
+<section id="five-things">
+  <div class="sec-head">
+    <div class="sec-num">[05]</div>
+    <h2 class="sec-title">📌 오늘의 5가지</h2>
+    <span class="sec-sub">Five Things · 5 Different Topics</span>
+  </div>
+
+  <div class="five">
+
+    <!-- 01: 한국 시장 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">01</span>
+        <span class="news-cat">🇰🇷 한국 시장</span>
+        <span class="news-time">🕒 5/20 (수) 15:30 KST 종가</span>
+      </div>
+      <h3 class="news-headline">KOSPI 7,208.95(-0.86%) 외국인 11일 연속 매도 신기록 — 단, NVDA 호조로 5/21 V자 시도 환경</h3>
+      <div class="news-body">
+        <p>수요일 KOSPI는 NVDA 직전 관망 모드 그대로였어요. 개장 7,324에서 출발했지만 오전장에 7,000선까지 폭락 후 회복, <strong>7,208.95(-0.86%, -62.71p)</strong>로 마감. KOSDAQ은 더 큰 폭으로 <strong>-2.61%</strong> 후퇴. 일중 변동폭이 200p+로 5/19(244p)에 이어 이틀 연속 큰 폭의 변동성 환경 — NVDA D-Day 대기 효과.</p>
+
+        <p>수급은 외국인 매도가 한층 깊어졌어요. <strong>외국인 -2.879조 11거래일 연속 매도 신기록 갱신</strong>, 5월 누적은 사상 최대 영역 진입. 그런데 5/19 1.5조에서 5/20 2.9조로 매도 강도가 거의 2배 — NVDA 결과를 기다리지 않고 사실상 항복성 매도. 동시에 <strong>개인이 +1.334조·기관이 +1.370조</strong>로 외국인 매물을 거의 1:1로 받아냈어요. 두 주체 합쳐 2.7조 매수가 -2.9조 외국인 매도를 완전히 흡수한 모양새 — 5월 한 달째 이어진 한국 시장의 구조적 특징.</p>
+
+        <p>그런데 핵심은 5/21(목) 첫 반응 거래일. NVDA Q2 가이던스 $91B(휘스퍼 $90B 초과)가 한국 메모리에 직접 호재로 작용 — <strong>SK하이닉스 프리마켓 +3.4%·삼성 동조 상승 신호</strong>. 외국인 매도 11일 연속이 단번에 끊긴다는 보장은 없지만, 환율 1,509원이 1,510 근접에서 후퇴 시도하면 외국인 입장에서 매도 동력 일부 약화. 7,500선 V자 시도 환경이 갖춰진 상태.</p>
+      </div>
+      <div class="news-conclusion">
+        5/20은 NVDA 대기성 항복 매도였고, 5/21이 V자 시도. KOSPI 7,400~7,500 회복 시도 환경, SK하이닉스 1,900,000원 재시도. 외국인 매도 끊김 신호 + 환율 1,500선 안착 확인이 V자 지속의 조건. 추격 매수보다 분할 매수가 정석.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.asiae.co.kr/en/article/2026052015545779859" target="_blank" rel="noopener">Asia Business Daily</a> ·
+        <a href="https://www.koreatimes.co.kr/economy/others/20260520/foreign-investor-exodus-from-korean-stocks-accelerates-amid-chip-sell-off" target="_blank" rel="noopener">Korea Times</a> ·
+        <a href="https://en.bloomingbit.io/feed/news/112492" target="_blank" rel="noopener">Bloomingbit</a>
+      </div>
+    </article>
+
+    <!-- 02: 기업·산업 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">02</span>
+        <span class="news-cat">💼 기업·산업</span>
+        <span class="news-time">🕒 5/20-21 발표 + 프리마켓</span>
+      </div>
+      <h3 class="news-headline">SK하이닉스 SOCAMM2 Vera Rubin 전용 메모리 대량생산 — 프리마켓 +3.4%, NVDA 직접 수혜 가시화</h3>
+      <div class="news-body">
+        <p>SK하이닉스가 5/20~21 사이 <strong>192GB SOCAMM2</strong>(Small Outline Compression Attached Memory Module 2세대) 대량생산 시작을 발표했어요. SOCAMM은 NVIDIA가 차세대 AI 인프라용으로 개발 주도한 메모리 폼팩터인데, 그 2세대를 SK하이닉스가 NVDA의 Vera Rubin 플랫폼 전용으로 공급한다는 의미. <strong>NVDA Q2 가이던스 $91B의 직접 수혜 종목</strong>이라는 시그널이 가장 명확한 회사예요.</p>
+
+        <p>시장 반응은 즉각. SK하이닉스 ADR이 한국 시장 마감 후 NVDA 결과를 반영해 <strong>프리마켓 +3.4%</strong>로 출발, 동시에 NVDA 본주는 시간외에서 -1.4% 정도 후퇴. 흥미로운 역방향 — NVDA는 가격 반영이 끝났는데 한국 메모리는 새로운 호재 흡수 단계. 노무라 5/17 SK하이닉스 400만·삼성 59만 목표 상향이 다시 살아나는 환경이에요. 5/14 200만선 돌파(시총 1위) → 5/15 -7.66% 사이드카 → 5/19 -2.88% → 5/20 NVDA 대기 → 5/21 +5% 회복 시도 흐름.</p>
+
+        <p>구조적으로 더 중요한 건 NVDA CFO의 <strong>"Vera CPU가 $200B 새 시장"</strong> 발언. 이는 GPU 중심의 NVDA가 데이터센터 시스템 전체로 확장한다는 의미인데, 그 시스템 구성품 중 메모리(HBM·DRAM)는 SK하이닉스·삼성이 압도적 점유. 단순 NVDA 매출 증가 = 단순 HBM 매출이 아니라 시스템 전체 단가 상승의 멱승 효과 가능성. 단, 단기는 외국인 매도 11일 연속 후폭풍 정리가 필요해요.</p>
+      </div>
+      <div class="news-conclusion">
+        SK하이닉스는 NVDA $91B 가이던스의 직접 수혜 1순위 + SOCAMM2 자체 호재까지 겹친 상태. 5/21 1,900,000원 재시도, 강하게 진행 시 5/14 200만선 재돌파. 삼성도 290,000원 복귀 시도. 단, 외국인 매도 끊김 확인 후 분할 매수가 안전.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://blockonomi.com/sk-hynix-hxscl-stock-climbs-on-launch-of-advanced-ai-memory-for-nvidia-vera-rubin/" target="_blank" rel="noopener">Blockonomi</a> ·
+        <a href="https://coincentral.com/sk-hynix-stock-rises-as-mass-production-of-nvidia-vera-rubin-memory-module-begins/" target="_blank" rel="noopener">CoinCentral</a> ·
+        <a href="https://www.bloomberg.com/quote/000660:KS" target="_blank" rel="noopener">Bloomberg SK</a>
+      </div>
+    </article>
+
+    <!-- 03: 정책·규제 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">03</span>
+        <span class="news-cat">💰 정책·규제·정부</span>
+        <span class="news-time">🕒 5/20 (수) 美 상원 은행위</span>
+      </div>
+      <h3 class="news-headline">CLARITY Act 상원 은행위 15-9 통과 — 본회의 진입, 7/4 백악관 목표 D-44 가시권</h3>
+      <div class="news-body">
+        <p>미국 상원 은행위원회가 5/20 표결을 통해 디지털자산 시장구조 법안(<strong>CLARITY Act</strong>)을 <strong>15-9 초당파 표결로 본회의에 이송</strong>했어요. CLARITY Act는 미국 첫 번째 종합적 디지털자산 규제 프레임워크로, ① SEC·CFTC 관할권 명확화 ② 스테이블코인 발행·유통 규제 ③ 디파이·중앙화 거래소 구분 ④ 토큰 분류 기준을 담은 법안. 작년에 하원은 통과, 상원에서 정체돼 있다가 이번 마크업으로 핵심 고비를 넘은 거예요.</p>
+
+        <p>표결 전 합의된 핵심은 <strong>스테이블코인 yield 타협안</strong>. 상원의원 톰 틸리스·앤절라 알소브룩스가 발의한 절충안에 따르면 ① 은행 예금에 준하는 이자 지급은 금지(은행권 보호) ② "선의의 활동(bona fide activities)"으로 분류되는 보상은 허용 — 사실상 결제 인센티브·온체인 활동 보상은 가능한 구조. 은행권과 코인 업계의 핵심 쟁점이 해결됐다는 의미.</p>
+
+        <p>남은 변수는 <strong>윤리 조항</strong>. 민주당 의원들이 트럼프 가족의 코인 사업 연관성(Trump 코인·World Liberty Financial 등)을 규제하는 윤리 가드레일을 요구. 이게 마지막 걸림돌이지만 본회의 표결까지 갈 가능성. 7/4 백악관이 제시한 목표일까지 <strong>D-44</strong>, 통과 시 BTC 단기 +10~15% + 스테이블코인 결제 인프라 명확성 + 한국 게임·결제사도 USDC·USDT PoC 본격화 가능.</p>
+      </div>
+      <div class="news-conclusion">
+        CLARITY Act 본회의 진입은 코인 업계 최대 호재. BTC가 채권 발작 + 강달러 환경에서도 $76K 박스 사수한 핵심 동력. 7/4 D-44 모멘텀 + 5/21 NVDA 후 시장 회복까지 겹치면 BTC $82~85K 시도 환경. 한국 게임·결제 — 통과 시 스테이블코인 결제 PoC 사전 검토 권장.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://fortune.com/2026/05/13/crypto-clarity-act-senate-markup/" target="_blank" rel="noopener">Fortune</a> ·
+        <a href="https://www.coindesk.com/policy/2026/05/17/the-clarity-act-took-a-step-forward" target="_blank" rel="noopener">CoinDesk</a> ·
+        <a href="https://www.congress.gov/bill/119th-congress/house-bill/3633/text" target="_blank" rel="noopener">Congress.gov</a>
+      </div>
+    </article>
+
+    <!-- 04: 글로벌·지정학 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">04</span>
+        <span class="news-cat">🌐 글로벌·지정학</span>
+        <span class="news-time">🕒 5/19~20 협상 교착</span>
+      </div>
+      <h3 class="news-headline">트럼프 "이란 응답 totally unacceptable" — Project Freedom 재개 거론, 호르무즈 통항 계속 차단</h3>
+      <div class="news-body">
+        <p>트럼프가 5/19 후반~5/20 사이 이란이 제출한 평화안 카운터안에 대해 <strong>"전적으로 받아들일 수 없다(totally unacceptable)"</strong>고 일축. 이란 측 제안은 호르무즈 해협 통항 재개 + 美 봉쇄 해제는 하되 핵 프로그램 논의는 나중에 미루자는 내용. 트럼프 입장은 명확 — "핵무기 보유는 절대 안 되며, 이란도 이미 동의했다." 핵 시설 폐쇄 + 우라늄 비축분 이전이 핵심 요구.</p>
+
+        <p>현재 상황의 핵심은 <strong>호르무즈 해협이 2/28부터 사실상 차단된 상태</strong>. 이란 의회 국가안보위 위원장은 "통항 관리 계획을 준비했고, 협력 선박과 당사자는 '필요한 수수료'를 내면 통과를 허용할 것"이라 발언. 카르그 섬(이란 주요 원유 수출 허브) 인근에 약 24척의 유조선이 대기 중 — 이란이 사실상 "통행료 부스(toll booth)"로 운영하는 모양새. WTI는 5/20 $101.27(-0.29%)로 횡보 중이지만, 협상 결렬 + Project Freedom 재개 시 $108~110 재진입 가능.</p>
+
+        <p>그런데 시장 반응은 의외로 차분. 이유는 NVDA 가이던스가 모든 분위기를 압도. 채권시장 발작 우려도 5/20 안도 랠리로 일부 진정. <strong>이번 주 게임은 이란 협상 결렬 신호 vs NVDA 모멘텀 지속의 무게 싸움</strong>. 이번 주 안에 트럼프 발언 강도가 한 단계 더 격화되면 6월 첫 주 군사 작전 재개 가능성 — 그땐 WTI $110+ + 채권 금리 4.75%+ 재발작 가능.</p>
+      </div>
+      <div class="news-conclusion">
+        이란 협상은 계속 교착, Project Freedom 재개 거론이 매크로 잔존 리스크. NVDA 모멘텀이 단기 압도하지만 6월 첫 주가 결판 시점. WTI $100 위 유지 시 인플레 + 채권 부담 지속. 매일 트럼프 트윗 + 호르무즈 통항 모니터링 유지.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.cnn.com/2026/05/10/world/live-news/iran-war-news" target="_blank" rel="noopener">CNN</a> ·
+        <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank" rel="noopener">Wikipedia 호르무즈</a> ·
+        <a href="https://www.cbsnews.com/live-updates/iran-war-trump-warning-oil-stock-prices-futures-ceasefire-diplomacy/" target="_blank" rel="noopener">CBS News</a>
+      </div>
+    </article>
+
+    <!-- 05: 디지털자산 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">05</span>
+        <span class="news-cat">₿ 디지털자산·신기술</span>
+        <span class="news-time">🕒 5/21 (목) 새벽 KST</span>
+      </div>
+      <h3 class="news-headline">BTC $77,428(+1.2%) $76K 박스 상단 돌파 — NVDA 호조 + ETF 누적 +$2.7B 9일 연속</h3>
+      <div class="news-body">
+        <p>비트코인이 NVDA 결과 직전부터 매수세가 살아나기 시작했어요. 5/20 새벽 $76,500선에서 마감 후 NVDA 발표 직후 <strong>$77,428(+1.2% 24h)</strong>까지 회복, $76K 박스 상단을 돌파했어요. 이더리움도 <strong>$2,128.62(+0.6%)</strong>로 5/20 $2,116에서 추가 회복. CoinGecko·CoinDesk 모두 일치. 채권 발작 + 강달러 환경에서 박스 횡보하던 코인 시장이 NVDA 가이던스 $91B를 위험자산 회복 신호로 직접 해석한 거예요.</p>
+
+        <p>구조적 동력은 <strong>美 비트코인 현물 ETF 9거래일+ 연속 누적 +$2.7B 유입</strong>. BlackRock IBIT가 단독으로 약 70% 비중을 차지하는 흡수력. 4월 +$1.97B 흑자에 이어 5월도 흑자 출발. 채권 발작 환경에서도 기관 자금 흡수가 끊기지 않은 것이 BTC $76K 박스 사수의 핵심 동력이었고, 이제 NVDA + CLARITY 본회의 진입까지 호재 더해지면서 박스 상단 돌파 트리거가 발사된 모습.</p>
+
+        <p>다음 분기점은 <strong>$80K 회복 + ETH $2,200 복귀</strong>. 둘 다 달성하면 단기 모멘텀 전환 신호. 추가 호재 — ① CLARITY Act 7/4 백악관 목표 D-44, 본회의 표결 가시화 ② NVDA Vera Rubin 양산 = AI 데이터센터 전력·인프라 수요 = 비트코인 채굴 효율성·온체인 AI 결합 신규 내러티브 가능 ③ 알트코인(SOL, AVAX 등) 동조 상승 가능성.</p>
+      </div>
+      <div class="news-conclusion">
+        BTC $76K 박스 돌파 = 단기 바닥 확인. $80K 회복 시 $82~85K 시도 환경. ETH $2,200 + BTC $80K 동반 시 모멘텀 전환 확정. CLARITY Act 본회의 진입은 보너스 호재. 한국 게임·IT — 7/4 통과 시 USDC·USDT 결제 PoC 사전 검토 권장.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-wednesday-may-20-2026-opened-lower-but-moving-higher-111622180.html" target="_blank" rel="noopener">Yahoo Finance</a> ·
+        <a href="https://farside.co.uk/btc/" target="_blank" rel="noopener">Farside Investors</a> ·
+        <a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank" rel="noopener">CoinGecko BTC</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============== [6] MARKET SNAPSHOTS ============== -->
+<section id="markets">
+  <div class="sec-head">
+    <div class="sec-num">[06]</div>
+    <h2 class="sec-title">📈 시장별 스냅샷</h2>
+    <span class="sec-sub">Market Snapshots · 🇺🇸 🇰🇷 ₿</span>
+  </div>
+
+  <div class="markets">
+
+    <div class="market-card us">
+      <div class="market-head">
+        <span class="market-flag">🇺🇸</span>
+        <span class="market-title">미국 시장</span>
+        <span class="market-time">5/20 (수) NY 종가</span>
+      </div>
+      <table class="mkt-table">
+        <thead>
+          <tr><th>지수</th><th>종가</th><th>변동</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mkt-name">S&amp;P 500</td><td class="mkt-val">7,427대</td><td class="mkt-chg macro-down">+1.0%</td></tr>
+          <tr><td class="mkt-name">Nasdaq</td><td class="mkt-val">26,180대</td><td class="mkt-chg macro-down">+1.2%</td></tr>
+          <tr><td class="mkt-name">Dow Jones</td><td class="mkt-val">49,956대</td><td class="mkt-chg macro-down">+1.2%</td></tr>
+          <tr><td class="mkt-name">VIX</td><td class="mkt-val">17.5대</td><td class="mkt-chg macro-down">▼ -0.5p</td></tr>
+          <tr><td class="mkt-name">10Y Yield</td><td class="mkt-val">4.67%</td><td class="mkt-chg macro-down">▼ -1bp</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-comment">3거래일 약세 끊음. NVDA 직전 안도 랠리 + 시간외 $91B 가이던스 발표. 10Y 4.67% 16개월 최고권은 유지.</div>
+    </div>
+
+    <div class="market-card kr">
+      <div class="market-head">
+        <span class="market-flag">🇰🇷</span>
+        <span class="market-title">한국 시장</span>
+        <span class="market-time">5/20 (수) 종가</span>
+      </div>
+      <table class="mkt-table">
+        <thead>
+          <tr><th>지수/종목</th><th>현재가</th><th>변동</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mkt-name">KOSPI</td><td class="mkt-val">7,208.95</td><td class="mkt-chg macro-up">-0.86% (-62.71p)</td></tr>
+          <tr><td class="mkt-name">KOSDAQ</td><td class="mkt-val">1,072대</td><td class="mkt-chg macro-up">-2.61%</td></tr>
+          <tr><td class="mkt-name">SK하이닉스 ADR</td><td class="mkt-val">프리마켓</td><td class="mkt-chg macro-down">+3.4% (SOCAMM2)</td></tr>
+          <tr><td class="mkt-name">USD/KRW</td><td class="mkt-val">1,509.11원</td><td class="mkt-chg macro-up">▲ +8원</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-flow"><strong>수급</strong> · 외국인 <strong>-2.879조 11거래일 연속</strong> 매도 신기록(KOSPI). 개인 +1.334조·기관 +1.370조로 외국인 매물 합산 1:1 흡수. 5월 누적 외국인 매도 사상 최대 영역 진입.</div>
+      <div class="mkt-comment">NVDA 대기성 항복 매도. 5/21 NVDA 호조 첫 반응 거래일 — V자 시도 환경.</div>
+    </div>
+
+    <div class="market-card crypto">
+      <div class="market-head">
+        <span class="market-flag">₿</span>
+        <span class="market-title">디지털 자산</span>
+        <span class="market-time">5/21 (목) 새벽</span>
+      </div>
+      <table class="mkt-table">
+        <thead>
+          <tr><th>자산</th><th>현재가</th><th>변동 (24h)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mkt-name">BTC</td><td class="mkt-val">$77,428</td><td class="mkt-chg macro-down">+1.2%</td></tr>
+          <tr><td class="mkt-name">ETH</td><td class="mkt-val">$2,128</td><td class="mkt-chg macro-down">+0.6%</td></tr>
+          <tr><td class="mkt-name">BTC.D</td><td class="mkt-val">58.4%</td><td class="mkt-chg macro-down">-0.1%p</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-flow"><strong>온체인 / ETF</strong> · 美 BTC 현물 ETF 9거래일+ 연속 누적 <strong>+$2.7B 유입</strong>, BlackRock IBIT 단독 70% 비중. 5/20 NVDA 결과 직후 매수세 회복, $76K 박스 상단 돌파.</div>
+      <div class="mkt-comment">$76K 박스 상단 돌파 = 단기 바닥 확인 신호. NVDA + CLARITY 본회의 진입 더블 모멘텀.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== [7] HEADLINES ============== -->
+<section id="headlines">
+  <div class="sec-head">
+    <div class="sec-num">[07]</div>
+    <h2 class="sec-title">📰 헤드라인 더보기</h2>
+    <span class="sec-sub">More Headlines</span>
+  </div>
+
+  <div class="filter-bar">
+    <span class="filter-chip">전체 8</span>
+    <span class="filter-chip">🇺🇸 2</span>
+    <span class="filter-chip">🇰🇷 2</span>
+    <span class="filter-chip">💼 2</span>
+    <span class="filter-chip">🌍 1</span>
+    <span class="filter-chip">₿ 1</span>
+  </div>
+
+  <div class="headline-list">
+
+    <div class="h-item">
+      <div class="h-title">🇺🇸 NVDA Vera CPU "$200B 신규 시장" — CFO 발언, 올해 CPU 매출만 $20B</div>
+      <div class="h-desc">NVDA CFO Colette Kress가 컨퍼런스콜에서 Vera CPU가 "NVIDIA에게 완전히 새로운 $2,000억(=$200B) 시장을 연다"고 발언. 올해 CPU 매출만 $20B 예상. GPU 중심 회사에서 데이터센터 시스템 회사로 확장 전환 시그널.</div>
+      <div class="h-meta">🕒 5/20 (수) 컨퍼런스콜 ·
+        <a href="https://www.cnbc.com/2026/05/20/nvidia-nvda-earnings-report-q1-2027.html" target="_blank" rel="noopener">CNBC</a> ·
+        <a href="https://www.kiplinger.com/investing/live/nvidia-earnings-live-updates-and-commentary-may-2026" target="_blank" rel="noopener">Kiplinger</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇺🇸 NVDA 소버린 AI 매출 FY26 $30B 돌파 — YoY +3배, 전체 매출 14%</div>
+      <div class="h-desc">국가 단위 AI 인프라(소버린 AI) 매출이 FY26 누적 $30B 돌파, YoY +3배 가속. 전체 매출의 14% 비중으로 새로운 성장축 부상. 중동(사우디·UAE)·유럽·아시아 등 국가 AI 패권 경쟁이 NVDA 매출 다변화로 직결.</div>
+      <div class="h-meta">🕒 5/20 (수) 컨퍼런스콜 ·
+        <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/261902589-nvidia-q1-fy2027-earnings-may-20-nvda-a-buy-at-224-before-most-important-print-tradingkey" target="_blank" rel="noopener">TradingKey</a> ·
+        <a href="https://www.heygotrade.com/en/blog/nvidia-q1-fy2027-earnings-preview-may-20-setup-catalysts/" target="_blank" rel="noopener">HeyGoTrade</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇰🇷 KOSPI 5/20 외국인 -2.879조 매도 신기록 — 개인+기관 +2.7조 합산 흡수</div>
+      <div class="h-desc">외국인 매도 11거래일 연속 + 일중 매도 강도 -2.879조로 5/19 -1.654조에서 거의 2배 가속. NVDA 결과 대기 못 하고 항복성 매도. 개인 +1.334조 + 기관 +1.370조로 매물 합산 1:1 흡수, 한국 시장 구조적 특징 유지.</div>
+      <div class="h-meta">🕒 5/20 (수) 종가 ·
+        <a href="https://www.asiae.co.kr/en/article/2026052015545779859" target="_blank" rel="noopener">Asia Business Daily</a> ·
+        <a href="https://www.koreatimes.co.kr/economy/others/20260520/foreign-investor-exodus-from-korean-stocks-accelerates-amid-chip-sell-off" target="_blank" rel="noopener">Korea Times</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇰🇷 USD/KRW 1,509.11원 1,510 근접 — 1,500선 안착, 한은 6월 인하 사실상 불가</div>
+      <div class="h-desc">USD/KRW가 5/20 +0.08% 상승해 1,509.11원으로 1,510 근접. 5/19 1,501원 → 5/20 1,509원의 점진 약세. NVDA 결과 후 후퇴 시도 가능하지만 1,510 돌파 시 한은 6월 금통위 추가 매파 시그널 + 외국인 매도 재가속 우려.</div>
+      <div class="h-meta">🕒 5/20 (수) ·
+        <a href="https://tradingeconomics.com/south-korea/currency" target="_blank" rel="noopener">Trading Economics</a> ·
+        <a href="https://finance.yahoo.com/quote/KRW=X/history/" target="_blank" rel="noopener">Yahoo Finance</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">💼 크래프톤 1분기 매출 8,742억(+31.3%)·영업이익 4,573억(+47.3%) 역대 최대</div>
+      <div class="h-desc">크래프톤이 1분기 매출 8,742억·영업이익 4,573억으로 역대 최대 분기 기록 경신. 배틀그라운드 안정 + 인도 시장 진출 효과 + 5/15 '서브노티카2' 글로벌 출시. 환율 1,509원으로 2분기 환차익 추가 호재. KOSDAQ -2.61% 환경에서도 게임주 차별화 가능성.</div>
+      <div class="h-meta">🕒 5/19~20 발표 ·
+        <a href="https://m.irgo.co.kr/IR-COMP/259960/" target="_blank" rel="noopener">크래프톤 IR</a> ·
+        <a href="https://store.steampowered.com/app/2829050/Subnautica_2/" target="_blank" rel="noopener">Steam</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">💼 골드만삭스 KOSPI 12개월 목표 9,000 — 한국 기업 이익 YoY +300% 전망</div>
+      <div class="h-desc">골드만삭스가 한국 주식에 대한 'top conviction' 등급을 재확인하면서 KOSPI 12개월 목표를 9,000으로 상향. 2026년 한국 기업 이익이 YoY +300% 성장 전망, 주로 반도체·하드웨어 섹터 견인. JP모건 10,000 목표와 함께 외국계 IB의 한국 강세 컨센서스 형성.</div>
+      <div class="h-meta">🕒 5월 둘째 주 ·
+        <a href="https://en.sedaily.com/markets/2026/05/13/foreign-ownership-of-kospi-rises-despite-heavy-net-selling" target="_blank" rel="noopener">Seoul Economic</a> ·
+        <a href="https://www.tradingkey.com/analysis/stocks/more/261878165-korea-stock-price-index-kospi-surging-over-4-breaking-7800-tradingkey" target="_blank" rel="noopener">TradingKey</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🌍 이란 호르무즈 "통행료 부스" 운영 — 카르그 섬 인근 유조선 24척 대기</div>
+      <div class="h-desc">이란 의회 국가안보위가 "협력 선박은 '필요한 수수료' 내면 호르무즈 통과 허용" 발언. 카르그 섬(이란 주요 원유 수출 허브) 인근 약 24척의 유조선 대기 중. 사실상 통행료 부스(toll booth) 운영 구조. WTI $101.27(-0.29%) 횡보, 협상 결렬 시 Project Freedom 재개·$108~110 재진입 가능.</div>
+      <div class="h-meta">🕒 5/19~20 ·
+        <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank" rel="noopener">Wikipedia</a> ·
+        <a href="https://www.cnbc.com/2026/05/02/trump-iran-strait-of-hormuz.html" target="_blank" rel="noopener">CNBC</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">₿ CLARITY Act 상원 은행위 15-9 통과 — 본회의 진입, 스테이블코인 yield 절충안 합의</div>
+      <div class="h-desc">상원 은행위가 5/20 CLARITY Act를 15-9 초당파 표결로 본회의 이송. 스테이블코인 yield 핵심 절충안 — 은행 예금 준하는 이자는 금지, "선의의 활동" 보상은 허용. 남은 변수는 트럼프 가족 코인 관련 윤리 가드레일. 7/4 백악관 목표 D-44 가시권.</div>
+      <div class="h-meta">🕒 5/20 (수) ·
+        <a href="https://fortune.com/2026/05/13/crypto-clarity-act-senate-markup/" target="_blank" rel="noopener">Fortune</a> ·
+        <a href="https://www.coindesk.com/policy/2026/05/17/the-clarity-act-took-a-step-forward" target="_blank" rel="noopener">CoinDesk</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== [8] 부동산·생활경제 ============== -->
+<section id="realestate">
+  <div class="sec-head">
+    <div class="sec-num">[08]</div>
+    <h2 class="sec-title">🏠 부동산·생활경제</h2>
+    <span class="sec-sub">Real Estate &amp; Living</span>
+  </div>
+
+  <div class="re-snapshot">
+    <strong>부동산 한눈에 (5월 둘째 주, 한국부동산원)</strong><br>
+    서울 아파트 매매: <strong>+0.28%</strong> (평소 0.05%의 5배+, 연초 누적 +3.10%)<br>
+    매매수급지수 <strong>108.3</strong> — 2021년 3월 이후 약 5년 만 최고 (100 초과 = 수요 우위)<br>
+    DSR 3단계 시행 D-41 + 양도세 중과 유예 6/30 만료가 동시 트리거<br>
+    1분기 가계대출 +12.9조원(전분기 +11.3조 가속), 5월 시중은행 +3조 추가
+  </div>
+
+  <div class="re-grid">
+
+    <div class="re-card">
+      <div class="re-title">1️⃣ NVDA 호조 + 환율 1,509원 = 부동산 매수 심리 단기 회복 가능성</div>
+      <div class="re-body">
+        <p>5/20 KOSPI는 -0.86% 약세였지만 마감 후 NVDA Q2 $91B 가이던스로 5/21 V자 시도 환경이 열렸어요. 부동산 시장에 직접 효과 — <strong>"주식해서 번 돈 부동산으로"</strong> 흐름이 5/15~19 KOSPI 폭락 구간에 일시 차단됐지만, NVDA 호조로 SK하이닉스·삼성 회복 시 5월 후반 다시 활성화 가능. 매매수급지수 108.3의 매수 우위 환경에 추가 동력.</p>
+        <p>다만 환율 1,509원이 1,510 근접해 있고 10년물 4.67% 16개월 최고권은 그대로. 한은 6월 금통위는 인하 어려움 — 주담대 변동금리 상승 압력은 유지. 부동산 활성화의 한 축은 회복 가능하지만 자금 조달 비용 축은 부담.</p>
+      </div>
+      <div class="re-sources">📰
+        <a href="https://www.reb.or.kr/reb/cm/cntnts/cntntsView.do?mi=10001&cntntsId=1308" target="_blank" rel="noopener">한국부동산원</a> ·
+        <a href="https://www.newspim.com/news/view/20260519001217" target="_blank" rel="noopener">뉴스핌</a>
+      </div>
+    </div>
+
+    <div class="re-card">
+      <div class="re-title">2️⃣ DSR 3단계 D-41 — 6월이 단기 막바지, 7월부터 거래량 둔화 진입 예상</div>
+      <div class="re-body">
+        <p>7/1 스트레스 DSR(총부채원리금상환비율) 3단계 시행 <strong>D-41</strong>로 카운트다운. 한은 1분기 가계대출 +12.9조 + 5월 시중은행 추가 +3조의 시행 직전 폭증 환경 그대로. 연봉 5,000만원 차주 수도권 주담대 한도 <strong>-900만~-1,700만원</strong> 축소, 연봉 1억은 최대 -4,800만원 차이. 동시에 양도세 중과 유예 6/30 만료로 다주택자 매수 자제 가능성.</p>
+        <p>실제 시장 동향 — 강남 3개월 만 최대 상승 전환(머니투데이 보도), 매매수급지수 5년 만 최고. 6월이 단기 마지막 활발 거래월, 7~8월 거래량 둔화 → 8~9월 가격 모멘텀 둔화 가능성. IT/게임 사업자 — 사무실 임대 갱신·자산 매각·인재 채용 보상 패키지 점검은 6월 전 완료 권장.</p>
+      </div>
+      <div class="re-sources">📰
+        <a href="https://www.bloomberg.com/news/articles/2026-05-19/s-korea-household-lending-accelerates-amid-seoul-housing-rally" target="_blank" rel="noopener">Bloomberg</a> ·
+        <a href="https://www.fsc.go.kr/eng/pr010101/85413" target="_blank" rel="noopener">금융위</a>
+      </div>
+    </div>
+
+    <div class="re-card">
+      <div class="re-title">3️⃣ 게임·IT 직원 채용 시그널 — 환차익 호재, 그러나 수도권 거주비 부담 증가</div>
+      <div class="re-body">
+        <p>크래프톤 1분기 매출 8,742억(+31.3%) · 영업이익 4,573억(+47.3%) 역대 최대. 환율 1,509원으로 2분기 환차익 추가 호재. 시프트업·넥슨게임즈 등 해외 매출 큰 게임사도 동일 환차익 구간 진입 — <strong>2분기 실적 강세 + 채용 확대 사이클 가능성</strong>.</p>
+        <p>그러나 수도권 신입·경력 직원 입장에선 부동산 부담 정점 환경. DSR 3단계 시행 직전 폭증한 주담대 한도가 7월부터 축소되고 매매수급지수 108.3의 매수 우위 환경에서 전·월세도 동반 상승. 회사 입장 — 보상 패키지에 주거 보조·전세 보증금 대출 이자 보조 등 검토 필요. 인재 시장 경쟁 환경에서 환차익 호재를 인재 retention에 일부 재투자하는 방향이 효율적.</p>
+      </div>
+      <div class="re-sources">📰
+        <a href="https://m.irgo.co.kr/IR-COMP/259960/" target="_blank" rel="noopener">크래프톤 IR</a> ·
+        <a href="https://www.bok.or.kr/" target="_blank" rel="noopener">한국은행</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== [9] ANALYST VIEW ============== -->
+<section id="analyst">
+  <div class="sec-head">
+    <div class="sec-num">[09]</div>
+    <h2 class="sec-title">🧠 애널리스트 시각</h2>
+    <span class="sec-sub">Analyst Take · NVDA Day</span>
+  </div>
+
+  <div class="analyst-box">
+    <div class="analyst-tag">▍ 오늘의 종합 분석</div>
+    <div class="analyst-body">
+      <p>오늘의 핵심 — <strong>"NVDA가 채권시장에 처방전을 내밀었어요"</strong>. 수요일(5/20) 미국 시장은 NVDA 직전 안도 랠리로 S&amp;P +1%·Nasdaq/Dow +1.2% 3거래일 약세를 끊었고, 마감 후 NVDA가 모든 기대선을 뛰어넘었어요. Q1 매출 $81.62B(컨센 $79.2B 초과), Q2 가이던스 <strong>$91B</strong>로 휘스퍼 넘버 $90B마저 돌파. 핵심 메시지 세 가지 — Vera Rubin "tremendous start", Vera CPU "$200B 신규 시장"(CFO), 소버린 AI FY26 $30B(+3배 YoY). AI 슈퍼사이클 재확인 + 데이터센터 시스템 회사로의 확장 시그널.</p>
+
+      <p>한국 시장은 5/20 KOSPI -0.86% + 외국인 -2.879조 11일 연속(매도 신기록)으로 NVDA 대기성 항복 매도. 그러나 5/21이 진짜 게임 — <strong>SK하이닉스 ADR 프리마켓 +3.4%(SOCAMM2 Vera Rubin 전용 메모리 대량생산 발표)</strong> + NVDA $91B 직접 수혜로 V자 시도 환경이 갖춰졌어요. 환율 1,509원도 NVDA 후 1,510 돌파 회피 가능성, DXY -0.23% 완화도 도움. CLARITY Act 상원 은행위 15-9 통과로 본회의 진입까지 더해져 코인도 BTC $77,428로 $76K 박스 상단 돌파.</p>
+
+      <p>잔존 리스크는 두 가지. ① 채권시장 발작 — 10년물 4.67% 16개월 최고권은 그대로, 30년물 5.20% 18년 최고도 유지. 재정 적자 우려는 NVDA 한 발로 해결 안 됨. 5/22 美 신규 주택판매와 다음 주 PCE 물가가 다음 분기점. ② 이란 협상 교착 — 트럼프 "totally unacceptable" 발언, Project Freedom 재개 거론. 6월 첫 주가 결판 가능성, 결렬 시 WTI $110+ + 채권 4.75%+ 재발작 가능. NVDA 모멘텀 vs 매크로 리스크의 무게 싸움.</p>
+    </div>
+  </div>
+
+  <div class="scenarios">
+    <div class="sc-card main">
+      <div class="sc-prob">메인 시나리오 · 확률 60%</div>
+      <h3 class="sc-title">"NVDA 모멘텀 지속 + KOSPI V자 + 채권 발작 일부 진정"</h3>
+      <p class="sc-body">5/21 SK하이닉스 +5% 1,900,000원 재시도, 삼성 290,000원 복귀. KOSPI 7,400~7,500선 회복, 외국인 매도 11일 연속 끊김. 환율 1,500~1,505원 후퇴, 10년물 4.55~4.60% 후퇴 시도. S&amp;P 7,500 시도, BTC $80~85K, ETH $2,200 복귀. CLARITY 본회의 진입 모멘텀 보너스. 단, 추격 매수는 신중, 분할 매수가 정석.</p>
+    </div>
+    <div class="sc-card alt">
+      <div class="sc-prob">대안 시나리오 · 확률 40%</div>
+      <h3 class="sc-title">"NVDA 효과 차익실현 + 채권 발작 재발 + 이란 협상 결렬"</h3>
+      <p class="sc-body">NVDA 가이던스가 가격에 이미 반영됐다는 차익실현 매도 + 트럼프 이란 추가 발언 강화 + 6월 첫 주 Project Freedom 재개 가시화. 10년물 4.75%+ 추가, 30년물 5.30%+. USD/KRW 1,512원 돌파, KOSPI 5/21 +2~3% 반등 후 재차 7,100선 테스트. WTI $108~110, BTC $73~75K. 다년 메모리·AI 슈퍼사이클은 무너지지 않으며 이 구간이 분할 매수 적기.</p>
+    </div>
+  </div>
+
+  <div class="action-box">
+    <div class="action-title">🎯 IT/게임 사업자 실용 액션</div>
+    <ul class="action-list">
+      <li><strong>NVDA $91B 가이던스 = AI 인프라 슈퍼사이클 재확인</strong> — Vera Rubin 양산 본격화로 AI API 단가 안정 신호, 그러나 GPU 공급 자체는 여전히 타이트. Claude·OpenAI API 비용 단기 안정 기대, 중기 추가 인하는 여전히 미지수</li>
+      <li><strong>USD/KRW 1,509원 = 환차익 사상 최고권, 1,510 근접</strong> — 크래프톤 1Q 8,742억 역대 최대 + 시프트업·넥슨게임즈 2분기 환차익 확정. NVDA 후 1,500선 후퇴 시도 가능, 1,510 돌파 시나리오 플래닝은 유지</li>
+      <li>SK하이닉스 SOCAMM2 Vera Rubin 전용 메모리 대량생산 = 한국 메모리 NVDA 직접 수혜 1순위 확인. 5/21 1,900,000원 재시도, 추격 매수 신중·분할 진입 정석</li>
+      <li>CLARITY Act 상원 본회의 진입 + 7/4 백악관 목표 D-44 — 통과 시 USDC·USDT 결제 인프라 명확성 확보. 게임 결제·해외 송금 라인업에 스테이블코인 옵션 PoC 사전 검토 권장</li>
+      <li>부동산 — 7/1 DSR 3단계 D-41, 6월이 단기 가계대출 막바지. 사무실 임대 갱신·자산 매각·인재 채용 보상 패키지 점검은 6월 전 완료 권장</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============== [10] CALENDAR ============== -->
+<section id="calendar">
+  <div class="sec-head">
+    <div class="sec-num">[10]</div>
+    <h2 class="sec-title">📅 이번 주 꼭 봐야 할 일정</h2>
+    <span class="sec-sub">Key Events · 5/21 - 5/24</span>
+  </div>
+
+  <div class="cal-grid">
+    <div class="cal-item warn">
+      <div class="cal-date">5/21 (목)</div>
+      <div>
+        <div class="cal-event">🟨 한국 NVDA 첫 반응 거래일 · 美 4월 기존주택판매</div>
+        <div class="cal-desc">NVDA Q2 $91B 가이던스 + SK하이닉스 SOCAMM2 발표 더블 호재로 V자 시도 환경. SK하이닉스 1,900,000원 재시도, 삼성 290,000원 복귀. 외국인 매도 11일 연속 끊김 여부가 V자 지속 조건. 美 기존주택판매 컨센 410만 호.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">5/22 (금)</div>
+      <div>
+        <div class="cal-event">🟦 美 4월 신규 주택판매 + 채권 금리 모니터링</div>
+        <div class="cal-desc">신규 주택판매 컨센 73만 호 — 부동산 경기 모니터. 10년물 4.67% 16개월 최고권에서 4.55%로 후퇴할지 추가 상승할지 NVDA 모멘텀 + 데이터 흐름 결정. 환율 1,500선 사수 여부 동시 모니터링.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">5/23 (토)</div>
+      <div>
+        <div class="cal-event">🟦 한 주 정리 위클리 브리핑 (Vol.155 위클리)</div>
+        <div class="cal-desc">NVDA 결과 + 한 주 KOSPI·미국·코인 흐름 정리 + 다음 주 시나리오 업데이트. 채권 금리 추이 + CLARITY Act 본회의 진행 점검.</div>
+      </div>
+    </div>
+    <div class="cal-item warn">
+      <div class="cal-date">5/29 (목)</div>
+      <div>
+        <div class="cal-event">🟨 美 4월 PCE 물가 — Fed 핵심 물가 지표</div>
+        <div class="cal-desc">연준이 가장 중요시하는 인플레 지표. 코어 PCE 컨센 +0.3% 부합 시 채권 발작 추가 진정, +0.4% 이상 시 10년물 4.75%+ 재발작 가능. NVDA 모멘텀과 매크로 데이터의 다음 교차점.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">상시</div>
+      <div>
+        <div class="cal-event">🟦 트럼프 이란 발언 + 호르무즈 통항 모니터 (매일)</div>
+        <div class="cal-desc">트럼프 이란 카운터안 "totally unacceptable" 일축, Project Freedom 재개 거론. 6월 첫 주가 결판 가능성. 호르무즈 카르그 섬 유조선 24척 대기 중. 결렬 시 WTI $110+·채권 금리 4.75%+ 재발작 가능.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">7/1, 7/4</div>
+      <div>
+        <div class="cal-event">🟦 스트레스 DSR 3단계 시행 D-41 · CLARITY Act 백악관 목표 D-44</div>
+        <div class="cal-desc">한국 가계대출 한도 -900만~-4,800만원 축소(수도권). 6월이 막바지 거래월. 美 CLARITY Act 본회의 진입 — 통과 시 BTC 단기 +10~15% + 스테이블코인 결제 명확성.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ 본 브리핑은 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단의 책임은 본인에게 있습니다. 인용된 수치·뉴스는 발행 시점 기준이며, 시장 상황은 빠르게 변할 수 있어요. 미국 시장 데이터는 5/20 (수) NY 종가 및 시간외 발표분, 한국 시장은 5/20 (수) 15:30 KST 종가, 코인은 5/21 (목) 새벽 KST 기준입니다. 출처 링크는 새 탭으로 열립니다.
+  </div>
+</section>
+
+</main>
+
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    if (!themeToggle) return;
+
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+  });
+</script>
+
+</body>
+</html>

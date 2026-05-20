@@ -7,12 +7,96 @@
                  "publish_time":  "07:00 KST"
              },
     "stats":  {
-                  "total_issues":  153,
+                  "total_issues":  154,
                   "avg_read_minutes":  5,
                   "data_sources":  15
               },
-    "latest":  "2026-05-20",
+    "latest":  "2026-05-21",
     "briefings":  [
+                      {
+                          "date":  "2026-05-21",
+                          "weekday":  "목",
+                          "vol":  154,
+                          "theme":  "NVDA Blowout, Q2 $91B",
+                          "tagline":  "수요일(5/20) NVDA가 모든 기대선을 위로 깼어요. Q1 매출 $81.62B(컨센 $79.2B 초과)·EPS $1.87, 그리고 진짜 핵심 Q2 가이던스 $91B로 휘스퍼 $90B마저 뚫었어요. Vera Rubin tremendous start + CFO Vera CPU $200B 신규 시장 발언, 소버린 AI FY26 $30B(+3배 YoY). 미국 마감은 S&P +1%·Nasdaq/Dow +1.2%로 3거래일 약세 끊음. 한국은 5/20 KOSPI -0.86% 7,208.95 외국인 -2.879조 11일 연속 매도 신기록, 그러나 SK하이닉스 SOCAMM2 발표 + NVDA 호조로 5/21 V자 시도. BTC $77,428로 $76K 박스 상단 돌파. 단, 10년물 4.67% 16개월 최고권 유지.",
+                          "tldr_us":  "S&P +1%·Nasdaq/Dow +1.2% 3거래일 약세 끊음. 마감 후 NVDA Q2 $91B 휘스퍼 $90B 초과",
+                          "tldr_kr":  "KOSPI 7,208.95(-0.86%, -62.71p) 외국인 -2.879조 11일 연속 매도 신기록. NVDA 호조로 5/21 V자 시도",
+                          "tldr_crypto":  "BTC $77,428(+1.2%) $76K 박스 상단 돌파, ETH $2,128. NVDA + ETF 9일+ 누적",
+                          "us_change":  "+1.0",
+                          "kr_change":  "-0.86",
+                          "crypto_change":  "+1.2",
+                          "tags":  [
+                                       "bull",
+                                       "event"
+                                   ],
+                          "html_path":  "2026-05-21-morning.html",
+                          "md_path":  "2026-05-21-morning.md",
+                          "created_at":  "2026-05-21T07:00:00+09:00",
+                          "macro":  {
+                                        "us_10y":  "4.67% (-1bp)",
+                                        "dxy":  "99.27 (-0.23%)",
+                                        "wti":  "$101.27 (-0.29%)",
+                                        "gold":  "$4,504 (+0.6%)",
+                                        "usdkrw":  "1,509원 (+8원)",
+                                        "vix":  "17.5 (-0.46p)"
+                                    },
+                          "telegram_top3":  [
+                                                {
+                                                    "title":  "NVDA Q2 $91B — 휘스퍼 $90B마저 초과",
+                                                    "body":  "Q1 매출 $81.62B(컨센 $79.2B 초과)·EPS $1.87. 핵심은 Q2 가이던스 $91B로 휘스퍼 $90B마저 뚫음. CFO Vera CPU $200B 신규 시장 발언, 소버린 AI FY26 $30B +3배 YoY."
+                                                },
+                                                {
+                                                    "title":  "SK하이닉스 SOCAMM2 대량생산 — 프리마켓 +3.4%",
+                                                    "body":  "Vera Rubin 전용 192GB SOCAMM2 메모리 양산 발표. NVDA $91B 가이던스 직접 수혜 1순위. 5/21 한국 첫 반응 거래일 1,900,000원 재시도 환경."
+                                                },
+                                                {
+                                                    "title":  "KOSPI 외국인 -2.879조 11일 연속 매도 신기록",
+                                                    "body":  "5/19 1.5조에서 거의 2배 가속, 항복성 매도. 개인+기관 +2.7조 합산 흡수. NVDA 호조 + SOCAMM2 더블 호재로 5/21 V자 시도 환경."
+                                                }
+                                            ],
+                          "calendar":  [
+                                           {
+                                               "date":  "5/21 (목)",
+                                               "event":  "한국 NVDA 첫 반응 거래일 · 美 4월 기존주택판매",
+                                               "importance":  "warning",
+                                               "consensus":  "기존주택판매 410만 호"
+                                           },
+                                           {
+                                               "date":  "5/22 (금)",
+                                               "event":  "美 4월 신규 주택판매 + 채권 금리 모니터링",
+                                               "importance":  "info",
+                                               "consensus":  "신규 주택판매 73만 호"
+                                           },
+                                           {
+                                               "date":  "5/23 (토)",
+                                               "event":  "한 주 정리 위클리 브리핑 발행 (Vol.155 위클리)",
+                                               "importance":  "info"
+                                           },
+                                           {
+                                               "date":  "5/29 (목)",
+                                               "event":  "美 4월 PCE 물가 — Fed 핵심 물가 지표",
+                                               "importance":  "warning",
+                                               "consensus":  "코어 PCE +0.3%"
+                                           },
+                                           {
+                                               "date":  "7/1, 7/4",
+                                               "event":  "스트레스 DSR 3단계 D-41 · CLARITY Act 백악관 목표 D-44",
+                                               "importance":  "info"
+                                           }
+                                       ],
+                          "scenarios":  {
+                                            "main":  {
+                                                         "probability":  60,
+                                                         "title":  "NVDA 모멘텀 지속 + KOSPI V자 + 채권 발작 일부 진정",
+                                                         "description":  "5/21 SK하이닉스 +5% 1,900,000원 재시도, KOSPI 7,400~7,500 회복, 외국인 매도 11일 연속 끊김. 환율 1,500~1,505원 후퇴, 10년물 4.55~4.60% 후퇴. S&P 7,500 시도, BTC $80~85K, ETH $2,200 복귀."
+                                                     },
+                                            "risk":  {
+                                                         "probability":  40,
+                                                         "title":  "NVDA 효과 차익실현 + 채권 발작 재발 + 이란 협상 결렬",
+                                                         "description":  "차익실현 + 트럼프 발언 강화 + 6월 첫 주 Project Freedom 재개. 10년물 4.75%+, 30년물 5.30%+. USD/KRW 1,512원 돌파, KOSPI 5/21 반등 후 재차 7,100선 테스트. WTI $108~110, BTC $73~75K 테스트."
+                                                     }
+                                        }
+                      },
                       {
                           "date":  "2026-05-20",
                           "weekday":  "수",
