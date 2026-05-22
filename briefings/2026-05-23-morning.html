@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0F1115">
+<title>2026년 5월 23일 위클리 브리핑 v3.6 — KOSDAQ +4.99% 정책 펀드 폭발, 이란 진정</title>
+<meta name="description" content="한국·미국 증시와 디지털 자산 주말 위클리 브리핑 — 2026년 5월 23일 (토) KOSDAQ +4.99% 국민성장펀드 출시, KOSPI 7,847.71 안정, 이란 진정 + WTI -5.5% 주간, 미국 3대 지수 동반 회복">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg-primary: #0F1115;
+    --bg-elevated: #1A1D24;
+    --bg-card: #1F232C;
+    --bg-hover: #252932;
+    --bg-deeper: #0A0C10;
+    --text-primary: #F0EAE0;
+    --text-secondary: #A8A29A;
+    --text-tertiary: #6B6862;
+    --gold: #D4A857;
+    --gold-bright: #E8C078;
+    --gold-glow: rgba(212,168,87,0.15);
+    --bull: #26A69A;
+    --bear: #EF5350;
+    --bull-bg: rgba(38,166,154,0.1);
+    --bear-bg: rgba(239,83,80,0.1);
+    --border: #2D3138;
+    --border-strong: #3A3F49;
+    --border-gold: rgba(212,168,87,0.3);
+    --info-bg: rgba(91,155,213,0.1);
+    --info-border: #5B9BD5;
+    --warn-bg: rgba(232,192,120,0.12);
+    --warn-border: #E8C078;
+    --font-body: 'Pretendard', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  [data-theme="light"] {
+    --bg-primary: #FAF8F3;
+    --bg-elevated: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-hover: #F5F1E8;
+    --bg-deeper: #F0EBE0;
+    --text-primary: #1A1D24;
+    --text-secondary: #4A4843;
+    --text-tertiary: #6B6862;
+    --gold: #A07F3F;
+    --gold-bright: #7A5F2F;
+    --gold-glow: rgba(160,127,63,0.1);
+    --border: #E5DFD0;
+    --border-strong: #C9C2B0;
+    --border-gold: rgba(160,127,63,0.4);
+    --info-bg: rgba(91,155,213,0.08);
+    --warn-bg: rgba(160,127,63,0.1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-body); font-size: 16px; line-height: 1.7; transition: background .3s, color .3s; }
+  a { color: var(--gold-bright); text-decoration: none; border-bottom: 1px dotted var(--gold); }
+  a:hover { color: var(--gold); border-bottom-style: solid; }
+  strong { color: var(--gold-bright); font-weight: 700; }
+
+  .top-header { position: sticky; top: 0; z-index: 100; background: rgba(15,17,21,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+  [data-theme="light"] .top-header { background: rgba(250,248,243,0.9); }
+  .header-inner { max-width: 920px; margin: 0 auto; padding: .75rem 1.25rem; display: flex; align-items: center; justify-content: space-between; }
+  .header-brand { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; text-decoration: none; }
+  .brand-mark { font-weight: 800; font-size: 1.25rem; color: var(--gold); line-height: 1; letter-spacing: -0.02em; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .brand-text .ko { font-size: 0.7rem; color: var(--text-tertiary); letter-spacing: 0.15em; margin-top: 2px; }
+  .brand-text .en { font-size: 0.95rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.01em; }
+  .header-actions { display: flex; align-items: center; gap: 0.5rem; }
+  .icon-btn { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; font-size: 1rem; }
+  .icon-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+  main { max-width: 920px; margin: 0 auto; padding: 0 1.25rem; }
+  section { padding: 2.5rem 0; border-bottom: 1px dashed var(--border); }
+  section:last-child { border-bottom: none; }
+
+  .hero { padding-top: 2.5rem; }
+  .hero-meta { font-family: var(--font-mono); font-size: .8rem; color: var(--text-tertiary); letter-spacing: .12em; margin-bottom: 1.25rem; }
+  .hero-meta .vol { color: var(--gold); }
+  .hero-title { font-weight: 800; font-size: clamp(1.7rem, 4.5vw, 2.3rem); line-height: 1.3; letter-spacing: -.01em; margin-bottom: .8rem; }
+  .hero-sub { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 680px; }
+
+  .tldr-grid { display: grid; gap: .75rem; margin-top: 2rem; }
+  .tldr-card { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 4px; }
+  .tldr-flag { font-size: 1.6rem; }
+  .tldr-label { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); letter-spacing: .1em; margin-bottom: .2rem; }
+  .tldr-text { font-size: .95rem; line-height: 1.5; }
+  .tldr-change { font-family: var(--font-mono); font-size: 1.05rem; font-weight: 700; padding: .35rem .65rem; border-radius: 4px; }
+  .change-bull { color: var(--bull); background: var(--bull-bg); }
+  .change-bear { color: var(--bear); background: var(--bear-bg); }
+
+  .sec-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: .8rem; border-bottom: 1px solid var(--border); }
+  .sec-num { font-family: var(--font-mono); font-weight: 700; font-size: .78rem; color: var(--gold); padding: .25rem .5rem; background: var(--gold-glow); border-radius: 3px; }
+  .sec-title { font-weight: 700; font-size: 1.35rem; letter-spacing: -.01em; }
+  .sec-sub { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); margin-left: auto; letter-spacing: .12em; text-transform: uppercase; }
+
+  .macro-table { width: 100%; border-collapse: collapse; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; font-size: .92rem; }
+  .macro-table th, .macro-table td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+  .macro-table thead th { background: var(--bg-deeper); font-family: var(--font-mono); font-size: .75rem; color: var(--text-tertiary); letter-spacing: .1em; text-transform: uppercase; font-weight: 600; }
+  .macro-table tbody tr:last-child td { border-bottom: none; }
+  .macro-table tbody tr:hover { background: var(--bg-hover); }
+  .macro-name { font-weight: 700; color: var(--gold-bright); font-family: var(--font-mono); font-size: .88rem; }
+  .macro-value { font-family: var(--font-mono); font-weight: 600; }
+  .macro-chg { font-family: var(--font-mono); font-weight: 600; font-size: .88rem; }
+  .macro-up { color: var(--bear); }
+  .macro-down { color: var(--bull); }
+  .macro-note { font-size: .85rem; color: var(--text-secondary); }
+  .macro-summary { margin-top: 1rem; padding: .9rem 1.1rem; background: var(--info-bg); border-left: 3px solid var(--info-border); border-radius: 4px; font-size: .9rem; line-height: 1.65; color: var(--text-primary); }
+
+  .deep { background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 10px; padding: 1.8rem 1.6rem; }
+  .deep-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .18em; margin-bottom: 1rem; }
+  .deep-title { font-weight: 800; font-size: 1.35rem; line-height: 1.4; margin-bottom: 1.2rem; }
+  .deep-body { font-size: .96rem; line-height: 1.8; color: var(--text-primary); margin-bottom: 1.2rem; }
+  .deep-body p { margin-bottom: 1rem; }
+  .stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .6rem; margin: 1.3rem 0; }
+  .stat-card { padding: .9rem 1rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 6px; }
+  .stat-label { font-family: var(--font-mono); font-size: .68rem; color: var(--text-tertiary); letter-spacing: .1em; margin-bottom: .3rem; }
+  .stat-value { font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; color: var(--gold-bright); }
+  .stat-note { font-size: .75rem; color: var(--text-secondary); margin-top: .3rem; line-height: 1.4; }
+  .so-what { padding: 1rem 1.2rem; background: var(--info-bg); border-left: 3px solid var(--info-border); border-radius: 4px; margin-top: 1rem; font-size: .92rem; line-height: 1.65; }
+  .so-what::before { content: '🎯 그래서 나한테 무슨 의미?'; display: block; font-weight: 700; color: var(--info-border); margin-bottom: .4rem; font-size: .82rem; }
+  .deep-sources { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-top: 1.2rem; padding-top: 1rem; border-top: 1px dashed var(--border); font-size: .82rem; color: var(--text-tertiary); }
+  .deep-sources strong { color: var(--text-secondary); font-weight: 600; margin-right: .3rem; }
+  .source-chip { display: inline-block; padding: .25rem .65rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); font-size: .72rem; color: var(--text-secondary) !important; border-bottom: none !important; }
+  .source-chip:hover { border-color: var(--gold); color: var(--gold) !important; }
+
+  .five { display: grid; gap: 1rem; }
+  .news-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.4rem 1.5rem; transition: border-color .25s; }
+  .news-card:hover { border-color: var(--border-gold); }
+  .news-meta { display: flex; align-items: center; gap: .6rem; margin-bottom: .7rem; font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .news-rank { color: var(--gold); font-weight: 700; padding: .2rem .45rem; background: var(--gold-glow); border-radius: 3px; }
+  .news-cat { color: var(--text-secondary); letter-spacing: .08em; }
+  .news-time { margin-left: auto; }
+  .news-headline { font-weight: 700; font-size: 1.1rem; line-height: 1.45; margin-bottom: .8rem; }
+  .news-body { font-size: .93rem; line-height: 1.8; color: var(--text-primary); }
+  .news-body p { margin-bottom: .7rem; }
+  .news-body p:last-child { margin-bottom: 0; }
+  .news-conclusion { margin-top: 1rem; padding: .8rem 1rem; background: var(--bg-deeper); border-left: 3px solid var(--gold); border-radius: 4px; font-size: .9rem; line-height: 1.55; }
+  .news-conclusion::before { content: '→ 그래서 뭐? '; color: var(--gold); font-weight: 700; }
+  .news-sources { margin-top: .9rem; padding-top: .7rem; border-top: 1px dashed var(--border); font-size: .8rem; color: var(--text-tertiary); }
+  .news-sources a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; }
+  .news-sources a:hover { color: var(--gold); }
+
+  .markets { display: grid; gap: 1.2rem; }
+  .market-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.3rem 1.4rem; }
+  .market-card.us { border-top: 3px solid #5B9BD5; }
+  .market-card.kr { border-top: 3px solid #D4A857; }
+  .market-card.crypto { border-top: 3px solid #F7931A; }
+  .market-head { display: flex; align-items: baseline; gap: .6rem; margin-bottom: .9rem; }
+  .market-flag { font-size: 1.4rem; }
+  .market-title { font-weight: 700; font-size: 1.05rem; }
+  .market-time { margin-left: auto; font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .mkt-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-bottom: .8rem; }
+  .mkt-table th, .mkt-table td { padding: .55rem .7rem; text-align: left; border-bottom: 1px solid var(--border); }
+  .mkt-table thead th { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); letter-spacing: .08em; text-transform: uppercase; font-weight: 600; background: var(--bg-deeper); }
+  .mkt-table tbody tr:last-child td { border-bottom: none; }
+  .mkt-table .mkt-name { font-weight: 600; }
+  .mkt-table .mkt-val { font-family: var(--font-mono); font-weight: 600; }
+  .mkt-table .mkt-chg { font-family: var(--font-mono); font-weight: 700; }
+  .mkt-flow { font-size: .85rem; color: var(--text-secondary); padding: .55rem .8rem; background: var(--bg-deeper); border-radius: 4px; margin-bottom: .7rem; line-height: 1.55; }
+  .mkt-comment { padding: .7rem .9rem; background: var(--gold-glow); border-left: 3px solid var(--gold); border-radius: 4px; font-size: .88rem; line-height: 1.6; color: var(--text-primary); }
+  .mkt-comment::before { content: '💬 '; }
+
+  .filter-bar { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.2rem; font-size: .8rem; color: var(--text-tertiary); }
+  .filter-chip { padding: .3rem .7rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); }
+  .headline-list { display: grid; gap: .7rem; }
+  .h-item { padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; transition: all .2s; }
+  .h-item:hover { border-color: var(--border-gold); transform: translateX(2px); }
+  .h-title { font-weight: 600; font-size: .98rem; margin-bottom: .4rem; line-height: 1.4; }
+  .h-desc { font-size: .87rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: .5rem; }
+  .h-meta { font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .h-meta a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; font-size: .72rem; }
+
+  .re-snapshot { padding: 1.1rem 1.3rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 1.2rem; font-size: .9rem; line-height: 1.7; }
+  .re-snapshot strong { color: var(--gold-bright); }
+  .re-grid { display: grid; gap: 1rem; }
+  .re-card { padding: 1.3rem 1.4rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; }
+  .re-title { font-weight: 700; font-size: 1.02rem; margin-bottom: .6rem; line-height: 1.4; }
+  .re-body { font-size: .92rem; line-height: 1.75; color: var(--text-primary); }
+  .re-body p { margin-bottom: .55rem; }
+  .re-body p:last-child { margin-bottom: 0; }
+  .re-sources { margin-top: .8rem; padding-top: .7rem; border-top: 1px dashed var(--border); font-size: .78rem; color: var(--text-tertiary); }
+  .re-sources a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; }
+
+  .analyst-box { padding: 1.5rem 1.6rem; background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 8px; margin-bottom: 1.2rem; }
+  .analyst-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .15em; margin-bottom: .8rem; }
+  .analyst-body { font-size: .96rem; line-height: 1.85; color: var(--text-primary); }
+  .analyst-body p { margin-bottom: .8rem; }
+  .analyst-body p:last-child { margin-bottom: 0; }
+  .scenarios { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem; }
+  .sc-card { padding: 1.4rem 1.5rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; }
+  .sc-card.main { border-left: 3px solid var(--bull); }
+  .sc-card.alt { border-left: 3px solid var(--bear); }
+  .sc-prob { font-family: var(--font-mono); font-size: .8rem; color: var(--gold); letter-spacing: .1em; margin-bottom: .5rem; }
+  .sc-title { font-weight: 700; font-size: 1.05rem; margin-bottom: .7rem; line-height: 1.4; }
+  .sc-body { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+  .action-box { padding: 1.1rem 1.3rem; background: var(--bg-deeper); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; }
+  .action-title { font-weight: 700; font-size: .92rem; color: var(--gold); margin-bottom: .6rem; }
+  .action-list { list-style: none; padding: 0; margin: 0; }
+  .action-list li { padding: .35rem 0; padding-left: 1.2rem; position: relative; font-size: .9rem; line-height: 1.6; color: var(--text-primary); }
+  .action-list li::before { content: '▸'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+
+  .cal-grid { display: grid; gap: .7rem; }
+  .cal-item { display: grid; grid-template-columns: 110px 1fr; gap: 1rem; padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--info-border); border-radius: 6px; align-items: center; }
+  .cal-item.warn { border-left-color: var(--warn-border); background: var(--warn-bg); }
+  .cal-item.info { border-left-color: var(--info-border); background: var(--info-bg); }
+  .cal-date { font-family: var(--font-mono); font-size: .85rem; font-weight: 700; color: var(--gold-bright); }
+  .cal-event { font-weight: 600; margin-bottom: .25rem; font-size: .98rem; }
+  .cal-desc { font-size: .85rem; color: var(--text-secondary); line-height: 1.55; }
+
+  .disclaimer { margin-top: 2rem; padding: 1rem 1.2rem; background: var(--bg-deeper); border: 1px dashed var(--border); border-radius: 6px; font-size: .78rem; color: var(--text-tertiary); line-height: 1.6; }
+
+  @media (max-width: 720px) {
+    .scenarios { grid-template-columns: 1fr; }
+    .tldr-card { grid-template-columns: auto 1fr; }
+    .tldr-change { grid-column: 2; justify-self: start; margin-top: .3rem; }
+    .cal-item { grid-template-columns: 1fr; gap: .3rem; }
+    .macro-table th, .macro-table td { padding: .6rem .55rem; font-size: .82rem; }
+    .mkt-table th, .mkt-table td { padding: .45rem .5rem; font-size: .82rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top-header">
+  <div class="header-inner">
+    <a href="/index.html" class="header-brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-text">
+        <div class="en">Morning Brief</div>
+        <div class="ko">데일리 경제 브리핑</div>
+      </div>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" title="테마 변경">🌙</button>
+      <button class="icon-btn" title="공유" onclick="navigator.share && navigator.share({title: document.title, url: location.href})">↗</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============== [1] HERO ============== -->
+<section class="hero">
+  <div class="hero-meta">
+    <span class="vol">Vol.156</span> · 2026.05.23 (토) · 📖 14분 읽기 · v3.6 위클리
+  </div>
+  <h1 class="hero-title">위클리 정리 — KOSPI 양방향 사이드카의 주, KOSDAQ +4.99% 정책 펀드 폭발, 이란 진정 + 환율 1,517원 재상승</h1>
+  <p class="hero-sub">한 주(5/19~5/22)를 한 줄로 — <strong>V자 그 자체</strong>. KOSPI는 월요일 출발 → 5/20 7,208.95 항복 매도 → <strong>5/21 +8.42% 사상 최대 상승폭 7,815.59 (사이드카)</strong> → 5/22 +0.41% 7,847.71로 안정 마감. 5/15 -6.12% 하락 사이드카 자리에서 정확히 6거래일 만에 정반대 사이드카가 작동한 매우 드문 한 주. 5/22 <strong>KOSDAQ +4.99% 1,161.13으로 폭발</strong> — 같은 날 출시된 <strong>국민성장펀드(5년 150조, KOSDAQ 30% 배정)</strong> 기대로 바이오·로봇·항공우주 동반 강세. 미국은 5/21 이란 카메네이 우라늄 충격 후 5/22 협상 진전 시그널로 진정 — <strong>S&amp;P 7,445.72 (+0.17%), Dow 50,285.66 (+0.55%), Nasdaq 26,293.10 (+0.09%)</strong> 3대 지수 동반 상승, <strong>WTI $96.60(-5.5% 주간)</strong>, 10년물 4.57%(-3bp). 환율은 정반대 — <strong>USD/KRW 1,517.04원(+12.8원)</strong> 강달러 복귀. BTC $77K 박스 사수, ETH $2,127. <strong>다음 주 5/25 美 메모리얼 데이 휴장 + 5/28 4월 PCE</strong>가 변동성 메인 변수.</p>
+
+  <div class="tldr-grid">
+    <div class="tldr-card">
+      <div class="tldr-flag">🇺🇸</div>
+      <div>
+        <div class="tldr-label">미국 (5/22 금 NY 종가)</div>
+        <div class="tldr-text">S&amp;P <strong>+0.17%</strong>·Dow <strong>+0.55%</strong>·Nasdaq +0.09%. 이란 진정 + WTI $96.60 -5.5% 주간, 10Y 4.57%</div>
+      </div>
+      <div class="tldr-change change-bull">+0.17%</div>
+    </div>
+    <div class="tldr-card">
+      <div class="tldr-flag">🇰🇷</div>
+      <div>
+        <div class="tldr-label">한국 (5/22 금 종가)</div>
+        <div class="tldr-text">KOSPI <strong>7,847.71 (+0.41%, +32p)</strong> 안정, <strong>KOSDAQ +4.99% 1,161.13</strong> 국민성장펀드 폭발</div>
+      </div>
+      <div class="tldr-change change-bull">+0.41%</div>
+    </div>
+    <div class="tldr-card">
+      <div class="tldr-flag">₿</div>
+      <div>
+        <div class="tldr-label">코인 (5/23 토 새벽)</div>
+        <div class="tldr-text">BTC <strong>$77K 박스 사수</strong>, ETH $2,127. 한 주 박스 횡보, CLARITY Act 7/4 D-42</div>
+      </div>
+      <div class="tldr-change change-bear">~0%</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== [3] MACRO TABLE ============== -->
+<section id="macro">
+  <div class="sec-head">
+    <div class="sec-num">[03]</div>
+    <h2 class="sec-title">📊 거시 환경 한눈에 (한 주 정리)</h2>
+    <span class="sec-sub">Macro Dashboard · 6 Indicators · Weekly</span>
+  </div>
+
+  <table class="macro-table">
+    <thead>
+      <tr>
+        <th>지표</th>
+        <th>현재값</th>
+        <th>주간 변동</th>
+        <th>시사점 (한 줄)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="macro-name">美 10Y</span></td>
+        <td class="macro-value">4.57%</td>
+        <td class="macro-chg macro-down">▼ -3bp</td>
+        <td class="macro-note">4.55% 이탈 시도, 성장 우려 우위</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">DXY</span></td>
+        <td class="macro-value">99.71</td>
+        <td class="macro-chg macro-up">▲ +0.32%</td>
+        <td class="macro-note">강달러 복귀, 한국 자금 환차 압력</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">WTI</span></td>
+        <td class="macro-value">$96.60</td>
+        <td class="macro-chg macro-down">▼ -5.5%</td>
+        <td class="macro-note">이란 진정, 주간 최대 낙폭, $100 이탈</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">금</span></td>
+        <td class="macro-value">$4,510</td>
+        <td class="macro-chg macro-down">▼ -0.3%</td>
+        <td class="macro-note">안전자산 일부 후퇴, 위험선호 회복</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">USD/KRW</span></td>
+        <td class="macro-value">1,517.04원</td>
+        <td class="macro-chg macro-up">▲ +13원</td>
+        <td class="macro-note">5/21 V자 후에도 1,517 재돌파</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">VIX</span></td>
+        <td class="macro-value">17.8</td>
+        <td class="macro-chg macro-down">▼ -0.4p</td>
+        <td class="macro-note">이란 진정 + NVDA 잔존 효과로 진정</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="macro-summary">
+    한 줄 종합 — <strong>"극단의 한 주, 진정의 금요일"</strong>. 한 주 흐름은 ① 5/19~20 항복 매도 → ② 5/20 늦은 밤 NVDA Q2 $91B 가이던스 → ③ 5/21 사상 최대 +8.42% 폭등 + 사이드카 → ④ 5/22 이란 협상 진전 + 국민성장펀드 폭발. 시장 심리가 일주일 안에 두 번 완전히 뒤집힌 드문 케이스. 5/22 마감 환경은 — 한국 KOSPI 안정·KOSDAQ 폭발, 미국 3대 지수 동반 상승, 유가 진정, 환율 1,517 재상승. <strong>다음 주 5/28 美 4월 PCE</strong>가 분기점, 코어 +0.3% 부합 시 채권 추가 진정·+0.4%+ 시 4.70%대 재발작.
+  </div>
+</section>
+
+<!-- ============== [4] DEEP DIVE ============== -->
+<section id="deep-dive">
+  <div class="sec-head">
+    <div class="sec-num">[04]</div>
+    <h2 class="sec-title">⭐ 오늘의 깊은 이야기</h2>
+    <span class="sec-sub">Deep Dive · KOSDAQ Policy Fund Explosion</span>
+  </div>
+
+  <article class="deep">
+    <div class="deep-tag">DEEP DIVE · 한국 KOSDAQ 폭발 · 🕒 5/22 (금) 종가</div>
+    <h3 class="deep-title">KOSDAQ +4.99% 폭발 — 5년 150조 국민성장펀드 출시 + 5/21 V자 자산효과의 결합</h3>
+
+    <div class="deep-body">
+      <p>5/22(금) 한국 시장의 진짜 주인공은 KOSPI가 아니라 <strong>KOSDAQ</strong>이었어요. KOSPI는 +0.41% 7,847.71로 5/21 사상 최대 +8.42% 폭등 후 안정 마감했지만, KOSDAQ은 <strong>+4.99% 1,161.13</strong>(전일 1,105.97 대비 +55.16p)으로 폭발. 평소 ±0.5%가 일반적이니 <strong>10배 큰 움직임</strong>, KOSDAQ 단일 일 상승률로는 2024년 이후 최대 수준이에요.</p>
+
+      <p>트리거는 <strong>국민성장펀드 출시</strong>. 이재명 정부가 5/22(금) <strong>5년간 150조원 규모</strong>(공공자금 3조원 포함)의 국민성장펀드를 첫 판매 개시. 핵심은 자금 배분 구조 — <strong>KOSPI 10% / KOSDAQ + 비상장주 30% / 첨단 전략산업 60%</strong>. KOSDAQ에 30%가 직접 배정되는데, KOSDAQ에 집중된 산업이 정확히 AI·반도체·바이오·로봇·항공우주·이차전지로 정부의 첨단 전략산업 라인업과 겹쳐요. 사실상 KOSDAQ에 직간접으로 40~50%가 유입되는 구조라는 해석이 시장의 컨센서스.</p>
+
+      <div class="stat-cards">
+        <div class="stat-card">
+          <div class="stat-label">KOSDAQ 종가</div>
+          <div class="stat-value">1,161.13</div>
+          <div class="stat-note">+4.99% (+55.16p) · 2024년 이후 최대</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">국민성장펀드</div>
+          <div class="stat-value">150조</div>
+          <div class="stat-note">5년 · KOSDAQ 30% 배정</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">금융</div>
+          <div class="stat-value">+7.91%</div>
+          <div class="stat-note">KOSDAQ 업종 1위</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">제약·바이오</div>
+          <div class="stat-value">+6.37%</div>
+          <div class="stat-note">KOSDAQ 업종 2위</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">KOSPI</div>
+          <div class="stat-value">7,847.71</div>
+          <div class="stat-note">+0.41% · 주간 +8.8%</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">USD/KRW</div>
+          <div class="stat-value">1,517.04</div>
+          <div class="stat-note">+12.8원 · 강달러 복귀</div>
+        </div>
+      </div>
+
+      <p>업종별 강세는 명확했어요. <strong>금융 +7.91% / 제약·바이오 +6.37% / 일반 서비스 +5.97% / 전기·전자 +5.94% / 건설 +5.39%</strong>. 정부가 명시한 5대 전략산업(AI·반도체·바이오·로봇·이차전지)이 위치한 KOSDAQ 시총 상위주가 일제히 강세. 판매 기간은 <strong>5/22 ~ 6/11(3주)</strong>, 첫 2주(5/22~6/4)는 저소득층 우선 배정 1,200억원(전체의 20%) — 단기 자금 유입 가시화.</p>
+
+      <p>또 하나의 배경은 <strong>5/21 KOSPI +8.42% 자산효과</strong>. 한국 자산 시장이 일주일 안에 두 번 사이드카(5/15 하락·5/21 상승)를 겪으며 시장 신뢰가 극단적으로 변동, 5/22 KOSPI 안정 + KOSDAQ 폭발로 <strong>자금 회전의 분기</strong>가 일어났어요. 외국인은 5/22에도 KOSPI에서 -1.93조 매도(2일 연속 매수 우위 종료)했지만, 정작 그 자금이 KOSDAQ과 정책 펀드 라인업으로 일부 이동한 정황. <strong>개인 +1.06조·기관 +7,601억</strong>으로 국내 자금이 KOSPI를 방어하며 KOSDAQ을 동시 견인.</p>
+
+      <p>다만 주의할 점 — 정책 펀드 1회성 효과 vs 지속성의 분기점은 6월 첫 주. 5/22~6/4 1주차 판매 진척도가 관건이고, 첨단 전략산업 60%가 KOSDAQ 종목에 어느 정도 흡수되는지에 따라 6월 중순 이후 흐름이 달라져요. KOSPI/KOSDAQ 동시 강세 vs KOSDAQ 단독 강세 시나리오가 다음 주 정해질 듯.</p>
+    </div>
+
+    <div class="so-what">
+      한국 주식 — KOSPI는 5/21 사상 최대 폭등 + 5/22 안정으로 단기 상승 추세 확정, <strong>7,800~7,900 안착 시도</strong>. KOSDAQ은 정책 펀드 직접 수혜 — 5/22 +4.99% 절반 정도는 단기 모멘텀이지만, 첨단 전략산업 종목(KOSDAQ 시총 상위 바이오·AI·로봇)은 6월 중순까지 우호적 환경. IT/게임 — 게임주는 KOSDAQ 비중 + 자금 회전 수혜 가능, 크래프톤·시프트업·넥슨게임즈·데브시스터즈 6월 관심. <strong>환율 1,517원 재돌파로 환차익 사상 최고권 유지</strong> — 2분기 해외 매출 큰 게임사 실적 강세 확정. 미국 주식 — 이란 진정 + NVDA 잔존 효과로 S&amp;P 7,500 시도, 단 5/25 메모리얼 데이 휴장 + 5/28 PCE까지 거래량 둔화. 코인 — BTC $77K 박스 유지, CLARITY Act 7/4 D-42 진행 중.
+    </div>
+
+    <div class="deep-sources">
+      <strong>📰 출처:</strong>
+      <a href="https://en.sedaily.com/markets/2026/05/22/kosdaq-surges-nearly-5-percent-on-hopes-for-45-trillion-won" target="_blank" rel="noopener" class="source-chip">Seoul Economic</a>
+      <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148963908" target="_blank" rel="noopener" class="source-chip">정책브리핑</a>
+      <a href="https://www.asiae.co.kr/en/article/2026052215434975788" target="_blank" rel="noopener" class="source-chip">Asia Business</a>
+      <a href="https://en.bloomingbit.io/feed/news/112657" target="_blank" rel="noopener" class="source-chip">Bloomingbit</a>
+      <a href="https://v.daum.net/v/20260522075119954" target="_blank" rel="noopener" class="source-chip">Daum 업종</a>
+    </div>
+  </article>
+</section>
+
+<!-- ============== [5] FIVE THINGS ============== -->
+<section id="five-things">
+  <div class="sec-head">
+    <div class="sec-num">[05]</div>
+    <h2 class="sec-title">📌 이번 주의 5가지</h2>
+    <span class="sec-sub">Weekly Five Things · 5 Different Topics</span>
+  </div>
+
+  <div class="five">
+
+    <!-- 01: 미국 시장 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">01</span>
+        <span class="news-cat">🇺🇸 미국 시장</span>
+        <span class="news-time">🕒 5/22 (금) NY 종가</span>
+      </div>
+      <h3 class="news-headline">이란 진정 + WTI -5.5% 주간으로 3대 지수 동반 회복, S&amp;P 7,445로 복귀</h3>
+      <div class="news-body">
+        <p>목요일(5/21) 이란 우라늄 명령 충격에 약세 마감했던 미국이 <strong>금요일(5/22) 동반 회복</strong>했어요. 핵심은 <strong>미·이란 협상 진전 시그널</strong> — 양측이 "최종 합의에 가까이 다가가고 있다"는 발언이 흘러나오면서 WTI가 +0.25% 마감 $96.60으로 안착, 한 주 누적 <strong>-5.5% 주간 최대 낙폭</strong> 기록. 5/21 카메네이 우라늄 보관 명령에도 시장이 "협상 결렬"보다는 "최종 단계 줄다리기"로 해석했다는 신호.</p>
+
+        <p>지수는 — <strong>S&amp;P 500 7,445.72 (+0.17%, +12.75p)</strong>, <strong>Dow 50,285.66 (+0.55%, +276.31p)</strong>, <strong>Nasdaq 26,293.10 (+0.09%, +22.74p)</strong>. Dow가 가장 강했고 Nasdaq은 약보합 — 4월 NVDA Q1 호조 잔존 효과는 있었지만, 5/22 메모리얼 데이 직전 거래량 둔화로 큰 방향성은 어려운 환경. 10년물은 <strong>4.57%(-3bp)</strong>로 4.55% 이탈 시도, "성장 우려가 인플레보다 우위" 지속.</p>
+
+        <p>업종별로는 — 에너지가 주간 -5%대 약세(WTI 동조), 금융·산업이 강세(Dow 견인), 빅테크는 NVDA +0.5%·AAPL·MSFT 등 보합. 4월 신규 주택판매 컨센 73만 호 부합으로 부동산 경기 진정도 호재.</p>
+      </div>
+      <div class="news-conclusion">
+        이란 협상 진전이 메인 호재로 작동 중. 5/25 (월) 메모리얼 데이 휴장 + 5/28 (목) 4월 PCE가 다음 주 메인 변수. PCE 코어 +0.3% 부합 시 채권 진정(10년물 4.55% 이탈) + S&amp;P 7,500 시도, +0.4%+ 시 4.70%대 재발작. 분할 매수 + 6월 첫 주 이란 결판 모니터링.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.heygotrade.com/en/news/wall-street-closes-mixed-nasdaq-sp-500-slip-oil-yields/" target="_blank" rel="noopener">Heygotrade Wall Street</a> ·
+        <a href="https://www.cnbc.com/2026/05/22/oil-prices-today-trump-iran-strait-of-hormuz-uranium-.html" target="_blank" rel="noopener">CNBC Oil Iran</a> ·
+        <a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener">FRED 10Y</a>
+      </div>
+    </article>
+
+    <!-- 02: 한국 시장 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">02</span>
+        <span class="news-cat">🇰🇷 한국 시장</span>
+        <span class="news-time">🕒 5/22 (금) 종가</span>
+      </div>
+      <h3 class="news-headline">KOSPI +0.41% 7,847.71 안정 — 외국인 -1.93조 매도 복귀에도 개인·기관 +1.82조 방어</h3>
+      <div class="news-body">
+        <p>KOSPI가 5/22(금) <strong>+0.41% 7,847.71</strong>(+32.12p)로 5/21 사상 최대 폭등 후 안정 마감. KOSDAQ +4.99%와 정반대로 차분한 흐름이었지만, 7,800선 안착이 핵심이에요. 5/14 사상 최고 7,683 → 5/15 -6.12% 7,213 → 5/20 7,208 → 5/21 7,816 → 5/22 7,847로 일주일 안에 V자 + 신고가 갱신.</p>
+
+        <p>수급은 흥미로워요 — 외국인이 <strong>-1.9266조원 순매도</strong>로 복귀(5/21 +1.49조 매수 우위에서 하루 만에 반전). 그러나 <strong>개인 +1.0638조·기관 +7,601억</strong>의 합산 +1.82조 매수로 외국인 매도를 정확히 흡수. "외국인이 차익실현하면 국내 자금이 받아내는" 패턴 재현 — 단, 이번엔 KOSDAQ 폭등이 동반되며 자금 회전이 활발했다는 점이 차이.</p>
+
+        <p>업종별로는 KOSPI는 IT·반도체 약보합(5/21 폭등 차익실현) vs 바이오·헬스케어·중형주 강세. <strong>삼성전자 -0.5% 297,800원</strong>(역대 최고 299,500원 인근 유지), <strong>SK하이닉스 -1.2% 1,917,000원</strong>(200만 직전에서 잠시 후퇴). 두 대형주 모두 -2% 미만으로 추세 훼손은 아직 없음.</p>
+      </div>
+      <div class="news-conclusion">
+        KOSPI 7,800 안착이 핵심 사인. 외국인 단기 차익실현은 자연 발생, 국내 자금이 받아내는 한 7,800선 사수. 다음 주 5/29 한은 금통위 + 5/28 美 PCE 동시 변수. 삼전 30만·하닉 200만 재돌파가 다음 분기점.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.koreatimes.co.kr/economy/20260522/kosdaq-jumps-nearly-5-on-state-backed-fund-optimism-while-kospi-takes-breather" target="_blank" rel="noopener">Korea Times</a> ·
+        <a href="https://www.cnbc.com/2026/05/22/asia-markets-today-brent-nikkei-225-kospi-hang-seng-index.html" target="_blank" rel="noopener">CNBC Asia</a> ·
+        <a href="https://www.asiae.co.kr/en/article/2026052215434975788" target="_blank" rel="noopener">Asia Business</a>
+      </div>
+    </article>
+
+    <!-- 03: 기업·산업 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">03</span>
+        <span class="news-cat">💼 기업·산업</span>
+        <span class="news-time">🕒 5/22 (금) NY 종가</span>
+      </div>
+      <h3 class="news-headline">NVIDIA 5/22 $218.13 마감 + AVGO Q2 가이던스 $22B AI 칩 $10.7B(+27%) 두각</h3>
+      <div class="news-body">
+        <p>NVIDIA가 5/22(금) <strong>$218.13 마감</strong>(일중 고가 $221.49·저가 $215.16)으로 안정. 5/20 마감 후 Q1 호조 + Q2 가이던스 $91B 휘스퍼 초과의 잔존 효과가 한 주를 견인. 컨퍼런스에서 CEO 젠슨 황의 발언 — "Vera Rubin tremendous start + Vera CPU $200B 신규 시장" — 이 다년 모멘텀을 강화. 올해 매출 $370B 가시화 = 2021년 대비 22배, 전체 반도체 섹터 매출의 1/3+ 점유 전망.</p>
+
+        <p>진짜 흥미는 <strong>AVGO(Broadcom)</strong>. 2분기 가이던스 매출 <strong>$22B + AI 칩 매출 $10.7B</strong>(전 분기 $8.4B에서 +27%) — NVDA가 GPU 시장을 지배하는 동안 AVGO는 커스텀 AI 칩(ASIC)으로 시장을 형성 중. 4월 메타가 AVGO와의 파트너십을 <strong>2029년까지 확장</strong>(여러 세대 커스텀 AI 프로세서 + 이더넷 네트워킹), 알파벳도 커스텀 AI 칩 파트너십을 <strong>2031년까지 연장</strong>. 빅테크 4개사의 in-house AI 칩 전환 흐름이 AVGO에 집중되는 구조.</p>
+
+        <p>한국 메모리에는 양면 — NVDA·AVGO 둘 다 HBM·DDR5 수요원이지만, AVGO 커스텀 칩 확산은 SK하이닉스 HBM3E/HBM4 차세대 수주에 직접 영향. 5/21 SK하이닉스 +11.17% 1,940,000원이 NVDA + AVGO 모멘텀의 결과, 6월 본격 양산 시그널 가시화 시 200만 재돌파 가능.</p>
+      </div>
+      <div class="news-conclusion">
+        NVDA·AVGO 듀얼 모멘텀 = AI 인프라 슈퍼사이클의 두 번째 단계. 한국 메모리·후공정·소재 종목(SK하이닉스·삼성전자·한미반도체·HPSP·후공정 PCB) 6월 관심. NVDA 단기 $220 박스, AVGO 다음 어닝 기다림.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://finance.yahoo.com/quote/NVDA/" target="_blank" rel="noopener">Yahoo NVDA</a> ·
+        <a href="https://www.fool.com/investing/2026/05/22/part-ai-that-nvidia-cant-monopolize-avgo-stock/" target="_blank" rel="noopener">Motley Fool AVGO</a> ·
+        <a href="https://fortune.com/2026/05/20/nvidia-q1-earnings-forecast-dividend-stock-buybacks/" target="_blank" rel="noopener">Fortune NVDA</a>
+      </div>
+    </article>
+
+    <!-- 04: 정책·규제 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">04</span>
+        <span class="news-cat">💰 정책·규제·정부</span>
+        <span class="news-time">🕒 5/22 (금) 출시</span>
+      </div>
+      <h3 class="news-headline">국민성장펀드 5/22 출시 — 5년 150조 + KOSDAQ 30%·첨단 60% 배정 + 3주 판매</h3>
+      <div class="news-body">
+        <p>5/22(금) 정부가 <strong>국민성장펀드</strong>를 첫 판매 개시. 핵심 숫자 — <strong>5년간 150조원 규모</strong>(공공자금 3조원 포함), 판매 기간 <strong>5/22 ~ 6/11(3주)</strong>, 첫 2주(5/22~6/4)는 저소득층 우선 <strong>1,200억원(전체의 20%) 배정</strong>. 1인당 투자 한도는 5년간 2억원.</p>
+
+        <p>자금 배분이 핵심 — <strong>KOSPI 10% / KOSDAQ + 비상장주 30% / 첨단 전략산업 60%</strong>. 첨단 전략산업 60%가 KOSDAQ 종목에 흡수될 가능성이 크기 때문에, KOSDAQ에 사실상 40~50%가 유입되는 구조. 5대 전략 산업은 — AI·반도체·바이오·로봇·이차전지로 정부가 명시. 5/22 KOSDAQ +4.99%가 이 기대를 즉시 가격에 반영한 사례.</p>
+
+        <p>한 가지 주의 — 1회성 정책 자금 vs 지속성의 분기점. 5/22 출시 첫날 KOSDAQ 폭등은 모멘텀 측면이 큰 만큼, 6월 첫 주 1주차 판매 진척도와 첨단 전략산업 60%가 KOSDAQ 시총 상위주에 실제로 어느 정도 흡수되는지가 6월 중순 이후 흐름을 결정. 정부의 추가 정책 자금 발표(연기금 KOSDAQ 투자 확대 등) 동반 시 지속성 확보.</p>
+      </div>
+      <div class="news-conclusion">
+        KOSDAQ 시총 상위 첨단 전략 산업 종목(에코프로·셀트리온·HLB·삼천당제약·로보스타·레인보우로보틱스·풍산 등) 6월 관심. 단기 모멘텀 + 정책 수혜 + 5/21 자산효과 3중 호재. IT/게임 — 게임주는 KOSDAQ 핵심 비중, 크래프톤·시프트업·넥슨게임즈·데브시스터즈 6월 관심.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148963908" target="_blank" rel="noopener">정책브리핑</a> ·
+        <a href="https://www.sedaily.com/article/20047476" target="_blank" rel="noopener">서울경제 45조</a> ·
+        <a href="https://www.fsc.go.kr/no010101/86834" target="_blank" rel="noopener">금융위</a>
+      </div>
+    </article>
+
+    <!-- 05: 글로벌·지정학 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">05</span>
+        <span class="news-cat">🌐 글로벌·지정학</span>
+        <span class="news-time">🕒 5/22 (금) 협상 진전</span>
+      </div>
+      <h3 class="news-headline">미·이란 협상 진전 시그널 — WTI -5.5% 주간 + 호르무즈 유조선 통항 부분 재개 가능성</h3>
+      <div class="news-body">
+        <p>5/22 미·이란 협상에서 진전 시그널이 나오면서 <strong>WTI가 한 주 -5.5%, $102.35 → $96.60</strong>으로 후퇴. 5/21 카메네이 우라늄 보관 명령 충격이 24시간 만에 진정된 셈. 양측 분쟁 핵심은 두 가지로 좁혀졌어요 — ① 농축 우라늄 비축분 처리(이전 vs 국내 보관), ② 호르무즈 해협 통행료(이란이 부과 중인 통행료를 美 측이 수용 거부).</p>
+
+        <p>5/22 시그널 — 양측 "최종 합의에 가까이 다가가고 있다"는 비공식 발언, 호르무즈 카르그 섬 인근 대기 중인 유조선 24척 중 일부가 단계적 통항 허가를 받았다는 보도. 결렬 시 Project Freedom 재개 가능성은 여전히 잔존하지만, 6월 첫 주 결판 직전 양측이 거리를 좁히는 흐름.</p>
+
+        <p>채권 시장 반응 — <strong>10년물 4.57%(-3bp)</strong>로 4.55% 이탈 시도. 유가 진정 + 성장 우려 우위 시그널 지속. 단, PCE 결과에 따라 다시 변동성 확대 가능. <strong>금 $4,510 -0.3%</strong>로 안전자산 일부 후퇴 — 위험선호 부분 회복.</p>
+      </div>
+      <div class="news-conclusion">
+        이란 6월 첫 주 결판이 변동성 메인 트리거. 협상 진전 시 WTI $90대 후퇴 + 위험선호 부활 + KOSPI 8,000 시도. 결렬 시 WTI $108~110 + 채권 4.75%+ 재발작 + KOSPI 7,500 복귀. 6/1~6/7 매일 트럼프 발언 + 호르무즈 통항 + 유가 종가 체크.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.cnbc.com/2026/05/22/oil-prices-today-trump-iran-strait-of-hormuz-uranium-.html" target="_blank" rel="noopener">CNBC Oil Iran</a> ·
+        <a href="https://cryptobriefing.com/us-iran-tensions-ease-wti-crude-oil-price-predictions-fall-for-may-2026/" target="_blank" rel="noopener">Cryptobriefing</a> ·
+        <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank" rel="noopener">Wikipedia Hormuz</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============== [6] MARKET SNAPSHOTS ============== -->
+<section id="markets">
+  <div class="sec-head">
+    <div class="sec-num">[06]</div>
+    <h2 class="sec-title">📈 시장별 스냅샷 (주간 정리)</h2>
+    <span class="sec-sub">Market Snapshots · 🇺🇸 🇰🇷 ₿</span>
+  </div>
+
+  <div class="markets">
+
+    <div class="market-card us">
+      <div class="market-head">
+        <span class="market-flag">🇺🇸</span>
+        <span class="market-title">미국 시장</span>
+        <span class="market-time">5/22 (금) NY 종가</span>
+      </div>
+      <table class="mkt-table">
+        <thead>
+          <tr><th>지수</th><th>종가</th><th>일간 변동</th><th>주간 변동</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mkt-name">S&amp;P 500</td><td class="mkt-val">7,445.72</td><td class="mkt-chg macro-down">+0.17%</td><td class="mkt-chg macro-down">+0.5%</td></tr>
+          <tr><td class="mkt-name">Nasdaq</td><td class="mkt-val">26,293.10</td><td class="mkt-chg macro-down">+0.09%</td><td class="mkt-chg macro-down">+0.3%</td></tr>
+          <tr><td class="mkt-name">Dow Jones</td><td class="mkt-val">50,285.66</td><td class="mkt-chg macro-down">+0.55%</td><td class="mkt-chg macro-down">+0.6%</td></tr>
+          <tr><td class="mkt-name">WTI</td><td class="mkt-val">$96.60</td><td class="mkt-chg macro-down">+0.3%</td><td class="mkt-chg macro-up">▼ -5.5%</td></tr>
+          <tr><td class="mkt-name">10Y Yield</td><td class="mkt-val">4.57%</td><td class="mkt-chg macro-down">▼ -3bp</td><td class="mkt-chg macro-down">▼ -10bp</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-comment">이란 진정 + 유가 -5.5% 주간 낙폭으로 3대 지수 동반 회복. 5/25 메모리얼 데이, 5/28 PCE.</div>
+    </div>
+
+    <div class="market-card kr">
+      <div class="market-head">
+        <span class="market-flag">🇰🇷</span>
+        <span class="market-title">한국 시장</span>
+        <span class="market-time">5/22 (금) 종가</span>
+      </div>
+      <table class="mkt-table">
+        <thead>
+          <tr><th>지수/종목</th><th>현재가</th><th>일간 변동</th><th>주간</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mkt-name">KOSPI</td><td class="mkt-val">7,847.71</td><td class="mkt-chg macro-down">+0.41%</td><td class="mkt-chg macro-down">+8.8%</td></tr>
+          <tr><td class="mkt-name">KOSDAQ</td><td class="mkt-val">1,161.13</td><td class="mkt-chg macro-down">+4.99%</td><td class="mkt-chg macro-down">+6%+</td></tr>
+          <tr><td class="mkt-name">삼성전자</td><td class="mkt-val">297,800원</td><td class="mkt-chg macro-up">-0.5%</td><td class="mkt-chg macro-down">+6%+</td></tr>
+          <tr><td class="mkt-name">SK하이닉스</td><td class="mkt-val">1,917,000원</td><td class="mkt-chg macro-up">-1.2%</td><td class="mkt-chg macro-down">+8%+</td></tr>
+          <tr><td class="mkt-name">USD/KRW</td><td class="mkt-val">1,517.04원</td><td class="mkt-chg macro-up">▲ +12.8원</td><td class="mkt-chg macro-up">+13원</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-flow"><strong>수급(5/22)</strong> · 외국인 <strong>-1.9266조 매도 복귀</strong>, 개인 +1.0638조·기관 +7,601억 흡수. 한 주 KOSPI 양방향 사이드카(5/15 ↓·5/21 ↑) 발동.</div>
+      <div class="mkt-comment"><strong>KOSDAQ +4.99% 폭발</strong>(국민성장펀드), KOSPI 7,800 안착. 환율 1,517 재돌파.</div>
+    </div>
+
+    <div class="market-card crypto">
+      <div class="market-head">
+        <span class="market-flag">₿</span>
+        <span class="market-title">디지털 자산</span>
+        <span class="market-time">5/23 (토) 새벽</span>
+      </div>
+      <table class="mkt-table">
+        <thead>
+          <tr><th>자산</th><th>현재가</th><th>일간</th><th>주간</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mkt-name">BTC</td><td class="mkt-val">$77,447</td><td class="mkt-chg macro-down">~0%</td><td class="mkt-chg macro-down">~0% 박스</td></tr>
+          <tr><td class="mkt-name">ETH</td><td class="mkt-val">$2,127</td><td class="mkt-chg macro-down">~0%</td><td class="mkt-chg macro-up">-1%</td></tr>
+          <tr><td class="mkt-name">BTC.D</td><td class="mkt-val">58.1%</td><td class="mkt-chg macro-down">~</td><td class="mkt-chg macro-up">+0.3%p</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-flow"><strong>온체인 / ETF</strong> · 美 BTC 현물 ETF 누적 <strong>+$2.7B 유입</strong> 지속, BlackRock IBIT 70% 비중. ETH BTC 대비 약세 분기 유지.</div>
+      <div class="mkt-comment">한 주 박스 횡보, 한국 폭등·미국 변동성 상쇄. CLARITY Act 7/4 D-42.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== [7] HEADLINES ============== -->
+<section id="headlines">
+  <div class="sec-head">
+    <div class="sec-num">[07]</div>
+    <h2 class="sec-title">📰 헤드라인 더보기</h2>
+    <span class="sec-sub">More Headlines</span>
+  </div>
+
+  <div class="filter-bar">
+    <span class="filter-chip">전체 8</span>
+    <span class="filter-chip">🇺🇸 2</span>
+    <span class="filter-chip">🇰🇷 2</span>
+    <span class="filter-chip">💼 1</span>
+    <span class="filter-chip">💰 1</span>
+    <span class="filter-chip">🌍 1</span>
+    <span class="filter-chip">₿ 1</span>
+  </div>
+
+  <div class="headline-list">
+
+    <div class="h-item">
+      <div class="h-title">🇺🇸 WTI -5.5% 주간 낙폭, 이란 협상 진전 시그널 — $102.35 → $96.60</div>
+      <div class="h-desc">호르무즈 카르그 섬 인근 유조선 24척 중 일부 단계적 통항 허가 보도. 양측 "최종 합의에 가까이 다가가고 있다" 비공식 발언. Project Freedom 재개 가능성은 여전히 잔존, 6월 첫 주 결판이 메인.</div>
+      <div class="h-meta">🕒 5/22 (금) ·
+        <a href="https://www.cnbc.com/2026/05/22/oil-prices-today-trump-iran-strait-of-hormuz-uranium-.html" target="_blank" rel="noopener">CNBC</a> ·
+        <a href="https://cryptobriefing.com/us-iran-tensions-ease-wti-crude-oil-price-predictions-fall-for-may-2026/" target="_blank" rel="noopener">Cryptobriefing</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇺🇸 10Y 4.57% -3bp, 4.55% 이탈 시도 — 5/28 PCE 분기점</div>
+      <div class="h-desc">성장 우려 우위 지속 + 유가 진정 동반. 4.55% 이탈 시 채권 ETF·금리 인하 기대 부활. 5/28 PCE 코어 +0.3% 부합 시 채권 추가 진정 시나리오, +0.4%+ 시 4.70%대 재발작.</div>
+      <div class="h-meta">🕒 5/22 (금) ·
+        <a href="https://fred.stlouisfed.org/series/DGS10" target="_blank" rel="noopener">FRED</a> ·
+        <a href="https://www.cnbc.com/quotes/US10Y" target="_blank" rel="noopener">CNBC US10Y</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇰🇷 KOSDAQ 업종별 강세 — 금융 +7.91%·제약 +6.37%·일반서비스 +5.97%·전기전자 +5.94%</div>
+      <div class="h-desc">국민성장펀드 첨단 전략산업 60% 배정 직접 수혜. KOSDAQ 시총 상위 바이오·로봇·AI 6월 모멘텀 확보. 단, 정책 펀드 1주차 판매 진척도가 6월 중순 이후 흐름 분기점.</div>
+      <div class="h-meta">🕒 5/22 (금) ·
+        <a href="https://en.sedaily.com/markets/2026/05/22/kosdaq-surges-nearly-5-percent-on-hopes-for-45-trillion-won" target="_blank" rel="noopener">Seoul Economic</a> ·
+        <a href="https://v.daum.net/v/20260522075119954" target="_blank" rel="noopener">Daum</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇰🇷 USD/KRW 1,517.04원 +12.8원 강달러 복귀 — 5/21 V자에도 환율 1,510 재돌파</div>
+      <div class="h-desc">5/21 KOSPI 사상 최대 폭등 후에도 환율은 정반대로 +0.83% 강달러 복귀. 외국인 KOSPI -1.93조 매도 + DXY 99.71 상승 결합. 환차익 게임주는 사상 최고권 유지, 단 1,520 재돌파 시 일시 헤지 검토.</div>
+      <div class="h-meta">🕒 5/22 (금) ·
+        <a href="https://finance.yahoo.com/quote/KRW=X/history/" target="_blank" rel="noopener">Yahoo USD/KRW</a> ·
+        <a href="https://www.investing.com/currencies/usd-krw-historical-data" target="_blank" rel="noopener">Investing.com</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">💼 AVGO 2분기 가이던스 $22B + AI 칩 $10.7B(+27%) — 메타 2029·알파벳 2031 파트너십</div>
+      <div class="h-desc">NVDA가 GPU 지배하는 동안 AVGO는 커스텀 AI 칩(ASIC) 시장 형성. 빅테크 4개사(메타·구글·아마존·MSFT) in-house 칩 전환의 핵심 수혜. 한국 메모리 HBM·DDR5 수요원 확보.</div>
+      <div class="h-meta">🕒 5/22 (금) ·
+        <a href="https://www.fool.com/investing/2026/05/22/part-ai-that-nvidia-cant-monopolize-avgo-stock/" target="_blank" rel="noopener">Motley Fool</a> ·
+        <a href="https://finance.yahoo.com/quote/AVGO/" target="_blank" rel="noopener">Yahoo AVGO</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">💰 국민성장펀드 5/22~6/11 3주 판매, 1인당 2억원 한도</div>
+      <div class="h-desc">5년 150조원 규모, 첫 2주 저소득층 1,200억 우선 배정. 첨단 전략 5대 산업(AI·반도체·바이오·로봇·이차전지) 60% 자금 배분. 6월 첫 주 판매 진척도가 지속성 분기점.</div>
+      <div class="h-meta">🕒 5/22 (금) 출시 ·
+        <a href="https://www.korea.kr/news/policyNewsView.do?newsId=148963908" target="_blank" rel="noopener">정책브리핑</a> ·
+        <a href="https://www.tossbank.com/articles/national-growth-fund" target="_blank" rel="noopener">토스뱅크</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🌍 트럼프 "6월 첫 주 안에 결판" + 호르무즈 통항 부분 재개 시그널</div>
+      <div class="h-desc">미·이란 협상 마무리 단계 진입, 6월 첫 주가 사실상 결판 시점. 호르무즈 카르그 섬 인근 유조선 24척 중 일부 단계적 통항 허가. 결렬 시 Project Freedom 재개 가능성 잔존.</div>
+      <div class="h-meta">🕒 5/22 (금) ·
+        <a href="https://www.cnbc.com/2026/05/22/oil-prices-today-trump-iran-strait-of-hormuz-uranium-.html" target="_blank" rel="noopener">CNBC</a> ·
+        <a href="https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis" target="_blank" rel="noopener">Wikipedia</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">₿ BTC $77K 박스 사수, ETH $2,127 약세 분기 유지 — IBIT 70%</div>
+      <div class="h-desc">美 BTC 현물 ETF 누적 +$2.7B 유입(IBIT 70% 비중). ETH 7일 -7.9% 후 안정, $2,200 회복이 다음 분기점. CLARITY Act 7/4 D-42, 본회의 60표 진행 모니터.</div>
+      <div class="h-meta">🕒 5/23 (토) 새벽 ·
+        <a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank" rel="noopener">CoinGecko</a> ·
+        <a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-friday-may-22-2026-prices-moved-little-this-week-120513396.html" target="_blank" rel="noopener">Yahoo Finance</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== [8] 부동산·생활경제 ============== -->
+<section id="realestate">
+  <div class="sec-head">
+    <div class="sec-num">[08]</div>
+    <h2 class="sec-title">🏠 부동산·생활경제</h2>
+    <span class="sec-sub">Real Estate &amp; Living · Weekly</span>
+  </div>
+
+  <div class="re-snapshot">
+    <strong>부동산 한눈에 (5월 넷째 주, 한국부동산원)</strong><br>
+    서울 아파트 매매: <strong>+0.13%</strong> (지난주 +0.28%에서 둔화, 3주 연속 상승 유지)<br>
+    전국 매매: <strong>+0.11%</strong> (3주 연속 상승)<br>
+    경기·인천: <strong>+0.14%</strong> (수도권 동조)<br>
+    강남·성북·서대문·강서 강세, 지방 약세 — 양극화 심화<br>
+    매물 감소가 가격 상승 견인, 5/21 KOSPI +8.42% 자산효과 + DSR 3단계 D-39 + 양도세 6/30 만료 트리거
+  </div>
+
+  <div class="re-grid">
+
+    <div class="re-card">
+      <div class="re-title">1️⃣ 5/22 환율 1,517원 재돌파 = 외국인 매도 + 강달러 복귀, 부동산 안전자산 수요 잔존</div>
+      <div class="re-body">
+        <p>5/22(금) USD/KRW가 1,517.04원으로 +12.8원 상승, 5/21 V자 후에도 강달러 회귀. 외국인이 KOSPI에서 -1.93조 매도하며 일시 자금 유출 시그널 — 부동산은 자국 안전자산으로 일부 회귀 가능. 단, 5월 넷째 주 서울 매매 <strong>+0.13%</strong>는 지난주 +0.28%에서 둔화 — 5월 초 폭증 후 단기 숨고르기.</p>
+        <p>다만 3주 연속 상승은 견고한 모멘텀. 매물 감소가 가격 상승을 견인 중. 강남·성북·서대문·강서 등 실거주 선호 + 재건축 기대 지역이 우선 반응, 지방 약세는 지속.</p>
+      </div>
+      <div class="re-sources">📰
+        <a href="https://www.reb.or.kr/reb/cm/cntnts/cntntsView.do?mi=10001&cntntsId=1308" target="_blank" rel="noopener">한국부동산원</a> ·
+        <a href="https://www.fnnews.com/news/202605221456502287" target="_blank" rel="noopener">파이낸셜뉴스</a>
+      </div>
+    </div>
+
+    <div class="re-card">
+      <div class="re-title">2️⃣ DSR 3단계 D-39, 6월이 단기 막바지 매수 기회</div>
+      <div class="re-body">
+        <p>스트레스 DSR(총부채원리금상환비율) 3단계가 <strong>7/1 시행</strong>(현시점 D-39). 全 업권 가계대출 합산, 스트레스 금리 1.50%, 연봉 1억 차주 한도 -1.2억. 양도세 중과 유예 6/30 만료 + 5/21 자산효과 + 강달러로 인한 부동산 안전자산 수요 = 6월이 단기 매수 정점.</p>
+        <p>7~8월 거래량 둔화 진입 예상. 매수 시점은 6월 중순까지가 적절, 매도 측 호가도 6월 중 정점 가능성. IT/게임 사업자 — 사무실 임대 갱신·자산 매각·인재 보상 패키지 6월 전 완료 권장.</p>
+      </div>
+      <div class="re-sources">📰
+        <a href="https://www.korea.kr/multi/visualNewsView.do?newsId=148943522" target="_blank" rel="noopener">정책브리핑</a> ·
+        <a href="https://www.fsc.go.kr/eng/pr010101/85413" target="_blank" rel="noopener">금융위</a>
+      </div>
+    </div>
+
+    <div class="re-card">
+      <div class="re-title">3️⃣ 국민성장펀드 + 한국 자산 시장 강세 = IT/게임 채용 + 보상 환경 우호</div>
+      <div class="re-body">
+        <p>5/22 KOSDAQ +4.99% 폭발 + KOSPI 5/21 사상 최대 + 환율 1,517원 환차익 사상 최고권의 트리플 호재로 게임주 6월 관심도 ↑. 크래프톤·시프트업·넥슨게임즈·데브시스터즈 KOSDAQ/KOSPI 종목 동시 수혜. 환차익은 사상 최고권 유지 — 2분기 해외 매출 큰 게임사 실적 강세 확정.</p>
+        <p>다만 수도권 신입·경력 입장에선 주거비 부담 정점 환경 — DSR 3단계 직전 폭증 한도가 7월부터 축소, 매매수급지수 108.3 + 전·월세 동반 상승. 보상 패키지에 주거 보조·환차익 인센티브 검토 필요.</p>
+      </div>
+      <div class="re-sources">📰
+        <a href="https://m.irgo.co.kr/IR-COMP/259960/" target="_blank" rel="noopener">크래프톤 IR</a> ·
+        <a href="https://www.bok.or.kr/" target="_blank" rel="noopener">한국은행</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== [9] ANALYST VIEW ============== -->
+<section id="analyst">
+  <div class="sec-head">
+    <div class="sec-num">[09]</div>
+    <h2 class="sec-title">🧠 애널리스트 시각</h2>
+    <span class="sec-sub">Weekly Analyst Take · Two Sided Sidecar Week</span>
+  </div>
+
+  <div class="analyst-box">
+    <div class="analyst-tag">▍ 한 주의 종합 분석</div>
+    <div class="analyst-body">
+      <p>오늘의 핵심 — <strong>"V자의 한 주, 진정의 금요일, 정책 펀드의 폭발"</strong>. 한 주(5/19~5/22)는 시장 심리가 두 번 완전히 뒤집힌 매우 드문 케이스였어요. 5/15 -6.12% 사이드카 → 5/19~20 -2.88%·-0.86% 항복 매도 → 5/20 늦은 밤 NVDA Q2 $91B 가이던스 → 5/21 +8.42% 사상 최대 사이드카 → 5/22 KOSPI +0.41% 안정 + <strong>KOSDAQ +4.99% 폭발</strong>. KOSPI는 7,847.71로 한 주 +8.8% 상승, KOSDAQ은 정책 펀드 출시 + 자산효과 결합으로 +6%+ 폭등.</p>
+
+      <p>미국은 5/21 이란 카메네이 우라늄 명령 충격 후 5/22 협상 진전 시그널로 24시간 만에 진정. <strong>S&amp;P +0.17%·Dow +0.55%·Nasdaq +0.09% 3대 지수 동반 상승</strong>, WTI 한 주 -5.5% 낙폭으로 $96.60 안착, 10년물 4.57%로 4.55% 이탈 시도. 채권 시장이 "성장 우려 &gt; 인플레 우려" 시그널을 유지하면서 6월 첫 주 이란 결판 + 5/28 PCE 결과까지의 우호적 매크로 환경 확보.</p>
+
+      <p>다음 주(5/25~5/29)의 핵심은 세 가지. ① <strong>5/25 (월) 미국 메모리얼 데이 휴장</strong> — 거래량 둔화로 큰 방향성 어려움. ② <strong>5/28 (목) 美 4월 PCE 물가</strong> — 코어 +0.3% 부합 시 채권 추가 진정 + S&amp;P 7,500 시도, +0.4%+ 시 10년물 4.70%대 재발작. ③ <strong>6월 첫 주 이란 결판</strong> — 협상 진전 vs Project Freedom 재개의 갈림길. 5/29 한은 금통위 + 국민성장펀드 1주차 판매 진척도가 한국 측 변수.</p>
+    </div>
+  </div>
+
+  <div class="scenarios">
+    <div class="sc-card main">
+      <div class="sc-prob">메인 시나리오 · 확률 60%</div>
+      <h3 class="sc-title">"점진적 회복 + KOSDAQ 모멘텀 + 5/28 PCE 부합"</h3>
+      <p class="sc-body">KOSPI 7,800~8,000 안착, 삼성 30만·하닉 200만 재돌파 시도. KOSDAQ 1,160~1,200 박스 형성하며 정책 펀드 수혜주 선별 강세. 미국은 5/28 PCE 코어 +0.3% 부합으로 채권 4.55% 이탈, S&amp;P 7,500 시도. WTI $90대 안착, USD/KRW 1,505~1,515원 박스. 이란 협상 6월 첫 주 진전 → 위험선호 부활. BTC $80K 회복 시도, ETH $2,200 회복.</p>
+    </div>
+    <div class="sc-card alt">
+      <div class="sc-prob">대안 시나리오 · 확률 40%</div>
+      <h3 class="sc-title">"PCE 서프라이즈 + 이란 결렬 + 차익실현 동조"</h3>
+      <p class="sc-body">5/28 PCE 코어 +0.4%+ 또는 이란 6월 첫 주 결렬로 채권 4.70%대 재발작, 미국 -2~3% 조정. KOSPI 한 주 +8.8% 폭등의 차익실현 압력 + KOSDAQ 정책 펀드 1회성 효과 한계로 KOSPI 7,500선 테스트, KOSDAQ -3~5% 조정. WTI $108~110, USD/KRW 1,520원 재돌파, BTC $73~75K. 그러나 다년 메모리·AI 슈퍼사이클 펀더멘털 유지 — 분할 매수 적기.</p>
+    </div>
+  </div>
+
+  <div class="action-box">
+    <div class="action-title">🎯 IT/게임 사업자 실용 액션</div>
+    <ul class="action-list">
+      <li><strong>국민성장펀드 KOSDAQ 30%+첨단 60% 배정 = 게임주 6월 모멘텀</strong>. 크래프톤·시프트업·넥슨게임즈·데브시스터즈 KOSDAQ·KOSPI 동시 수혜</li>
+      <li><strong>환율 1,517원 = 환차익 사상 최고권 유지</strong>. 2분기 해외 매출 큰 게임사 실적 강세 확정, 단 1,520 재돌파 시 일시 헤지 검토</li>
+      <li>부동산 — <strong>6월 막바지 매수 기회</strong>. DSR 3단계 D-39 + 양도세 6/30 만료. 사무실 임대 갱신·인재 보상 패키지 6월 전 완료</li>
+      <li><strong>5/28 美 4월 PCE 모니터링 필수</strong>. 코어 +0.3% 부합 시 위험자산 우호, +0.4%+ 시 단기 환차익 + 일시 헤지 검토</li>
+      <li>CLARITY Act 7/4 D-42 — 본회의 진행 모니터, 통과 시 USDC·USDT 결제 PoC 본격 권장</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============== [10] CALENDAR ============== -->
+<section id="calendar">
+  <div class="sec-head">
+    <div class="sec-num">[10]</div>
+    <h2 class="sec-title">📅 다음 주 꼭 봐야 할 일정</h2>
+    <span class="sec-sub">Key Events · 5/25 - 5/29</span>
+  </div>
+
+  <div class="cal-grid">
+    <div class="cal-item info">
+      <div class="cal-date">5/25 (월)</div>
+      <div>
+        <div class="cal-event">🟦 美 메모리얼 데이 휴장</div>
+        <div class="cal-desc">미국 증시·채권시장 휴장으로 거래량 둔화. 한국은 정상 거래 — KOSDAQ 국민성장펀드 수혜 지속 여부 + KOSPI 7,800선 사수 확인. 글로벌 큰 방향성은 어려운 환경.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">5/27 (화)</div>
+      <div>
+        <div class="cal-event">🟦 美 4월 내구재 주문 + 컨퍼런스보드 소비자신뢰지수</div>
+        <div class="cal-desc">소비·기업 투자 모멘텀 체크. 컨센서스 부합 시 5/28 PCE 우호적 환경, 큰 서프라이즈 시 변동성 선반영 가능.</div>
+      </div>
+    </div>
+    <div class="cal-item warn">
+      <div class="cal-date">5/28 (목)</div>
+      <div>
+        <div class="cal-event">🟨 美 4월 PCE 물가 + Q1 GDP 2차 + 신규 실업급여 청구</div>
+        <div class="cal-desc">Fed 핵심 인플레 지표. 코어 PCE 컨센 +0.3% 부합 시 채권 발작 추가 진정(10년물 4.50%대 시도), +0.4% 이상 시 10년물 4.70%+ 재발작. 채권·달러·금 동시 반응.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">5/29 (금)</div>
+      <div>
+        <div class="cal-event">🟦 한은 금통위 — 5월 후반 부동산·환율 환경 평가</div>
+        <div class="cal-desc">동결 우세 컨센서스. 외환 부담 발언 + 가계대출 발언 모니터. DSR 3단계 D-32 + 환율 1,517원 환경 발언이 시장 영향.</div>
+      </div>
+    </div>
+    <div class="cal-item warn">
+      <div class="cal-date">6월 첫 주</div>
+      <div>
+        <div class="cal-event">🟨 트럼프 이란 결판 + 호르무즈 통항 모니터 (매일)</div>
+        <div class="cal-desc">6/1~6/7 매일 트윗·통항·WTI 종가 체크. 협상 진전 시 WTI $90대 안착 + 위험선호 부활, 결렬·Project Freedom 재개 시 WTI $108~110·채권 4.75%+ 재발작 가능.</div>
+      </div>
+    </div>
+    <div class="cal-item warn">
+      <div class="cal-date">7/1</div>
+      <div>
+        <div class="cal-event">🟨 스트레스 DSR 3단계 시행 D-39</div>
+        <div class="cal-desc">全 업권 가계대출 합산, 스트레스 금리 1.50%. 연봉 1억 차주 한도 -1.2억, 수도권 -900만~-4,800만원. 6월이 단기 막바지 거래월, 7~8월 거래량 둔화. 양도세 중과 유예 6/30 만료 동시.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">7/4</div>
+      <div>
+        <div class="cal-event">🟦 CLARITY Act 백악관 목표 D-42</div>
+        <div class="cal-desc">5/14 상원 은행위 15-9 통과 → 본회의 60표 필요(민주당 7표). 통과 시 BTC 단기 +10~15% + 스테이블코인 결제 인프라 명확성 + 한국 게임·결제 USDC·USDT PoC 환경.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ 본 브리핑은 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단의 책임은 본인에게 있습니다. 인용된 수치·뉴스는 발행 시점 기준이며, 시장 상황은 빠르게 변할 수 있어요. 미국 시장 데이터는 5/22 (금) NY 종가, 한국 시장은 5/22 (금) 15:30 KST 종가, 코인은 5/23 (토) 새벽 KST 기준입니다. 위클리 브리핑은 토요일에 발행되며 한 주의 흐름과 다음 주 시나리오를 정리합니다. 출처 링크는 새 탭으로 열립니다.
+  </div>
+</section>
+
+</main>
+
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    if (!themeToggle) return;
+
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+  });
+</script>
+
+</body>
+</html>
