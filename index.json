@@ -7,12 +7,117 @@
                  "publish_time":  "07:00 KST"
              },
     "stats":  {
-                  "total_issues":  163,
+                  "total_issues":  164,
                   "avg_read_minutes":  5,
                   "data_sources":  15
               },
-    "latest":  "2026-06-01",
+    "latest":  "2026-06-02",
     "briefings":  [
+                      {
+                          "date":  "2026-06-02",
+                          "weekday":  "화",
+                          "vol":  164,
+                          "theme":  "ISM 54 4-Year High + KOSPI 8,788 Sidecar + NVIDIA PC Entry — Trump 'I Don't Care if It's Over' Iran → WTI +5%",
+                          "tagline":  "6/1(월) 美 5월 ISM 제조업 PMI 54%로 컨센 52~53 상회 + 2022년 5월 이후 4년 최고, 신규주문 56.8(+2.7p) 가속, 19개월 연속 확장. 미국 3대 지수 동반 사상 최고 — S&P 7,599.96(+0.26%) 10주 연속, Nasdaq 27,086.81(+0.42%), Dow 51,078.88(+0.09%). NVIDIA GTC Taipei RTX Spark(N1X) Arm 기반 PC 프로세서 공개 → NVDA +4.7% $221.04, Arm +7.5% vs Intel -5.4%, AMD -4.5%, Qualcomm -3.6%. 한국 KOSPI 8,788.38(+3.68%, +311.85p) 사상 최고 + 매수 사이드카 발동(KOSPI 200 선물 +5.02%, 11:30) + 시총 7,000조 첫 돌파 + 삼성전자 시총 2,000조 첫 돌파($1.47조). 한국 5월 수출 877.5억$ 역대 최대(+53.2% YoY, 반도체 +169.4%, 일평균 첫 40억$ 돌파, 1~5월 누적 흑자 1,019억$ 기존 연간 최대 조기 초과). 그러나 같은 날 트럼프 'I don't care if it's over' CNBC 발언 → WTI +5.1% $92.16, $87 6주 저점 단번 반전, 5/30 상황실 결정 없음에 이어 사실상 파기 시그널. USD/KRW 1,516원(+21원) 1,500 재돌파, ISM 강함 + 트럼프 발언 동시 충격. 10Y 4.44% 박스, DXY ~98.9, 금 ~$4,460, VIX 15.3(-1.1p). 코인 더 어둠 — BTC $73,594(-0.6%), ETH $1,988(-1.2%). 美 BTC ETF 10거래일 연속 -$2.97B 사상 최장 갱신(IBIT -$448.3M, ARKB -$109.6M, FBTC -$63.4M). 그러나 Galaxy Digital Alex Thorn CLARITY Act 통과 확률 75% 상향(직전 50%, Senate Banking 15-9 가결 후) - 백악관 디지털자산 어드바이저 Patrick Witt 7/4 House 통과 + 6월 중 Senate 처리 공식 목표. 오늘 밤 23:00 KST 美 4월 JOLTS(컨센 720~750만), 6/3 ISM 서비스, 6/4 ADP(컨센 +10만), 6/5 NFP(컨센 +12~15만, 실업률 4.0%), 6/12 한은 통화신용정책보고서, 6/17~18 FOMC 점도표가 핵심 경로.",
+                          "tldr_us":  "S&P 7,599.96(+0.26%) 10주 연속, Nasdaq 27,086.81(+0.42%), Dow 51,078.88(+0.09%) 동반 사상 최고. ISM 54 4년 최고, NVDA +4.7% RTX Spark PC 진출",
+                          "tldr_kr":  "KOSPI 8,788.38(+3.68%, +311.85p) 사상 최고 + 매수 사이드카. 시총 7,000조·삼성전자 2,000조 첫 돌파. 5월 수출 877.5억$ 역대 최대(+53.2% YoY)",
+                          "tldr_crypto":  "BTC $73,594(-0.6%), ETH $1,988(-1.2%). 美 BTC ETF 10거래일 연속 -$2.97B 사상 최장 갱신, IBIT -$448M 누적. CLARITY Act 통과 확률 75%↑",
+                          "us_change":  "+0.26",
+                          "kr_change":  "+3.68",
+                          "crypto_change":  "-0.6",
+                          "tags":  [
+                                       "bull",
+                                       "event"
+                                   ],
+                          "html_path":  "2026-06-02-morning.html",
+                          "md_path":  "2026-06-02-morning.md",
+                          "created_at":  "2026-06-02T07:00:00+09:00",
+                          "macro":  {
+                                        "us_10y":  "4.44% (박스)",
+                                        "dxy":  "~98.9 (-0.2%)",
+                                        "wti":  "$92.16 (+5.1%)",
+                                        "gold":  "~$4,460 (-0.5%)",
+                                        "usdkrw":  "1,516원 (+21원)",
+                                        "vix":  "15.3 (-1.1p)"
+                                    },
+                          "telegram_top3":  [
+                                                {
+                                                    "title":  "KOSPI 8,788 사상 최고 + 매수 사이드카 + 시총 7,000조·삼성 2,000조 첫 돌파",
+                                                    "body":  "6/1 KOSPI 8,788.38(+311.85p, +3.68%) 사상 최고, 장중 8,874 + 매수 사이드카(KOSPI 200 선물 +5.02%, 11:30). KOSPI 시총 7,000조원 첫 돌파, 삼성전자 시총 2,000조원($1.47조) 첫 돌파. 한국 5월 수출 877.5억$ 역대 최대(+53.2% YoY, 반도체 +169.4%)."
+                                                },
+                                                {
+                                                    "title":  "美 ISM 제조업 54 4년 최고 + 3대 지수 동반 사상 최고 + NVIDIA RTX Spark PC 진출",
+                                                    "body":  "5월 ISM 제조업 54%(컨센 52~53 상회, 2022년 5월 이후 4년 최고). 신규주문 56.8(+2.7p). S&P 7,599.96(+0.26%) 10주 연속, Nasdaq 27,086.81(+0.42%), Dow 51,078.88. NVIDIA RTX Spark(N1X) Arm PC 공개 → NVDA +4.7%, Arm +7.5%, Intel -5.4%, AMD -4.5%, Qualcomm -3.6%."
+                                                },
+                                                {
+                                                    "title":  "트럼프 '이란 협상 끝나도 상관없어' → WTI +5.1% $92.16, BTC ETF 10일 -$2.97B 갱신",
+                                                    "body":  "6/1 트럼프 CNBC '이란 협상 끝나도 상관없어' 발언, 5/30 상황실 결정 없음 후 사실상 파기 시그널. WTI +5.1% $92.16, $87 6주 저점 단번 반전. USD/KRW 1,516원(+21원) 1,500 재돌파. 美 BTC ETF 10거래일 연속 -$2.97B 사상 최장 갱신(IBIT -$448M). CLARITY Act 통과 확률 75% 상향."
+                                                }
+                                            ],
+                          "calendar":  [
+                                           {
+                                               "date":  "6/2 (화) 23:00",
+                                               "event":  "美 4월 JOLTS 구인공고",
+                                               "importance":  "warning",
+                                               "consensus":  "720~750만 건"
+                                           },
+                                           {
+                                               "date":  "6/3 (수) 23:00",
+                                               "event":  "美 5월 ISM 서비스 PMI",
+                                               "importance":  "info",
+                                               "consensus":  "52(4월 51.6)"
+                                           },
+                                           {
+                                               "date":  "6/4 (수) 21:15",
+                                               "event":  "美 5월 ADP 민간 고용",
+                                               "importance":  "info",
+                                               "consensus":  "+10만"
+                                           },
+                                           {
+                                               "date":  "6/5 (금) 21:30",
+                                               "event":  "美 5월 비농업 고용(NFP) + 실업률",
+                                               "importance":  "warning",
+                                               "consensus":  "NFP +12~15만, 실업률 4.0%"
+                                           },
+                                           {
+                                               "date":  "6월 중",
+                                               "event":  "트럼프 이란 협상 공식 발표 (결렬/유보/승인)",
+                                               "importance":  "warning"
+                                           },
+                                           {
+                                               "date":  "6/12 (목)",
+                                               "event":  "한국은행 통화신용정책보고서 발간",
+                                               "importance":  "info"
+                                           },
+                                           {
+                                               "date":  "6/17~18 (수~목)",
+                                               "event":  "美 FOMC 6월 — 동결 우세, 점도표 갱신",
+                                               "importance":  "warning"
+                                           },
+                                           {
+                                               "date":  "7/1 (D-29)",
+                                               "event":  "스트레스 DSR 3단계 시행 + 양도세 중과 유예 6/30 만료",
+                                               "importance":  "info"
+                                           },
+                                           {
+                                               "date":  "7/4 (D-32)",
+                                               "event":  "CLARITY Act 美 본회의 표결 — 통과 확률 75% 상향",
+                                               "importance":  "info"
+                                           }
+                                       ],
+                          "scenarios":  {
+                                            "main":  {
+                                                         "probability":  55,
+                                                         "title":  "ADP·NFP 둔화 + 트럼프 진정 → 신고가 추가 시도",
+                                                         "description":  "JOLTS 720~750만 부합 + ADP·NFP 정상(+10~15만) + 트럼프 '재협상' 신호 → WTI $90 박스, 10Y 4.4% 박스, S&P 7,650, KOSPI 8,800~9,000 안착, BTC $75K 복귀 시도. CLARITY Act 75% 추가 호재"
+                                                     },
+                                            "risk":  {
+                                                         "probability":  45,
+                                                         "title":  "ISM 가격지수 + NFP +20만+ 가속 + 트럼프 결렬 확정",
+                                                         "description":  "ISM 가격지수 가속 + NFP +20만+ + 트럼프 이란 결렬 → 10Y 4.55%+ 발작, WTI $95~$100 재돌파, S&P -1~2%(7,450 이하), KOSPI 8,400 박스 후퇴, BTC $70K 재테스트, 환율 1,520원+"
+                                                     }
+                                        }
+                      },
                       {
                           "date":  "2026-06-01",
                           "weekday":  "월",
