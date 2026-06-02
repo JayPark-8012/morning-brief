@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0F1115">
+<title>2026년 6월 3일 데일리 브리핑 v3.6 — S&P 첫 7,600 돌파 + Marvell +33% vs BTC -6% $67K 폭락, Saylor 4년만의 첫 BTC 매도 + JOLTS 7.62M 깜짝</title>
+<meta name="description" content="한국·미국 증시와 디지털 자산 매일 아침 7시 브리핑 — 2026년 6월 3일 (수). 6/2(화) 美 S&P 500 7,609.78(+0.13%) 첫 7,600 돌파 + Nasdaq 27,093.90(+0.03%) + Dow 51,307.79(+0.45%) 3대 지수 동반 신기록 갱신, Marvell Technology +33%(Jensen Huang 코멘트), HPE +19%(실적 깜짝). 美 4월 JOLTS 구인공고 7.618M(컨센 6.88만 대폭 상회, 전월 +731K, 2024년 5월 이후 최고, 공석률 4.2% → 4.6%) — Fed 인하 기대 9월 60% 박스로 약화, 일부 인상 베팅 재부상. KOSPI 8,801(+0.15%) 추가 사상 최고. 그러나 코인 -6% 충격 — BTC $67,468(-5.7%) 4월 이후 첫 $70K 하향 이탈, ETH $1,978(-0.5%). MicroStrategy/Saylor 2022년 12월 이후 첫 BTC 매도(32 BTC, $2.5M, STRC 우선주 배당 자금) 상징적 충격. 美 BTC ETF 11거래일 연속 -$4B(6/1 -$483.8M, IBIT -$440.3M), IBIT $1.26B 블록세일. WTI $91(-1%) Iran 메시지 교환 중단 + 이스라엘 레바논 작전 확대 환경. USD/KRW 1,513원(-0.06%), 10Y 4.46%(+1bp). 오늘 밤 23:00 KST 美 5월 ISM 서비스, 6/4 ADP, 6/5 NFP, 6/17 FOMC 점도표.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg-primary: #0F1115;
+    --bg-elevated: #1A1D24;
+    --bg-card: #1F232C;
+    --bg-hover: #252932;
+    --bg-deeper: #0A0C10;
+    --text-primary: #F0EAE0;
+    --text-secondary: #A8A29A;
+    --text-tertiary: #6B6862;
+    --gold: #D4A857;
+    --gold-bright: #E8C078;
+    --gold-glow: rgba(212,168,87,0.15);
+    --bull: #26A69A;
+    --bear: #EF5350;
+    --bull-bg: rgba(38,166,154,0.1);
+    --bear-bg: rgba(239,83,80,0.1);
+    --border: #2D3138;
+    --border-strong: #3A3F49;
+    --border-gold: rgba(212,168,87,0.3);
+    --info-bg: rgba(91,155,213,0.1);
+    --info-border: #5B9BD5;
+    --warn-bg: rgba(232,192,120,0.12);
+    --warn-border: #E8C078;
+    --font-body: 'Pretendard', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  [data-theme="light"] {
+    --bg-primary: #FAF8F3;
+    --bg-elevated: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-hover: #F5F1E8;
+    --bg-deeper: #F0EBE0;
+    --text-primary: #1A1D24;
+    --text-secondary: #4A4843;
+    --text-tertiary: #6B6862;
+    --gold: #A07F3F;
+    --gold-bright: #7A5F2F;
+    --gold-glow: rgba(160,127,63,0.1);
+    --border: #E5DFD0;
+    --border-strong: #C9C2B0;
+    --border-gold: rgba(160,127,63,0.4);
+    --info-bg: rgba(91,155,213,0.08);
+    --warn-bg: rgba(160,127,63,0.1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-body); font-size: 16px; line-height: 1.7; transition: background .3s, color .3s; }
+  a { color: var(--gold-bright); text-decoration: none; border-bottom: 1px dotted var(--gold); }
+  a:hover { color: var(--gold); border-bottom-style: solid; }
+  strong { color: var(--gold-bright); font-weight: 700; }
+
+  .top-header { position: sticky; top: 0; z-index: 100; background: rgba(15,17,21,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+  [data-theme="light"] .top-header { background: rgba(250,248,243,0.9); }
+  .header-inner { max-width: 920px; margin: 0 auto; padding: .75rem 1.25rem; display: flex; align-items: center; justify-content: space-between; }
+  .header-brand { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; text-decoration: none; }
+  .brand-mark { font-weight: 800; font-size: 1.25rem; color: var(--gold); line-height: 1; letter-spacing: -0.02em; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .brand-text .ko { font-size: 0.7rem; color: var(--text-tertiary); letter-spacing: 0.15em; margin-top: 2px; }
+  .brand-text .en { font-size: 0.95rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.01em; }
+  .header-actions { display: flex; align-items: center; gap: 0.5rem; }
+  .icon-btn { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; font-size: 1rem; }
+  .icon-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+  main { max-width: 920px; margin: 0 auto; padding: 0 1.25rem; }
+  section { padding: 2.5rem 0; border-bottom: 1px dashed var(--border); }
+  section:last-child { border-bottom: none; }
+
+  .hero { padding-top: 2.5rem; }
+  .hero-meta { font-family: var(--font-mono); font-size: .8rem; color: var(--text-tertiary); letter-spacing: .12em; margin-bottom: 1.25rem; }
+  .hero-meta .vol { color: var(--gold); }
+  .hero-title { font-weight: 800; font-size: clamp(1.7rem, 4.5vw, 2.3rem); line-height: 1.3; letter-spacing: -.01em; margin-bottom: .8rem; }
+  .hero-sub { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 680px; }
+
+  .tldr-grid { display: grid; gap: .75rem; margin-top: 2rem; }
+  .tldr-card { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 4px; }
+  .tldr-flag { font-size: 1.6rem; }
+  .tldr-label { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); letter-spacing: .1em; margin-bottom: .2rem; }
+  .tldr-text { font-size: .95rem; line-height: 1.5; }
+  .tldr-change { font-family: var(--font-mono); font-size: 1.05rem; font-weight: 700; padding: .35rem .65rem; border-radius: 4px; }
+  .change-bull { color: var(--bull); background: var(--bull-bg); }
+  .change-bear { color: var(--bear); background: var(--bear-bg); }
+  .change-neutral { color: var(--text-secondary); background: var(--bg-deeper); }
+
+  .sec-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: .8rem; border-bottom: 1px solid var(--border); }
+  .sec-num { font-family: var(--font-mono); font-weight: 700; font-size: .78rem; color: var(--gold); padding: .25rem .5rem; background: var(--gold-glow); border-radius: 3px; }
+  .sec-title { font-weight: 700; font-size: 1.35rem; letter-spacing: -.01em; }
+  .sec-sub { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); margin-left: auto; letter-spacing: .12em; text-transform: uppercase; }
+
+  .macro-table { width: 100%; border-collapse: collapse; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; font-size: .92rem; }
+  .macro-table th, .macro-table td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+  .macro-table thead th { background: var(--bg-deeper); font-family: var(--font-mono); font-size: .75rem; color: var(--text-tertiary); letter-spacing: .1em; text-transform: uppercase; font-weight: 600; }
+  .macro-table tbody tr:last-child td { border-bottom: none; }
+  .macro-table tbody tr:hover { background: var(--bg-hover); }
+  .macro-name { font-weight: 700; color: var(--gold-bright); font-family: var(--font-mono); font-size: .88rem; }
+  .macro-value { font-family: var(--font-mono); font-weight: 600; }
+  .macro-chg { font-family: var(--font-mono); font-weight: 600; font-size: .88rem; }
+  .macro-up { color: var(--bear); }
+  .macro-down { color: var(--bull); }
+  .macro-note { font-size: .85rem; color: var(--text-secondary); }
+  .macro-summary { margin-top: 1rem; padding: .9rem 1.1rem; background: var(--info-bg); border-left: 3px solid var(--info-border); border-radius: 4px; font-size: .9rem; line-height: 1.65; color: var(--text-primary); }
+
+  .deep { background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 10px; padding: 1.8rem 1.6rem; }
+  .deep-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .18em; margin-bottom: 1rem; }
+  .deep-title { font-weight: 800; font-size: 1.35rem; line-height: 1.4; margin-bottom: 1.2rem; }
+  .deep-body { font-size: .96rem; line-height: 1.8; color: var(--text-primary); margin-bottom: 1.2rem; }
+  .deep-body p { margin-bottom: 1rem; }
+  .stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .6rem; margin: 1.3rem 0; }
+  .stat-card { padding: .9rem 1rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 6px; }
+  .stat-label { font-family: var(--font-mono); font-size: .68rem; color: var(--text-tertiary); letter-spacing: .1em; margin-bottom: .3rem; }
+  .stat-value { font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; color: var(--gold-bright); }
+  .stat-note { font-size: .75rem; color: var(--text-secondary); margin-top: .3rem; line-height: 1.4; }
+  .so-what { padding: 1rem 1.2rem; background: var(--info-bg); border-left: 3px solid var(--info-border); border-radius: 4px; margin-top: 1rem; font-size: .92rem; line-height: 1.65; }
+  .so-what::before { content: '🎯 그래서 나한테 무슨 의미?'; display: block; font-weight: 700; color: var(--info-border); margin-bottom: .4rem; font-size: .82rem; }
+  .deep-sources { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-top: 1.2rem; padding-top: 1rem; border-top: 1px dashed var(--border); font-size: .82rem; color: var(--text-tertiary); }
+  .deep-sources strong { color: var(--text-secondary); font-weight: 600; margin-right: .3rem; }
+  .source-chip { display: inline-block; padding: .25rem .65rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); font-size: .72rem; color: var(--text-secondary) !important; border-bottom: none !important; }
+  .source-chip:hover { border-color: var(--gold); color: var(--gold) !important; }
+
+  .five { display: grid; gap: 1rem; }
+  .news-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.4rem 1.5rem; transition: border-color .25s; }
+  .news-card:hover { border-color: var(--border-gold); }
+  .news-meta { display: flex; align-items: center; gap: .6rem; margin-bottom: .7rem; font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .news-rank { color: var(--gold); font-weight: 700; padding: .2rem .45rem; background: var(--gold-glow); border-radius: 3px; }
+  .news-cat { color: var(--text-secondary); letter-spacing: .08em; }
+  .news-time { margin-left: auto; }
+  .news-headline { font-weight: 700; font-size: 1.1rem; line-height: 1.45; margin-bottom: .8rem; }
+  .news-body { font-size: .93rem; line-height: 1.8; color: var(--text-primary); }
+  .news-body p { margin-bottom: .7rem; }
+  .news-body p:last-child { margin-bottom: 0; }
+  .news-conclusion { margin-top: 1rem; padding: .8rem 1rem; background: var(--bg-deeper); border-left: 3px solid var(--gold); border-radius: 4px; font-size: .9rem; line-height: 1.55; }
+  .news-conclusion::before { content: '→ 그래서 뭐? '; color: var(--gold); font-weight: 700; }
+  .news-sources { margin-top: .9rem; padding-top: .7rem; border-top: 1px dashed var(--border); font-size: .8rem; color: var(--text-tertiary); }
+  .news-sources a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; }
+  .news-sources a:hover { color: var(--gold); }
+
+  .markets { display: grid; gap: 1.2rem; }
+  .market-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.3rem 1.4rem; }
+  .market-card.us { border-top: 3px solid #5B9BD5; }
+  .market-card.kr { border-top: 3px solid #D4A857; }
+  .market-card.crypto { border-top: 3px solid #F7931A; }
+  .market-head { display: flex; align-items: baseline; gap: .6rem; margin-bottom: .9rem; }
+  .market-flag { font-size: 1.4rem; }
+  .market-title { font-weight: 700; font-size: 1.05rem; }
+  .market-time { margin-left: auto; font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .mkt-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-bottom: .8rem; }
+  .mkt-table th, .mkt-table td { padding: .55rem .7rem; text-align: left; border-bottom: 1px solid var(--border); }
+  .mkt-table thead th { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); letter-spacing: .08em; text-transform: uppercase; font-weight: 600; background: var(--bg-deeper); }
+  .mkt-table tbody tr:last-child td { border-bottom: none; }
+  .mkt-table .mkt-name { font-weight: 600; }
+  .mkt-table .mkt-val { font-family: var(--font-mono); font-weight: 600; }
+  .mkt-table .mkt-chg { font-family: var(--font-mono); font-weight: 700; }
+  .mkt-flow { font-size: .85rem; color: var(--text-secondary); padding: .55rem .8rem; background: var(--bg-deeper); border-radius: 4px; margin-bottom: .7rem; line-height: 1.55; }
+  .mkt-comment { padding: .7rem .9rem; background: var(--gold-glow); border-left: 3px solid var(--gold); border-radius: 4px; font-size: .88rem; line-height: 1.6; color: var(--text-primary); }
+  .mkt-comment::before { content: '💬 '; }
+
+  .filter-bar { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.2rem; font-size: .8rem; color: var(--text-tertiary); }
+  .filter-chip { padding: .3rem .7rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); }
+  .headline-list { display: grid; gap: .7rem; }
+  .h-item { padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; transition: all .2s; }
+  .h-item:hover { border-color: var(--border-gold); transform: translateX(2px); }
+  .h-title { font-weight: 600; font-size: .98rem; margin-bottom: .4rem; line-height: 1.4; }
+  .h-desc { font-size: .87rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: .5rem; }
+  .h-meta { font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .h-meta a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; font-size: .72rem; }
+
+  .re-snapshot { padding: 1.1rem 1.3rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 1.2rem; font-size: .9rem; line-height: 1.7; }
+  .re-snapshot strong { color: var(--gold-bright); }
+  .re-grid { display: grid; gap: 1rem; }
+  .re-card { padding: 1.3rem 1.4rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; }
+  .re-title { font-weight: 700; font-size: 1.02rem; margin-bottom: .6rem; line-height: 1.4; }
+  .re-body { font-size: .92rem; line-height: 1.75; color: var(--text-primary); }
+  .re-body p { margin-bottom: .55rem; }
+  .re-body p:last-child { margin-bottom: 0; }
+  .re-sources { margin-top: .8rem; padding-top: .7rem; border-top: 1px dashed var(--border); font-size: .78rem; color: var(--text-tertiary); }
+  .re-sources a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; }
+
+  .analyst-box { padding: 1.5rem 1.6rem; background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 8px; margin-bottom: 1.2rem; }
+  .analyst-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .15em; margin-bottom: .8rem; }
+  .analyst-body { font-size: .96rem; line-height: 1.85; color: var(--text-primary); }
+  .analyst-body p { margin-bottom: .8rem; }
+  .analyst-body p:last-child { margin-bottom: 0; }
+  .scenarios { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem; }
+  .sc-card { padding: 1.4rem 1.5rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; }
+  .sc-card.main { border-left: 3px solid var(--bull); }
+  .sc-card.alt { border-left: 3px solid var(--bear); }
+  .sc-prob { font-family: var(--font-mono); font-size: .8rem; color: var(--gold); letter-spacing: .1em; margin-bottom: .5rem; }
+  .sc-title { font-weight: 700; font-size: 1.05rem; margin-bottom: .7rem; line-height: 1.4; }
+  .sc-body { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+  .action-box { padding: 1.1rem 1.3rem; background: var(--bg-deeper); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; }
+  .action-title { font-weight: 700; font-size: .92rem; color: var(--gold); margin-bottom: .6rem; }
+  .action-list { list-style: none; padding: 0; margin: 0; }
+  .action-list li { padding: .35rem 0; padding-left: 1.2rem; position: relative; font-size: .9rem; line-height: 1.6; color: var(--text-primary); }
+  .action-list li::before { content: '▸'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+
+  .cal-grid { display: grid; gap: .7rem; }
+  .cal-item { display: grid; grid-template-columns: 110px 1fr; gap: 1rem; padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--info-border); border-radius: 6px; align-items: center; }
+  .cal-item.warn { border-left-color: var(--warn-border); background: var(--warn-bg); }
+  .cal-item.info { border-left-color: var(--info-border); background: var(--info-bg); }
+  .cal-date { font-family: var(--font-mono); font-size: .85rem; font-weight: 700; color: var(--gold-bright); }
+  .cal-event { font-weight: 600; margin-bottom: .25rem; font-size: .98rem; }
+  .cal-desc { font-size: .85rem; color: var(--text-secondary); line-height: 1.55; }
+
+  .disclaimer { margin-top: 2rem; padding: 1rem 1.2rem; background: var(--bg-deeper); border: 1px dashed var(--border); border-radius: 6px; font-size: .78rem; color: var(--text-tertiary); line-height: 1.6; }
+
+  @media (max-width: 720px) {
+    .scenarios { grid-template-columns: 1fr; }
+    .tldr-card { grid-template-columns: auto 1fr; }
+    .tldr-change { grid-column: 2; justify-self: start; margin-top: .3rem; }
+    .cal-item { grid-template-columns: 1fr; gap: .3rem; }
+    .macro-table th, .macro-table td { padding: .6rem .55rem; font-size: .82rem; }
+    .mkt-table th, .mkt-table td { padding: .45rem .5rem; font-size: .82rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top-header">
+  <div class="header-inner">
+    <a href="/index.html" class="header-brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-text">
+        <div class="en">Morning Brief</div>
+        <div class="ko">데일리 경제 브리핑</div>
+      </div>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" title="테마 변경">🌙</button>
+      <button class="icon-btn" title="공유" onclick="navigator.share && navigator.share({title: document.title, url: location.href})">↗</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============== [1] HERO ============== -->
+<section class="hero">
+  <div class="hero-meta">
+    <span class="vol">Vol.165</span> · 2026.06.03 (수) · 📖 14분 읽기 · v3.6 · normal
+  </div>
+  <h1 class="hero-title">S&P 첫 7,600 돌파 + Marvell +33%·HPE +19% 칩 랠리 vs BTC -6% $67K 폭락 — Saylor 4년만의 첫 BTC 매도 + JOLTS 7.62M 깜짝 인하 흔들기</h1>
+  <p class="hero-sub">어제 6/2(화) 밤 23:00 KST 美 4월 <strong>JOLTS 구인공고가 7.618만 건</strong>으로 발표돼서 컨센서스 <strong>6.88만 건</strong>을 대폭 상회했어요. 전월 대비 <strong>+73.1만 명 급증, 2024년 5월 이후 최고</strong>. 공석률도 4.2% → <strong>4.6%</strong>로 점프. 같은 날 미국 3대 지수가 또 신기록 — <strong>S&amp;P 500 7,609.78(+0.13%) 첫 7,600 돌파</strong>, <strong>Nasdaq 27,093.90(+0.03%)</strong>, <strong>Dow 51,307.79(+0.45%)</strong>. 칩 랠리 동력은 결정적이었어요 — <strong>Marvell Technology +33%</strong>(NVIDIA Jensen Huang의 "Marvell 제품이 우리 데이터센터에 핵심" 코멘트), <strong>HPE +19%</strong>(실적 깜짝 + AI 서버 가이던스 상향), Arm 추가 +3%대 강세. 한국은 같은 날 KOSPI <strong>8,801(+0.15%) 추가 사상 최고</strong>(6/1 +3.68% 사이드카 마감 직후 추종 통과). 그런데 코인은 정반대 — <strong>BTC가 단번에 -5.7% $67,468로 폭락</strong>, 4월 7일 이후 첫 $70K 하향 이탈. ETH $1,978(-0.5%). 도화선은 두 개 — ① <strong>MicroStrategy/Saylor가 2022년 12월 이후 처음으로 BTC 매도</strong>(32 BTC, $2.5M, 평균 $77,135, STRC 우선주 배당 자금), 매도량 자체는 보유 0.0038%로 미미하지만 "Saylor는 절대 안 판다" 신화 균열의 상징성. ② <strong>BlackRock IBIT $1.26B 단일 블록세일</strong> + 美 BTC ETF <strong>11거래일 연속 -$4B 갱신</strong>(6/1 -$483.8M, IBIT -$440.3M). JOLTS 7.62M 충격까지 결합 → 인하 9월 70% → 60% 약세, 연내 인상 베팅 일부 재부상. WTI $91(-1%), 이란 메시지 교환 중단 + 이스라엘 레바논 작전 확대에도 단기는 진정. USD/KRW <strong>1,513원(-0.06%)</strong>, 10Y <strong>4.46%(+1bp)</strong>. 오늘 밤 23:00 KST <strong>美 5월 ISM 서비스 PMI(컨센 52)</strong>, 6/4(수) ADP, 6/5(금) NFP, 6/17 FOMC 점도표가 6월 핵심 경로.</p>
+
+  <div class="tldr-grid">
+    <div class="tldr-card">
+      <div class="tldr-flag">🇺🇸</div>
+      <div>
+        <div class="tldr-label">미국 (6/2 화 마감)</div>
+        <div class="tldr-text">S&amp;P <strong>7,609.78(+0.13%) 첫 7,600 돌파</strong>, Nasdaq <strong>27,093.90(+0.03%)</strong>, Dow 51,307.79(+0.45%) 신기록. <strong>Marvell +33%(Jensen Huang 코멘트)·HPE +19%</strong></div>
+      </div>
+      <div class="tldr-change change-bull">+0.13%</div>
+    </div>
+    <div class="tldr-card">
+      <div class="tldr-flag">🇰🇷</div>
+      <div>
+        <div class="tldr-label">한국 (6/2 화 마감)</div>
+        <div class="tldr-text">KOSPI <strong>8,801(+0.15%) 추가 사상 최고</strong>. 6/1 사이드카(+3.68%) 다음 거래일 추종 통과. USD/KRW 1,513원(-0.06%)으로 약간 진정</div>
+      </div>
+      <div class="tldr-change change-bull">+0.15%</div>
+    </div>
+    <div class="tldr-card">
+      <div class="tldr-flag">₿</div>
+      <div>
+        <div class="tldr-label">코인 (6/3 새벽 KST)</div>
+        <div class="tldr-text">BTC <strong>$67,468(-5.7%)</strong> 4월 이후 첫 $70K 하향 이탈, ETH $1,978(-0.5%). <strong>Saylor 4년만의 첫 BTC 매도</strong> + IBIT $1.26B 블록 + ETF 11일 -$4B</div>
+      </div>
+      <div class="tldr-change change-bear">-5.7%</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== [3] MACRO TABLE ============== -->
+<section id="macro">
+  <div class="sec-head">
+    <div class="sec-num">[03]</div>
+    <h2 class="sec-title">📊 거시 환경 한눈에</h2>
+    <span class="sec-sub">Macro Dashboard · 6 Indicators</span>
+  </div>
+
+  <table class="macro-table">
+    <thead>
+      <tr>
+        <th>지표</th>
+        <th>현재값</th>
+        <th>변동</th>
+        <th>시사점 (한 줄)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="macro-name">美 10Y</span></td>
+        <td class="macro-value">4.46%</td>
+        <td class="macro-chg macro-up">▲ +1bp</td>
+        <td class="macro-note">JOLTS 7.62M 깜짝 → 인하 기대 약화</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">DXY</span></td>
+        <td class="macro-value">~99.1</td>
+        <td class="macro-chg macro-up">▲ +0.2%</td>
+        <td class="macro-note">JOLTS 충격 후 달러 강세 반전</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">WTI</span></td>
+        <td class="macro-value">$91</td>
+        <td class="macro-chg macro-down">▼ -1%</td>
+        <td class="macro-note">이란 메시지 중단에도 단기 진정</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">금</span></td>
+        <td class="macro-value">~$4,420</td>
+        <td class="macro-chg macro-down">▼ -0.9%</td>
+        <td class="macro-note">달러 강세에 안전자산 차익실현</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">USD/KRW</span></td>
+        <td class="macro-value">1,513원</td>
+        <td class="macro-chg macro-down">▼ -3원</td>
+        <td class="macro-note">1,510대 안착, KOSPI 사상 최고 호재</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">VIX</span></td>
+        <td class="macro-value">15.6</td>
+        <td class="macro-chg macro-up">▲ +0.3p</td>
+        <td class="macro-note">BTC 충격에도 주식 변동성 안정</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="macro-summary">
+    한 줄 종합 — <strong>"S&amp;P 첫 7,600 돌파 + KOSPI 추가 신고가 vs BTC -6% 폭락 + JOLTS 7.62M 깜짝"</strong>. 미국이 6/2 <strong>S&amp;P 500 7,609.78(+0.13%) 첫 7,600 돌파 + 3대 지수 동반 신기록</strong>. 동력은 칩·AI — <strong>Marvell +33%(Jensen Huang 코멘트), HPE +19%(실적 깜짝)</strong>. 한국 KOSPI도 <strong>8,801(+0.15%) 추가 사상 최고</strong>로 6/1 사이드카 후 D+1 추종 통과. 그런데 코인은 정반대 — <strong>BTC -5.7% $67,468</strong> 4월 이후 첫 $70K 하향 이탈. 도화선은 ① <strong>Saylor/MicroStrategy가 2022년 12월 이후 첫 BTC 매도</strong>(32 BTC, $2.5M, STRC 우선주 배당 자금) "절대 안 판다" 신화 상징성 균열, ② <strong>IBIT $1.26B 블록세일 + ETF 11일 -$4B 갱신</strong>. <strong>JOLTS 4월 7.618만 건(컨센 6.88만 대폭 상회) + 공석률 4.2→4.6%</strong>는 인하 9월 70% → 60% 약세 + 일부 인상 베팅 재부상. 10Y 4.46%(+1bp), DXY ~99.1(+0.2%) 달러 강세 반전. WTI $91(-1%) 이란 메시지 중단에도 단기 진정. USD/KRW <strong>1,513원(-3원)</strong> KOSPI 사상 최고 호재로 약간 진정. 오늘 밤 23:00 KST <strong>美 5월 ISM 서비스 PMI(컨센 52)</strong>, 6/4 ADP, 6/5 NFP가 6/17 점도표 직전 결정자.
+  </div>
+</section>
+
+<!-- ============== [4] DEEP DIVE ============== -->
+<section id="deep-dive">
+  <div class="sec-head">
+    <div class="sec-num">[04]</div>
+    <h2 class="sec-title">⭐ 오늘의 깊은 이야기</h2>
+    <span class="sec-sub">Deep Dive · BTC -6% 폭락 + Saylor 매도 vs 美 신고가</span>
+  </div>
+
+  <article class="deep">
+    <div class="deep-tag">DEEP DIVE · 디지털자산·매크로 · 🕒 6/2 (화) NY 종가 → 6/3 (수) 새벽</div>
+    <h3 class="deep-title">BTC -6% $67K 폭락의 진짜 원인 — Saylor 4년만의 첫 매도 + IBIT $1.26B 블록 + JOLTS 7.62M 깜짝의 3종 결합</h3>
+
+    <div class="deep-body">
+      <p>어제 6/2(화) 코인 시장에서 일어난 일은 단순한 가격 하락이 아니라 <strong>구조적 신화의 균열</strong>이에요. BTC가 단번에 <strong>-5.7% $67,468</strong>로 떨어져서 <strong>4월 7일 이후 처음으로 $70K를 하향 이탈</strong>했어요. ETH도 $1,978(-0.5%). 도화선은 세 가지가 같은 시간대에 결합했어요. ① <strong>MicroStrategy(Strategy)/Michael Saylor가 2022년 12월 이후 처음으로 BTC를 매도</strong> — 5/26~31에 32 BTC, $2.5M, 평균 $77,135. STRC 우선주 배당 자금 조달 목적이라는 공시였고 보유 84.37만 BTC의 <strong>0.0038%로 자체 규모는 미미</strong>하지만, "Saylor는 절대 안 판다" 신화의 첫 균열이라는 상징성이 컸어요. ② <strong>BlackRock IBIT $1.26B 단일 블록세일</strong> + 美 현물 BTC ETF가 <strong>11거래일 연속 순유출, 2주 누적 -$4B</strong>로 사상 최장 갱신(6/1 단일 -$483.8M, IBIT -$440.3M). ③ 같은 시간 美 4월 <strong>JOLTS 구인공고 7.618만 건</strong>이 컨센 6.88만을 대폭 상회한 <strong>2024년 5월 이후 최고</strong>로 발표, 공석률 4.2% → 4.6%로 점프 — 인하 기대 약화 → 무위험 4.7% 매력 강화 → 변동성 자산 디리스킹.</p>
+
+      <p>그런데 같은 날 미국 주식은 정반대로 <strong>또 신기록</strong>이에요 — <strong>S&amp;P 500 7,609.78(+0.13%) 첫 7,600 돌파</strong>, Nasdaq 27,093.90(+0.03%), Dow 51,307.79(+0.45%). 동력은 결정적이었어요 — <strong>Marvell Technology +33%</strong>(NVIDIA Jensen Huang의 "Marvell 인터커넥트가 우리 데이터센터 핵심" 코멘트), <strong>HPE +19%</strong>(실적 깜짝 + AI 서버 가이던스 상향), Arm 추가 +3%대 강세. 칩·AI 트레이드가 NVIDIA 헤일로 효과로 1차 협력사까지 확산되는 모습. 한국 KOSPI도 <strong>8,801(+0.15%) 추가 사상 최고</strong>로 6/1 사이드카 후 추종 통과. 즉 <strong>주식은 신고가, 코인은 -6% 폭락이라는 사상 보기 드문 비대칭 마감</strong>이에요.</p>
+
+      <div class="stat-cards">
+        <div class="stat-card">
+          <div class="stat-label">S&amp;P 500 (6/2)</div>
+          <div class="stat-value">7,609.78</div>
+          <div class="stat-note">+0.13% · 첫 7,600 돌파</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Nasdaq (6/2)</div>
+          <div class="stat-value">27,093.90</div>
+          <div class="stat-note">+0.03% · 신기록 갱신</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Marvell</div>
+          <div class="stat-value">+33%</div>
+          <div class="stat-note">Jensen Huang 코멘트</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">HPE</div>
+          <div class="stat-value">+19%</div>
+          <div class="stat-note">실적 + AI 서버 가이던스</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">BTC</div>
+          <div class="stat-value">$67,468</div>
+          <div class="stat-note">-5.7% · 4월 이후 첫 $70K↓</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">JOLTS 4월</div>
+          <div class="stat-value">7.618M</div>
+          <div class="stat-note">컨센 6.88M · 2024년 5월래 최고</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">BTC ETF 11일</div>
+          <div class="stat-value">-$4B</div>
+          <div class="stat-note">사상 최장 + IBIT $1.26B 블록</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">KOSPI</div>
+          <div class="stat-value">8,801</div>
+          <div class="stat-note">+0.15% · 추가 사상 최고</div>
+        </div>
+      </div>
+
+      <p>왜 디커플링이 더 심해졌는가 — 진단은 명확해요. <strong>① 금리 환경 변화</strong>: JOLTS 7.62M + 6/1 ISM 제조업 54 4년 최고가 결합하면서 10Y 4.46%(+1bp), DXY 99.1(+0.2%) 달러 강세 반전. 시장이 가격에 반영한 9월 인하 70% 확률이 60% 박스로 약화, <strong>일부 연내 인상 베팅까지 재부상</strong>. 무위험 4.7% 매력이 BTC 변동성 대비 우위로 작용. <strong>② AI 트레이드의 독자 동력</strong>: NVIDIA의 RTX Spark PC + Vera Rubin + Marvell 인터커넥트 가이던스 같은 AI 인프라 호재가 매크로 환경과 독립적으로 작동. AI 종목 위로 흘러가는 자금이 코인 자금을 일부 흡수하는 회전 발생(이른바 AI for crypto 흐름). <strong>③ Saylor 상징성</strong>: 보유의 0.0038%지만 "절대 안 판다" 신화 균열이 단기 모멘텀 트레이더 청산을 가속.</p>
+
+      <p>다만 모든 신호가 약세는 아니에요. ① <strong>Tom Lee(Bitmine 회장)는 "Saylor 매도가 전형적 바닥 행동(bottom behavior)"</strong>이라며 단기 저점 시그널로 해석. 과거 5~7일 연속 ETF 유출 종료 후 30일간 BTC +12% 평균 회복 패턴 유효(이번엔 11일이라 더 길어질 가능성). ② <strong>CLARITY Act 통과 확률 75% 상향</strong>(Galaxy Digital, 직전 50%) + Senate Banking 15-9 가결 후 백악관이 <strong>7/4 House 통과 + 6월 중 Senate 처리</strong>를 공식 목표로 제시. 통과 시 SEC vs CFTC 관할 정리 + 스테이블코인 정식 화이트리스트 → USDC·USDT 결제 본격화. 즉 <strong>단기는 디리스킹 정점 진입 + 7/4 직전 즉시 회복 가능 구조</strong>예요. ③ 6/1 처음 BTC를 산 BMC(Bitmine), Marathon 같은 신규 트레저리 기업들이 매수 지속 중 — 매도자(MicroStrategy)와 매수자(BMC) 교대 가능성.</p>
+
+      <p>이번 주 핵심 데이터는 줄지어 있어요 — 오늘 6/3(수) 23:00 KST <strong>美 5월 ISM 서비스 PMI</strong>(컨센 52, 4월 51.6), 6/4(수) 21:15 ADP(컨센 +10만), 6/5(금) 21:30 NFP(컨센 +12~15만, 실업률 4.0%). <strong>6/17 FOMC 점도표 직전 마지막 매크로 데이터</strong>예요. ADP·NFP가 +20만+ 가속이면 인하 기대 9월 → 12월 이연, BTC 추가 약세. 둔화(+10만 이하) 시 인하 기대 회복 + BTC ETF 흐름 즉시 전환 가능. 한국 KOSPI는 8,801 추가 신고가 + 환율 1,513원 안착으로 사이드카 모멘텀 추가 시험 통과 중 — 다만 미국 코인 충격이 6/3 한국 장 오전에 단기 영향 가능.</p>
+    </div>
+
+    <div class="so-what">
+      코인 — BTC $67K + Saylor 첫 매도 + ETF 11일 -$4B 동시 발생은 <strong>단기 디리스킹 정점</strong>일 가능성(Tom Lee 진단 활용). 보유는 핵심 비중 유지, 추가 진입은 ① ETF 유출 종료(연속일 끊김), ② $70K 회복 + 24h 거래량 평소 +50% 동반, ③ 6/5 NFP 둔화 또는 7/4 CLARITY Act 통과 시그널 — 3중 확인 후 단계적. ETH는 $2,000 하회 시 추가 변동성 폭 큼 — 비중 30% 이내 권장. 미국 주식 — S&amp;P 첫 7,600 + Marvell +33% + HPE +19%로 AI 칩 랠리 확장 — NVIDIA 1차 협력사(Marvell, Arm, Broadcom, Ciena, Coherent) 모멘텀 모니터. JOLTS 7.62M + ISM 54 결합으로 채권 변동성 확대 가능, 6/5 NFP +20만+ 시 단기 차익실현. 한국 — KOSPI 8,801 추가 사상 최고는 5/29·6/1 신고가 패턴이 일회성이 아니라는 추가 확인, 환율 1,513원 안착으로 외국인 매도 동기 일부 진정. 다만 코인 충격이 한국 가상자산 거래소·관련주(우리기술투자·다날 등)에 단기 영향 가능. 환율·매크로 — 1,513원 안착 + DXY 99.1 강세로 단기 1,510~1,520 박스, 6/5 NFP가 변동 최대 트리거. IT/게임 사업자 — JOLTS 충격으로 인하 9월 → 12월 이연 시나리오 가시화, 해외 매출 헤지 비중 유지. NVIDIA RTX Spark + Vera Rubin + Marvell 인터커넥트 가속화로 AI 인프라 투자 모멘텀 가속 — 한국 게임 클라이언트 AI 가속 PoC 적절 시점.
+    </div>
+
+    <div class="deep-sources">
+      <strong>📰 출처:</strong>
+      <a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-june-2-2026-bitcoins-lowest-open-since-april-prices-falling-further-132451193.html" target="_blank" rel="noopener" class="source-chip">Yahoo BTC -6%</a>
+      <a href="https://www.coindesk.com/markets/2026/06/01/saylor-s-strategy-sold-bitcoin-for-the-first-time-since-2022" target="_blank" rel="noopener" class="source-chip">CoinDesk Saylor 매도</a>
+      <a href="https://www.coindesk.com/markets/2026/06/02/tom-lee-dismisses-bitcoin-fears-over-michael-saylor-first-bitcoin-sale-and-etf-outflows" target="_blank" rel="noopener" class="source-chip">CoinDesk Tom Lee</a>
+      <a href="https://hedgeco.net/news/06/2026/bitcoin-opens-june-under-pressure-as-etf-outflows-cross-2b.html" target="_blank" rel="noopener" class="source-chip">HedgeCo ETF 11일</a>
+      <a href="https://www.cnbc.com/2026/06/02/job-openings-april-2026.html" target="_blank" rel="noopener" class="source-chip">CNBC JOLTS 7.62M</a>
+      <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-june-2-212210685.html" target="_blank" rel="noopener" class="source-chip">Yahoo S&amp;P 7,600</a>
+    </div>
+  </article>
+</section>
+
+<!-- ============== [5] FIVE THINGS ============== -->
+<section id="five-things">
+  <div class="sec-head">
+    <div class="sec-num">[05]</div>
+    <h2 class="sec-title">📌 오늘의 5가지</h2>
+    <span class="sec-sub">Five Things · 5 Different Topics</span>
+  </div>
+
+  <div class="five">
+
+    <!-- 01: 시장·매크로 (미국 - S&P 첫 7,600 돌파) -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">01</span>
+        <span class="news-cat">💹 시장·매크로 (미국)</span>
+        <span class="news-time">🕒 6/2 (화) NY 16:00 마감</span>
+      </div>
+      <h3 class="news-headline">S&P 첫 7,600 돌파 + Marvell +33% + HPE +19% — Nasdaq·Dow 동반 신기록, 칩·AI 트레이드 확장</h3>
+      <div class="news-body">
+        <p>화요일(6/2) 미국 3대 지수가 또 신기록을 갈아치웠어요. <strong>S&amp;P 500 7,609.78(+0.13%)로 사상 첫 7,600 돌파</strong>, Nasdaq 27,093.90(+0.03%), Dow 51,307.79(+0.45%) 동반 신고가. 6/1 ISM 4년 최고에 이은 D+1 추종 통과인데, 단순 추종이 아니라 <strong>칩·AI 트레이드의 새로운 동력 발견</strong>이 진짜 의미였어요.</p>
+
+        <p>가장 강력한 두 종목 — <strong>Marvell Technology +33%</strong>(NVIDIA Jensen Huang의 "Marvell 인터커넥트가 우리 데이터센터 핵심 부품" 코멘트 후 폭등), <strong>HPE +19%</strong>(2분기 실적 깜짝 + AI 서버 가이던스 상향). Marvell +33%는 평소 일일 변동 ±2%의 약 16배라 거의 사건급 — NVIDIA Vera Rubin 차세대 플랫폼에 Marvell 옵티컬 인터커넥트가 표준으로 채택될 가능성을 시사. NVDA 헤일로 효과가 칩 1차 협력사까지 확장되는 패턴이에요. Arm도 +3%대 추가 강세, Broadcom·Ciena·Coherent 같은 인터커넥트 종목 동반 상승.</p>
+
+        <p>다만 이날 신고가는 <strong>채권·매크로와의 불협화음 속에서 만들어진 신고가</strong>예요. 같은 날 4월 JOLTS 구인공고가 7.618만 건(컨센 6.88만 대폭 상회, 2024년 5월 이후 최고)으로 발표돼서 10Y가 4.46%(+1bp)로 상승, DXY 99.1(+0.2%) 달러 강세 반전. <strong>9월 인하 70% → 60% 약세 + 일부 연내 인상 베팅 재부상</strong> 환경이에요. 즉 주식은 신고가, 채권은 약세 라는 분리가 6/5 NFP 결과 + 6/17 점도표에서 어느 쪽으로 수렴할지가 핵심.</p>
+      </div>
+      <div class="news-conclusion">
+        S&amp;P 첫 7,600 돌파는 신고가 모멘텀 추가 확인이지만 거의 모든 상승 동력이 칩·AI 1~2종목 + Marvell 한 종목에 집중 — 폭(breadth) 약함은 단기 차익실현 위험 동반. NVIDIA 인터커넥트 협력사(Marvell·Arm·Broadcom·Ciena) 보유 시 비중 유지, 추가 매수는 추격 신중. 6/5 NFP가 +20만+ 가속 시 단기 -1~2% 조정 가능.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-june-2-212210685.html" target="_blank" rel="noopener">Yahoo Markets 6/2</a> ·
+        <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-june-02-2026" target="_blank" rel="noopener">TheStreet 6/2</a> ·
+        <a href="https://www.cnbc.com/quotes/MRVL" target="_blank" rel="noopener">CNBC Marvell</a>
+      </div>
+    </article>
+
+    <!-- 02: 기업·산업 - Marvell +33% & HPE +19% -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">02</span>
+        <span class="news-cat">💼 기업·산업 (AI 인프라)</span>
+        <span class="news-time">🕒 6/2 (화) NY 장중</span>
+      </div>
+      <h3 class="news-headline">Marvell +33% Jensen Huang 코멘트 + HPE +19% AI 서버 가이던스 — NVIDIA 헤일로 효과 1차 협력사 확장</h3>
+      <div class="news-body">
+        <p>화요일 미국 시장의 진짜 주인공은 <strong>Marvell Technology +33%</strong>예요. NVIDIA Jensen Huang이 GTC Taipei 후속 인터뷰에서 <strong>"Marvell의 코히어런트 옵티컬 인터커넥트가 Vera Rubin 차세대 AI 플랫폼의 핵심 부품"</strong>이라고 명시적으로 호명한 직후 폭등. 평소 일일 변동 ±2%인데 +33%는 약 <strong>16배 규모의 변동</strong>으로 단기 옵션·헤지펀드 카버 매수가 동반된 사건급 흐름. 사실상 Marvell이 NVIDIA Vera Rubin 인터커넥트 표준에 채택될 가능성이 시장에 가격 반영된 거예요.</p>
+
+        <p>같은 날 <strong>HPE(Hewlett Packard Enterprise)도 +19% 급등</strong>했어요. 2분기 실적이 컨센서스를 깜짝 상회 + AI 서버 부문 가이던스를 4Q $5B → $6B로 상향. NVIDIA H100/H200 시스템 인티그레이터로서 AI 매출 비중이 분기 35%까지 확대됐다고 밝힘. Dell·Supermicro에 이은 AI 서버 3강 구도가 본격화. <strong>두 종목만으로 S&amp;P 500 0.13% 상승의 대부분을 견인</strong>한 모양이에요.</p>
+
+        <p>구조적 의미 — 이건 단순 "NVIDIA가 더 좋다"가 아니라 <strong>NVIDIA 헤일로 효과가 1차 협력사까지 확장되는 단계</strong>예요. NVIDIA 매출이 데이터센터 $40B+ 분기 영역으로 들어서면서 <strong>Marvell(인터커넥트), Arm(CPU), Broadcom(ASIC), Ciena·Coherent(옵티컬), Astera Labs(메모리 인터커넥트)</strong> 같은 1차 협력사들이 모두 가치 재평가 대상. 한국 입장에서도 SK하이닉스(HBM)·삼성(LPDDR·HBM3E) 모멘텀의 미국판 확장이라 무관하지 않아요. 다만 +33%·+19%급 일일 폭등은 단기 차익실현 압력을 동반 — 6/3 갭다운 가능성 동반 관찰.</p>
+      </div>
+      <div class="news-conclusion">
+        Marvell·HPE 보유 시 일부 차익실현 권장(+33%·+19%는 평소 대비 16배·9배). 미보유 시 추격 매수보다는 NVIDIA 1차 협력사 그룹(Broadcom, Arm, Ciena, Coherent, Astera Labs) 분산 진입이 합리적. 한국 반도체(SK하닉·삼성) 간접 수혜 추가 — NVIDIA 매출 가속이 HBM·LPDDR 수요 가속 동기.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.cnbc.com/quotes/MRVL" target="_blank" rel="noopener">CNBC Marvell +33%</a> ·
+        <a href="https://www.cnbc.com/quotes/HPE" target="_blank" rel="noopener">CNBC HPE +19%</a> ·
+        <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-june-2-212210685.html" target="_blank" rel="noopener">Yahoo Markets</a>
+      </div>
+    </article>
+
+    <!-- 03: 정책·규제·정부 - JOLTS 7.62M 깜짝 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">03</span>
+        <span class="news-cat">💰 정책·규제·정부 (미국 고용)</span>
+        <span class="news-time">🕒 6/2 (화) 23:00 KST 발표</span>
+      </div>
+      <h3 class="news-headline">美 4월 JOLTS 7.618M 깜짝 — 컨센 6.88M 대폭 상회 + 2024년 5월 이후 최고, Fed 인하 기대 약화</h3>
+      <div class="news-body">
+        <p>화요일 밤 23:00 KST, 美 4월 JOLTS(구인구직조사) 구인공고가 <strong>7.618만 건</strong>으로 발표됐어요. 컨센서스 6.88만 건을 <strong>약 73만 건(+10.6%) 대폭 상회</strong>한 결과로, <strong>2024년 5월 이후 최고</strong>예요. 전월 대비로도 +73.1만 명 급증 — 컨센서스 대비, 전월 대비, 추세선 대비 3중 서프라이즈. 공석률(Job openings rate)도 4.2% → <strong>4.6%로 급반등</strong>(평소 +0.1~0.2%p 변동이 일반).</p>
+
+        <p>왜 깜짝인가 — 시장은 4월에는 트럼프 관세 충격 + 1Q 기저 효과로 구인공고가 둔화될 것으로 가격에 반영해 왔어요. 그런데 실제로는 정반대로 가속. 채용(hires)은 5.12만 명으로 -41.9만 감소(평년 대비 둔화), 분리(separations)도 5.0만 명으로 -41.7만 감소했지만 <strong>구인공고만 +73.1만 가속</strong>. 즉 <strong>"기업이 사람은 안 뽑는데 자리는 더 늘리는"</strong> 패턴 — 6/1 ISM 제조업 54 4년 최고와 결합해서 <strong>고용 수요는 여전히 견고</strong>하다는 시그널이에요. Indeed Hiring Lab 분석으로는 대기업이 채용 페이스를 줄였지만 신규 자리 등록은 가속하는 비대칭 환경.</p>
+
+        <p>시장 반응은 즉각적. 10Y가 4.46%(+1bp)로 상승, DXY 99.1(+0.2%) 달러 강세 반전, 골드 -0.9%. 무엇보다 <strong>Fed Funds 선물에서 9월 인하 확률이 70% → 60% 박스로 약화</strong>, 일부 트레이더는 <strong>연내 인상 베팅까지 재진입</strong>(아직 소수지만 1~2주 전에는 0). BTC가 같은 시간 -6% 폭락한 도화선의 한 가닥이 바로 이 JOLTS 충격이에요(무위험 4.7% 매력 강화). <strong>핵심 후속은 6/4 ADP(컨센 +10만), 6/5 NFP(컨센 +12~15만)</strong>예요. JOLTS·ADP·NFP 3종이 모두 컨센 상회 시 인하 기대 9월 → 12월 이연 가능.</p>
+      </div>
+      <div class="news-conclusion">
+        미국 주식 보유 시 JOLTS 깜짝은 일단 경기 강함 호재 + 인하 기대 약화 동시 — 중기 채권 발작 위험 동반. 6/4 ADP + 6/5 NFP 3종 동시 컨센 상회 시 단기 차익실현 + 10Y 4.55% 시도 대비. 한국 보유는 환율 1,513원 안착이 단기 호재, 다만 인하 이연 시 외국인 수급에 누적 부담.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.cnbc.com/2026/06/02/job-openings-april-2026.html" target="_blank" rel="noopener">CNBC JOLTS 7.62M</a> ·
+        <a href="https://www.bls.gov/news.release/jolts.nr0.htm" target="_blank" rel="noopener">BLS JOLTS 4월</a> ·
+        <a href="https://www.hiringlab.org/2026/06/02/april-2026-jolts-report-the-bigger-they-are-the-harder-they-hire/" target="_blank" rel="noopener">Indeed Hiring Lab</a>
+      </div>
+    </article>
+
+    <!-- 04: 글로벌·지정학 - 이란 메시지 중단 + 호르무즈 협상 -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">04</span>
+        <span class="news-cat">🌐 글로벌·지정학 (미·이란)</span>
+        <span class="news-time">🕒 6/2 (화) 장중</span>
+      </div>
+      <h3 class="news-headline">이란 메시지 중단 + 이스라엘 레바논 작전 확대 vs 트럼프 "호르무즈 MoU 일주일 내" — WTI $91 단기 진정</h3>
+      <div class="news-body">
+        <p>화요일 중동 사안은 정반대 두 신호가 동시에 나왔어요. ① <strong>이란이 미국과의 직접 메시지 교환을 중단</strong>(이란 통신사 IRNA·Tasnim 보도). 6/1 트럼프 "이란 협상 끝나도 상관없어" 발언 + 이스라엘이 레바논 헤즈볼라 거점에 추가 공습한 데 대한 반응. ② 그러나 같은 날 <strong>트럼프가 "호르무즈 해협 재개통 양해각서(MoU)를 일주일 내 체결 가능"</strong>이라며 SNS와 백악관 브리핑에서 동시 발신. "여러 이슈가 남아있지만 진전이 있다"는 정확히 양가적 메시지.</p>
+
+        <p>시장 반응은 의외로 진정 — <strong>WTI ~$91(-1%)</strong>, 6/1 트럼프 발언 직후 $92.16(+5.1%)에서 살짝 후퇴. 트럼프의 "MoU 일주일 내" 메시지가 이란 메시지 중단의 부정적 영향을 일부 상쇄. Brent도 $96대 박스 유지. 시장은 <strong>"매일 트럼프 SNS 게임"</strong>으로 변동성을 가격에 반영하는 단계인데, 한 번의 강한 메시지 후 즉시 반대 메시지가 이어지면서 단기 추세 형성에 실패하는 패턴이에요.</p>
+
+        <p>한국 영향 — 정유주(SK이노베이션·S-Oil)는 마진 개선이 한주 더 유지, 항공·해운(대한항공·HMM)은 원가 부담 박스. 무엇보다 <strong>중동 사안이 단기 BTC 폭락의 직접 동력은 아니었음</strong>이 6/2 데이터로 확인 — JOLTS 7.62M 인하 약화 + Saylor 매도 + IBIT 블록이 코인 충격의 진짜 도화선. 다만 <strong>6월 OPEC+ 회의(일정 미정)에서 감산 정책 결정 + 7월 이란 호르무즈 MoU 시한</strong>이 다음 변곡점. 결렬 시 WTI $100+ 재돌파 가능, 진전 시 $85 박스 회귀.</p>
+      </div>
+      <div class="news-conclusion">
+        유가 보유 시 단기 박스 트레이딩 권장 ($88~$95). 한국 정유주(SK이노·S-Oil)는 마진 우호 유지, 항공주(대한항공·아시아나)는 회복 후 진입 단계. 코스피 직접 영향은 6/2 시점에서 제한적 — 인하 기대 약화가 더 큰 변수. 매일 트럼프 SNS + OPEC+ 6월 일정 발표 모니터 필수.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.cnbc.com/2026/05/18/oil-today-brent-wti-iran-trump-hormuz-iea-supply-crude-.html" target="_blank" rel="noopener">CNBC 호르무즈 MoU</a> ·
+        <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank" rel="noopener">TradingEconomics WTI</a> ·
+        <a href="https://www.cnbc.com/2026/06/01/oil-prices-wti-brent-crude-israel-lebanon-hezbollah-iran-trump-us.html" target="_blank" rel="noopener">CNBC 이란 메시지 중단</a>
+      </div>
+    </article>
+
+    <!-- 05: 디지털자산·신기술 - Saylor 첫 매도 + BTC -6% -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">05</span>
+        <span class="news-cat">₿ 디지털자산·신기술</span>
+        <span class="news-time">🕒 6/2 (화) NY 장중 → 6/3 새벽</span>
+      </div>
+      <h3 class="news-headline">Saylor 2022년 12월 이후 첫 BTC 매도 + IBIT $1.26B 블록 + BTC -5.7% $67K 폭락 — Tom Lee "전형적 바닥 행동"</h3>
+      <div class="news-body">
+        <p>화요일 코인 시장에서 <strong>"절대 안 판다" 신화가 처음 균열</strong>됐어요. MicroStrategy(이제 Strategy)/Michael Saylor가 <strong>5/26~31에 32 BTC를 평균 $77,135에 매도, $2.5M 조달</strong> — <strong>2022년 12월 이후 첫 BTC 매도</strong>(약 3.5년 만)이에요. 매도 자체는 보유 84.37만 BTC의 <strong>0.0038%로 무의미한 수준</strong>, 목적도 <strong>STRC 우선주 배당 자금</strong> 충당이라는 회계적 거래. Saylor 본인도 SNS에서 "Strategy는 여전히 BTC 최대 보유 기관"이라며 정책 변화가 아님을 강조.</p>
+
+        <p>그러나 시장은 상징성으로 받아들였어요. 같은 시간 <strong>BlackRock IBIT가 $1.26B 단일 블록세일</strong>(거래 보고서 기준)을 실행 + <strong>美 BTC ETF가 11거래일 연속 -$4B 갱신</strong>(6/1 단일 -$483.8M, IBIT -$440.3M). 3종 동시 발생 + 어제 JOLTS 7.62M 깜짝까지 결합 → <strong>BTC -5.7% $67,468 폭락, 4월 7일 이후 첫 $70K 하향 이탈</strong>. ETH $1,978(-0.5%)도 동반 약세. 양대 주식 신고가(S&amp;P 첫 7,600 돌파)에도 코인만 -6% 폭락이라는 사상 보기 드문 비대칭 마감이에요.</p>
+
+        <p>그런데 반대편 신호도 강력. <strong>Bitmine 회장 Tom Lee가 "Saylor 매도는 전형적 바닥 행동(classic bottom behavior)"</strong>이라며 단기 저점 시그널로 해석. 과거 5~7일 연속 ETF 유출 종료 후 30일간 BTC +12% 평균 회복 패턴 유효(이번엔 11일이라 회복 시점이 좀 더 늦어질 가능성). 신규 트레저리 기업(BMC, Marathon Digital, 일본 Metaplanet)이 매수 지속, 매도자(MicroStrategy)와 매수자 교대 가능성. <strong>구조 호재 진영도 강함</strong> — CLARITY Act 통과 확률 75% 유지(Galaxy Digital, 직전 50%), 백악관이 7/4 House 통과 + 6월 Senate 처리 공식 목표 제시. ETF 유출 종료 시그널 + 6/5 NFP 둔화 + 7/4 CLARITY 통과 3종 결합 시 즉시 회복 가능 구조.</p>
+      </div>
+      <div class="news-conclusion">
+        BTC 보유 핵심 유지 + 추가 진입은 11일 ETF 유출 종료 + $70K 회복 시그널 + 6/5 NFP 둔화 동시 확인 후 단계적. Tom Lee의 "바닥 행동" 진단은 옳을 가능성이 있지만 데이터 확인 전까지 추격 매수 비추천. ETH $2,000 이탈 시 추가 변동성 폭 큼 — 비중 30% 이내 권장. 한국 가상자산 거래소·관련주(우리기술투자·다날 등) 단기 약세 위험.
+      </div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.coindesk.com/markets/2026/06/01/saylor-s-strategy-sold-bitcoin-for-the-first-time-since-2022" target="_blank" rel="noopener">CoinDesk Saylor 매도</a> ·
+        <a href="https://www.coindesk.com/markets/2026/06/02/tom-lee-dismisses-bitcoin-fears-over-michael-saylor-first-bitcoin-sale-and-etf-outflows" target="_blank" rel="noopener">CoinDesk Tom Lee</a> ·
+        <a href="https://hedgeco.net/news/06/2026/bitcoin-opens-june-under-pressure-as-etf-outflows-cross-2b.html" target="_blank" rel="noopener">HedgeCo ETF 11일</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============== [6] MARKETS SNAPSHOT ============== -->
+<section id="markets">
+  <div class="sec-head">
+    <div class="sec-num">[06]</div>
+    <h2 class="sec-title">📈 시장별 스냅샷</h2>
+    <span class="sec-sub">Markets · Numbers Only</span>
+  </div>
+
+  <div class="markets">
+
+    <!-- US -->
+    <article class="market-card us">
+      <div class="market-head">
+        <span class="market-flag">🇺🇸</span>
+        <span class="market-title">미국 시장</span>
+        <span class="market-time">6/2 (화) NY 마감</span>
+      </div>
+      <table class="mkt-table">
+        <thead>
+          <tr><th>지수/종목</th><th>종가</th><th>변동</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mkt-name">S&amp;P 500</td><td class="mkt-val">7,609.78</td><td class="mkt-chg" style="color:var(--bull)">+0.13% (첫 7,600 돌파)</td></tr>
+          <tr><td class="mkt-name">Nasdaq Composite</td><td class="mkt-val">27,093.90</td><td class="mkt-chg" style="color:var(--bull)">+0.03%</td></tr>
+          <tr><td class="mkt-name">Dow Jones</td><td class="mkt-val">51,307.79</td><td class="mkt-chg" style="color:var(--bull)">+0.45%</td></tr>
+          <tr><td class="mkt-name">Marvell (MRVL)</td><td class="mkt-val">폭등</td><td class="mkt-chg" style="color:var(--bull)">+33% (Huang 코멘트)</td></tr>
+          <tr><td class="mkt-name">HPE</td><td class="mkt-val">폭등</td><td class="mkt-chg" style="color:var(--bull)">+19% (실적·가이던스)</td></tr>
+          <tr><td class="mkt-name">VIX</td><td class="mkt-val">15.6</td><td class="mkt-chg" style="color:var(--bear)">+0.3p</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-comment">3대 지수 동반 신기록, S&amp;P 첫 7,600 돌파 — 칩·AI 트레이드 1차 협력사 확장(Marvell·HPE), JOLTS 7.62M 깜짝에도 신고가 유지</div>
+    </article>
+
+    <!-- KR -->
+    <article class="market-card kr">
+      <div class="market-head">
+        <span class="market-flag">🇰🇷</span>
+        <span class="market-title">한국 시장</span>
+        <span class="market-time">6/2 (화) 마감 → 6/3 오픈</span>
+      </div>
+      <table class="mkt-table">
+        <thead>
+          <tr><th>지수/종목</th><th>종가</th><th>변동</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mkt-name">KOSPI</td><td class="mkt-val">8,801</td><td class="mkt-chg" style="color:var(--bull)">+0.15% (추가 사상 최고)</td></tr>
+          <tr><td class="mkt-name">KOSPI 시총</td><td class="mkt-val">7,000조원+</td><td class="mkt-chg" style="color:var(--bull)">유지</td></tr>
+          <tr><td class="mkt-name">USD/KRW</td><td class="mkt-val">1,513.05원</td><td class="mkt-chg" style="color:var(--bull)">-0.06% (약간 진정)</td></tr>
+          <tr><td class="mkt-name">USD/KRW 장중 고가</td><td class="mkt-val">1,515.60원</td><td class="mkt-chg" style="color:var(--text-secondary)">JOLTS 후 단기 변동</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-flow">6/2 KOSPI 추종 통과(+0.15%) — 6/1 사이드카 +3.68% 다음 거래일에 차익실현 압력 견뎌내며 추가 신고가. 환율은 1,513원으로 안정, KOSPI 강세 + 5월 수출 호조 누적 효과 일부 반영</div>
+      <div class="mkt-comment">6/1 사이드카 후 D+1 추종 통과 — 사상 최고 추가 갱신, 환율 1,513원 안착 — 다만 미국 BTC -6% 충격이 6/3 오전 단기 영향 가능</div>
+    </article>
+
+    <!-- Crypto -->
+    <article class="market-card crypto">
+      <div class="market-head">
+        <span class="market-flag">₿</span>
+        <span class="market-title">디지털 자산</span>
+        <span class="market-time">6/3 (수) 새벽 KST</span>
+      </div>
+      <table class="mkt-table">
+        <thead>
+          <tr><th>자산</th><th>현재가</th><th>변동</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mkt-name">BTC</td><td class="mkt-val">$67,468</td><td class="mkt-chg" style="color:var(--bear)">-5.7% (24h)</td></tr>
+          <tr><td class="mkt-name">ETH</td><td class="mkt-val">$1,978</td><td class="mkt-chg" style="color:var(--bear)">-0.5% (24h)</td></tr>
+          <tr><td class="mkt-name">BTC 도미넌스</td><td class="mkt-val">56.0%</td><td class="mkt-chg" style="color:var(--text-secondary)">시총 $2.42T (-3.8%)</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-flow">온체인: 美 BTC ETF 11거래일 연속 -$4B 갱신 · 6/1 단일 -$483.8M, IBIT -$440.3M · BlackRock IBIT $1.26B 단일 블록세일 · Saylor/Strategy 2022/12 이후 첫 BTC 매도(32 BTC, $2.5M) · CLARITY Act 통과 확률 75% 유지</div>
+      <div class="mkt-comment">BTC 4월 이후 첫 $70K 하향 이탈 — Saylor 첫 매도 + IBIT 블록 + JOLTS 7.62M 3종 결합. Tom Lee "전형적 바닥 행동" 진단</div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============== [7] HEADLINES ============== -->
+<section id="headlines">
+  <div class="sec-head">
+    <div class="sec-num">[07]</div>
+    <h2 class="sec-title">📰 헤드라인 더보기</h2>
+    <span class="sec-sub">More Headlines · 8 Topics</span>
+  </div>
+
+  <div class="filter-bar">
+    <span class="filter-chip">전체 8</span>
+    <span class="filter-chip">🇺🇸 2</span>
+    <span class="filter-chip">🇰🇷 1</span>
+    <span class="filter-chip">💼 2</span>
+    <span class="filter-chip">🌍 1</span>
+    <span class="filter-chip">💰 1</span>
+    <span class="filter-chip">₿ 1</span>
+  </div>
+
+  <div class="headline-list">
+
+    <div class="h-item">
+      <div class="h-title">🇺🇸 美 5월 ISM 서비스 PMI — 6/3 23:00 KST 컨센 52</div>
+      <div class="h-desc">서비스업은 미국 경제의 70%. 4월 51.6 → 5월 컨센 52. 6/1 제조업 ISM 54 4년 최고 직후라 동반 강세 시 인플레 우려 재발 + 채권 변동성 추가. 50 이탈 시 서비스 둔화 시그널로 골디락스 시나리오 일부 회복.</div>
+      <div class="h-meta">🕒 6/3 23:00 KST · <a href="https://www.investing.com/economic-calendar" target="_blank" rel="noopener">Economic Calendar</a>, <a href="https://www.ismworld.org" target="_blank" rel="noopener">ISM</a></div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇺🇸 美 6/4 ADP + 6/5 NFP — 6/17 점도표 직전 마지막 핵심</div>
+      <div class="h-desc">6/4(수) 21:15 ADP 5월(컨센 +10만), 6/5(금) 21:30 NFP + 실업률(컨센 +12~15만, 실업률 4.0%). 6/2 JOLTS 7.62M 깜짝 후라 ADP·NFP +20만+ 가속 동반 시 9월 인하 기대 약화 + 일부 인상 베팅 추가 + 10Y 4.55% 발작.</div>
+      <div class="h-meta">🕒 6/4~6/5 · <a href="https://www.investing.com/economic-calendar" target="_blank" rel="noopener">Economic Calendar</a></div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇰🇷 KOSPI 8,801 추가 사상 최고 — 외국인 신규 매수 진입 여부</div>
+      <div class="h-desc">6/2 KOSPI 8,801(+0.15%) 추가 사상 최고로 6/1 사이드카(+3.68%) D+1 추종 통과. 5월 외국인 -40조 매도 후 신규 매수 전환 여부가 8,900~9,000 안착 핵심. 다만 美 BTC -6% + JOLTS 충격이 6/3 오전 단기 영향 가능.</div>
+      <div class="h-meta">🕒 6/2 마감 · <a href="https://finance.yahoo.com/quote/%5EKS11/" target="_blank" rel="noopener">Yahoo KOSPI</a>, <a href="https://data.krx.co.kr/" target="_blank" rel="noopener">KRX</a></div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">💼 Marvell +33% Jensen Huang 코멘트 후속 — Vera Rubin 인터커넥트</div>
+      <div class="h-desc">6/2 Marvell Technology +33% Jensen Huang의 Vera Rubin 인터커넥트 핵심 부품 코멘트 후 폭등. 평소 변동 ±2%의 약 16배. Broadcom·Ciena·Coherent·Astera Labs 같은 1차 협력사 동반 재평가 가능성. 단기 차익실현 압력 동반.</div>
+      <div class="h-meta">🕒 6/2 NY 장중 · <a href="https://www.cnbc.com/quotes/MRVL" target="_blank" rel="noopener">CNBC Marvell</a>, <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-june-2-212210685.html" target="_blank" rel="noopener">Yahoo Markets</a></div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🌍 OPEC+ 6월 회의 — WTI $91 박스에서 감산 정책 결정</div>
+      <div class="h-desc">6월 첫째 주 OPEC+ 회의(일정 미정). 트럼프 호르무즈 MoU 일주일 + 이란 메시지 중단 환경에서 감산 연장 vs 동결 시나리오. 감산 연장 시 WTI $95+ 시도, 동결 시 $88 박스 회귀.</div>
+      <div class="h-meta">🕒 6월 첫째 주 · <a href="https://www.google.com/search?q=OPEC%2B+meeting+June+2026+production+cuts" target="_blank" rel="noopener">OPEC+ 6월</a>, <a href="https://www.reuters.com" target="_blank" rel="noopener">Reuters Energy</a></div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">💰 한은 6월 통화신용정책보고서 — 6/12 발간</div>
+      <div class="h-desc">5/28 8연속 동결 + 매파적 톤 직후 첫 공식 보고서. 가계대출 5월 +3조 누적, DSR 3단계 D-28, KOSPI 8,801 사상 최고 환경에서 한은의 7월 통방 시그널이 핵심. 7월 동결 우세 컨센, 8~9월 인하 시점 평가.</div>
+      <div class="h-meta">🕒 6/12 (목) · <a href="https://www.bok.or.kr" target="_blank" rel="noopener">한국은행</a>, <a href="https://www.google.com/search?q=한국은행+통화신용정책보고서+2026년+6월" target="_blank" rel="noopener">통방 보고서</a></div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">💼 HPE +19% 실적·AI 서버 가이던스 — 데이터센터 3강 본격화</div>
+      <div class="h-desc">6/2 Hewlett Packard Enterprise +19% 2분기 실적 깜짝 + AI 서버 4Q 가이던스 $5B → $6B 상향. NVIDIA H100/H200 인티그레이터로 AI 비중 35%. Dell·Supermicro·HPE 3강 본격화. 한국 IT 서비스주(LG CNS·삼성SDS) 간접 호재.</div>
+      <div class="h-meta">🕒 6/2 NY 마감 · <a href="https://www.cnbc.com/quotes/HPE" target="_blank" rel="noopener">CNBC HPE</a></div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">₿ Tom Lee "Saylor 매도는 전형적 바닥 행동" — BTC 반등 시그널?</div>
+      <div class="h-desc">Bitmine 회장 Tom Lee가 Saylor의 첫 BTC 매도 + IBIT 블록세일을 "classic bottom behavior"로 해석. 과거 ETF 유출 종료 후 30일간 평균 +12% 회복 패턴 유효. 다만 이번엔 11일 갱신이라 회복 시점 더 늦어질 가능성. 6/5 NFP + 7/4 CLARITY가 트리거.</div>
+      <div class="h-meta">🕒 6/2 (화) · <a href="https://www.coindesk.com/markets/2026/06/02/tom-lee-dismisses-bitcoin-fears-over-michael-saylor-first-bitcoin-sale-and-etf-outflows" target="_blank" rel="noopener">CoinDesk Tom Lee</a></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== [8] REAL ESTATE ============== -->
+<section id="realestate">
+  <div class="sec-head">
+    <div class="sec-num">[08]</div>
+    <h2 class="sec-title">🏠 부동산·생활경제</h2>
+    <span class="sec-sub">Real Estate · DSR D-29</span>
+  </div>
+
+  <div class="re-snapshot">
+    <strong>부동산 한눈에</strong> — 서울 아파트 매매(5월 둘째 주, 한국부동산원): <strong>+0.28%</strong> (3개월 최대 상승, 평소 +0.05%의 약 5배) · 5월 마지막 주 통계 발표 임박 · DSR 3단계 + 양도세 중과 만료 <strong>D-28</strong> · 강남·용산·마포 핵심권 ↗ · 노원·도봉 → · 지방 ↗(6/27 대출 규제 제외 + DSR 3단계 6개월 유예) · 주택산업연구원: 2026년 서울 아파트 매매 +4.2% 전망
+  </div>
+
+  <div class="re-grid">
+    <article class="re-card">
+      <div class="re-title">1️⃣ DSR 3단계 + 양도세 중과 D-28 — 6월 막판 거래 집중</div>
+      <div class="re-body">
+        <p>오늘부터 정확히 28일 후인 <strong>7/1(수)에 DSR 3단계 시행 + 양도세 중과 유예 만료가 동시</strong>에 발효돼요. DSR(총부채원리금상환비율)는 신용대출 + 카드론 + 주택담보대출이 한 사람 기준으로 합쳐져서 평가 — 연봉 1억 차주 기준 한도 약 -1.2억(6.5억 → 5.3억).</p>
+        <p>6월 한 달은 단기 시장의 마지막 거래월. 신용대출 한도 막판 활용 매수 + 다주택 매도 절세 막판 처분이 동시 몰리는 환경 — 한국부동산원 5월 둘째 주 통계 <strong>서울 +0.28%(평소 +0.05%의 5배)</strong>가 정확히 이 효과. 5월 마지막 주 통계 발표 임박, +0.30~+0.40% 가능성도 일부 분석.</p>
+      </div>
+      <div class="re-sources">📰 <a href="https://www.reb.or.kr/reb/cm/cntnts/cntntsView.do?mi=10001&amp;cntntsId=1308" target="_blank" rel="noopener">한국부동산원</a> · <a href="https://www.mt.co.kr/amp/estate/2026/05/14/2026051414573745425" target="_blank" rel="noopener">머투 3개월 최대</a></div>
+    </article>
+
+    <article class="re-card">
+      <div class="re-title">2️⃣ 정부 추가 거시건전성 카드 — LTV·1주택 비과세 기준 강화 가능성</div>
+      <div class="re-body">
+        <p>5월 한은 매파적 동결(8연속 동결 + 성장·물가 동시 상향)의 배경에는 가계대출 5월 추가 +3조 누적, DSR 시행 직전 막판 폭증 우려가 있었어요. 정부도 같은 인식 — <strong>LTV(주택담보인정비율, 주택가격 대비 대출 한도) 조정</strong>, 1주택 양도세 비과세 기준 강화, 분양가 상한제 확대 같은 카드들이 거론.</p>
+        <p>6월 중 정부 추가 발표 시 즉시 매수세 진정 + 6월 중반 이후 거래량 둔화 가속. 매수 검토 중이라면 6월 첫 주~중반이 단기 마지막 거래 기회, 단 협상 매수 권장 — 추가 조치 발표 시 호가 즉시 -2~3% 조정 가능.</p>
+      </div>
+      <div class="re-sources">📰 <a href="https://www.google.com/search?q=정부+LTV+조정+1주택+양도세+비과세+강화+2026년+6월" target="_blank" rel="noopener">정부 거시건전성</a> · <a href="https://www.news1.kr/realestate/general/6024386" target="_blank" rel="noopener">News1 부동산</a></div>
+    </article>
+
+    <article class="re-card">
+      <div class="re-title">3️⃣ 지방 부동산 회복 신호 — 6·27 대출 규제 제외 + DSR 6개월 유예 효과</div>
+      <div class="re-body">
+        <p>주목할 흐름은 <strong>지방 아파트 시장의 꿈틀거림</strong>. 지방은 6/27 시행 예정 가계대출 규제 대상에서 제외됐고, 지난 7월부터 시행된 3단계 스트레스 DSR도 6개월간 유예된 상태. 즉 수도권은 7/1 규제 강화, 지방은 12/31까지 유예라는 비대칭 환경.</p>
+        <p>이미 부산·대구·대전 일부 핵심권에서 거래량이 4월 대비 +20~30% 회복 시그널 — 신규 분양가 인하 + 미분양 해소 흐름. 수도권 추가 규제 → 지방 회복이 8~9월 본격화 가능. 다만 침체 후 회복 초기는 변동성도 동반 — 핵심권/외곽 양극화 심화 가능.</p>
+      </div>
+      <div class="re-sources">📰 <a href="https://economychosun.com/site/data/html_dir/2025/12/05/2025120500029.html" target="_blank" rel="noopener">조선비즈 부동산</a> · <a href="https://www.google.com/search?q=지방+부동산+회복+2026년+5월+거래량+미분양" target="_blank" rel="noopener">지방 부동산</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ============== [9] ANALYST VIEW ============== -->
+<section id="analyst">
+  <div class="sec-head">
+    <div class="sec-num">[09]</div>
+    <h2 class="sec-title">🧠 애널리스트 시각</h2>
+    <span class="sec-sub">Analyst View · Scenarios + Actions</span>
+  </div>
+
+  <div class="analyst-box">
+    <div class="analyst-tag">종합 분석</div>
+    <div class="analyst-body">
+      <p>오늘의 핵심은 <strong>"주식 신고가 vs 코인 -6% 폭락의 사상 최대 디커플링"</strong>이에요. 어제 6/2(화) 美 3대 지수는 또 신기록 — <strong>S&amp;P 첫 7,600 돌파(+0.13%) + Nasdaq + Dow 동반</strong>. 동력은 결정적 — <strong>Marvell +33%(Jensen Huang 코멘트)·HPE +19%(실적 + AI 서버 가이던스)</strong>로 NVIDIA 헤일로 효과가 1차 협력사까지 확장. 한국 KOSPI도 <strong>8,801(+0.15%) 추가 사상 최고</strong>로 6/1 사이드카 후 추종 통과.</p>
+
+      <p>그런데 같은 시간 코인은 정반대 — <strong>BTC -5.7% $67,468로 4월 7일 이후 첫 $70K 하향 이탈</strong>. 도화선 3종 결합: ① <strong>Saylor/MicroStrategy 2022년 12월 이후 첫 BTC 매도</strong>(32 BTC, $2.5M) — 보유 0.0038% 미미하지만 "절대 안 판다" 신화 상징성 균열, ② <strong>BlackRock IBIT $1.26B 단일 블록세일 + ETF 11일 연속 -$4B 갱신</strong>, ③ <strong>美 4월 JOLTS 7.618만(컨센 6.88만 대폭 상회) + 공석률 4.2→4.6%</strong>로 인하 기대 약화. 10Y 4.46%(+1bp), DXY 99.1(+0.2%) 달러 강세 반전. 다만 <strong>Tom Lee는 "Saylor 매도는 전형적 바닥 행동"</strong>이라고 진단 — 단기 디리스킹 정점일 가능성. 이번 주 핵심은 오늘 밤 23:00 KST <strong>美 ISM 서비스 PMI</strong>(컨센 52) + 6/4 ADP + 6/5 NFP — <strong>6/17 FOMC 점도표 직전 마지막 매크로 분기점</strong>이에요.</p>
+    </div>
+  </div>
+
+  <div class="scenarios">
+    <div class="sc-card main">
+      <div class="sc-prob">메인 시나리오 · 55%</div>
+      <div class="sc-title">ADP·NFP 둔화 + BTC 단기 바닥 회복</div>
+      <div class="sc-body">ISM 서비스 52 부합 + ADP +5~10만 둔화 + NFP +10~15만 정상 → 10Y 4.4% 박스 복귀, S&amp;P 7,650 시도, KOSPI 8,800~9,000 안착, BTC ETF 11일 유출 종료 + $70K 회복 + BTC $72K 시도. Tom Lee "바닥 행동" 진단 적중, CLARITY Act 75% 확률 유지.</div>
+    </div>
+    <div class="sc-card alt">
+      <div class="sc-prob">리스크 시나리오 · 45%</div>
+      <div class="sc-title">JOLTS 후속 ISM 서비스·NFP 동시 가속 + BTC $65K 재테스트</div>
+      <div class="sc-body">ISM 서비스 53+ 가속(인플레 시그널) + NFP +20만+ 가속(고용 강세) + 일부 인상 베팅 본격화 → 10Y 4.55%+ 발작, DXY 99.5+, S&amp;P -1~2% 차익실현(7,450 이하), KOSPI 8,500 박스 후퇴, BTC $65K 재테스트(2024년 6월 저점), ETH $1,900 시도, 환율 1,525원+ 시도.</div>
+    </div>
+  </div>
+
+  <div class="action-box">
+    <div class="action-title">🎯 IT/게임 사업자 실용 액션</div>
+    <ul class="action-list">
+      <li><strong>오늘 밤 23:00 KST ISM 서비스 PMI 결과 즉시 확인</strong> — 50 이탈 시 골디락스 일부 회복(주식 호재), 53+ 가속 시 채권 변동성 + 차익실현. 6/2 JOLTS 7.62M 충격 후속이라 컨센 상회 시 인하 기대 9월 → 12월 이연 위험</li>
+      <li><strong>삼성·SK하닉 핵심 비중 유지 + 부분 차익실현(20~30%)</strong>. NVIDIA Vera Rubin + Marvell 인터커넥트 가속화로 HBM4·LPDDR 수요 추가 모멘텀, KOSPI 8,801 추종 통과 후 외국인 신규 매수 진입 모니터</li>
+      <li><strong>환율 1,513원 안착 — 해외 결제 헤지 단기 진정</strong>. JOLTS 충격에도 1,515원 장중 고가에서 일부 후퇴, KOSPI 강세가 진정 요인. 6/5 NFP가 단기 변동 최대 트리거 — 1,510~1,520 박스 권장</li>
+      <li>부동산 — <strong>DSR 3단계 + 양도세 중과 만료 D-28 막판 거래월</strong>. 강남·용산·마포 핵심권 매수 검토 중이라면 6월 첫 주~중반 협상 매수 권장. 6/12 한은 통화신용정책보고서 + 정부 추가 LTV 카드 발표 모니터</li>
+      <li><strong>BTC -6% 폭락 직후 추격 매수 비추천</strong>. Tom Lee "바닥 행동" 진단은 옳을 가능성이 있지만 ETF 유출 종료 + $70K 회복 + NFP 둔화 3중 확인 후 단계적 진입. CLARITY Act 7/4 본회의는 변함없는 구조 호재</li>
+      <li><strong>NVIDIA 헤일로 효과 1차 협력사 확장 = AI 인프라 트레이드 새 단계</strong>. Marvell·Arm·Broadcom·Ciena·Coherent·Astera Labs 분산 검토. 한국 게임 클라이언트 AI 가속 PoC + Vera Rubin 출시 대비 7~8월부터 준비</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============== [10] CALENDAR ============== -->
+<section id="calendar">
+  <div class="sec-head">
+    <div class="sec-num">[10]</div>
+    <h2 class="sec-title">📅 이번 주 꼭 봐야 할 일정</h2>
+    <span class="sec-sub">Key Events · 6/3 - 7/4</span>
+  </div>
+
+  <div class="cal-grid">
+    <div class="cal-item warn">
+      <div class="cal-date">6/3 (수) 23:00</div>
+      <div>
+        <div class="cal-event">🟨 美 5월 ISM 서비스 PMI</div>
+        <div class="cal-desc">서비스업은 미국 경제의 70%. 4월 51.6 → 5월 컨센 52. 6/1 제조업 ISM 54 4년 최고와 동반 강세 시 인플레 우려 재발, 50 이탈 시 서비스 둔화 시그널로 골디락스 일부 회복. JOLTS 7.62M 깜짝 직후라 컨센 상회 시 인하 기대 추가 약화.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">6/4 (수) 21:15</div>
+      <div>
+        <div class="cal-event">🟦 美 5월 ADP 민간 고용</div>
+        <div class="cal-desc">컨센 +10만 명. NFP 사전 핵심 신호. +15만+ 시 NFP 가속 시나리오, +5만 이하 시 9월 인하 70% 강화. JOLTS 7.62M 후속이라 시장 민감도 상승.</div>
+      </div>
+    </div>
+    <div class="cal-item warn">
+      <div class="cal-date">6/5 (금) 21:30</div>
+      <div>
+        <div class="cal-event">🟨 美 5월 비농업 고용(NFP) + 실업률</div>
+        <div class="cal-desc">컨센 NFP +12~15만, 실업률 4.0%. 6/17 FOMC 점도표 직전 마지막 핵심 데이터. JOLTS 7.62M + ISM 54 환경에서 +20만+ 가속 시 신고가 차익실현 + 10Y 4.55% 발작 + 인상 베팅 재진입 가능, 둔화(+10만 이하) 시 9월 인하 회복 + BTC ETF 흐름 전환.</div>
+      </div>
+    </div>
+    <div class="cal-item warn">
+      <div class="cal-date">6월 중</div>
+      <div>
+        <div class="cal-event">🟨 트럼프 이란 협상 + 호르무즈 MoU 시한</div>
+        <div class="cal-desc">6/2 트럼프 "호르무즈 MoU 일주일 내 가능" 발언 vs 이란 메시지 교환 중단. 결렬 공식 시 WTI $100+ 재돌파·9월 인하 이연·KOSPI 8,400 후퇴, MoU 체결 시 WTI $85 박스·신고가 모멘텀 회복.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">6/12 (목)</div>
+      <div>
+        <div class="cal-event">🟦 한국은행 통화신용정책보고서 발간</div>
+        <div class="cal-desc">5/28 8연속 동결 + 매파적 톤 직후 첫 공식 보고서. 가계대출 5월 +3조 누적, DSR 3단계 D-19, KOSPI 8,801 사상 최고 환경에서 7월 통방 시그널 핵심. 7월 동결 우세 컨센.</div>
+      </div>
+    </div>
+    <div class="cal-item warn">
+      <div class="cal-date">6/17~18 (수~목)</div>
+      <div>
+        <div class="cal-event">🟨 美 FOMC 6월 — 동결 우세, 점도표 갱신</div>
+        <div class="cal-desc">기준금리 동결 컨센. 핵심은 점도표(dot plot, 위원별 향후 금리 예상치) — 9월·12월 인하 횟수가 시장 방향 결정. 6/2~6/5 매크로 데이터 결과가 점도표에 직접 반영. JOLTS 7.62M + ISM 54 + NFP 가속 시 점도표 매파 시그널.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">7/1 (D-28)</div>
+      <div>
+        <div class="cal-event">🟦 스트레스 DSR 3단계 시행 + 양도세 중과 유예 6/30 만료</div>
+        <div class="cal-desc">全 업권 가계대출 합산, 스트레스 금리 1.50%. 연봉 1억 차주 한도 -1.2억. 6월이 단기 막바지 거래월, 7~8월 거래량 둔화 진입 예상. 정부 추가 LTV·비과세 카드 발표 가능성 모니터.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">7/4 (D-31)</div>
+      <div>
+        <div class="cal-event">🟦 CLARITY Act 美 본회의 표결 — 통과 확률 75% 유지</div>
+        <div class="cal-desc">SEC·CFTC 관할 정리 + 스테이블코인 정식 화이트리스트. Galaxy Digital 통과 확률 75% 유지(직전 50% 대비 상향), Senate Banking 15-9 가결 후. USDC·USDT 결제 PoC 본격, GENIUS Act 동시 발효 가능 — BTC -6% 폭락 후 핵심 회복 트리거.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ 본 브리핑은 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단의 책임은 본인에게 있습니다. 인용된 수치·뉴스는 발행 시점 기준이며, 시장 상황은 빠르게 변할 수 있어요. 미국 시장 데이터는 6/2 (화) NY 종가(S&amp;P 500 7,609.78 +0.13% 첫 7,600 돌파 · Nasdaq 27,093.90 +0.03% · Dow 51,307.79 +0.45% · Marvell +33% · HPE +19%), 美 4월 JOLTS 7.618만 건(컨센 6.88만 대폭 상회, 2024년 5월래 최고, 공석률 4.2→4.6%), 한국 시장은 6/2 (화) 15:30 KST 종가(KOSPI 8,801 +0.15% 추가 사상 최고), 코인은 6/3 (수) 새벽 KST(BTC $67,468 -5.7% 4월 이후 첫 $70K↓ · ETH $1,978 -0.5% · 美 BTC ETF 11일 -$4B 사상 최장 + IBIT $1.26B 블록 + Saylor/Strategy 2022/12 이후 첫 BTC 매도 32 BTC $2.5M), 환율·유가·금리는 6/2 기준(USD/KRW 1,513.05원 -0.06%, WTI ~$91 -1%, 美 10Y 4.46% +1bp, DXY ~99.1 +0.2%)입니다. 출처 링크는 새 탭으로 열립니다.
+  </div>
+</section>
+
+</main>
+
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    if (!themeToggle) return;
+
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+  });
+</script>
+
+</body>
+</html>

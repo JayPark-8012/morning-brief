@@ -7,12 +7,111 @@
                  "publish_time":  "07:00 KST"
              },
     "stats":  {
-                  "total_issues":  164,
+                  "total_issues":  165,
                   "avg_read_minutes":  5,
                   "data_sources":  15
               },
-    "latest":  "2026-06-02",
+    "latest":  "2026-06-03",
     "briefings":  [
+                      {
+                          "date":  "2026-06-03",
+                          "weekday":  "수",
+                          "vol":  165,
+                          "theme":  "S&P First 7,600 + Marvell +33% & HPE +19% Chip Rally vs BTC -6% $67K Crash — Saylor First BTC Sale in 4 Years + JOLTS 7.62M Shock",
+                          "tagline":  "6/2(화) 美 3대 지수 동반 신기록 — S&P 500 7,609.78(+0.13%) 사상 첫 7,600 돌파, Nasdaq 27,093.90(+0.03%), Dow 51,307.79(+0.45%). 칩·AI 트레이드 1차 협력사 확장 — Marvell Technology +33%(NVIDIA Jensen Huang의 'Marvell 인터커넥트가 Vera Rubin 핵심 부품' 코멘트), HPE +19%(2분기 실적 깜짝 + AI 서버 4Q 가이던스 $5B→$6B 상향). 한국 KOSPI 8,801(+0.15%) 추가 사상 최고 — 6/1 매수 사이드카(+3.68%) D+1 추종 통과. 그런데 코인은 정반대 폭락 — BTC -5.7% $67,468로 4월 7일 이후 첫 $70K 하향 이탈, ETH $1,978(-0.5%). 도화선 3종 결합: ① MicroStrategy/Saylor 2022년 12월 이후 첫 BTC 매도(5/26~31에 32 BTC, 평균 $77,135, $2.5M, STRC 우선주 배당 자금) — 보유 84.37만 BTC의 0.0038%로 미미하나 '절대 안 판다' 신화 균열 상징성, ② BlackRock IBIT $1.26B 단일 블록세일 + 美 BTC ETF 11거래일 연속 -$4B 사상 최장 갱신(6/1 단일 -$483.8M, IBIT -$440.3M), ③ 美 4월 JOLTS 구인공고 7.618만 건(컨센 6.88만 대폭 상회, 전월 +73.1만 급증, 2024년 5월 이후 최고, 공석률 4.2% → 4.6%) → Fed 인하 9월 70% → 60% 약세, 일부 연내 인상 베팅 재부상. 10Y 4.46%(+1bp), DXY ~99.1(+0.2%) 달러 강세 반전. 그러나 반대 신호도 강력 — Bitmine 회장 Tom Lee 'Saylor 매도는 전형적 바닥 행동(classic bottom behavior)' 진단, 과거 ETF 유출 종료 후 30일 BTC +12% 평균 회복 패턴, CLARITY Act 통과 확률 75% 유지(7/4 House 본회의 + 6월 Senate 처리 백악관 공식 목표). WTI ~$91(-1%) 이란 메시지 교환 중단에도 트럼프 '호르무즈 MoU 일주일 내' 발언으로 단기 진정. USD/KRW 1,513.05원(-0.06%) 안정. 오늘 밤 23:00 KST 美 5월 ISM 서비스 PMI(컨센 52, 4월 51.6), 6/4 ADP(컨센 +10만), 6/5 NFP(컨센 +12~15만, 실업률 4.0%), 6/12 한은 통화신용정책보고서, 6/17~18 FOMC 점도표가 6월 핵심 경로.",
+                          "tldr_us":  "S&P 500 7,609.78(+0.13%) 첫 7,600 돌파, Nasdaq 27,093.90(+0.03%), Dow 51,307.79(+0.45%) 동반 신기록. Marvell +33%(Jensen Huang 코멘트), HPE +19%(실적·AI 서버)",
+                          "tldr_kr":  "KOSPI 8,801(+0.15%) 추가 사상 최고 — 6/1 사이드카(+3.68%) D+1 추종 통과. USD/KRW 1,513.05원(-0.06%) 안정",
+                          "tldr_crypto":  "BTC $67,468(-5.7%) 4월 이후 첫 $70K 하향 이탈, ETH $1,978(-0.5%). Saylor 2022/12 이후 첫 BTC 매도 32 BTC + IBIT $1.26B 블록 + ETF 11일 -$4B",
+                          "us_change":  "+0.13",
+                          "kr_change":  "+0.15",
+                          "crypto_change":  "-5.7",
+                          "tags":  [
+                                       "bull",
+                                       "event"
+                                   ],
+                          "html_path":  "2026-06-03-morning.html",
+                          "md_path":  "2026-06-03-morning.md",
+                          "created_at":  "2026-06-03T07:00:00+09:00",
+                          "macro":  {
+                                        "us_10y":  "4.46% (+1bp)",
+                                        "dxy":  "~99.1 (+0.2%)",
+                                        "wti":  "~$91 (-1%)",
+                                        "gold":  "~$4,420 (-0.9%)",
+                                        "usdkrw":  "1,513.05원 (-3원)",
+                                        "vix":  "15.6 (+0.3p)"
+                                    },
+                          "telegram_top3":  [
+                                                {
+                                                    "title":  "BTC -5.7% $67K 폭락 + Saylor 2022/12 이후 첫 매도 + ETF 11일 -$4B",
+                                                    "body":  "6/2 BTC -5.7% $67,468 4월 7일 이후 첫 $70K 하향 이탈. Saylor/Strategy 2022년 12월 이후 첫 BTC 매도(32 BTC, $2.5M, STRC 우선주 배당, 보유 0.0038%). BlackRock IBIT $1.26B 단일 블록세일 + 美 BTC ETF 11거래일 연속 -$4B 사상 최장. Tom Lee 'classic bottom behavior' 진단."
+                                                },
+                                                {
+                                                    "title":  "S&P 첫 7,600 돌파 + Marvell +33% Jensen Huang 코멘트 + HPE +19%",
+                                                    "body":  "S&P 500 7,609.78(+0.13%) 첫 7,600 돌파, Nasdaq 27,093.90, Dow 51,307.79 동반 신기록. Marvell +33%(평소 ±2%의 16배) NVIDIA Vera Rubin 인터커넥트 코멘트 후 폭등. HPE +19% 2분기 실적 + AI 서버 4Q $5B→$6B 가이던스. NVIDIA 헤일로 효과 1차 협력사 확장."
+                                                },
+                                                {
+                                                    "title":  "美 4월 JOLTS 7.618M 깜짝 — 컨센 6.88M 대폭 상회, 인하 약화",
+                                                    "body":  "4월 JOLTS 7.618만 건(컨센 6.88만 대폭 상회, 2024년 5월래 최고), 전월 +73.1만 급증, 공석률 4.2 → 4.6%. Fed 인하 9월 70% → 60% 약세, 일부 연내 인상 베팅 재부상. 10Y 4.46%(+1bp), DXY ~99.1(+0.2%) 달러 강세 반전. BTC 폭락의 한 가닥."
+                                                }
+                                            ],
+                          "calendar":  [
+                                           {
+                                               "date":  "6/3 (수) 23:00",
+                                               "event":  "美 5월 ISM 서비스 PMI",
+                                               "importance":  "warning",
+                                               "consensus":  "52 (4월 51.6)"
+                                           },
+                                           {
+                                               "date":  "6/4 (수) 21:15",
+                                               "event":  "美 5월 ADP 민간 고용",
+                                               "importance":  "info",
+                                               "consensus":  "+10만"
+                                           },
+                                           {
+                                               "date":  "6/5 (금) 21:30",
+                                               "event":  "美 5월 비농업 고용(NFP) + 실업률",
+                                               "importance":  "warning",
+                                               "consensus":  "NFP +12~15만, 실업률 4.0%"
+                                           },
+                                           {
+                                               "date":  "6월 중",
+                                               "event":  "트럼프 이란 협상 + 호르무즈 MoU 시한",
+                                               "importance":  "warning"
+                                           },
+                                           {
+                                               "date":  "6/12 (목)",
+                                               "event":  "한국은행 통화신용정책보고서 발간",
+                                               "importance":  "info"
+                                           },
+                                           {
+                                               "date":  "6/17~18 (수~목)",
+                                               "event":  "美 FOMC 6월 — 동결 우세, 점도표 갱신",
+                                               "importance":  "warning"
+                                           },
+                                           {
+                                               "date":  "7/1 (D-28)",
+                                               "event":  "스트레스 DSR 3단계 시행 + 양도세 중과 유예 만료",
+                                               "importance":  "info"
+                                           },
+                                           {
+                                               "date":  "7/4 (D-31)",
+                                               "event":  "CLARITY Act 美 본회의 표결 — 통과 확률 75% 유지",
+                                               "importance":  "info"
+                                           }
+                                       ],
+                          "scenarios":  {
+                                            "main":  {
+                                                         "probability":  55,
+                                                         "title":  "ADP·NFP 둔화 + BTC 단기 바닥 회복",
+                                                         "description":  "ISM 서비스 52 부합 + ADP·NFP 정상(+10~15만) + ETF 11일 유출 종료 → S&P 7,650 시도, KOSPI 8,800~9,000 안착, BTC $70K 회복 + $72K 시도. Tom Lee '바닥 행동' 적중, CLARITY 75% 유지"
+                                                     },
+                                            "risk":  {
+                                                         "probability":  45,
+                                                         "title":  "ISM 서비스·NFP 동시 가속 + BTC $65K 재테스트",
+                                                         "description":  "ISM 서비스 53+ + NFP +20만+ + 일부 인상 베팅 본격화 → 10Y 4.55%+ 발작, DXY 99.5+, S&P -1~2%(7,450 이하), KOSPI 8,500 박스 후퇴, BTC $65K 재테스트, ETH $1,900, 환율 1,525원+"
+                                                     }
+                                        }
+                      },
                       {
                           "date":  "2026-06-02",
                           "weekday":  "화",
