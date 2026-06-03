@@ -7,12 +7,115 @@
                  "publish_time":  "07:00 KST"
              },
     "stats":  {
-                  "total_issues":  165,
+                  "total_issues":  166,
                   "avg_read_minutes":  5,
                   "data_sources":  15
               },
-    "latest":  "2026-06-03",
+    "latest":  "2026-06-04",
     "briefings":  [
+                      {
+                          "date":  "2026-06-04",
+                          "weekday":  "목",
+                          "vol":  166,
+                          "theme":  "Lee Jae-myung Wins 21st Korean Presidency (51.7%) + US Record High Profit-Taking (Iran Kuwait Strike) — Broadcom AI $100B Guidance Frozen + BTC $65K 4-Month Low",
+                          "tagline":  "어제 6/3(수)은 한국 정치사의 분수령 — 제21대 대선 임시공휴일로 한국 증시 휴장, 이재명 더불어민주당 후보 51.7%(역대 최다 1,728만 표) 당선, 김문수 39.3%(12.4%p차), 투표율 79.4%. 인수위 없이 6/4 즉시 취임. 같은 시간 美 시장 일제 차익실현 — S&P 500 -0.74%, Nasdaq -0.89%, Dow -1.21%, Russell 2000 -1.25%. 도화선은 이란이 쿠웨이트 국제공항 T1 미사일 공격(시설 파손·부상, 항공 중단) + 바레인 미사일 3발(요격) + 美 호르무즈 인근 타격으로 위기 재격화 → WTI $95+ 3거래일 연속 상승. 美 5월 ISM 서비스 PMI 54.5(컨센 53.8 상회, 3개월래 최고, 신규주문 57.3, 고용 47.9 3개월 연속 위축), 美 5월 ADP +12.2만(컨센 +11.7만, 2025년 1월래 최고) 동시 깜짝. Broadcom 2분기 EPS $2.44 컨센 상회·매출 $22.19B 미달·3Q 가이던스 $29.4B 컨센 상회, 그러나 Hock Tan CEO가 2026년 AI 칩 $100B 목표 상향 거부('to be in excess of $100B' 2027년 재확인) → 시간외 하락. CrowdStrike 1Q EPS $1.10 컨센 $0.88 대폭 상회 + 4:1 주식분할. BTC $65,800대(장중 저점 $65,372 4월 7일 이후 최저), ETH $1,921, 美 BTC ETF 12거래일 연속 -$3.5B 사상 최장(6/2 단일 -$519M), F&G 23 Extreme Fear, 24h 청산 $1.86B(롱 $1.35B, 2026/2월래 최대). USD/KRW NDF ~1,520원(장중 1,531원 고가, +7원). 10Y ~4.45%, 금 $4,500 이탈, VIX ~17(+1.4p). 6월 첫째 주 OPEC+ 회의(Iran 위기 환경 감산 결정), 6월 중반 이재명 신정부 첫 정책 패키지(추경 30~50조·K-AI·K-콘텐츠·부동산 미세조정) 가능성. 오늘 밤 21:30 KST 美 5월 NFP(컨센 +10만, 실업률 4.3%) — 6/17 FOMC 점도표 직전 마지막 핵심.",
+                          "tldr_us":  "S&P 500 -0.74%, Nasdaq -0.89%, Dow -1.21%, Russell 2000 -1.25% 신고가 직후 일제 차익실현. Iran 쿠웨이트 공항 공습 + ISM 서비스 54.5·ADP +12.2만 동시 깜짝 + Broadcom AI $100B 동결",
+                          "tldr_kr":  "제21대 대선 임시공휴일 휴장. 이재명 51.7%(1,728만 표 역대 최다) 당선, 김문수 39.3% 12.4%p차. 투표율 79.4%. USD/KRW NDF ~1,520원(장중 1,531원)",
+                          "tldr_crypto":  "BTC $65,800대(장중 저점 $65,372, 4월 7일 이후 최저), ETH $1,921. 美 BTC ETF 12일 연속 -$3.5B 사상 최장. F&G 23 Extreme Fear, 24h 청산 $1.86B",
+                          "us_change":  "-0.74",
+                          "kr_change":  "0",
+                          "crypto_change":  "-2.5",
+                          "tags":  [
+                                       "bear",
+                                       "event"
+                                   ],
+                          "html_path":  "2026-06-04-morning.html",
+                          "md_path":  "2026-06-04-morning.md",
+                          "created_at":  "2026-06-04T07:00:00+09:00",
+                          "macro":  {
+                                        "us_10y":  "~4.45% (-1bp)",
+                                        "dxy":  "~99.2 (+0.1%)",
+                                        "wti":  "~$95 (+1%대, 3일 연속↑)",
+                                        "gold":  "<$4,500 (추가↓)",
+                                        "usdkrw":  "~1,520원 (+7원, 장중 1,531)",
+                                        "vix":  "~17 (+1.4p)"
+                                    },
+                          "telegram_top3":  [
+                                                {
+                                                    "title":  "이재명 21대 대통령 51.7% 당선 + 6/4 즉시 취임",
+                                                    "body":  "6/3 제21대 대선 임시공휴일. 이재명 더불어민주당 후보 51.7% 득표(역대 최다 1,728만 표) 당선, 김문수 국민의힘 39.3%(12.4%p차), 투표율 79.4%. 보궐 대선 성격이라 인수위 없이 6/4 즉시 취임. 6월 중반 첫 정책 패키지 가능성(추경 30~50조·K-AI·K-콘텐츠·부동산 미세조정). 친환경·디지털·게임 단기 수혜."
+                                                },
+                                                {
+                                                    "title":  "美 신고가 차익실현 -0.74~-1.25% — Iran 쿠웨이트 공항 미사일 공격 + WTI $95+",
+                                                    "body":  "6/3 S&P -0.74%, Nasdaq -0.89%, Dow -1.21%, Russell 2000 -1.25% 일제 차익실현. 이란이 쿠웨이트 국제공항 T1 미사일 공격(시설 파손·부상·항공 중단) + 바레인 3발 요격 + 美 호르무즈 인근 타격. WTI $95+ 3거래일 연속 상승. ISM 서비스 54.5·ADP +12.2만 동시 깜짝 + Broadcom AI $100B 동결 4중 동력."
+                                                },
+                                                {
+                                                    "title":  "BTC $65,800 4월래 최저 + ETF 12일 -$3.5B 사상 최장 + F&G 23",
+                                                    "body":  "6/3 BTC 장중 저점 $65,372(4월 7일 이후 최저), 24h 청산 $1.86B(롱 $1.35B, 2026/2월래 최대). 美 BTC 현물 ETF 12거래일 연속 순유출 누적 -$3.5B 사상 최장 갱신(6/2 단일 -$519M). F&G Index 23 Extreme Fear 한 달래 최악. Tom Lee 'Saylor 매도 = 전형적 바닥 행동' 진단."
+                                                }
+                                            ],
+                          "calendar":  [
+                                           {
+                                               "date":  "6/4 (목)",
+                                               "event":  "한국 KOSPI/KOSDAQ 재개장 + 이재명 21대 대통령 취임",
+                                               "importance":  "warning"
+                                           },
+                                           {
+                                               "date":  "6/5 (금) 21:30",
+                                               "event":  "美 5월 비농업 고용(NFP) + 실업률",
+                                               "importance":  "warning",
+                                               "consensus":  "NFP +10만, 실업률 4.3%"
+                                           },
+                                           {
+                                               "date":  "6월 첫째 주",
+                                               "event":  "OPEC+ 6월 회의 — Iran 위기 환경 감산 결정",
+                                               "importance":  "warning"
+                                           },
+                                           {
+                                               "date":  "6월 중",
+                                               "event":  "이재명 신정부 첫 정책 패키지 + Iran 호르무즈 협상",
+                                               "importance":  "warning"
+                                           },
+                                           {
+                                               "date":  "6/11 (수) 21:30",
+                                               "event":  "美 5월 CPI 발표",
+                                               "importance":  "info",
+                                               "consensus":  "헤드라인 +0.2% MoM, YoY ~3.0%, 코어 +0.3% MoM"
+                                           },
+                                           {
+                                               "date":  "6/12 (목)",
+                                               "event":  "한국은행 통화신용정책보고서 발간",
+                                               "importance":  "info"
+                                           },
+                                           {
+                                               "date":  "6/17~18 (수~목)",
+                                               "event":  "美 FOMC 6월 — 동결 우세, 점도표 갱신",
+                                               "importance":  "warning"
+                                           },
+                                           {
+                                               "date":  "7/1 (D-27)",
+                                               "event":  "스트레스 DSR 3단계 시행 + 양도세 중과 유예 만료",
+                                               "importance":  "info"
+                                           },
+                                           {
+                                               "date":  "7/4 (D-30)",
+                                               "event":  "CLARITY Act 美 본회의 표결 — 통과 확률 75% 유지",
+                                               "importance":  "info"
+                                           }
+                                       ],
+                          "scenarios":  {
+                                            "main":  {
+                                                         "probability":  55,
+                                                         "title":  "NFP 부합 + Iran 단기 진정 + 이재명 정책 호재",
+                                                         "description":  "NFP +5~12만 부합 + Iran 직접 충돌 단기 진정 + 이재명 첫 정책 친환경·디지털 호재 → S&P 7,550~7,600 박스 회복, KOSPI 8,800선 안착, BTC ETF 유출 종료 + $70K 회복 + $72K 시도. 환율 1,510~1,520 박스, Tom Lee '바닥 행동' 적중"
+                                                     },
+                                            "risk":  {
+                                                         "probability":  45,
+                                                         "title":  "NFP +15만+ 가속 + Iran 호르무즈 봉쇄 + Broadcom 후폭풍",
+                                                         "description":  "NFP +15만+ 가속(인하 12월 이연 본격화) + Iran 호르무즈 추가 격화(WTI $110+, 美 직접 충돌) + Broadcom AI 1차 협력사 약세 → 10Y 4.55%+ 발작, S&P -2~3%(7,400 이하), KOSPI 8,500~8,600 후퇴, BTC $60K 재테스트, ETH $1,800, 환율 1,535원+ 시도"
+                                                     }
+                                        }
+                      },
                       {
                           "date":  "2026-06-03",
                           "weekday":  "수",
