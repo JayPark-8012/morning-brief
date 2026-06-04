@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0F1115">
+<title>2026년 6월 5일 데일리 브리핑 v3.6 — KOSPI 8,639 외국인 7조 투매 + 美 Dow 신고가 51,561 (섹터 로테이션) — 오늘 밤 NFP 분기점</title>
+<meta name="description" content="한국·미국 증시와 디지털 자산 매일 아침 7시 브리핑 — 2026년 6월 5일 (금). 어제 6/4(목) 한국은 이재명 21대 대통령 취임 첫날에 KOSPI -1.84%(8,639.41) 162p 후퇴, 외국인 -6.95조원 19거래일 연속 매도 + 역대 2위 규모(2/27 7.08조 이후 최대). 삼성 -2.50% 35만원대, SK하이닉스 -2.63% 220만원대. USD/KRW 1,529.7원 +13.3원 2009년 3월 이후 첫 1,530원 개장가 돌파. 美 시장은 정반대 — Dow 신기록 51,561.93(+1.73%, +874p UNH +5%·JPM +3% 견인), S&P 500 +0.41% 7,584.31, 그러나 Nasdaq -0.09% 26,830.96(반도체 차익실현 지속, AVGO Broadcom 후폭풍). 美 10Y 4.49%(-1bp). WTI ~$95(-1%, 3일 연속↑ 후 첫 조정). BTC $62~64K(추가 -4% 4월 7일 이후 최저 갱신), ETH $1,740~1,810(약세 가속). 美 BTC ETF 6일 연속 유출 누적 -$2.42B(이번 주 -$1.67B). 오늘 밤 21:30 KST 美 5월 NFP(컨센 +10만, 실업률 4.3%) — 6/17 FOMC 점도표 직전 마지막 핵심 데이터. 한국 정유주(SK이노·S-Oil), 게임주(크래프톤·시프트업), 2차전지(LG에너지·삼성SDI) 신정부 모멘텀 모니터.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg-primary: #0F1115;
+    --bg-elevated: #1A1D24;
+    --bg-card: #1F232C;
+    --bg-hover: #252932;
+    --bg-deeper: #0A0C10;
+    --text-primary: #F0EAE0;
+    --text-secondary: #A8A29A;
+    --text-tertiary: #6B6862;
+    --gold: #D4A857;
+    --gold-bright: #E8C078;
+    --gold-glow: rgba(212,168,87,0.15);
+    --bull: #26A69A;
+    --bear: #EF5350;
+    --bull-bg: rgba(38,166,154,0.1);
+    --bear-bg: rgba(239,83,80,0.1);
+    --border: #2D3138;
+    --border-strong: #3A3F49;
+    --border-gold: rgba(212,168,87,0.3);
+    --info-bg: rgba(91,155,213,0.1);
+    --info-border: #5B9BD5;
+    --warn-bg: rgba(232,192,120,0.12);
+    --warn-border: #E8C078;
+    --font-body: 'Pretendard', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  [data-theme="light"] {
+    --bg-primary: #FAF8F3;
+    --bg-elevated: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-hover: #F5F1E8;
+    --bg-deeper: #F0EBE0;
+    --text-primary: #1A1D24;
+    --text-secondary: #4A4843;
+    --text-tertiary: #6B6862;
+    --gold: #A07F3F;
+    --gold-bright: #7A5F2F;
+    --gold-glow: rgba(160,127,63,0.1);
+    --border: #E5DFD0;
+    --border-strong: #C9C2B0;
+    --border-gold: rgba(160,127,63,0.4);
+    --info-bg: rgba(91,155,213,0.08);
+    --warn-bg: rgba(160,127,63,0.1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-body); font-size: 16px; line-height: 1.7; transition: background .3s, color .3s; }
+  a { color: var(--gold-bright); text-decoration: none; border-bottom: 1px dotted var(--gold); }
+  a:hover { color: var(--gold); border-bottom-style: solid; }
+  strong { color: var(--gold-bright); font-weight: 700; }
+
+  .top-header { position: sticky; top: 0; z-index: 100; background: rgba(15,17,21,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+  [data-theme="light"] .top-header { background: rgba(250,248,243,0.9); }
+  .header-inner { max-width: 920px; margin: 0 auto; padding: .75rem 1.25rem; display: flex; align-items: center; justify-content: space-between; }
+  .header-brand { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; text-decoration: none; }
+  .brand-mark { font-weight: 800; font-size: 1.25rem; color: var(--gold); line-height: 1; letter-spacing: -0.02em; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .brand-text .ko { font-size: 0.7rem; color: var(--text-tertiary); letter-spacing: 0.15em; margin-top: 2px; }
+  .brand-text .en { font-size: 0.95rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.01em; }
+  .header-actions { display: flex; align-items: center; gap: 0.5rem; }
+  .icon-btn { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; font-size: 1rem; }
+  .icon-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+  main { max-width: 920px; margin: 0 auto; padding: 0 1.25rem; }
+  section { padding: 2.5rem 0; border-bottom: 1px dashed var(--border); }
+  section:last-child { border-bottom: none; }
+
+  .hero { padding-top: 2.5rem; }
+  .hero-meta { font-family: var(--font-mono); font-size: .8rem; color: var(--text-tertiary); letter-spacing: .12em; margin-bottom: 1.25rem; }
+  .hero-meta .vol { color: var(--gold); }
+  .hero-title { font-weight: 800; font-size: clamp(1.7rem, 4.5vw, 2.3rem); line-height: 1.3; letter-spacing: -.01em; margin-bottom: .8rem; }
+  .hero-sub { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 680px; }
+
+  .tldr-grid { display: grid; gap: .75rem; margin-top: 2rem; }
+  .tldr-card { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 4px; }
+  .tldr-flag { font-size: 1.6rem; }
+  .tldr-label { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); letter-spacing: .1em; margin-bottom: .2rem; }
+  .tldr-text { font-size: .95rem; line-height: 1.5; }
+  .tldr-change { font-family: var(--font-mono); font-size: 1.05rem; font-weight: 700; padding: .35rem .65rem; border-radius: 4px; }
+  .change-bull { color: var(--bull); background: var(--bull-bg); }
+  .change-bear { color: var(--bear); background: var(--bear-bg); }
+  .change-neutral { color: var(--text-secondary); background: var(--bg-deeper); }
+
+  .sec-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: .8rem; border-bottom: 1px solid var(--border); }
+  .sec-num { font-family: var(--font-mono); font-weight: 700; font-size: .78rem; color: var(--gold); padding: .25rem .5rem; background: var(--gold-glow); border-radius: 3px; }
+  .sec-title { font-weight: 700; font-size: 1.35rem; letter-spacing: -.01em; }
+  .sec-sub { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); margin-left: auto; letter-spacing: .12em; text-transform: uppercase; }
+
+  .macro-table { width: 100%; border-collapse: collapse; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; font-size: .92rem; }
+  .macro-table th, .macro-table td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+  .macro-table thead th { background: var(--bg-deeper); font-family: var(--font-mono); font-size: .75rem; color: var(--text-tertiary); letter-spacing: .1em; text-transform: uppercase; font-weight: 600; }
+  .macro-table tbody tr:last-child td { border-bottom: none; }
+  .macro-table tbody tr:hover { background: var(--bg-hover); }
+  .macro-name { font-weight: 700; color: var(--gold-bright); font-family: var(--font-mono); font-size: .88rem; }
+  .macro-value { font-family: var(--font-mono); font-weight: 600; }
+  .macro-chg { font-family: var(--font-mono); font-weight: 600; font-size: .88rem; }
+  .macro-up { color: var(--bear); }
+  .macro-down { color: var(--bull); }
+  .macro-note { font-size: .85rem; color: var(--text-secondary); }
+  .macro-summary { margin-top: 1rem; padding: .9rem 1.1rem; background: var(--info-bg); border-left: 3px solid var(--info-border); border-radius: 4px; font-size: .9rem; line-height: 1.65; color: var(--text-primary); }
+
+  .deep { background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 10px; padding: 1.8rem 1.6rem; }
+  .deep-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .18em; margin-bottom: 1rem; }
+  .deep-title { font-weight: 800; font-size: 1.35rem; line-height: 1.4; margin-bottom: 1.2rem; }
+  .deep-body { font-size: .96rem; line-height: 1.8; color: var(--text-primary); margin-bottom: 1.2rem; }
+  .deep-body p { margin-bottom: 1rem; }
+  .stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .6rem; margin: 1.3rem 0; }
+  .stat-card { padding: .9rem 1rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 6px; }
+  .stat-label { font-family: var(--font-mono); font-size: .68rem; color: var(--text-tertiary); letter-spacing: .1em; margin-bottom: .3rem; }
+  .stat-value { font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; color: var(--gold-bright); }
+  .stat-note { font-size: .75rem; color: var(--text-secondary); margin-top: .3rem; line-height: 1.4; }
+  .so-what { padding: 1rem 1.2rem; background: var(--info-bg); border-left: 3px solid var(--info-border); border-radius: 4px; margin-top: 1rem; font-size: .92rem; line-height: 1.65; }
+  .so-what::before { content: '🎯 그래서 나한테 무슨 의미?'; display: block; font-weight: 700; color: var(--info-border); margin-bottom: .4rem; font-size: .82rem; }
+  .deep-sources { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-top: 1.2rem; padding-top: 1rem; border-top: 1px dashed var(--border); font-size: .82rem; color: var(--text-tertiary); }
+  .deep-sources strong { color: var(--text-secondary); font-weight: 600; margin-right: .3rem; }
+  .source-chip { display: inline-block; padding: .25rem .65rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); font-size: .72rem; color: var(--text-secondary) !important; border-bottom: none !important; }
+  .source-chip:hover { border-color: var(--gold); color: var(--gold) !important; }
+
+  .five { display: grid; gap: 1rem; }
+  .news-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.4rem 1.5rem; transition: border-color .25s; }
+  .news-card:hover { border-color: var(--border-gold); }
+  .news-meta { display: flex; align-items: center; gap: .6rem; margin-bottom: .7rem; font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .news-rank { color: var(--gold); font-weight: 700; padding: .2rem .45rem; background: var(--gold-glow); border-radius: 3px; }
+  .news-cat { color: var(--text-secondary); letter-spacing: .08em; }
+  .news-time { margin-left: auto; }
+  .news-headline { font-weight: 700; font-size: 1.1rem; line-height: 1.45; margin-bottom: .8rem; }
+  .news-body { font-size: .93rem; line-height: 1.8; color: var(--text-primary); }
+  .news-body p { margin-bottom: .7rem; }
+  .news-body p:last-child { margin-bottom: 0; }
+  .news-conclusion { margin-top: 1rem; padding: .8rem 1rem; background: var(--bg-deeper); border-left: 3px solid var(--gold); border-radius: 4px; font-size: .9rem; line-height: 1.55; }
+  .news-conclusion::before { content: '→ 그래서 뭐? '; color: var(--gold); font-weight: 700; }
+  .news-sources { margin-top: .9rem; padding-top: .7rem; border-top: 1px dashed var(--border); font-size: .8rem; color: var(--text-tertiary); }
+  .news-sources a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; }
+  .news-sources a:hover { color: var(--gold); }
+
+  .markets { display: grid; gap: 1.2rem; }
+  .market-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.3rem 1.4rem; }
+  .market-card.us { border-top: 3px solid #5B9BD5; }
+  .market-card.kr { border-top: 3px solid #D4A857; }
+  .market-card.crypto { border-top: 3px solid #F7931A; }
+  .market-head { display: flex; align-items: baseline; gap: .6rem; margin-bottom: .9rem; }
+  .market-flag { font-size: 1.4rem; }
+  .market-title { font-weight: 700; font-size: 1.05rem; }
+  .market-time { margin-left: auto; font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .mkt-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-bottom: .8rem; }
+  .mkt-table th, .mkt-table td { padding: .55rem .7rem; text-align: left; border-bottom: 1px solid var(--border); }
+  .mkt-table thead th { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); letter-spacing: .08em; text-transform: uppercase; font-weight: 600; background: var(--bg-deeper); }
+  .mkt-table tbody tr:last-child td { border-bottom: none; }
+  .mkt-table .mkt-name { font-weight: 600; }
+  .mkt-table .mkt-val { font-family: var(--font-mono); font-weight: 600; }
+  .mkt-table .mkt-chg { font-family: var(--font-mono); font-weight: 700; }
+  .mkt-flow { font-size: .85rem; color: var(--text-secondary); padding: .55rem .8rem; background: var(--bg-deeper); border-radius: 4px; margin-bottom: .7rem; line-height: 1.55; }
+  .mkt-comment { padding: .7rem .9rem; background: var(--gold-glow); border-left: 3px solid var(--gold); border-radius: 4px; font-size: .88rem; line-height: 1.6; color: var(--text-primary); }
+  .mkt-comment::before { content: '💬 '; }
+
+  .filter-bar { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.2rem; font-size: .8rem; color: var(--text-tertiary); }
+  .filter-chip { padding: .3rem .7rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); }
+  .headline-list { display: grid; gap: .7rem; }
+  .h-item { padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; transition: all .2s; }
+  .h-item:hover { border-color: var(--border-gold); transform: translateX(2px); }
+  .h-title { font-weight: 600; font-size: .98rem; margin-bottom: .4rem; line-height: 1.4; }
+  .h-desc { font-size: .87rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: .5rem; }
+  .h-meta { font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .h-meta a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; font-size: .72rem; }
+
+  .re-snapshot { padding: 1.1rem 1.3rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 1.2rem; font-size: .9rem; line-height: 1.7; }
+  .re-snapshot strong { color: var(--gold-bright); }
+  .re-grid { display: grid; gap: 1rem; }
+  .re-card { padding: 1.3rem 1.4rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; }
+  .re-title { font-weight: 700; font-size: 1.02rem; margin-bottom: .6rem; line-height: 1.4; }
+  .re-body { font-size: .92rem; line-height: 1.75; color: var(--text-primary); }
+  .re-body p { margin-bottom: .55rem; }
+  .re-body p:last-child { margin-bottom: 0; }
+  .re-sources { margin-top: .8rem; padding-top: .7rem; border-top: 1px dashed var(--border); font-size: .78rem; color: var(--text-tertiary); }
+  .re-sources a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; }
+
+  .analyst-box { padding: 1.5rem 1.6rem; background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 8px; margin-bottom: 1.2rem; }
+  .analyst-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .15em; margin-bottom: .8rem; }
+  .analyst-body { font-size: .96rem; line-height: 1.85; color: var(--text-primary); }
+  .analyst-body p { margin-bottom: .8rem; }
+  .analyst-body p:last-child { margin-bottom: 0; }
+  .scenarios { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem; }
+  .sc-card { padding: 1.4rem 1.5rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; }
+  .sc-card.main { border-left: 3px solid var(--bull); }
+  .sc-card.alt { border-left: 3px solid var(--bear); }
+  .sc-prob { font-family: var(--font-mono); font-size: .8rem; color: var(--gold); letter-spacing: .1em; margin-bottom: .5rem; }
+  .sc-title { font-weight: 700; font-size: 1.05rem; margin-bottom: .7rem; line-height: 1.4; }
+  .sc-body { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+  .action-box { padding: 1.1rem 1.3rem; background: var(--bg-deeper); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; }
+  .action-title { font-weight: 700; font-size: .92rem; color: var(--gold); margin-bottom: .6rem; }
+  .action-list { list-style: none; padding: 0; margin: 0; }
+  .action-list li { padding: .35rem 0; padding-left: 1.2rem; position: relative; font-size: .9rem; line-height: 1.6; color: var(--text-primary); }
+  .action-list li::before { content: '▸'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+
+  .cal-grid { display: grid; gap: .7rem; }
+  .cal-item { display: grid; grid-template-columns: 110px 1fr; gap: 1rem; padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--info-border); border-radius: 6px; align-items: center; }
+  .cal-item.warn { border-left-color: var(--warn-border); background: var(--warn-bg); }
+  .cal-item.info { border-left-color: var(--info-border); background: var(--info-bg); }
+  .cal-date { font-family: var(--font-mono); font-size: .85rem; font-weight: 700; color: var(--gold-bright); }
+  .cal-event { font-weight: 600; margin-bottom: .25rem; font-size: .98rem; }
+  .cal-desc { font-size: .85rem; color: var(--text-secondary); line-height: 1.55; }
+
+  .disclaimer { margin-top: 2rem; padding: 1rem 1.2rem; background: var(--bg-deeper); border: 1px dashed var(--border); border-radius: 6px; font-size: .78rem; color: var(--text-tertiary); line-height: 1.6; }
+
+  @media (max-width: 720px) {
+    .scenarios { grid-template-columns: 1fr; }
+    .tldr-card { grid-template-columns: auto 1fr; }
+    .tldr-change { grid-column: 2; justify-self: start; margin-top: .3rem; }
+    .cal-item { grid-template-columns: 1fr; gap: .3rem; }
+    .macro-table th, .macro-table td { padding: .6rem .55rem; font-size: .82rem; }
+    .mkt-table th, .mkt-table td { padding: .45rem .5rem; font-size: .82rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top-header">
+  <div class="header-inner">
+    <a href="/index.html" class="header-brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-text">
+        <div class="en">Morning Brief</div>
+        <div class="ko">데일리 경제 브리핑</div>
+      </div>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" title="테마 변경">🌙</button>
+      <button class="icon-btn" title="공유" onclick="navigator.share &amp;&amp; navigator.share({title: document.title, url: location.href})">↗</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============== [1] HERO ============== -->
+<section class="hero">
+  <div class="hero-meta">
+    <span class="vol">Vol.167</span> · 2026.06.05 (금) · 📖 14분 읽기 · v3.6 · normal
+  </div>
+  <h1 class="hero-title">KOSPI 8,639 -1.84% (외국인 7조 투매 19일 연속·역대 2위) vs 美 Dow 신고가 51,561 (섹터 로테이션) — 오늘 밤 NFP 분기점</h1>
+  <p class="hero-sub">어제 6/4(목)은 이재명 21대 대통령 취임 첫날의 시장 데뷔 — 그런데 <strong>KOSPI는 8,801 사상최고에서 162p(-1.84%) 후퇴한 8,639.41 마감</strong>, <strong>외국인이 6.95조원 순매도(19거래일 연속, 역대 2위 규모, 2/27 7.08조 이후 최대)</strong>로 시장을 끌어내렸어요. 개인 +5.02조·기관 +1.81조의 방어에도 역부족. 삼성전자 -2.50%(35만원대), SK하이닉스 -2.63%(220만원대) 반도체 대형주 동반 숨고르기. <strong>USD/KRW 1,529.7원(+13.3원, 2009년 3월 이후 첫 1,530원 개장가 돌파)</strong>로 환율 부담이 외국인 매도 동력 증폭. 같은 시간 미국은 정반대 모습 — <strong>Dow 신기록 51,561.93(+1.73%, +874.86p)</strong>, S&amp;P 500 +0.41% 7,584.31, 그러나 <strong>Nasdaq -0.09% 26,830.96 반도체 차익실현 지속</strong>. 종목별로 UnitedHealth +5%, JPMorgan +3%, Walmart +1% 등 비기술 섹터로 자금 회전. Broadcom AI $100B 가이던스 동결 후폭풍이 반도체에 잔존. BTC는 추가 하락 — 장중 <strong>$62,257까지 -4% 4월 7일 이후 최저 갱신</strong>, ETH $1,740대. 美 BTC 현물 ETF 6거래일 연속 유출 누적 -$2.42B(이번 주 -$1.67B). WTI ~$95(-1%, 3일 연속↑ 후 첫 조정, Iran 외교 채널 재가동 시도). 美 10Y 4.49%(-1bp), DXY 99.34. 오늘 한국 시장은 단기 반등 vs 추가 후퇴 갈림길, 오늘 밤 21:30 KST <strong>美 5월 NFP(컨센 +10만, 실업률 4.3%)</strong>가 6/17 FOMC 점도표 직전 마지막 핵심 데이터. JOLTS 7.62M + ISM 서비스 54.5 + ADP +12.2만 3종 깜짝 후속이라 +15만+ 가속 시 인하 12월 이연 + 10Y 4.55% 발작 가능.</p>
+
+  <div class="tldr-grid">
+    <div class="tldr-card">
+      <div class="tldr-flag">🇺🇸</div>
+      <div>
+        <div class="tldr-label">미국 (6/4 목 마감)</div>
+        <div class="tldr-text">Dow <strong>+1.73% 51,561.93 신기록</strong>(+874p), S&amp;P +0.41% 7,584. 그러나 <strong>Nasdaq -0.09%</strong> 반도체 차익실현 지속 (UNH +5%·JPM +3% 비기술 회전)</div>
+      </div>
+      <div class="tldr-change change-bull">+0.41%</div>
+    </div>
+    <div class="tldr-card">
+      <div class="tldr-flag">🇰🇷</div>
+      <div>
+        <div class="tldr-label">한국 (6/4 목 마감)</div>
+        <div class="tldr-text">KOSPI <strong>-1.84% 8,639.41</strong>(-162p), <strong>외국인 -6.95조 19일 연속·역대 2위</strong>. 삼성 -2.50%·SK하이닉스 -2.63%. USD/KRW 1,529.7원(+13.3원, 2009/3 이후 첫 1,530 개장가)</div>
+      </div>
+      <div class="tldr-change change-bear">-1.84%</div>
+    </div>
+    <div class="tldr-card">
+      <div class="tldr-flag">₿</div>
+      <div>
+        <div class="tldr-label">코인 (6/5 새벽 KST)</div>
+        <div class="tldr-text">BTC <strong>$62,257~64,000</strong>(장중 -4%, 4월 7일 이후 최저 갱신), ETH $1,740대. 美 BTC ETF 6일 연속 -$2.42B(이번 주 -$1.67B), F&amp;G 25 이하</div>
+      </div>
+      <div class="tldr-change change-bear">-4.0%</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== [3] MACRO TABLE ============== -->
+<section id="macro">
+  <div class="sec-head">
+    <div class="sec-num">[03]</div>
+    <h2 class="sec-title">📊 거시 환경 한눈에</h2>
+    <span class="sec-sub">Macro Dashboard · 6 Indicators</span>
+  </div>
+
+  <table class="macro-table">
+    <thead>
+      <tr>
+        <th>지표</th>
+        <th>현재값</th>
+        <th>변동</th>
+        <th>시사점 (한 줄)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="macro-name">美 10Y</span></td>
+        <td class="macro-value">4.49%</td>
+        <td class="macro-chg macro-down">▼ -1bp</td>
+        <td class="macro-note">매크로 강세 vs 안전선호 균형</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">DXY</span></td>
+        <td class="macro-value">99.34</td>
+        <td class="macro-chg macro-down">▼ -0.18%</td>
+        <td class="macro-note">달러 단기 숨고르기</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">WTI</span></td>
+        <td class="macro-value">~$95</td>
+        <td class="macro-chg macro-down">▼ -1%</td>
+        <td class="macro-note">3일 연속↑ 후 첫 조정 (Iran 외교)</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">금</span></td>
+        <td class="macro-value">~$4,480</td>
+        <td class="macro-chg macro-down">▼ 약보합</td>
+        <td class="macro-note">강한 매크로에 인하 기대 약화</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">USD/KRW</span></td>
+        <td class="macro-value">1,529.7원</td>
+        <td class="macro-chg macro-up">▲ +13.3원 (16년래 최약)</td>
+        <td class="macro-note">2009/3 이후 첫 1,530 개장가</td>
+      </tr>
+      <tr>
+        <td><span class="macro-name">VIX</span></td>
+        <td class="macro-value">~18</td>
+        <td class="macro-chg macro-up">▲ +1p (추정)</td>
+        <td class="macro-note">NFP 대기 변동성</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="macro-summary">
+    한 줄 종합 — <strong>"한국 외국인 7조 투매 + 美 Dow 신고가 (섹터 로테이션) + BTC $62K 추가 폭락"</strong>. 이재명 취임 첫날 한국 시장은 <strong>KOSPI 8,639.41 -1.84% (외국인 -6.95조 19일 연속, 2026/2/27 7.08조 이후 역대 2위)</strong>로 정치 호재가 환율·美 후폭풍을 이기지 못함. USD/KRW <strong>1,529.7원(+13.3원, 2009년 3월 이후 첫 1,530 개장가)</strong>로 환율 충격이 매도 동력 증폭. 반면 美 시장은 <strong>Dow 신기록 51,561.93(+1.73%, +874p, UnitedHealth +5%·JPM +3% 견인)</strong>, S&amp;P +0.41%, Nasdaq -0.09%로 <strong>섹터 로테이션이 본격화</strong> — AI/반도체에서 헬스케어·금융·소비재로 자금 회전. BTC <strong>$62,257 장중 저점 4월 이후 최저 갱신</strong>, ETH $1,740대로 디지털 자산 약세 가속. ETF 6일 연속 -$2.42B. WTI ~$95(-1%) 3일 연속↑ 후 첫 조정. 오늘 밤 21:30 KST <strong>美 5월 NFP(컨센 +10만, 실업률 4.3%)</strong> — JOLTS·ISM·ADP 3종 깜짝 후속이라 +15만+ 가속 시 인하 12월 이연 본격화, +5만 이하 둔화 시 일부 회복. 6/17 FOMC 점도표 직전 마지막 매크로 분기점.
+  </div>
+</section>
+
+<!-- ============== [4] DEEP DIVE ============== -->
+<section id="deep-dive">
+  <div class="sec-head">
+    <div class="sec-num">[04]</div>
+    <h2 class="sec-title">⭐ 오늘의 깊은 이야기</h2>
+    <span class="sec-sub">Deep Dive · 한국 시장 7조 투매 vs 美 Dow 신고가</span>
+  </div>
+
+  <article class="deep">
+    <div class="deep-tag">DEEP DIVE · 시장·매크로 · 🕒 6/4 (목) KST 09:00 ~ NY 16:00</div>
+    <h3 class="deep-title">이재명 취임 첫날의 디커플링 — KOSPI 외국인 7조 투매(역대 2위) vs 美 Dow 신기록(섹터 로테이션)</h3>
+
+    <div class="deep-body">
+      <p>어제 6/4(목)은 의외의 시장 드라마가 펼쳐졌어요. 이재명 21대 대통령 취임 첫날, 한국 시장이 다시 열리는 순간 <strong>외국인이 6조 9,529억원을 통매도</strong>했어요. 이게 얼마나 큰 규모냐면 — <strong>2026년 2월 27일 7조 812억원에 이은 역대 2위</strong>, 그리고 <strong>19거래일 연속 매도</strong>(이미 5월 중순부터 시작된 흐름이 더 격해진 것). 평소 외국인이 1조원만 팔아도 시장에 큰 뉴스인데, <strong>그 7배 규모를 단 하루에 던진 셈</strong>. KOSPI는 162.08포인트(-1.84%) 내린 <strong>8,639.41</strong>에 마감, 6/2 사상최고 8,801.49에서 한 거래일 만에 -1.84% 후퇴. 개인이 5.02조원, 기관이 1.81조원을 사들이며 막아냈지만 외국인 매도 규모를 감당하기엔 부족했어요.</p>
+
+      <p>대형주별로 보면 <strong>삼성전자 -2.50%(35만원대로 후퇴)</strong>, <strong>SK하이닉스 -2.63%(220만원대로 밀림)</strong>로 반도체 양대 산맥이 동반 약세. Broadcom AI $100B 가이던스 동결의 후폭풍이 그대로 전이된 모습. 다만 <strong>삼성물산은 +10% 급등</strong>으로 신정부 정책 수혜주(지배구조·녹색 성장 테마)로 새로 부각되며 분리된 흐름. 가장 충격적인 변수는 환율 — <strong>USD/KRW 1,529.7원(+13.3원), 장 초반에는 1,530.0원까지 올라 2009년 3월 이후 처음 개장가 기준 1,530원선 돌파</strong>. 16년 만의 신저점이에요. 구윤철 기획재정부 장관은 "외환시장을 높은 경계심으로 모니터링, 과도한 변동 시 즉시 조치"라고 발표했지만 시장은 정부 개입 시그널만 받았을 뿐, 환율은 진정되지 않았어요.</p>
+
+      <div class="stat-cards">
+        <div class="stat-card">
+          <div class="stat-label">KOSPI (6/4)</div>
+          <div class="stat-value">8,639.41</div>
+          <div class="stat-note">-1.84% (-162.08p)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">외국인 순매도</div>
+          <div class="stat-value">-₩6.95조</div>
+          <div class="stat-note">19일 연속 · 역대 2위</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">USD/KRW</div>
+          <div class="stat-value">1,529.7원</div>
+          <div class="stat-note">+13.3원 · 2009/3 이후 첫 1,530 개장가</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">삼성전자</div>
+          <div class="stat-value">-2.50%</div>
+          <div class="stat-note">35만원대 후퇴</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">SK하이닉스</div>
+          <div class="stat-value">-2.63%</div>
+          <div class="stat-note">220만원대 후퇴</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Dow (6/4)</div>
+          <div class="stat-value">51,561.93</div>
+          <div class="stat-note">+1.73% (+874p) 신기록</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Nasdaq</div>
+          <div class="stat-value">26,830.96</div>
+          <div class="stat-note">-0.09% (반도체 차익실현)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">BTC</div>
+          <div class="stat-value">$62,257</div>
+          <div class="stat-note">장중 저점 · 4월 이후 최저</div>
+        </div>
+      </div>
+
+      <p>같은 시간 미국은 정반대 모습이었어요 — <strong>Dow가 +1.73%(+874.86포인트) 사상최고 51,561.93 마감</strong>. UnitedHealth가 +5% 이상 급등하며 Dow를 견인, JPMorgan +3%, Walmart +1% 등 비기술 섹터로 자금이 회전. S&amp;P 500은 +0.41% 7,584.31, 그러나 <strong>Nasdaq은 -0.09% 26,830.96으로 반도체 차익실현이 지속</strong>. 즉, "AI 트레이드 천장 우려 → 헬스케어·금융·소비재로 자금 회전"이라는 <strong>섹터 로테이션이 본격화</strong>되는 거예요. 한국 시장의 반도체 의존도가 KOSPI 시총의 40% 이상이라는 점을 감안하면, 美 반도체 차익실현이 한국에 더 강하게 전이된 셈. 이재명 신정부 정책 모멘텀(친환경·디지털·K-콘텐츠)은 있지만, <strong>거시 환경의 환율 충격 + 美 반도체 약세 + 외국인 19일 연속 매도라는 3중 압력</strong>을 단기에 이기기 어려운 구조였어요.</p>
+
+      <p>왜 이게 중요한가 — 세 가지 시사점. <strong>① 외국인 매도의 의미</strong>: 19거래일 연속 + 역대 2위 규모는 단순 차익실현이 아니라 <strong>구조적 포지션 조정</strong> 신호. 5월 한 달간 신고가 행진(8,801)에서 누적된 차익을 환율 1,530원 이전에 회수하려는 흐름. <strong>② 환율 1,530원의 심리적 임계</strong>: 16년 만의 신저점은 외국인 추가 매도 동기 강화 + 한국 기업 외화 부채 부담 가중 + 수입 물가 상승. <strong>③ 美 섹터 로테이션의 한국 영향</strong>: AI 일변도에서 분산 흐름이 본격화되면 반도체 비중 큰 한국이 단기 가장 약함. 다만 게임·콘텐츠·바이오·2차전지 등 신정부 수혜 섹터로 자금이 분산될 가능성도 동시 존재 — 6월 중반 신정부 첫 정책 패키지(추경 30~50조·K-AI·K-콘텐츠)가 분기점.</p>
+
+      <p>좋은 신호도 있어요 — ① <strong>美 Dow 신기록 + JPM·UNH·WMT 견인</strong>은 美 경기 둔화 우려가 과장됐다는 시그널. 헬스케어·금융 견조함은 매크로 전반 안정 ② 환율 1,530원에서 정부 개입 수사 강화 → 단기 1,520~1,535 박스에 갇힐 가능성 ③ 美 10Y 4.49%(-1bp)로 채권 시장은 안정 ④ 오늘 밤 NFP가 둔화(+5만 이하) 시 인하 기대 9월 유지 + 달러 약세 + 외국인 매도 둔화 트리거 가능. 이번 주의 핵심은 <strong>오늘 밤 21:30 KST 美 5월 NFP</strong> — 컨센 +10만, 실업률 4.3%. JOLTS 7.62M + ISM 서비스 54.5 + ADP +12.2만 3종 깜짝 후속이라 +15만+ 가속이 베이스라인. 가속 시 인하 9월 → 12월 이연 + 10Y 4.55% 발작 + KOSPI 추가 -2% 시도, 컨센 부합 시 박스권 유지, 둔화 시 일부 회복.</p>
+    </div>
+
+    <div class="so-what">
+      한국 시장 — KOSPI 8,600선 추격 매수 자제, 외국인 매도 종료 신호(연속일 끊김 + 일평균 -1조 이하 안정) 대기. 환율 1,530원 안착 시 해외 매출 30%+ 기업(NAVER·카카오·하이브) 헤지 비중 확대 권장. 반도체(삼성·SK하이닉스)는 핵심 비중 유지 + 추격 매수 자제, NVIDIA Vera Rubin·HBM4 구조 변함없음. <strong>신정부 정책 수혜주(2차전지·재생에너지·게임·콘텐츠)</strong>는 6월 중반 첫 패키지 발표 전 분할 매수 검토. 미국 — Dow 신고가 추격 매수보다는 <strong>섹터 로테이션 수혜주</strong> 우선: 헬스케어(UNH·LLY), 금융(JPM·BAC), 소비재(WMT·COST), 산업재(CAT·HON). AI 트레이드(NVDA·AVGO·MRVL)는 핵심 비중 유지 + 5월 신고가 진입자는 부분 차익실현(20~30%) 권장. 코인 — BTC $62K + ETH $1,740 추가 폭락 — 추격 매수 절대 금지. F&amp;G 25 이하 + ETF 유출 종료 + $65K 회복 3중 확인 후 단계적 진입. 7/4 CLARITY Act는 변함없는 구조 호재. 환율·매크로 — 오늘 밤 NFP가 결정자. +10만 부합 시 KOSPI/환율 박스, +15만+ 가속 시 KOSPI 추가 -2% + 환율 1,535+ 시도, 둔화 시 단기 회복. IT/게임 사업자 — 환율 1,530원은 해외 결제 비용 직접 부담 — Claude·GPT·AWS·GCP 결제 헤지 비중 확대. 이재명 정부 K-게임 정책(셧다운제·확률형 아이템 완화) 6월 중반 발표 가능성, 크래프톤·시프트업·엔씨 모니터.
+    </div>
+
+    <div class="deep-sources">
+      <strong>📰 출처:</strong>
+      <a href="https://www.wikitree.co.kr/articles/1139812" target="_blank" rel="noopener" class="source-chip">위키트리 KOSPI 8639</a>
+      <a href="https://biz.heraldcorp.com/article/10763822" target="_blank" rel="noopener" class="source-chip">헤럴드 외국인 7조</a>
+      <a href="https://www.smartbizn.com/news/articleView.html?idxno=145524" target="_blank" rel="noopener" class="source-chip">스마트경제 KOSPI 8600 붕괴</a>
+      <a href="https://www.fool.com/coverage/stock-market-today/2026/06/04/stock-market-today-june-4-dow-hits-record-as-tech-stocks-falter/" target="_blank" rel="noopener" class="source-chip">Motley Fool Dow 신기록</a>
+      <a href="https://www.thestreet.com/stock-market-today/stock-market-today-june-4-2026-nasdaq-futures-slide-amid-iran-war-concerns" target="_blank" rel="noopener" class="source-chip">TheStreet Nasdaq -0.09%</a>
+      <a href="https://www.dt.co.kr/article/12065909" target="_blank" rel="noopener" class="source-chip">디지털타임스 삼전·SK하닉</a>
+    </div>
+  </article>
+</section>
+
+<!-- ============== [5] FIVE THINGS ============== -->
+<section id="five-things">
+  <div class="sec-head">
+    <div class="sec-num">[05]</div>
+    <h2 class="sec-title">📌 오늘의 5가지</h2>
+    <span class="sec-sub">Five Things · 5 Different Topics</span>
+  </div>
+
+  <div class="five">
+
+    <!-- 01: 시장·매크로 (US - Dow 신고가 + 섹터 로테이션) -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">01</span>
+        <span class="news-cat">💹 시장·매크로 (美)</span>
+        <span class="news-time">🕒 6/4 (목) NY 16:00 마감</span>
+      </div>
+      <h3 class="news-headline">Dow 신기록 51,561.93 (+1.73%, +874p) — UnitedHealth +5%·JPM +3% 비기술 섹터 로테이션 본격화</h3>
+      <div class="news-body">
+        <p>어제 6/4(목) 美 시장은 지수별로 완전히 다른 모습을 보였어요 — <strong>Dow Jones는 +1.73%(+874.86포인트) 사상최고 51,561.93 마감</strong>으로 새 기록. S&amp;P 500은 +0.41% 7,584.31로 견조, 그런데 <strong>Nasdaq Composite은 -0.09% 26,830.96으로 반도체 차익실현이 지속</strong>. 같은 날 美 3대 지수가 이렇게 다른 방향을 가리키는 건 흔치 않아요. 핵심은 종목 안의 흐름 — UnitedHealth(UNH)가 +5% 이상 급등하며 Dow를 견인, JPMorgan +3%, Walmart 약 +1%, Caterpillar·Honeywell 등 비기술 섹터가 일제히 상승. 반면 NVIDIA·AVGO·MRVL 등 AI 반도체는 Broadcom $100B 가이던스 동결의 후폭풍이 잔존해 약세.</p>
+
+        <p>이 흐름의 본질은 <strong>"섹터 로테이션(sector rotation, 한 섹터에서 다른 섹터로 자금이 회전하는 현상)"</strong>이에요. 그동안 시장을 끌어올린 AI/반도체 트레이드의 천장 우려가 커지자, 자금이 헬스케어·금융·소비재·산업재로 옮겨가는 중. UnitedHealth 같은 헬스케어 거대 기업이 6/4 5%대 급등한 건, 단순한 종목 호재라기보다 <strong>"AI에 너무 몰려 있던 자금이 안전한 현금흐름 기업으로 회전"</strong>한다는 거시 신호. 이런 로테이션이 본격화되면 향후 1-3개월간 시장 주도주가 바뀔 가능성이 큰데, 그게 한국 시장(반도체 비중 40%+)에 단기 부정적이에요.</p>
+      </div>
+      <div class="news-conclusion">AI 트레이드는 핵심 비중 유지하되 추격 매수 자제, 신고가 진입자는 부분 차익실현(20~30%) 권장. 섹터 로테이션 수혜주 신규 검토 — 헬스케어(UNH·LLY), 금융(JPM·BAC), 소비재(WMT·COST), 산업재(CAT·HON). 한국 시장은 반도체 비중 높아 단기 부정적 영향 더 큼.</div>
+      <div class="news-sources">📰 <a href="https://www.fool.com/coverage/stock-market-today/2026/06/04/stock-market-today-june-4-dow-hits-record-as-tech-stocks-falter/" target="_blank" rel="noopener">Motley Fool Dow 신기록</a> · <a href="https://www.thestreet.com/stock-market-today/stock-market-today-june-4-2026-nasdaq-futures-slide-amid-iran-war-concerns" target="_blank" rel="noopener">TheStreet 6/4 마감</a> · <a href="https://www.cnbc.com/2026/06/03/stock-market-today-live-updates.html" target="_blank" rel="noopener">CNBC 마감 라이브</a></div>
+    </article>
+
+    <!-- 02: 기업·산업 (삼성전자·SK하이닉스 + 삼성물산 +10%) -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">02</span>
+        <span class="news-cat">💼 기업·산업 (한국 대형주)</span>
+        <span class="news-time">🕒 6/4 (목) 한국 시간 09:00 ~ 15:30</span>
+      </div>
+      <h3 class="news-headline">삼성전자 -2.50% / SK하이닉스 -2.63% 동반 후퇴 vs 삼성물산 +10% 급등 — 신정부 수혜 분기점</h3>
+      <div class="news-body">
+        <p>어제 한국 대형주 흐름은 두 갈래로 갈렸어요. <strong>반도체 양대 산맥 동반 약세</strong> — 삼성전자가 -2.50%로 35만원대로 후퇴(전일 36만원대 → 350,500원 부근), SK하이닉스가 -2.63%로 220만원대로 밀림(전일 225만원 부근 → 219만원대). 이유는 두 가지. ① 美 Broadcom(AVGO)이 6/3 컨퍼런스콜에서 <strong>2026년 AI 칩 매출 $100B 목표를 상향하지 않고 동결</strong>한 것이 AI 반도체 협력사 단기 천장 우려로 전이 ② Nasdaq -0.09%에 더해 美 반도체 차익실현이 지속, 한국에서 동시 작동.</p>
+
+        <p>반면 <strong>삼성물산은 +10% 급등</strong>으로 단일 종목 가장 강한 흐름. 이재명 신정부의 "녹색성장·지배구조 개혁" 정책 의제에서 직접 수혜가 거론되며 매수세 집중. 신정부 6월 중반 첫 정책 패키지 발표 가능성이 시장의 단기 기대주를 분명히 만들고 있어요. 다만 시총 비중을 보면 삼성전자 + SK하이닉스가 KOSPI 시총의 약 30%, 삼성물산은 1% 미만이라 단일 종목 급등이 지수 방향을 바꿀 수는 없는 구조. 외국인이 7조원 매도하는 와중에 이런 분기점이 나오는 건, <strong>"AI 일변도에서 분산"</strong>이라는 글로벌 흐름이 한국 내부에도 시작됐다는 신호.</p>
+      </div>
+      <div class="news-conclusion">반도체(삼성·SK하이닉스) 추격 매수 자제, 핵심 비중 유지. HBM4·Vera Rubin 구조는 변함없으니 7월 SK하이닉스 실적까지 인내. 신정부 수혜주(녹색성장·지배구조·재생에너지) 분할 매수 검토 — 첫 정책 패키지 발표일(6월 중반 가능성) 대기.</div>
+      <div class="news-sources">📰 <a href="https://www.dt.co.kr/article/12065909" target="_blank" rel="noopener">디지털타임스 삼전·SK하닉</a> · <a href="https://alphasquare.co.kr/home/stock-summary?code=000660" target="_blank" rel="noopener">알파스퀘어 SK하이닉스</a> · <a href="https://www.newspim.com/news/view/20260604001116" target="_blank" rel="noopener">뉴스핌 KOSPI 8600</a></div>
+    </article>
+
+    <!-- 03: 정책·규제·정부 (구윤철 환율 개입 + 한은 시그널) -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">03</span>
+        <span class="news-cat">🌍 정책·정부 (환율·외환)</span>
+        <span class="news-time">🕒 6/4 (목) 09:00 + 14:00 시그널</span>
+      </div>
+      <h3 class="news-headline">USD/KRW 1,529.7원 — 2009년 3월 이후 첫 1,530원 개장가 + 구윤철 기재부 장관 "즉시 조치" 시그널</h3>
+      <div class="news-body">
+        <p>어제 한국 시장 가장 충격적인 변수는 환율이었어요 — <strong>USD/KRW가 1,529.7원(+13.3원)으로 마감</strong>, 장 초반에는 1,530.0원까지 올라 <strong>2009년 3월 이후 처음으로 개장가 기준 1,530원선을 돌파</strong>. 단일 영업일에서 +13원은 평소 ±3~5원의 약 3배 규모. 정확히 16년 만의 신저점이에요. 한국 시장 휴장 중 NDF(역외) 시장에서 이미 1,520원대까지 올랐던 흐름이 본 시장 개장에서도 진정되지 않고 추가 상승.</p>
+
+        <p><strong>구윤철 기획재정부 장관</strong>은 즉시 외환시장 안정 메시지를 발표 — "외환시장을 높은 경계심으로 모니터링하고 있으며, 과도한 변동이 있을 경우 신속한 조치를 취할 것"이라며 정부 개입 시그널을 분명히 했어요. 다만 시장은 진정되지 않았는데, 그 이유는 <strong>① 매크로 환경(美 강세, 한국 휴장 후폭풍, Iran 위기, 외국인 매도 19일)</strong>이 너무 강하고 ② 한국은행이 8연속 동결 + 매파적 톤이라 금리 카드가 제한적이고 ③ 신정부 출범 직후라 정책 의도(친환경·디지털 + 추경)가 단기 인플레 자극 우려가 있기 때문. 6/12(목) 한국은행 통화신용정책보고서 + 7월 금통위(7/10)가 핵심 분기점.</p>
+      </div>
+      <div class="news-conclusion">환율 1,530원 + 1,535원 시도가 단기 라인. 정부 구두 개입 → 실탄 개입(외환보유고 활용) 가능성 — 1,540 돌파 시 본격 개입 가능. 해외 매출 30%+ 기업(NAVER·카카오·하이브·게임주) 즉시 헤지 비중 확대. 수입 의존 기업(항공·화학·정유 일부) 비용 부담 ↑.</div>
+      <div class="news-sources">📰 <a href="https://tradingeconomics.com/south-korea/currency" target="_blank" rel="noopener">TE USD/KRW 1,535</a> · <a href="https://kr.investing.com/currencies/usd-krw" target="_blank" rel="noopener">Investing USD/KRW</a> · <a href="https://www.koreareport.co.kr/news/articleView.html?idxno=50764" target="_blank" rel="noopener">코리아리포트 환율</a></div>
+    </article>
+
+    <!-- 04: 글로벌·지정학 (Iran 외교 채널 재가동 시도 + WTI 첫 조정) -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">04</span>
+        <span class="news-cat">🌐 글로벌·지정학 (Iran·유가)</span>
+        <span class="news-time">🕒 6/4 (목) NY 종일</span>
+      </div>
+      <h3 class="news-headline">WTI ~$95 -1% 3일 연속↑ 후 첫 조정 — Iran 외교 채널 재가동 시도, 호르무즈 위기 단기 진정 모색</h3>
+      <div class="news-body">
+        <p>6/3 Iran의 쿠웨이트 공항 미사일 공격으로 WTI 원유가 $95+까지 3일 연속 상승했었는데, <strong>6/4에는 ~$95에서 -1% 첫 조정</strong>이 나왔어요. 미국과 이란 사이에 외교 채널 재가동 시도가 보도되며 단기 위기 진정 기대가 형성된 결과. 다만 본질적인 위기는 해소되지 않았어요 — Iran은 여전히 "수일간 美와 통신 단절" 상태고, EIA 데이터는 美 원유 재고가 6주 연속 감소(최소 운영 수준 근접). OPEC+ 6월 회의(첫째 주, 일정 미정)도 변수.</p>
+
+        <p>美 시장 영향은 양가적 — Dow가 신기록을 찍을 수 있었던 이유 중 하나가 <strong>유가 단기 진정 + 매크로 안정</strong> 시그널. 다만 호르무즈 해협 통과 선박 수는 여전히 평소 대비 적은 상태로, <strong>단기 진정 vs 재격화 갈림길</strong>. 한국 영향은 상반된 — 정유주(SK이노·S-Oil·GS칼텍스)는 마진 단기 둔화, 항공주(대한항공·아시아나·제주항공)는 연료비 부담 일시 완화. 본격 진정 시 환율 1,530원 안정에도 일부 도움 가능, 재격화 시 WTI $100~$110 + 환율 1,540 동시 시도.</p>
+      </div>
+      <div class="news-conclusion">단기 유가 박스 ($93~$98) 가능성 — 정유주 추격 매수 자제. 항공주 연료비 완화 단기 수혜 — 대한항공·아시아나 모니터. OPEC+ 6월 회의 결과(첫째 주)가 다음 분기점. 호르무즈 봉쇄 시 즉시 WTI $110+ + 한국 화학·정유 약세 전이.</div>
+      <div class="news-sources">📰 <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank" rel="noopener">TE WTI $95</a> · <a href="https://oilprice.com/" target="_blank" rel="noopener">OilPrice 6/4</a> · <a href="https://www.thestreet.com/stock-market-today/stock-market-today-june-4-2026-nasdaq-futures-slide-amid-iran-war-concerns" target="_blank" rel="noopener">TheStreet Iran</a></div>
+    </article>
+
+    <!-- 05: 디지털자산 (BTC $62K 4월 이후 최저 갱신 + ETF 6일 연속) -->
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">05</span>
+        <span class="news-cat">₿ 디지털자산 (BTC 추가 폭락)</span>
+        <span class="news-time">🕒 6/4 (목) ~ 6/5 새벽 KST</span>
+      </div>
+      <h3 class="news-headline">BTC $62,257 장중 저점 (4월 7일 이후 최저 갱신 -4%) + ETH $1,740대 + ETF 6일 연속 -$2.42B 누적</h3>
+      <div class="news-body">
+        <p>BTC가 또 추가 하락했어요 — <strong>6/4 장중 저점 $62,257까지 -4% 추가</strong>(4월 7일 이후 최저 갱신), 종가 $63K 부근. 6/3 -6% 이후 이틀 연속 약세 누적. <strong>ETH는 $1,740~$1,810대로 더 약함</strong>(개장 $1,810 → 오전 $1,740 추가 하락). 美 BTC 현물 ETF는 <strong>6거래일 연속 순유출, 누적 -$2.42B</strong>(이번 주만 -$1.67B, 6월 전체 -$4.21B). ETH ETF도 주간 -$241M, 3주간 -$712M 누적. 6/2의 -$519M, 6/1의 -$484M에 이은 흐름.</p>
+
+        <p>핵심 지지선이 줄줄이 깨지면서 <strong>$60,000 다음 지지선이 시험대</strong>. 다만 통계적 단기 바닥 시그널(F&amp;G 25 이하 + 5일 이상 ETF 유출 종료 + 강한 거래량 동반)이 6/4 부분 충족 — 자본이 AI IPO와 안전자산으로 회전한다는 분석이 우세. Tom Lee의 "Saylor 매도 = 전형적 바닥 행동" 진단은 유효하지만, "전형적 바닥"이 즉시 반등을 의미하지는 않음(통계적으로 추가 -10% 가능성도 동시). 회복 트리거 3중: ① 오늘 밤 NFP 둔화(+5만 이하), ② ETF 유출 종료(연속일 끊김), ③ $65K 회복 + 거래량 평소 +50% 동반. CLARITY Act 7/4 표결 통과 확률 75% 유지는 구조적 호재.</p>
+      </div>
+      <div class="news-conclusion">BTC·ETH 추격 매수 절대 금지 — 핵심 비중 보유 유지. F&amp;G 25 이하는 통계적 바닥 시그널이지만 BTC $60K 추가 시험 가능성 동시 존재. NFP + ETF 유출 종료 + $65K 회복 3중 확인 후 단계적 진입. 7/4 CLARITY Act는 변함없는 구조 호재.</div>
+      <div class="news-sources">📰 <a href="https://finance.yahoo.com/personal-finance/investing/article/bitcoin-and-ethereum-prices-today-thursday-june-4-2026-bitcoin-prices-plunge-below-pre-war-levels-114549073.html" target="_blank" rel="noopener">Yahoo BTC $62K</a> · <a href="https://coinstats.app/ai/a/latest-news-for-bitcoin" target="_blank" rel="noopener">CoinStats 6/4 분석</a> · <a href="https://farside.co.uk/btc/" target="_blank" rel="noopener">Farside ETF Flow</a></div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============== [6] MARKETS SNAPSHOT ============== -->
+<section id="markets">
+  <div class="sec-head">
+    <div class="sec-num">[06]</div>
+    <h2 class="sec-title">📈 시장별 스냅샷</h2>
+    <span class="sec-sub">Markets · Numbers Only</span>
+  </div>
+
+  <div class="markets">
+
+    <!-- US -->
+    <article class="market-card us">
+      <div class="market-head">
+        <span class="market-flag">🇺🇸</span>
+        <span class="market-title">미국 시장</span>
+        <span class="market-time">6/4 (목) NY 마감</span>
+      </div>
+      <table class="mkt-table">
+        <thead>
+          <tr><th>지수/종목</th><th>종가</th><th>변동</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mkt-name">Dow Jones</td><td class="mkt-val">51,561.93</td><td class="mkt-chg" style="color:var(--bull)">+1.73% (+874.86p) 신기록</td></tr>
+          <tr><td class="mkt-name">S&amp;P 500</td><td class="mkt-val">7,584.31</td><td class="mkt-chg" style="color:var(--bull)">+0.41%</td></tr>
+          <tr><td class="mkt-name">Nasdaq</td><td class="mkt-val">26,830.96</td><td class="mkt-chg" style="color:var(--bear)">-0.09% (반도체 차익실현)</td></tr>
+          <tr><td class="mkt-name">UnitedHealth</td><td class="mkt-val">+5%↑</td><td class="mkt-chg" style="color:var(--bull)">Dow 견인 (헬스케어 회전)</td></tr>
+          <tr><td class="mkt-name">JPMorgan</td><td class="mkt-val">+3%↑</td><td class="mkt-chg" style="color:var(--bull)">금융 섹터 강세</td></tr>
+          <tr><td class="mkt-name">10Y Treasury</td><td class="mkt-val">4.49%</td><td class="mkt-chg" style="color:var(--bull)">-1bp 안정</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-comment">Dow 신기록 + Nasdaq 약보합 — 섹터 로테이션 본격화. AI/반도체 → 헬스케어·금융·소비재로 자금 회전. Broadcom 후폭풍 잔존</div>
+    </article>
+
+    <!-- KR -->
+    <article class="market-card kr">
+      <div class="market-head">
+        <span class="market-flag">🇰🇷</span>
+        <span class="market-title">한국 시장</span>
+        <span class="market-time">6/4 (목) 마감</span>
+      </div>
+      <table class="mkt-table">
+        <thead>
+          <tr><th>지수/종목</th><th>종가</th><th>변동</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mkt-name">KOSPI</td><td class="mkt-val">8,639.41</td><td class="mkt-chg" style="color:var(--bear)">-1.84% (-162.08p)</td></tr>
+          <tr><td class="mkt-name">삼성전자</td><td class="mkt-val">~350,500원</td><td class="mkt-chg" style="color:var(--bear)">-2.50%</td></tr>
+          <tr><td class="mkt-name">SK하이닉스</td><td class="mkt-val">~2,190,000원</td><td class="mkt-chg" style="color:var(--bear)">-2.63%</td></tr>
+          <tr><td class="mkt-name">삼성물산</td><td class="mkt-val">급등</td><td class="mkt-chg" style="color:var(--bull)">+10% (신정부 수혜 테마)</td></tr>
+          <tr><td class="mkt-name">USD/KRW</td><td class="mkt-val">1,529.7원</td><td class="mkt-chg" style="color:var(--bear)">▲ +13.3원 (2009/3 이후 1,530 개장)</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-flow">수급(마감): 개인 +5조 159억원 / 외국인 <strong>-6조 9,529억원 (19일 연속, 역대 2위 규모)</strong> / 기관 +1조 8,091억원 · 2026/2/27 -7조 812억원 이후 최대 매도. USD/KRW 1,529.7원으로 2009년 3월 이후 첫 1,530원 개장가 돌파 · 구윤철 기재부 장관 "신속 조치" 시그널</div>
+      <div class="mkt-comment">이재명 취임 첫날 KOSPI 162p 후퇴 — 환율 1,530원 + 외국인 7조 매도 + 美 반도체 약세 3중 압력. 삼성물산 +10%만 분리된 흐름. 신정부 첫 정책 패키지 발표가 분기점</div>
+    </article>
+
+    <!-- Crypto -->
+    <article class="market-card crypto">
+      <div class="market-head">
+        <span class="market-flag">₿</span>
+        <span class="market-title">디지털 자산</span>
+        <span class="market-time">6/5 (금) 새벽 KST</span>
+      </div>
+      <table class="mkt-table">
+        <thead>
+          <tr><th>자산</th><th>현재가</th><th>변동</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mkt-name">BTC</td><td class="mkt-val">$62,257~64,000</td><td class="mkt-chg" style="color:var(--bear)">-4% (저점 $62,257 4월 7일 이후 최저)</td></tr>
+          <tr><td class="mkt-name">ETH</td><td class="mkt-val">$1,740~1,810</td><td class="mkt-chg" style="color:var(--bear)">-3.9% (약세 가속)</td></tr>
+          <tr><td class="mkt-name">F&amp;G Index</td><td class="mkt-val">~23</td><td class="mkt-chg" style="color:var(--bear)">Extreme Fear 지속</td></tr>
+          <tr><td class="mkt-name">ETF 6일 누적</td><td class="mkt-val">-$2.42B</td><td class="mkt-chg" style="color:var(--bear)">6일 연속 유출 (주 -$1.67B)</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-flow">온체인: 美 BTC 현물 ETF 6거래일 연속 순유출 누적 -$2.42B(이번 주 -$1.67B, 6월 전체 -$4.21B) · ETH ETF 주간 -$241M, 3주 누적 -$712M · 자본이 AI IPO + 안전자산으로 회전 · CLARITY Act 통과 확률 75% 유지(7/4 House)</div>
+      <div class="mkt-comment">BTC 4월 7일 이후 최저 갱신 + ETF 6일 연속 -$2.42B — Tom Lee "바닥 행동" 진단 vs $60K 추가 시험 가능성 공존. NFP 둔화 + ETF 유출 종료 + $65K 회복 3중 확인 후 진입</div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============== [7] HEADLINES ============== -->
+<section id="headlines">
+  <div class="sec-head">
+    <div class="sec-num">[07]</div>
+    <h2 class="sec-title">📰 헤드라인 더보기</h2>
+    <span class="sec-sub">More Headlines · 8 Topics</span>
+  </div>
+
+  <div class="filter-bar">
+    <span class="filter-chip">전체 8</span>
+    <span class="filter-chip">🇺🇸 2</span>
+    <span class="filter-chip">🇰🇷 2</span>
+    <span class="filter-chip">💼 2</span>
+    <span class="filter-chip">🌍 1</span>
+    <span class="filter-chip">💰 1</span>
+  </div>
+
+  <div class="headline-list">
+
+    <div class="h-item">
+      <div class="h-title">🇺🇸 美 5월 NFP 오늘 밤 21:30 KST — 컨센 +10만, 실업률 4.3%</div>
+      <div class="h-desc">6/17 FOMC 점도표 직전 마지막 핵심. JOLTS 7.62M + ISM 서비스 54.5 + ADP +12.2만 3종 깜짝 후속이라 +15만+ 가속 시 인하 12월 이연 + 10Y 4.55% 발작, 둔화(+5만 이하) 시 일부 회복. KOSPI/환율 변동 트리거.</div>
+      <div class="h-meta">🕒 6/5 (금) 21:30 KST · <a href="https://www.investing.com/economic-calendar/nonfarm-payrolls-227" target="_blank" rel="noopener">Investing NFP</a>, <a href="https://www.bls.gov/news.release/empsit.nr0.htm" target="_blank" rel="noopener">BLS</a></div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇰🇷 외국인 19거래일 연속 매도 — 누적 10조원 + 역대 2위 단일 매도(6/4 6.95조)</div>
+      <div class="h-desc">5월 중순부터 시작된 외국인 매도가 19거래일 연속으로 누적. 6/4 단일 -6.95조원은 2026/2/27 -7.08조 이후 역대 2위. 5/30 K증시 전 세계 6위 진입 후 차익실현 본격화. 환율 1,530원 안착 시 매도 동력 추가 강화 우려.</div>
+      <div class="h-meta">🕒 6/4 (목) 마감 · <a href="https://biz.heraldcorp.com/article/10763822" target="_blank" rel="noopener">헤럴드 외국인</a>, <a href="https://www.sedaily.com/article/20051874" target="_blank" rel="noopener">서울경제</a></div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">💼 Broadcom AI $100B 동결 후폭풍 — Nasdaq -0.09% / 한국 반도체 -2.5%</div>
+      <div class="h-desc">6/3 NY 마감 후 Broadcom Hock Tan CEO가 2026년 AI 칩 $100B 목표 상향 거부, "to be in excess of $100B"로 2027년 재확인. 6/4 Nasdaq -0.09%, 한국 삼성전자 -2.50%·SK하이닉스 -2.63%로 전이. NVIDIA·Marvell 단기 천장 우려.</div>
+      <div class="h-meta">🕒 6/3 NY 마감 후 ~ 6/4 한국 · <a href="https://www.cnbc.com/2026/06/03/broadcom-avgo-earnings-report-q2-2026.html" target="_blank" rel="noopener">CNBC AVGO</a></div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">💼 UnitedHealth +5% / JPMorgan +3% / Walmart +1% — Dow 신고가 견인</div>
+      <div class="h-desc">6/4 Dow +874p 사상최고는 비기술 거대 종목들의 일제 강세 결과. UnitedHealth(헬스케어), JPMorgan(금융), Walmart(소비재), Caterpillar·Honeywell(산업재) 동반 상승. 섹터 로테이션 수혜 종목 단기 모멘텀 이어질 가능성.</div>
+      <div class="h-meta">🕒 6/4 NY 마감 · <a href="https://www.fool.com/coverage/stock-market-today/2026/06/04/stock-market-today-june-4-dow-hits-record-as-tech-stocks-falter/" target="_blank" rel="noopener">Motley Fool</a></div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇰🇷 USD/KRW 1,529.7원 — 2009년 3월 이후 첫 1,530원 개장가 + 정부 구두 개입</div>
+      <div class="h-desc">6/4 한국 시장 개장가 기준 처음으로 1,530원 돌파. 마감 1,529.7원(+13.3원). 구윤철 기재부 장관 "외환시장 높은 경계심·신속 조치" 시그널 발표. 1,540 돌파 시 본격 외환보유고 개입 가능. 해외 매출 30%+ 기업 즉시 헤지 권장.</div>
+      <div class="h-meta">🕒 6/4 (목) 09:00 + 14:00 · <a href="https://tradingeconomics.com/south-korea/currency" target="_blank" rel="noopener">TE 환율</a>, <a href="https://kr.investing.com/currencies/usd-krw" target="_blank" rel="noopener">Investing USD/KRW</a></div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🌍 Iran 외교 채널 재가동 시도 — WTI ~$95 -1% 3일 연속↑ 후 첫 조정</div>
+      <div class="h-desc">美·Iran 외교 채널 재가동 시도 보도로 단기 위기 진정 기대 형성, WTI ~$95에서 -1% 조정. 다만 Iran은 "수일간 美 통신 단절" 유지, EIA 美 원유 재고 6주 연속 감소. OPEC+ 6월 첫째 주 회의 + 호르무즈 통과 선박 수 평소 미만이 여전한 변수.</div>
+      <div class="h-meta">🕒 6/4 NY 종일 · <a href="https://tradingeconomics.com/commodity/crude-oil" target="_blank" rel="noopener">TE WTI</a>, <a href="https://oilprice.com/" target="_blank" rel="noopener">OilPrice</a></div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">💰 이재명 신정부 첫 정책 패키지 — 6월 중반 발표 가능성 (추경 30~50조)</div>
+      <div class="h-desc">이재명 21대 대통령 6/4 즉시 취임. 인수위 없이 정책 가속. 6월 중반 첫 패키지 가능성: ① 추경 30~50조(민생·소상공인), ② K-AI·K-반도체 가속, ③ K-콘텐츠·K-게임 진흥(셧다운제·확률형 아이템 완화 가능), ④ 부동산 미세 조정, ⑤ 미·중 균형 외교.</div>
+      <div class="h-meta">🕒 6월 중반 가능성 · <a href="https://www.fnnews.com/news/202606041448399324" target="_blank" rel="noopener">파이낸셜뉴스</a>, <a href="https://marketin.edaily.co.kr/News/ReadE?newsId=04349286642298808" target="_blank" rel="noopener">이데일리</a></div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">₿ BTC ETF 6일 연속 -$2.42B — 자본이 AI IPO와 안전자산으로 회전</div>
+      <div class="h-desc">美 BTC 현물 ETF 6/4까지 6거래일 연속 순유출 누적 -$2.42B(이번 주 -$1.67B, 6월 전체 -$4.21B). BlackRock IBIT 매도 주도. ETH ETF도 주 -$241M, 3주 -$712M. 분석가들은 "AI IPO와 안전자산(금융 섹터)으로 자본 회전" 진단. F&amp;G 25 이하 통계적 바닥 시그널 부분 충족.</div>
+      <div class="h-meta">🕒 6/4 (목) 마감 누적 · <a href="https://farside.co.uk/btc/" target="_blank" rel="noopener">Farside</a>, <a href="https://bitcoinfoundation.org/news/crypto-etfs-news/crypto-etfs-june/" target="_blank" rel="noopener">BTC Foundation</a></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== [8] REAL ESTATE ============== -->
+<section id="realestate">
+  <div class="sec-head">
+    <div class="sec-num">[08]</div>
+    <h2 class="sec-title">🏠 부동산·생활경제</h2>
+    <span class="sec-sub">Real Estate · DSR D-26</span>
+  </div>
+
+  <div class="re-snapshot">
+    <strong>부동산 한눈에</strong> — 서울 아파트 매매(6월 첫째 주, 한국부동산원): <strong>+0.25%</strong>(전주와 동일), 전세 +0.29%(전주 +0.26%에서 가속) · DSR(총부채원리금상환비율) 3단계 + 양도세 중과 만료 <strong>D-26</strong> · 송파 +0.50%(서울 1위) · 성동 +0.48% · 도봉 +0.47% · 성북 +0.43% · 노원 +0.41% — 강남권에서 외곽·강북·경기로 상승세 확산 · 6월 전국 분양 3만126가구(전년比 +101%) · <strong>신정부 첫 부동산 정책 발표 가능성 6월 중반 (LTV·1주택 비과세 선별 완화 vs 다주택 규제 유지)</strong>
+  </div>
+
+  <div class="re-grid">
+    <article class="re-card">
+      <div class="re-title">1️⃣ 서울 아파트 +0.25% 2주째 — 상승세 강남에서 외곽·강북·경기로 확산</div>
+      <div class="re-body">
+        <p>한국부동산원 6월 첫째 주 통계에서 서울 아파트 매매가격이 <strong>+0.25%로 전주(+0.25%) 동일 수준</strong>을 유지. 핵심은 변동률 자체보다 <strong>"상승 지역의 확산"</strong>. 그동안 강남 3구·용산 중심이었던 상승이 6월 들어 강북·노원·도봉·성북까지 확산. <strong>송파가 +0.50%로 서울 1위</strong>, 성동 +0.48%, 도봉 +0.47%, 성북 +0.43%, 노원 +0.41%. 동탄·평촌 등 경기 핵심 지역도 +0.30%+ 가속.</p>
+        <p>이유는 명확 — <strong>전세가 상승(+0.29%)에 부담을 느낀 실수요자가 매매로 전환</strong>하면서 가격 부담이 낮은 서울 동북권과 경기 가성비 지역으로 이동. DSR 3단계 시행 전 막판 매수 + 신정부 첫 부동산 정책 발표 임박이 추가 매수 동력. 강남권 +0.19%(완만 가속)는 이미 호가가 충분히 올라 단기 둔화.</p>
+      </div>
+      <div class="re-sources">📰 <a href="https://www.etoday.co.kr/news/view/2590474" target="_blank" rel="noopener">이투데이 서울 +0.25%</a> · <a href="https://www.reb.or.kr/reb/cm/cntnts/cntntsView.do?mi=10001&amp;cntntsId=1308" target="_blank" rel="noopener">한국부동산원</a></div>
+    </article>
+
+    <article class="re-card">
+      <div class="re-title">2️⃣ DSR 3단계 + 양도세 중과 만료 D-26 — 신정부 첫 정책 변수 동시</div>
+      <div class="re-body">
+        <p>7/1(수)에 <strong>DSR(총부채원리금상환비율) 3단계 시행 + 양도세 중과 유예 만료가 동시</strong> 발효까지 정확히 26일 남음. DSR 3단계는 전 업권 가계대출이 합산되어 평가 — 연봉 1억 차주 한도 약 -1.2억(6.5억 → 5.3억) 감소. 신용대출·카드론까지 포함되니 같은 연봉이라도 한도가 크게 줄어드는 효과.</p>
+        <p>이재명 정부의 부동산 노선은 <strong>"미세 조정"</strong>이 키워드 — 다주택자 규제는 현행 유지 또는 강화, <strong>무주택자·1주택 갈아타기 실수요자에 한해 DSR·LTV 선별 완화</strong> 가능성. 6월 중반 첫 정책 패키지가 분기점. 다주택 매도 막판 절세 매물 + 무주택 매수 검토 일시 보류가 동시 작동.</p>
+      </div>
+      <div class="re-sources">📰 <a href="https://www.fsc.go.kr" target="_blank" rel="noopener">금융위원회</a> · <a href="https://www.ynenews.kr/news/articleView.html?idxno=73047" target="_blank" rel="noopener">YN 2026 금융</a></div>
+    </article>
+
+    <article class="re-card">
+      <div class="re-title">3️⃣ 6월 전국 분양 3만126가구 (전년比 +101%) — 청약 시장 막판 활기</div>
+      <div class="re-body">
+        <p>6월 전국 아파트 분양 예정 물량이 <strong>3만126가구로 전년 동월(1만4,998가구) 대비 +101% 급증</strong>. DSR 3단계 시행 직전 + 신정부 정책 발표 임박이라는 환경에서 분양 강행. 서울·수도권 핵심권 + 광역시(부산·대구·대전) 회복 흐름.</p>
+        <p>청약 경쟁률 단기 급등 가능 — 무주택 실수요자가 분양가 인하 + DSR 시행 전 막판 청약 자격 활용. 분양가 상한제 적용 여부에 따라 시세차익 폭 차별. 6/27 대출 규제 제외 + DSR 6개월 유예로 지방 분양 추가 활성화.</p>
+      </div>
+      <div class="re-sources">📰 <a href="https://www.bank-mall.co.kr/plus/blog/12661" target="_blank" rel="noopener">뱅크몰 부동산</a> · <a href="https://www.reb.or.kr/r-one" target="_blank" rel="noopener">부동산통계정보</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ============== [9] ANALYST VIEW ============== -->
+<section id="analyst">
+  <div class="sec-head">
+    <div class="sec-num">[09]</div>
+    <h2 class="sec-title">🧠 애널리스트 시각</h2>
+    <span class="sec-sub">Analyst View · Scenarios + Actions</span>
+  </div>
+
+  <div class="analyst-box">
+    <div class="analyst-tag">종합 분석</div>
+    <div class="analyst-body">
+      <p>오늘의 핵심은 <strong>"이재명 취임 첫날 디커플링 + 美 섹터 로테이션 본격화 + 오늘 밤 NFP 분기점"</strong>이에요. 어제 6/4(목)은 한국이 의외의 충격을 받았어요 — KOSPI <strong>-1.84% 8,639.41 (외국인 -6.95조원 19거래일 연속, 2026/2/27 이후 역대 2위)</strong>로 정치 호재가 환율·美 후폭풍을 이기지 못함. 삼성전자 -2.50%, SK하이닉스 -2.63%, USD/KRW <strong>1,529.7원(+13.3원, 2009년 3월 이후 첫 1,530 개장가)</strong> 16년 만의 신저점. 다만 삼성물산 +10%로 신정부 수혜 테마는 분리된 흐름.</p>
+
+      <p>반면 美 시장은 정반대 모습 — <strong>Dow 신기록 51,561.93(+1.73%, +874p, UnitedHealth +5%·JPM +3% 견인)</strong>, S&amp;P +0.41%, 그러나 <strong>Nasdaq -0.09% 반도체 차익실현 지속</strong>. 같은 날 美 3대 지수가 이렇게 다른 방향을 가리키는 건 <strong>섹터 로테이션 본격화</strong> 시그널 — AI/반도체에서 헬스케어·금융·소비재로 자금 회전. 한국이 반도체 비중 40%+라 단기 가장 약한 위치. BTC는 추가 폭락 — <strong>장중 $62,257 4월 7일 이후 최저 갱신</strong>, ETH $1,740대. ETF 6일 연속 -$2.42B. WTI ~$95 -1%(3일 연속↑ 후 첫 조정, Iran 외교 채널 재가동 기대). 오늘 밤 21:30 KST <strong>美 5월 NFP(컨센 +10만)</strong>가 6/17 FOMC 점도표 직전 마지막 분기점 — JOLTS·ISM·ADP 3종 깜짝 후속이라 +15만+ 가속이 베이스라인.</p>
+    </div>
+  </div>
+
+  <div class="scenarios">
+    <div class="sc-card main">
+      <div class="sc-prob">메인 시나리오 · 55%</div>
+      <div class="sc-title">NFP 컨센 부합 + 외국인 매도 둔화 + KOSPI 8,600~8,750 박스</div>
+      <div class="sc-body">NFP +7~12만 컨센 부합 + Iran 외교 단기 진정 유지 + 외국인 매도 둔화(연속일 끊김 가능) → KOSPI 8,600~8,750 박스 회복 시도, S&amp;P 7,580~7,650 안착, Dow 신기록 추가, BTC $65K 회복 시험, 환율 1,520~1,530 박스. 신정부 첫 정책 패키지 발표 임박이 단기 분위기 반전 트리거.</div>
+    </div>
+    <div class="sc-card alt">
+      <div class="sc-prob">리스크 시나리오 · 45%</div>
+      <div class="sc-title">NFP +15만+ 가속 + 외국인 매도 20일 연속 + KOSPI 8,400 시도</div>
+      <div class="sc-body">NFP +15만+ 가속(인하 12월 이연 본격화) + 외국인 매도 20일 연속 + 환율 1,535+ → 10Y 4.55% 발작, KOSPI 8,400~8,500 후퇴(외국인 누적 매도 12조원+), S&amp;P -1~2% 조정, BTC $60K 재테스트(2024/6 저점), ETH $1,700, 환율 1,540 시도. 신정부 첫 정책 패키지 단기 효과 제한.</div>
+    </div>
+  </div>
+
+  <div class="action-box">
+    <div class="action-title">🎯 IT/게임 사업자 실용 액션</div>
+    <ul class="action-list">
+      <li><strong>KOSPI 8,600선 추격 매수 자제</strong> — 외국인 19일 연속 매도가 종료 신호(연속일 끊김 + 일평균 -1조 이하 안정) 보내기 전까지 관망. 오늘 외국인 수급이 신정부 모멘텀 vs 환율 충격 충돌 결정자</li>
+      <li><strong>환율 1,530원 = 해외 결제 비용 직접 부담</strong> — Claude·GPT·Gemini API, AWS·GCP·Azure 결제 즉시 헤지 비중 확대 권장. 6월 환율 헤지 50%+ 검토. 1,540 돌파 시 정부 외환보유고 개입 가능 — 박스 권장</li>
+      <li><strong>신정부 첫 정책 패키지 6월 중반 — K-게임·K-콘텐츠 정책 모니터</strong>. 셧다운제·확률형 아이템 규제 완화 가능성. 크래프톤·시프트업·엔씨·하이브·카카오게임즈 단기 모멘텀 시험. 정책 발표 전 분할 매수 검토</li>
+      <li><strong>오늘 밤 21:30 NFP 결과 즉시 확인</strong> — +15만+ 가속 시 인하 9월 → 12월 이연 본격화 + KOSPI 추가 -2% + 환율 1,535+ 시도, 둔화(+5만 이하) 시 단기 회복. JOLTS·ISM·ADP 3종 깜짝 후속이라 컨센 상회 베이스라인</li>
+      <li><strong>美 섹터 로테이션 수혜 종목 신규 검토</strong> — AI 일변도에서 분산 흐름 본격화. 헬스케어(UNH·LLY·JNJ), 금융(JPM·BAC·GS), 소비재(WMT·COST), 산업재(CAT·HON) 분할 매수. AI 트레이드(NVDA·AVGO·MRVL)는 핵심 비중 유지 + 추격 매수 자제</li>
+      <li><strong>한국 반도체 (삼성·SK하이닉스) 추격 매수 자제 + 핵심 비중 유지</strong> — HBM4·Vera Rubin 구조 변함없음. 7월 SK하이닉스 2Q 실적까지 인내. 추가 -3~5% 후 반등 가능성</li>
+      <li><strong>BTC $62K 추가 폭락 직후 추격 매수 절대 금지</strong>. F&amp;G 25 이하는 통계적 바닥 시그널이지만 $60K 추가 시험 가능성 동시 존재. NFP 둔화 + ETF 유출 종료 + $65K 회복 3중 확인 후 단계적 진입. 7/4 CLARITY Act는 변함없는 구조 호재</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============== [10] CALENDAR ============== -->
+<section id="calendar">
+  <div class="sec-head">
+    <div class="sec-num">[10]</div>
+    <h2 class="sec-title">📅 이번 주 꼭 봐야 할 일정</h2>
+    <span class="sec-sub">Key Events · 6/5 - 7/4</span>
+  </div>
+
+  <div class="cal-grid">
+    <div class="cal-item warn">
+      <div class="cal-date">6/5 (금) 21:30</div>
+      <div>
+        <div class="cal-event">🟨 美 5월 비농업 고용(NFP) + 실업률 — 오늘 밤 최대 분기점</div>
+        <div class="cal-desc">컨센 NFP +10만, 실업률 4.3%. 6/17 FOMC 점도표 직전 마지막 핵심. JOLTS 7.62M + ISM 서비스 54.5 + ADP +12.2만 3종 깜짝 후속이라 +15만+ 가속 시 인하 12월 이연 + 10Y 4.55% 발작 + KOSPI 추가 -2%, 둔화(+5만 이하) 시 일부 회복.</div>
+      </div>
+    </div>
+    <div class="cal-item warn">
+      <div class="cal-date">6월 첫째 주</div>
+      <div>
+        <div class="cal-event">🟨 OPEC+ 6월 회의 — Iran 위기 환경 감산 결정</div>
+        <div class="cal-desc">Iran 외교 채널 재가동 시도 + WTI $95대 환경. 감산 연장 시 $100+ 시도, 동결 시 $90 박스 회귀, 증산 시 단기 안정. 한국 정유주(SK이노·S-Oil) 단기 변동 + 항공주(대한항공·아시아나) 연료비 부담.</div>
+      </div>
+    </div>
+    <div class="cal-item warn">
+      <div class="cal-date">6월 중반</div>
+      <div>
+        <div class="cal-event">🟨 이재명 신정부 첫 정책 패키지 — 추경 30~50조 + K-AI·K-콘텐츠</div>
+        <div class="cal-desc">인수위 없이 6/4 즉시 취임. 6월 중반 첫 패키지 가능성: 추경 30~50조(민생·소상공인), K-AI·K-반도체·재생에너지 가속, K-콘텐츠·K-게임(셧다운제·확률형 아이템 완화), 부동산 미세 조정. 단기 시장 변동 최대 트리거.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">6/11 (수) 21:30</div>
+      <div>
+        <div class="cal-event">🟦 美 5월 CPI 발표</div>
+        <div class="cal-desc">컨센 헤드라인 +0.2% MoM, YoY ~3.0%, 코어 +0.3% MoM. Iran 위기 + WTI $95+ 환경이 6월 CPI(7월 발표)에 직접 반영 예상. 5월 CPI는 영향 제한적이지만 NFP 결과와 결합 시 시장 톤 결정.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">6/12 (목)</div>
+      <div>
+        <div class="cal-event">🟦 한국은행 통화신용정책보고서 + 신정부 첫 한은 시그널</div>
+        <div class="cal-desc">5/28 8연속 동결 + 매파적 톤 직후 첫 공식 보고서. 신정부 출범 후 첫 한은 메시지. 환율 1,530원 환경에서 7월 금통위(7/10) 동결 vs 인상 시그널 분기점 — DSR 3단계 D-19 + 가계대출 시그널 핵심.</div>
+      </div>
+    </div>
+    <div class="cal-item warn">
+      <div class="cal-date">6/17~18 (수~목)</div>
+      <div>
+        <div class="cal-event">🟨 美 FOMC 6월 — 동결 우세, 점도표 갱신</div>
+        <div class="cal-desc">기준금리 동결 컨센. 핵심은 점도표(dot plot, 위원별 향후 금리 예상치) — 9월·12월 인하 횟수가 시장 방향 결정. JOLTS·ISM·ADP·NFP 4종 결과 + Iran 위기 환경에서 매파 시그널 가능.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">7/1 (D-26)</div>
+      <div>
+        <div class="cal-event">🟦 스트레스 DSR 3단계 시행 + 양도세 중과 유예 6/30 만료</div>
+        <div class="cal-desc">全 업권 가계대출 합산, 스트레스 금리 1.50%. 연봉 1억 차주 한도 -1.2억. 6월이 단기 막바지 거래월. 이재명 정부의 무주택자·1주택 선별 완화 가능성이 변수 — 6월 중반 첫 정책 발표가 분기점.</div>
+      </div>
+    </div>
+    <div class="cal-item info">
+      <div class="cal-date">7/4 (D-29)</div>
+      <div>
+        <div class="cal-event">🟦 CLARITY Act 美 본회의 표결 — 통과 확률 75% 유지</div>
+        <div class="cal-desc">SEC·CFTC 관할 정리 + 스테이블코인 정식 화이트리스트. Galaxy Digital 통과 확률 75% 유지(Senate Banking 15-9 가결). USDC·USDT 결제 PoC 본격, GENIUS Act 동시 발효 가능 — BTC $62K 폭락 후 핵심 회복 트리거.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ 본 브리핑은 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단의 책임은 본인에게 있습니다. 인용된 수치·뉴스는 발행 시점 기준이며, 시장 상황은 빠르게 변할 수 있어요. 한국 시장 데이터는 6/4 (목) 마감(KOSPI -1.84% 8,639.41, 외국인 -6.95조원 19일 연속·역대 2위, 삼성전자 -2.50%, SK하이닉스 -2.63%, USD/KRW 1,529.7원 +13.3원 2009/3 이후 첫 1,530 개장가), 미국 시장 데이터는 6/4 (목) NY 종가(Dow 51,561.93 +1.73% 신기록 +874p, S&amp;P 500 7,584.31 +0.41%, Nasdaq 26,830.96 -0.09%, UnitedHealth +5%·JPMorgan +3% 견인), 코인은 6/5 (금) 새벽 KST(BTC 장중 저점 $62,257 4월 7일 이후 최저 갱신, ETH $1,740~1,810, 美 BTC ETF 6일 연속 -$2.42B 누적 이번 주 -$1.67B), 환율·유가·금리는 6/4 기준(USD/KRW 1,529.7원, WTI ~$95 -1% 3일 연속↑ 후 첫 조정, 美 10Y 4.49% -1bp, DXY 99.34), Iran 외교 채널 재가동 시도 + 美 호르무즈 인근 긴장 유지 + EIA 美 원유 재고 6주 연속 감소입니다. 출처 링크는 새 탭으로 열립니다.
+  </div>
+</section>
+
+</main>
+
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    if (!themeToggle) return;
+
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+  });
+</script>
+
+</body>
+</html>
