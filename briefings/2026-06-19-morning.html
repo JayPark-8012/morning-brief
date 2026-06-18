@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0F1115">
+<title>2026년 6월 19일 데일리 브리핑 v3.6 — KOSPI 9,000 시대 개막(어제 9,063.84 +2.25% 사상 첫 9,000 종가) + SK하이닉스 HBM4E 12단 출하 + 美 V자 반등(S&P +1.21%, Nasdaq +2.3%) + 오늘 6/19 美 Juneteenth 휴장 + Iran 평화안 제네바 D-DAY 서명</title>
+<meta name="description" content="한국·미국 증시와 디지털 자산 매일 아침 7시 브리핑 — 2026년 6월 19일 (금) 정규 브리핑. KOSPI 9,000 시대 개막: ①어제 6/18 KOSPI 9,063.84 +2.25%(+199.60p) 사상 첫 9,000 종가 돌파, SK하이닉스 +7%대 신고가 시총 1,200조 돌파, 삼성전자 +5%대 동조, ②SK하이닉스 HBM4E 12단 적층 AI 고객 샘플 출하(Samsung 5/29 첫 출하 3주 만 응수), ③美 V자 반등: S&P 7,510.43 +1.21%, Nasdaq +2.3%, Dow +327p +0.63% 어제 매파 -1.21% 거의 전부 회복, ④외국인 5거래일 매수 누적 +7조원+ 추정, ⑤USD/KRW 1,530원 -3원 매파 가격화 일부 해소, ⑥오늘 6/19 美 Juneteenth 휴장(주식·채권·선물 모두), 6/22 재개, ⑦Iran-美 평화안 6/19 제네바 D-DAY 공식 서명(Vance/Witkoff/Kushner), 호르무즈 재개 + WTI $75.05.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg-primary: #0F1115;
+    --bg-elevated: #1A1D24;
+    --bg-card: #1F232C;
+    --bg-hover: #252932;
+    --bg-deeper: #0A0C10;
+    --text-primary: #F0EAE0;
+    --text-secondary: #A8A29A;
+    --text-tertiary: #6B6862;
+    --gold: #D4A857;
+    --gold-bright: #E8C078;
+    --gold-glow: rgba(212,168,87,0.15);
+    --bull: #26A69A;
+    --bear: #EF5350;
+    --bull-bg: rgba(38,166,154,0.1);
+    --bear-bg: rgba(239,83,80,0.1);
+    --border: #2D3138;
+    --border-strong: #3A3F49;
+    --border-gold: rgba(212,168,87,0.3);
+    --info-bg: rgba(91,155,213,0.1);
+    --info-border: #5B9BD5;
+    --warn-bg: rgba(232,192,120,0.12);
+    --warn-border: #E8C078;
+    --font-body: 'Pretendard', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  [data-theme="light"] {
+    --bg-primary: #FAF8F3;
+    --bg-elevated: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-hover: #F5F1E8;
+    --bg-deeper: #F0EBE0;
+    --text-primary: #1A1D24;
+    --text-secondary: #4A4843;
+    --text-tertiary: #6B6862;
+    --gold: #A07F3F;
+    --gold-bright: #7A5F2F;
+    --gold-glow: rgba(160,127,63,0.1);
+    --border: #E5DFD0;
+    --border-strong: #C9C2B0;
+    --border-gold: rgba(160,127,63,0.4);
+    --info-bg: rgba(91,155,213,0.08);
+    --warn-bg: rgba(160,127,63,0.1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-body); font-size: 16px; line-height: 1.7; transition: background .3s, color .3s; }
+  a { color: var(--gold-bright); text-decoration: none; border-bottom: 1px dotted var(--gold); }
+  a:hover { color: var(--gold); border-bottom-style: solid; }
+  strong { color: var(--gold-bright); font-weight: 700; }
+
+  .top-header { position: sticky; top: 0; z-index: 100; background: rgba(15,17,21,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+  [data-theme="light"] .top-header { background: rgba(250,248,243,0.9); }
+  .header-inner { max-width: 920px; margin: 0 auto; padding: .75rem 1.25rem; display: flex; align-items: center; justify-content: space-between; }
+  .header-brand { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; text-decoration: none; }
+  .brand-mark { font-weight: 800; font-size: 1.25rem; color: var(--gold); line-height: 1; letter-spacing: -0.02em; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .brand-text .ko { font-size: 0.7rem; color: var(--text-tertiary); letter-spacing: 0.15em; margin-top: 2px; }
+  .brand-text .en { font-size: 0.95rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.01em; }
+  .header-actions { display: flex; align-items: center; gap: 0.5rem; }
+  .icon-btn { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s ease; font-size: 1rem; }
+  .icon-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+  main { max-width: 920px; margin: 0 auto; padding: 0 1.25rem; }
+  section { padding: 2.5rem 0; border-bottom: 1px dashed var(--border); }
+  section:last-child { border-bottom: none; }
+
+  .hero { padding-top: 2.5rem; }
+  .hero-meta { font-family: var(--font-mono); font-size: .8rem; color: var(--text-tertiary); letter-spacing: .12em; margin-bottom: 1.25rem; }
+  .hero-meta .vol { color: var(--gold); }
+  .hero-title { font-weight: 800; font-size: clamp(1.7rem, 4.5vw, 2.3rem); line-height: 1.3; letter-spacing: -.01em; margin-bottom: .8rem; }
+  .hero-sub { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 680px; }
+
+  .tldr-grid { display: grid; gap: .75rem; margin-top: 2rem; }
+  .tldr-card { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 4px; }
+  .tldr-flag { font-size: 1.6rem; }
+  .tldr-label { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); letter-spacing: .1em; margin-bottom: .2rem; }
+  .tldr-text { font-size: .95rem; line-height: 1.5; }
+  .tldr-change { font-family: var(--font-mono); font-size: 1.05rem; font-weight: 700; padding: .35rem .65rem; border-radius: 4px; }
+  .change-bull { color: var(--bull); background: var(--bull-bg); }
+  .change-bear { color: var(--bear); background: var(--bear-bg); }
+  .change-neutral { color: var(--text-secondary); background: var(--bg-deeper); }
+
+  .sec-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: .8rem; border-bottom: 1px solid var(--border); }
+  .sec-num { font-family: var(--font-mono); font-weight: 700; font-size: .78rem; color: var(--gold); padding: .25rem .5rem; background: var(--gold-glow); border-radius: 3px; }
+  .sec-title { font-weight: 700; font-size: 1.35rem; letter-spacing: -.01em; }
+  .sec-sub { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); margin-left: auto; letter-spacing: .12em; text-transform: uppercase; }
+
+  .macro-table { width: 100%; border-collapse: collapse; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; font-size: .92rem; }
+  .macro-table th, .macro-table td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+  .macro-table thead th { background: var(--bg-deeper); font-family: var(--font-mono); font-size: .75rem; color: var(--text-tertiary); letter-spacing: .1em; text-transform: uppercase; font-weight: 600; }
+  .macro-table tbody tr:last-child td { border-bottom: none; }
+  .macro-table tbody tr:hover { background: var(--bg-hover); }
+  .macro-name { font-weight: 700; color: var(--gold-bright); font-family: var(--font-mono); font-size: .88rem; }
+  .macro-value { font-family: var(--font-mono); font-weight: 600; }
+  .macro-chg { font-family: var(--font-mono); font-weight: 600; font-size: .88rem; }
+  .macro-up { color: var(--bear); }
+  .macro-down { color: var(--bull); }
+  .macro-note { font-size: .85rem; color: var(--text-secondary); }
+  .macro-summary { margin-top: 1rem; padding: .9rem 1.1rem; background: var(--info-bg); border-left: 3px solid var(--info-border); border-radius: 4px; font-size: .9rem; line-height: 1.65; color: var(--text-primary); }
+
+  .deep { background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 10px; padding: 1.8rem 1.6rem; }
+  .deep-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .18em; margin-bottom: 1rem; }
+  .deep-title { font-weight: 800; font-size: 1.35rem; line-height: 1.4; margin-bottom: 1.2rem; }
+  .deep-body { font-size: .96rem; line-height: 1.8; color: var(--text-primary); margin-bottom: 1.2rem; }
+  .deep-body p { margin-bottom: 1rem; }
+  .stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .6rem; margin: 1.3rem 0; }
+  .stat-card { padding: .9rem 1rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 6px; }
+  .stat-label { font-family: var(--font-mono); font-size: .68rem; color: var(--text-tertiary); letter-spacing: .1em; margin-bottom: .3rem; }
+  .stat-value { font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; color: var(--gold-bright); }
+  .stat-note { font-size: .75rem; color: var(--text-secondary); margin-top: .3rem; line-height: 1.4; }
+  .so-what { padding: 1rem 1.2rem; background: var(--info-bg); border-left: 3px solid var(--info-border); border-radius: 4px; margin-top: 1rem; font-size: .92rem; line-height: 1.65; }
+  .so-what::before { content: '🎯 그래서 나한테 무슨 의미?'; display: block; font-weight: 700; color: var(--info-border); margin-bottom: .4rem; font-size: .82rem; }
+  .deep-sources { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-top: 1.2rem; padding-top: 1rem; border-top: 1px dashed var(--border); font-size: .82rem; color: var(--text-tertiary); }
+  .deep-sources strong { color: var(--text-secondary); font-weight: 600; margin-right: .3rem; }
+  .source-chip { display: inline-block; padding: .25rem .65rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); font-size: .72rem; color: var(--text-secondary) !important; border-bottom: none !important; }
+  .source-chip:hover { border-color: var(--gold); color: var(--gold) !important; }
+
+  .five { display: grid; gap: 1rem; }
+  .news-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.4rem 1.5rem; transition: border-color .25s; }
+  .news-card:hover { border-color: var(--border-gold); }
+  .news-meta { display: flex; align-items: center; gap: .6rem; margin-bottom: .7rem; font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .news-rank { color: var(--gold); font-weight: 700; padding: .2rem .45rem; background: var(--gold-glow); border-radius: 3px; }
+  .news-cat { color: var(--text-secondary); letter-spacing: .08em; }
+  .news-time { margin-left: auto; }
+  .news-headline { font-weight: 700; font-size: 1.1rem; line-height: 1.45; margin-bottom: .8rem; }
+  .news-body { font-size: .93rem; line-height: 1.8; color: var(--text-primary); }
+  .news-body p { margin-bottom: .7rem; }
+  .news-body p:last-child { margin-bottom: 0; }
+  .news-conclusion { margin-top: 1rem; padding: .8rem 1rem; background: var(--bg-deeper); border-left: 3px solid var(--gold); border-radius: 4px; font-size: .9rem; line-height: 1.55; }
+  .news-conclusion::before { content: '→ 그래서 뭐? '; color: var(--gold); font-weight: 700; }
+  .news-sources { margin-top: .9rem; padding-top: .7rem; border-top: 1px dashed var(--border); font-size: .8rem; color: var(--text-tertiary); }
+  .news-sources a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; }
+  .news-sources a:hover { color: var(--gold); }
+
+  .markets { display: grid; gap: 1.2rem; }
+  .market-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.3rem 1.4rem; }
+  .market-card.us { border-top: 3px solid #5B9BD5; }
+  .market-card.kr { border-top: 3px solid #D4A857; }
+  .market-card.crypto { border-top: 3px solid #F7931A; }
+  .market-head { display: flex; align-items: baseline; gap: .6rem; margin-bottom: .9rem; }
+  .market-flag { font-size: 1.4rem; }
+  .market-title { font-weight: 700; font-size: 1.05rem; }
+  .market-time { margin-left: auto; font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .mkt-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-bottom: .8rem; }
+  .mkt-table th, .mkt-table td { padding: .55rem .7rem; text-align: left; border-bottom: 1px solid var(--border); }
+  .mkt-table thead th { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); letter-spacing: .08em; text-transform: uppercase; font-weight: 600; background: var(--bg-deeper); }
+  .mkt-table tbody tr:last-child td { border-bottom: none; }
+  .mkt-table .mkt-name { font-weight: 600; }
+  .mkt-table .mkt-val { font-family: var(--font-mono); font-weight: 600; }
+  .mkt-table .mkt-chg { font-family: var(--font-mono); font-weight: 700; }
+  .mkt-flow { font-size: .85rem; color: var(--text-secondary); padding: .55rem .8rem; background: var(--bg-deeper); border-radius: 4px; margin-bottom: .7rem; line-height: 1.55; }
+  .mkt-comment { padding: .7rem .9rem; background: var(--gold-glow); border-left: 3px solid var(--gold); border-radius: 4px; font-size: .88rem; line-height: 1.6; color: var(--text-primary); }
+  .mkt-comment::before { content: '💬 '; }
+
+  .filter-bar { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.2rem; font-size: .8rem; color: var(--text-tertiary); }
+  .filter-chip { padding: .3rem .7rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); }
+  .headline-list { display: grid; gap: .7rem; }
+  .h-item { padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; transition: all .2s; }
+  .h-item:hover { border-color: var(--border-gold); transform: translateX(2px); }
+  .h-title { font-weight: 600; font-size: .98rem; margin-bottom: .4rem; line-height: 1.4; }
+  .h-desc { font-size: .87rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: .5rem; }
+  .h-meta { font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .h-meta a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; font-size: .72rem; }
+
+  .re-snapshot { padding: 1.1rem 1.3rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 1.2rem; font-size: .9rem; line-height: 1.7; }
+  .re-snapshot strong { color: var(--gold-bright); }
+  .re-grid { display: grid; gap: 1rem; }
+  .re-card { padding: 1.3rem 1.4rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; }
+  .re-title { font-weight: 700; font-size: 1.02rem; margin-bottom: .6rem; line-height: 1.4; }
+  .re-body { font-size: .92rem; line-height: 1.75; color: var(--text-primary); }
+  .re-body p { margin-bottom: .55rem; }
+  .re-body p:last-child { margin-bottom: 0; }
+  .re-sources { margin-top: .8rem; padding-top: .7rem; border-top: 1px dashed var(--border); font-size: .78rem; color: var(--text-tertiary); }
+  .re-sources a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; }
+
+  .analyst-box { padding: 1.5rem 1.6rem; background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 8px; margin-bottom: 1.2rem; }
+  .analyst-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .15em; margin-bottom: .8rem; }
+  .analyst-body { font-size: .96rem; line-height: 1.85; color: var(--text-primary); }
+  .analyst-body p { margin-bottom: .8rem; }
+  .analyst-body p:last-child { margin-bottom: 0; }
+  .scenarios { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem; }
+  .sc-card { padding: 1.4rem 1.5rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; }
+  .sc-card.main { border-left: 3px solid var(--bull); }
+  .sc-card.alt { border-left: 3px solid var(--bear); }
+  .sc-prob { font-family: var(--font-mono); font-size: .8rem; color: var(--gold); letter-spacing: .1em; margin-bottom: .5rem; }
+  .sc-title { font-weight: 700; font-size: 1.05rem; margin-bottom: .7rem; line-height: 1.4; }
+  .sc-body { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+  .action-box { padding: 1.1rem 1.3rem; background: var(--bg-deeper); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; }
+  .action-title { font-weight: 700; font-size: .92rem; color: var(--gold); margin-bottom: .6rem; }
+  .action-list { list-style: none; padding: 0; margin: 0; }
+  .action-list li { padding: .35rem 0; padding-left: 1.2rem; position: relative; font-size: .9rem; line-height: 1.6; color: var(--text-primary); }
+  .action-list li::before { content: '▸'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+
+  .cal-grid { display: grid; gap: .7rem; }
+  .cal-item { display: grid; grid-template-columns: 110px 1fr; gap: 1rem; padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--info-border); border-radius: 6px; align-items: center; }
+  .cal-item.warn { border-left-color: var(--warn-border); background: var(--warn-bg); }
+  .cal-item.info { border-left-color: var(--info-border); background: var(--info-bg); }
+  .cal-date { font-family: var(--font-mono); font-size: .85rem; font-weight: 700; color: var(--gold-bright); }
+  .cal-event { font-weight: 600; margin-bottom: .25rem; font-size: .98rem; }
+  .cal-desc { font-size: .85rem; color: var(--text-secondary); line-height: 1.55; }
+
+  .disclaimer { margin-top: 2rem; padding: 1rem 1.2rem; background: var(--bg-deeper); border: 1px dashed var(--border); border-radius: 6px; font-size: .78rem; color: var(--text-tertiary); line-height: 1.6; }
+
+  @media (max-width: 720px) {
+    .scenarios { grid-template-columns: 1fr; }
+    .tldr-card { grid-template-columns: auto 1fr; }
+    .tldr-change { grid-column: 2; justify-self: start; margin-top: .3rem; }
+    .cal-item { grid-template-columns: 1fr; gap: .3rem; }
+    .macro-table th, .macro-table td { padding: .6rem .55rem; font-size: .82rem; }
+    .mkt-table th, .mkt-table td { padding: .45rem .5rem; font-size: .82rem; }
+  }
+</style>
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+</head>
+<body>
+
+<header class="top-header">
+  <div class="header-inner">
+    <a href="/index.html" class="header-brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-text">
+        <div class="en">Morning Brief</div>
+        <div class="ko">데일리 경제 브리핑</div>
+      </div>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" title="테마 변경">🌙</button>
+      <button class="icon-btn" title="공유" onclick="navigator.share &amp;&amp; navigator.share({title: document.title, url: location.href})">↗</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============== [1] HERO ============== -->
+<section class="hero">
+  <div class="hero-meta">
+    <span class="vol">Vol.179</span> · 2026.06.19 (금) · 📖 14분 읽기 · v3.6 · us-holiday
+  </div>
+  <h1 class="hero-title">KOSPI <strong>9,000 시대 개막</strong> — 어제 <strong>9,063.84 +2.25% 사상 첫 9,000 종가</strong> + SK하이닉스 HBM4E 12단 출하 + 美 V자 반등(S&amp;P <strong>+1.21%</strong> / Nasdaq <strong>+2.3%</strong>) + 오늘 6/19 美 Juneteenth 휴장 + Iran 평화안 제네바 D-DAY 서명</h1>
+  <p class="hero-sub">새 챕터예요. 어제 6/18(목) KOSPI가 사상 처음 종가 기준 9,000선을 돌파했어요 — <strong>9,063.84 +2.25%(+199.60p)</strong>. 새벽 FOMC 매파 점도표 충격으로 -2~3% 갭다운이 예상됐던 시장이 완전히 다른 결과. 단일 트리거는 <strong>SK하이닉스 HBM4E 12단 적층 샘플을 주요 AI 고객사에 출하</strong> 발표 — 현재 주력 HBM3E 대비 처리 속도 +67%, 전력 효율 +20%, 열저항 +17% 개선. Samsung 5/29 첫 출하 3주 만 12단으로 응수해 NVIDIA 단독 공급(점유율 58%) 굳히기. SK하이닉스 +7%대 신고가 <strong>시총 1,200조 돌파</strong>, 삼성전자 동조 +5%대. 미국 시장도 동조 회복 — <strong>S&amp;P 7,510.43 +1.21%</strong>, Nasdaq <strong>+2.3%</strong>, Dow <strong>+327p</strong> 어제 매파 -1.21% 손실 거의 전부 회복. 2Y -3bp(어제 +16bp의 일부 되돌림), DXY 99.6 -0.2%로 100 라인 후퇴. <strong>USD/KRW 1,530원 -3원</strong> KRW 단기 강세 반전. <strong>오늘 6/19은 美 Juneteenth로 NY 주식·채권·선물 모두 휴장</strong>(6/22 월 재개) — 글로벌 흐름 일시 정지, 한국·일본 단독 결정 구간. <strong>Iran-美 평화안 6/19 제네바 D-DAY 공식 서명</strong>(JD Vance 부통령 + Witkoff 특사 + Kushner 참석) — 호르무즈 해협 즉시 재개 + Iran 석유 제재 즉시 해제 + 60일 핵 협상. WTI <strong>$75.05</strong> $70 시도 가능. 코인은 약보합(BTC <strong>$64,200 -1.1%</strong>) — 매크로 회복에도 자금이 코인보다 칩 섹터로 우선 회귀. 메인 시나리오 55%: 9,000~9,100 박스 안착. 상승 30%: 9,100~9,200 추가 강세(Micron 6/25 D-6 사전 모멘텀). 리스크 15%: 9,000 이탈 차익실현 -1~1.5%(8,930~8,970).</p>
+
+  <div class="tldr-grid">
+    <div class="tldr-card">
+      <div class="tldr-flag">🇺🇸</div>
+      <div>
+        <div class="tldr-label">미국 (6/18 목 NY 마감 — 매파 충격 24시간 만 V자 반등 / 오늘 6/19 Juneteenth 휴장)</div>
+        <div class="tldr-text">S&amp;P <strong>7,510.43 +1.21%</strong>, Nasdaq <strong>26,620 +2.3%</strong>, Dow <strong>51,820 +327p(+0.63%)</strong>. 어제 -1.21% 손실 거의 전부 회복, 칩 섹터 견인(NVDA +4~5%, AMD +3%, MU +5%대). 2Y <strong>4.18% -3bp</strong> 매파 가격화 일부 되돌림, 10Y 4.46% 횡보. <strong>오늘 6/19 美 Juneteenth로 주식·채권·선물 모두 휴장</strong>(6/22 재개)</div>
+      </div>
+      <div class="tldr-change change-bull">+1.21%</div>
+    </div>
+    <div class="tldr-card">
+      <div class="tldr-flag">🇰🇷</div>
+      <div>
+        <div class="tldr-label">한국 (6/18 목 종가 — KOSPI 9,000 시대 개막)</div>
+        <div class="tldr-text"><strong>KOSPI 9,063.84 +2.25%(+199.60p) 사상 첫 9,000 종가</strong>. <strong>SK하이닉스 HBM4E 12단 출하</strong> 단일 트리거로 +7%대 신고가 <strong>시총 1,200조 돌파</strong>, 삼성전자 +5%대 동조. 외국인 5거래일 연속 매수 누적 <strong>+7조원+ 추정</strong>. USD/KRW <strong>1,530원 -3원</strong> KRW 단기 강세 반전</div>
+      </div>
+      <div class="tldr-change change-bull">+2.25%</div>
+    </div>
+    <div class="tldr-card">
+      <div class="tldr-flag">₿</div>
+      <div>
+        <div class="tldr-label">코인 (6/19 새벽 — 매크로 회복에도 약보합)</div>
+        <div class="tldr-text">BTC <strong>$64,200 -1.1% 24h</strong> 약보합, ETH <strong>$1,747 -0.5%</strong> 동조 약세. 어제 칩 랠리 자금이 코인보다 주식으로 우선 회귀. BTC ETF 7거래일 회복 IBIT 주도 지속. <strong>Iran-美 평화안 6/19 D-DAY 제네바 서명</strong>(Vance/Witkoff/Kushner) — 호르무즈 즉시 재개, WTI $75.05</div>
+      </div>
+      <div class="tldr-change change-bear">-1.1%</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== [3] MACRO TABLE ============== -->
+<section id="macro">
+  <div class="sec-head">
+    <span class="sec-num">03</span>
+    <h2 class="sec-title">📊 거시 환경 표 (6/18 목 NY 마감 — 매파 충격 회복)</h2>
+    <span class="sec-sub">6 Key Indicators</span>
+  </div>
+  <table class="macro-table">
+    <thead>
+      <tr>
+        <th>지표</th>
+        <th>현재값</th>
+        <th>전일 대비</th>
+        <th>시사점 (한 줄)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="macro-name">美 10Y</td>
+        <td class="macro-value">4.46%</td>
+        <td class="macro-chg">▶ 0bp</td>
+        <td class="macro-note">매파 충격 후 횡보 — 칩 랠리에도 금리 안정</td>
+      </tr>
+      <tr>
+        <td class="macro-name">美 2Y</td>
+        <td class="macro-value">4.18%</td>
+        <td class="macro-chg macro-down">▼ -3bp</td>
+        <td class="macro-note">어제 +16bp 반등의 일부 되돌림 — 매파 가격화 일부 해소</td>
+      </tr>
+      <tr>
+        <td class="macro-name">DXY</td>
+        <td class="macro-value">99.6</td>
+        <td class="macro-chg macro-down">▼ -0.2%</td>
+        <td class="macro-note">매파 베팅 일부 해소, 100 라인 후퇴</td>
+      </tr>
+      <tr>
+        <td class="macro-name">WTI</td>
+        <td class="macro-value">$75.05</td>
+        <td class="macro-chg macro-down">▼ -0.2%</td>
+        <td class="macro-note"><strong>Iran 6/19 D-DAY 서명 가격화</strong>, $75 안착</td>
+      </tr>
+      <tr>
+        <td class="macro-name">USD/KRW</td>
+        <td class="macro-value">1,530원</td>
+        <td class="macro-chg macro-down">▼ -3원</td>
+        <td class="macro-note">KOSPI 9,000 + 외국인 매수 자금 유입 → KRW 일부 강세</td>
+      </tr>
+      <tr>
+        <td class="macro-name">VIX</td>
+        <td class="macro-value">17.8</td>
+        <td class="macro-chg macro-down">▼ -1.7p</td>
+        <td class="macro-note">매파 통과 + 칩 랠리로 공포 지수 정상화</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="macro-summary">
+    한 줄 종합 — <strong>"어제 매파 점도표 충격은 24시간 만에 칩 랠리로 거의 전부 회복. SK하이닉스 HBM4E 출하가 글로벌 칩 섹터의 V자 반등 트리거. 한국 KOSPI는 9,000 시대 개막. 오늘 6/19 美 Juneteenth 휴장으로 글로벌 자금 흐름 일시 정지 — Iran 서명에 시장 시선 집중."</strong>
+  </div>
+</section>
+
+<!-- ============== [4] DEEP DIVE ============== -->
+<section id="deep-dive">
+  <div class="sec-head">
+    <span class="sec-num">04</span>
+    <h2 class="sec-title">⭐ 오늘의 깊은 이야기</h2>
+    <span class="sec-sub">Deep Dive · KOSPI 9,000 시대 개막 분해</span>
+  </div>
+  <div class="deep">
+    <div class="deep-tag">[DEEP DIVE] · KOSPI 9,000 시대 개막 + SK하이닉스 HBM4E · 🕒 6/18 목 종가 → 6/19 첫날</div>
+    <h3 class="deep-title">KOSPI 9,000 시대 개막: SK하이닉스 HBM4E 12단이 만든 매파 충격 V자 반전</h3>
+    <div class="deep-body">
+      <p>어제 6/18(목) KOSPI가 <strong>사상 처음으로 종가 기준 9,000선을 돌파</strong>했어요. <strong>9,063.84 +2.25%(+199.60p)</strong>. 장중 9,025.40 첫 9,000 진입 후 마감까지 추가 상승. 새벽 FOMC 매파 점도표 충격으로 -2~3% 갭다운이 예상됐던 시장이 완전히 다른 결과를 낸 거예요. 시장 예상이 이렇게 크게 빗나간 건 드문 일.</p>
+
+      <p><strong>V자 반전의 단일 트리거</strong>: SK하이닉스가 6/18 오전 <strong>12단 적층 HBM4E 샘플을 주요 AI 고객사에 출하 시작</strong>한다고 발표. HBM4E는 차세대 AI 메모리(현재 주력 HBM3E의 다음 세대)로 <strong>핀당 16Gbps 처리 속도 + 전력 효율 +20% + 열저항 +17% 개선</strong>. SK하이닉스는 글로벌 HBM 시장 점유율 58%(2026 Q1 기준)로 사실상 NVIDIA의 사실상 단독 공급자 — 이번 출하로 차세대까지 점유 굳히기. Samsung이 5/29 HBM4E 첫 출하 후 3주 만에 SK가 12단 적층 버전으로 응수.</p>
+    </div>
+    <div class="stat-cards">
+      <div class="stat-card">
+        <div class="stat-label">KOSPI 어제 종가</div>
+        <div class="stat-value">9,063.84</div>
+        <div class="stat-note">+2.25% (+199.60p) <strong>사상 첫 9,000 종가</strong></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">SK하이닉스 시총</div>
+        <div class="stat-value">1,200조+</div>
+        <div class="stat-note">+7%대 신고가, 1,150조→1,200조 +50조 단일 일</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">HBM4E 속도</div>
+        <div class="stat-value">16Gbps</div>
+        <div class="stat-note">HBM3E 9.6Gbps 대비 <strong>+67%</strong>, 전력 -20% +17% 열저항</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">S&amp;P 500 (6/18)</div>
+        <div class="stat-value">+1.21%</div>
+        <div class="stat-note">어제 매파 -1.21% 손실 거의 전부 회복</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">외국인 누적 매수</div>
+        <div class="stat-value">+7조+</div>
+        <div class="stat-note">6/12 이후 5거래일 연속 매수 추정</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">USD/KRW</div>
+        <div class="stat-value">1,530원</div>
+        <div class="stat-note">-3원 KRW 단기 강세 반전, 매파 가격화 일부 해소</div>
+      </div>
+    </div>
+    <div class="deep-body">
+      <p><strong>즉시 시장 반응 (한국)</strong>: SK하이닉스 <strong>+7%대 신고가, 시총 1,200조원 돌파</strong>(전일 1,150조 대비 +50조 단일 종목 추가). 삼성전자 동반 +5%대. 두 종목 합산 시총이 KOSPI의 48% 이상 차지 — 두 종목이 KOSPI 9,000 돌파의 직접 동력. 외국인 5거래일 연속 매수(6/12 이후 누적 +7조원+ 추정). USD/KRW 1,530원 -3원 반전 — 매파 가격화의 일부 해소.</p>
+      <p><strong>미국 시장도 동조 회복</strong>: NVIDIA +4~5%, AMD +3%대, Micron +5%대 등 글로벌 칩 섹터 동반 랠리. S&amp;P 500 <strong>7,510.43 +1.21%</strong> 어제 -1.21% 손실 거의 전부 회복, Nasdaq <strong>+2.3%</strong> 더 강한 반등. 매파 점도표 충격이 "구조적 호재인 AI 메모리 사이클 앞에서는 매크로보다 미시 펀더멘털이 우선"이라는 시장 메시지로 24시간 만에 정리. 2Y -3bp(어제 +16bp의 일부 되돌림), 10Y 횡보 — 금리 압력도 정상화.</p>
+    </div>
+    <div class="so-what">
+      KOSPI 9,000은 새 챕터예요. 다만 단기적으로 4거래일 강세 누적 + 9,000 심리적 저항선이라 6/19 오늘은 차익실현 일부 출현 가능 — <strong>메인 시나리오: 9,000~9,100 박스 안착(확률 55%)</strong>. 다음 큰 변수는 <strong>6/25 Micron 실적 D-6</strong> — HBM 매출 컨센 ~$7.1B 상회 시 SK 추가 +5~10% &amp; KOSPI 9,200 시도, 하회 시 -10% &amp; KOSPI 8,700~8,800 조정. 단기 추격 매수는 9,200 돌파 이후 권장, <strong>분할 매수는 9,000~9,030 지지 확인 후 가능</strong>. 환율 1,530원 -3원이 1,510원대까지 추가 되돌리면 IT/게임 사업자 해외 결제 부담 일시 완화 — 헤지 비중 70~80%로 일부 하향 가능. <strong>오늘 6/19은 美 Juneteenth로 글로벌 흐름 멈춤</strong> — 한국 단독 결정 → 거래량 평소의 70% 수준 예상.
+    </div>
+    <div class="deep-sources">
+      <strong>📰 출처:</strong>
+      <a href="https://www.asiae.co.kr/article/2026061816204217852" target="_blank" rel="noopener" class="source-chip">Asia Business Daily</a>
+      <a href="https://www.upi.com/Top_News/World-News/2026/06/18/korea-KOSPI-Korea-Stock-Index-9000-point-record-chip-semiconductor-rally/3691781772886/" target="_blank" rel="noopener" class="source-chip">UPI</a>
+      <a href="https://www.hpcwire.com/off-the-wire/sk-hynix-ships-12-stack-hbm4e-samples-to-major-ai-customers/" target="_blank" rel="noopener" class="source-chip">HPCwire</a>
+      <a href="https://www.koreatimes.co.kr/economy/20260618/kospi-crosses-over-historic-milestone-of-9000-on-chip-rally" target="_blank" rel="noopener" class="source-chip">Korea Times</a>
+      <a href="https://www.tradingkey.com/analysis/stocks/more/261975192-kospi-samsung-skhynix-dram-mu-hbm4e-tradingkey" target="_blank" rel="noopener" class="source-chip">TradingKey</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== [5] FIVE THINGS ============== -->
+<section id="five-things">
+  <div class="sec-head">
+    <span class="sec-num">05</span>
+    <h2 class="sec-title">📌 오늘의 5가지 (5개 다른 주제)</h2>
+    <span class="sec-sub">Five Things</span>
+  </div>
+  <div class="five">
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">01</span>
+        <span class="news-cat">💹 시장·매크로 (미국)</span>
+        <span class="news-time">🕒 6/18 목 NY 마감 → 6/19 Juneteenth 휴장</span>
+      </div>
+      <h3 class="news-headline">美 V자 반등: <strong>S&amp;P +1.21% / Nasdaq +2.3% / Dow +327p</strong> — 매파 충격 24시간 만 회복, 오늘 Juneteenth 휴장</h3>
+      <div class="news-body">
+        <p>어제 6/18(목) 美 마감이 시장 회복력을 확인시켰어요. <strong>S&amp;P 500 7,510.43 +1.21%</strong>, Nasdaq <strong>+2.3%</strong> 더 강한 반등, Dow <strong>+327p(+0.63%)</strong>. 어제(6/17) 매파 점도표 충격 -1.21% / -1.34% / -507p가 정확히 24시간 만에 거의 전부 회복. 칩 섹터가 단일 견인 — SK하이닉스 HBM4E 12단 출하 소식이 NVIDIA +4~5%, AMD +3%, Micron +5%대 등 동반 랠리 유발.</p>
+        <p><strong>금리도 정상화</strong>: 2Y <strong>4.18% -3bp</strong>(어제 +16bp의 일부 되돌림), 10Y 4.46% 횡보. 즉, 시장이 "어제 점도표 매파 충격이 과했다"고 가격화 시작. DXY 99.6 -0.2%로 100 라인 후퇴. 다만 매크로 자체가 매파 톤은 유지 — 시장의 메시지는 "AI 메모리 사이클 같은 구조적 호재가 매크로 충격을 흡수한다"는 것. 4Q 2026 실적 시즌(NVIDIA 8/20)까지 이 패턴 반복 가능.</p>
+      </div>
+      <div class="news-conclusion">단기 변수 명확. <strong>오늘 6/19은 美 Juneteenth로 NY 주식·채권·선물 모두 휴장</strong>(6/22 월 재개). 다음 큰 미국 데이터는 6/26 PCE 인플레(매파 점도표 후 첫 인플레 신호). 다음 매크로 분수령은 7/30 FOMC.</div>
+      <div class="news-sources">📰
+        <a href="https://tradingeconomics.com/united-states/stock-market" target="_blank" rel="noopener">TradingEconomics S&amp;P</a> ·
+        <a href="https://www.schwab.com/learn/story/stock-market-update-open" target="_blank" rel="noopener">Schwab Market</a> ·
+        <a href="https://www.kiplinger.com/investing/stocks/is-the-stock-market-open-on-juneteenth" target="_blank" rel="noopener">Kiplinger Juneteenth</a>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">02</span>
+        <span class="news-cat">💼 기업·산업</span>
+        <span class="news-time">🕒 6/18 SK하이닉스 발표 → 6/25 Micron D-6</span>
+      </div>
+      <h3 class="news-headline">SK하이닉스 <strong>HBM4E 12단 출하</strong> — Samsung 5/29 첫 출하 3주 만 응수, NVIDIA 단독 공급(점유율 58%) 굳히기</h3>
+      <div class="news-body">
+        <p>SK하이닉스가 6/18 <strong>12단 적층 HBM4E 샘플을 주요 AI 고객사에 출하</strong>했다고 공식 발표. HBM4E는 현재 주력 HBM3E의 다음 세대 — <strong>핀당 16Gbps 처리 속도(HBM3E 9.6Gbps 대비 +67%), 전력 효율 +20%, 열저항 +17% 개선</strong>. 차세대 AI 가속기 핵심 부품. Samsung이 5/29에 HBM4E 첫 출하했고, SK는 3주 만에 12단 적층 버전(Samsung 8단)으로 응수해 기술 우위 확인.</p>
+        <p>시장 의미는 단순한 신제품 출하 이상. <strong>SK는 NVIDIA의 사실상 단독 HBM 공급자(점유율 58%, 2026 Q1 기준)</strong> — 이번 출하로 차세대 HBM4E 사이클까지 점유 굳히기. NVIDIA가 2027 H2 출시 예정인 Vera Rubin 아키텍처가 HBM4E 표준 — 즉 SK는 다음 빅사이클 2~3년 핵심 공급자 위치 사전 확보. 어제 주가 +7%대 반응이 이유 — 시총 1,150조 → 1,200조 단일 종목 +50조.</p>
+      </div>
+      <div class="news-conclusion">주말 동안 추가 분석 보강 가능성 + 6/25 Micron 실적 D-7 후속 모멘텀 동시 작동. <strong>SK하이닉스 단기 추격 매수는 신중</strong>(이미 4거래일 +14% 누적). 분할 매수는 어제 종가 부근 1,950,000~2,000,000원 사이 지지 확인 후. Micron 6/25 결과가 가장 중요 — HBM 매출 컨센 분기 ~$7.1B 상회 시 SK 추가 +5~10%, 하회 시 -10% 양방향.</div>
+      <div class="news-sources">📰
+        <a href="https://news.skhynix.com/12-layer-hbm4e-sample/" target="_blank" rel="noopener">SK hynix Newsroom</a> ·
+        <a href="https://www.hpcwire.com/off-the-wire/sk-hynix-ships-12-stack-hbm4e-samples-to-major-ai-customers/" target="_blank" rel="noopener">HPCwire</a> ·
+        <a href="https://thenextweb.com/news/sk-hynix-ships-first-12-layer-hbm4e-samples-to-ai-customers" target="_blank" rel="noopener">The Next Web</a>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">03</span>
+        <span class="news-cat">🌍 글로벌·지정학</span>
+        <span class="news-time">🕒 6/19 (금) 제네바 D-DAY</span>
+      </div>
+      <h3 class="news-headline">Iran-美 평화안 <strong>6/19 제네바 D-DAY 공식 서명</strong> — 호르무즈 해협 즉시 재개, WTI $70 시도 가능</h3>
+      <div class="news-body">
+        <p>오늘 6/19(금) 제네바에서 Iran-美 평화안 <strong>공식 서명</strong>. JD Vance 부통령 + Steve Witkoff 특사 + Jared Kushner 참석. 6/14(토) MoU(양해각서) 합의 후 5일 만에 정식 서명. 핵심 조건 — <strong>호르무즈 해협 즉시 재개통</strong>(전 세계 석유·가스 약 20% 통과 지점) + <strong>Iran 석유 제재 즉시 해제</strong> + 이후 60일 핵 협상 기간.</p>
+        <p>WTI <strong>$75.05 -0.2%</strong> 어제도 안정. 6/12 이후 5거래일 누적 -10%로 3월 이후 최저. 서명 후 호르무즈 본격 재개 시 추가 -3~5% 가능 — $70 시도. 5월 미국 CPI 헤드라인 +4.2%의 60% 기여가 에너지였으므로 <strong>WTI $70 이탈 = 6~7월 CPI 헤드라인 -0.2~0.3%p 자동 둔화 = FOMC 매파 톤 약화 시그널</strong>. 6/17 매파 점도표가 잠재적으로 무력화될 수 있는 핵심 매크로 흐름.</p>
+      </div>
+      <div class="news-conclusion">한국 영향은 양면. <strong>정유주(SK이노·S-Oil) 단기 부담 지속, 항공주(대한항공·아시아나) 단기 호재</strong>. <strong>K-방산(한화에어로·LIG넥스원) -3~5% 조정 가능</strong>(평화 모드 진입) — 그러나 중기 글로벌 방산 수요는 별개로 분할 매수 기회. 6/19 서명 직후 시장 반응 확인 후 진입.</div>
+      <div class="news-sources">📰
+        <a href="https://www.mitrade.com/au/insights/news/live-news/article-2-1816694-20260617" target="_blank" rel="noopener">Mitrade WTI</a> ·
+        <a href="https://www.cnbc.com/2026/06/16/us-iran-peace-agreement-oil-prices-tankers-strait-of-hormuz-transit.html" target="_blank" rel="noopener">CNBC Iran Oil</a> ·
+        <a href="https://www.fxstreet.com/news/crude-oil-sells-the-iran-peace-deal-sight-unseen-wti-hits-15-week-low-202606161646" target="_blank" rel="noopener">FXStreet WTI 15주 최저</a>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">04</span>
+        <span class="news-cat">💰 정책·정부 (한국)</span>
+        <span class="news-time">🕒 D-12 7/1 시행</span>
+      </div>
+      <h3 class="news-headline">스트레스 DSR 3단계 <strong>D-12 시행</strong> — 6/22~30이 결제 마지막 한 주, 연봉 1억 한도 약 4,800만원 ↓</h3>
+      <div class="news-body">
+        <p>7/1 스트레스 DSR(총부채원리금상환비율) 3단계 시행까지 <strong>D-12</strong>. 다음 주 6/22~30이 결제 골든타임의 <strong>마지막 한 주</strong>. 신용대출+카드론까지 합산해 한도 계산하는 강화 방식 — 토스뱅크·뱅크샐러드 추정 <strong>연봉 1억원 차주 한도 약 4,800만원 감소</strong>.</p>
+        <p>KB부동산 6월 4주 통계 기준 <strong>서울 아파트 매매가 +0.11% WoW</strong> — 전주 +0.16% 대비 상승률 둔화는 했지만, 평소 +0.05% 대비 여전히 2배 빠른 페이스. <strong>강남구 +0.23%, 송파구 +0.31%, 동작구 +0.24%</strong> 매도호가 추가 상승. 매도인은 양도세 중과 면제(7/1 마감)로 6/30 결제 선호, 매수인은 DSR 적용 전 한도 확보 — 양방향 압력에 거래량 평소 대비 +60~80% 유지.</p>
+      </div>
+      <div class="news-conclusion">부동산 진입 검토 중이면 <strong>다음 주가 진짜 마지막 한도 확보 기회</strong>. 7월부터는 동일 조건에서 한 단계 작은 매물만 가능. K-게임/IT 종사자 자산 운용 측면 — 7월 이후 시장은 한도 축소 + 가격 단기 고점 가능성으로 관망 권장. 7/10 한은 금통위 신정부 첫 정책 결정도 동시 변수.</div>
+      <div class="news-sources">📰
+        <a href="https://www.tossbank.com/articles/stressdsr3" target="_blank" rel="noopener">토스뱅크 DSR</a> ·
+        <a href="https://data.kbland.kr/" target="_blank" rel="noopener">KB부동산</a> ·
+        <a href="https://www.reb.or.kr/r-one/" target="_blank" rel="noopener">한국부동산원 R-ONE</a>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">05</span>
+        <span class="news-cat">₿ 디지털자산·신기술</span>
+        <span class="news-time">🕒 6/19 새벽 — 매크로 회복에도 약보합</span>
+      </div>
+      <h3 class="news-headline">BTC ETF 회복 7일째 — 그러나 BTC <strong>$64,200 -1.1%</strong> 약보합, 칩 자금 우선 회귀</h3>
+      <div class="news-body">
+        <p>BTC ETF 흐름이 <strong>6/12 +$86M 13일 연속 유출 끊고 회복 7거래일째 일관</strong>. BlackRock IBIT가 주도(전체의 약 2/3). 그러나 6/19 새벽 BTC <strong>$64,200 -1.1% 24h</strong> 약보합, ETH <strong>$1,747 -0.5%</strong> 동조 약세 — 어제 미국 칩 랠리가 코인보다 주식으로 자금이 우선 회귀한 영향. 매크로 회복(매파 충격 완화 + V자 반등)에도 코인은 단기 모멘텀 부진.</p>
+        <p>해석은 명확. <strong>현재 위험자산 자금이 ① AI 메모리(SK·NVIDIA·AMD) ② 칩 섹터 전체 ③ 코인 순서로 우선순위</strong>. AI 메모리 호재가 워낙 강력해 자금 분산 안 됨. <strong>CLARITY Act 7/4 본회의 표결(통과 확률 75%)이 BTC의 다음 모멘텀</strong>. 통과 시 스테이블코인 제도화 + 기관 자금 유입 본격화 가능. WTI $75 안착 + Iran 6/19 서명도 코인엔 중립~약호재.</p>
+      </div>
+      <div class="news-conclusion"><strong>$66K 돌파 + ETF 5거래일 누적 +$300M 동시 확인 시 추세 회복 진입 시그널</strong>. 그 전까지 $63~65K 박스 횡보로 가정하고 분할 매수. ETH는 6/17 +5.5% 후 약세 — 단발성 가능. CLARITY Act 7/4 표결까지 단기 횡보 베이스 형성 가능.</div>
+      <div class="news-sources">📰
+        <a href="https://www.coingecko.com/en/coins/bitcoin" target="_blank" rel="noopener">CoinGecko</a> ·
+        <a href="https://farside.co.uk/btc/" target="_blank" rel="noopener">Farside Investors</a> ·
+        <a href="https://fortune.com/article/price-of-bitcoin-06-18-2026/" target="_blank" rel="noopener">Fortune BTC 6/18</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============== [6] MARKETS SNAPSHOT ============== -->
+<section id="markets">
+  <div class="sec-head">
+    <span class="sec-num">06</span>
+    <h2 class="sec-title">📈 시장별 스냅샷</h2>
+    <span class="sec-sub">🇺🇸 🇰🇷 ₿</span>
+  </div>
+  <div class="markets">
+
+    <div class="market-card us">
+      <div class="market-head">
+        <span class="market-flag">🇺🇸</span>
+        <span class="market-title">미국 시장</span>
+        <span class="market-time">6/18 (목) NY 마감 — V자 반등 / 6/19 Juneteenth 휴장</span>
+      </div>
+      <table class="mkt-table">
+        <thead><tr><th>지수</th><th>종가</th><th>변동</th></tr></thead>
+        <tbody>
+          <tr><td class="mkt-name">S&amp;P 500</td><td class="mkt-val">7,510.43</td><td class="mkt-chg macro-down">+1.21%</td></tr>
+          <tr><td class="mkt-name">Nasdaq</td><td class="mkt-val">26,620</td><td class="mkt-chg macro-down">+2.3%</td></tr>
+          <tr><td class="mkt-name">Dow</td><td class="mkt-val">51,820</td><td class="mkt-chg macro-down">+327p (+0.63%)</td></tr>
+          <tr><td class="mkt-name">2Y</td><td class="mkt-val">4.18%</td><td class="mkt-chg macro-down">-3bp</td></tr>
+          <tr><td class="mkt-name">10Y</td><td class="mkt-val">4.46%</td><td class="mkt-chg">0bp</td></tr>
+          <tr><td class="mkt-name">DXY</td><td class="mkt-val">99.6</td><td class="mkt-chg macro-down">-0.2%</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-flow">SK하이닉스 HBM4E 12단 출하 소식이 단일 트리거 · NVIDIA +4~5%, AMD +3%, Micron +5%대 칩 섹터 동반 랠리 · 어제 매파 점도표 -1.21% 손실 거의 전부 회복 · 2Y -3bp 매파 가격화 일부 되돌림, DXY 99.6으로 100 라인 후퇴 · <strong>오늘 6/19 美 Juneteenth로 NY 주식·채권·선물 모두 휴장, 6/22(월) 재개</strong></div>
+      <div class="mkt-comment">칩 섹터 견인 V자 반등 — AI 메모리 사이클이 매크로 충격을 흡수, 오늘 6/19 Juneteenth 휴장으로 글로벌 흐름 정지</div>
+    </div>
+
+    <div class="market-card kr">
+      <div class="market-head">
+        <span class="market-flag">🇰🇷</span>
+        <span class="market-title">한국 시장</span>
+        <span class="market-time">6/18 (목) 종가 — KOSPI 9,000 시대 개막</span>
+      </div>
+      <table class="mkt-table">
+        <thead><tr><th>지수/지표</th><th>종가/현재</th><th>변동</th></tr></thead>
+        <tbody>
+          <tr><td class="mkt-name">KOSPI</td><td class="mkt-val">9,063.84</td><td class="mkt-chg macro-down">+2.25% (+199.60p) 사상 첫 9,000 종가</td></tr>
+          <tr><td class="mkt-name">SK하이닉스</td><td class="mkt-val">~2,030,000</td><td class="mkt-chg macro-down">+7%대 신고가 (시총 1,200조 돌파)</td></tr>
+          <tr><td class="mkt-name">삼성전자</td><td class="mkt-val">~92,500</td><td class="mkt-chg macro-down">+5%대 동조</td></tr>
+          <tr><td class="mkt-name">USD/KRW</td><td class="mkt-val">1,530원</td><td class="mkt-chg macro-down">▼ -3원</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-flow">6/18 수급: 외국인 5거래일 연속 매수, 6/12 이후 누적 <strong>+7조원+ 추정</strong>(어제 6/17 누적 +5.83조 → 6/18 단독 +1조+ 추정) · KOSPI 4거래일 +20% 누적 강세 마지막 폭발 · SK하이닉스 4거래일 누적 +14% · 삼성전자 동조 +5%대 동반 신고가 · 두 종목 합산 시총이 KOSPI 48% 이상 차지 — 9,000 돌파 직접 동력</div>
+      <div class="mkt-comment">KOSPI 9,000 시대 개막 — SK하이닉스 HBM4E 12단 출하가 매파 충격을 단숨에 뒤집고 신고가 견인</div>
+    </div>
+
+    <div class="market-card crypto">
+      <div class="market-head">
+        <span class="market-flag">₿</span>
+        <span class="market-title">디지털 자산</span>
+        <span class="market-time">6/19 새벽 — 매크로 회복에도 약보합</span>
+      </div>
+      <table class="mkt-table">
+        <thead><tr><th>자산</th><th>현재가</th><th>변동</th></tr></thead>
+        <tbody>
+          <tr><td class="mkt-name">BTC</td><td class="mkt-val">$64,200</td><td class="mkt-chg macro-up">-1.1% 24h</td></tr>
+          <tr><td class="mkt-name">ETH</td><td class="mkt-val">$1,747</td><td class="mkt-chg macro-up">-0.5%</td></tr>
+          <tr><td class="mkt-name">WTI</td><td class="mkt-val">$75.05</td><td class="mkt-chg macro-down">▼ -0.2% (Iran 6/19 D-DAY 가격화)</td></tr>
+          <tr><td class="mkt-name">금</td><td class="mkt-val">$4,082</td><td class="mkt-chg macro-down">▲ +0.4%</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-flow">ETF: BTC ETF 6/12 회복 이후 <strong>7거래일째 IBIT 주도 순유입 지속</strong> · 그러나 6/19 새벽 BTC -1.1%, ETH -0.5% 약보합 — 어제 칩 랠리 자금이 코인보다 주식으로 우선 회귀 · CLARITY Act 7/4 본회의 표결 통과 확률 75% · Iran-美 평화안 6/19 제네바 D-DAY 서명 임박(JD Vance + Witkoff + Kushner)</div>
+      <div class="mkt-comment">매크로 회복에도 코인은 약보합 — 자금이 코인보다 칩 섹터로 우선 회귀, CLARITY Act 7/4가 다음 모멘텀</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== [7] HEADLINES ============== -->
+<section id="headlines">
+  <div class="sec-head">
+    <span class="sec-num">07</span>
+    <h2 class="sec-title">📰 헤드라인 더보기</h2>
+    <span class="sec-sub">More Headlines · 8 items</span>
+  </div>
+  <div class="filter-bar">
+    <span class="filter-chip">전체 8</span>
+    <span class="filter-chip">🇺🇸 2</span>
+    <span class="filter-chip">🇰🇷 2</span>
+    <span class="filter-chip">💼 1</span>
+    <span class="filter-chip">🌍 1</span>
+    <span class="filter-chip">💰 1</span>
+    <span class="filter-chip">₿ 1</span>
+  </div>
+  <div class="headline-list">
+
+    <div class="h-item">
+      <div class="h-title">🇺🇸 美 Juneteenth 6/19 휴장 — 주식·채권·선물 모두, 6/22(월) 재개</div>
+      <div class="h-desc">NYSE·Nasdaq 모두 종일 휴장. 글로벌 자금 흐름 일시 정지. 주말까지 한국 + 일본(BOJ 6/20) 단독 결정 구간. 다음 큰 미국 데이터는 6/26 PCE 인플레.</div>
+      <div class="h-meta">🕒 6/19 종일 ·
+        <a href="https://www.kiplinger.com/investing/stocks/is-the-stock-market-open-on-juneteenth" target="_blank" rel="noopener">Kiplinger</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇺🇸 NVIDIA·AMD·Micron 동반 +3~5% 칩 랠리 — SK하이닉스 HBM4E 직접 트리거</div>
+      <div class="h-desc">SK 12단 출하 발표가 글로벌 칩 섹터 V자 반등 단일 동력. AI 메모리 사이클이 매파 매크로 충격을 압도하는 패턴 4Q까지 반복 가능성. 8/20 NVIDIA 실적까지 모멘텀 유지.</div>
+      <div class="h-meta">🕒 6/18 NY ·
+        <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/261974697-samsung-skhynix-dram-mu-hbm4e-tradingkey" target="_blank" rel="noopener">TradingKey</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇰🇷 외국인 5거래일 연속 매수 누적 +7조원+ 추정 — 신정부 자금 본격화</div>
+      <div class="h-desc">신정부 + AI 메모리 슈퍼사이클 + 코리아 디스카운트 해소 3중 호재. 6/12 +1.5조, 6/17 +1.5조, 6/18 +1조+ 누적. KOSPI 9,000 돌파 직접 동력.</div>
+      <div class="h-meta">🕒 6/18 KRX ·
+        <a href="https://www.koreatimes.co.kr/economy/20260618/kospi-crosses-over-historic-milestone-of-9000-on-chip-rally" target="_blank" rel="noopener">Korea Times</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇰🇷 삼성전자 6/18 +5%대 동조 신고가 92,500원대 — KOSPI 9,000 직접 동력</div>
+      <div class="h-desc">SK하이닉스 HBM4E 효과의 동조 반등 + Samsung 5/29 자체 HBM4E 첫 출하 모멘텀 재부각. 두 종목 합산 시총이 KOSPI 48% 이상 차지로 9,000 돌파 직접 동력.</div>
+      <div class="h-meta">🕒 6/18 KRX ·
+        <a href="https://www.thestar.com.my/business/business-news/2026/06/18/south-korea039s-kospi-index-tops-9000-as-chipmakers-hit-records" target="_blank" rel="noopener">The Star</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🌍 Iran-美 평화안 6/19 제네바 D-DAY 공식 서명 — 호르무즈 즉시 재개</div>
+      <div class="h-desc">JD Vance 부통령 + Witkoff 특사 + Kushner 참석. 호르무즈 해협 즉시 재개통 + Iran 석유 제재 즉시 해제 + 60일 핵 협상. WTI $70 시도 가능, 6~7월 CPI 헤드라인 -0.2~0.3%p 자동 둔화.</div>
+      <div class="h-meta">🕒 6/19 (금) 제네바 ·
+        <a href="https://www.mitrade.com/au/insights/news/live-news/article-2-1816694-20260617" target="_blank" rel="noopener">Mitrade</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">💰 서울 아파트 매매 +0.11% WoW(KB부동산 6월 4주) — 둔화는 했지만 평소 2배</div>
+      <div class="h-desc">전주 +0.16% 대비 상승률 둔화. 평소 +0.05% 대비 여전히 2배 페이스. 강남구 +0.23%, 송파구 +0.31%, 동작구 +0.24%. DSR D-12 + 양도세 마감 동시 결제 러시.</div>
+      <div class="h-meta">🕒 6/18 KB부동산 ·
+        <a href="https://data.kbland.kr/" target="_blank" rel="noopener">KB부동산 데이터허브</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">💼 Vera Rubin(NVIDIA 2027 H2 출시 예정) HBM4E 표준 채택 확인 — SK 굳히기</div>
+      <div class="h-desc">SK하이닉스 12단 HBM4E 출하가 차세대 빅사이클 2~3년 핵심 공급자 위치 사전 확보 시그널. NVIDIA 단독 점유 굳히기, Samsung·Micron 후발 경쟁 압력.</div>
+      <div class="h-meta">🕒 6/18 ·
+        <a href="https://www.manilatimes.net/2026/06/18/tmt-newswire/pr-newswire/sk-hynix-ships-samples-of-12-layer-next-gen-hbm4e/2368000" target="_blank" rel="noopener">Manila Times</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">₿ BTC ETF 7거래일 연속 회복 IBIT 주도, 그러나 6/19 새벽 BTC -1.1% 약보합</div>
+      <div class="h-desc">매크로 회복에도 코인보다 칩 섹터로 자금 우선 회귀. CLARITY Act 7/4 표결까지 단기 횡보. $66K 돌파 + ETF 5거래일 +$300M 동시 확인 시 추세 진입 시그널.</div>
+      <div class="h-meta">🕒 6/19 새벽 ·
+        <a href="https://farside.co.uk/btc/" target="_blank" rel="noopener">Farside</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== [8] REAL ESTATE ============== -->
+<section id="realestate">
+  <div class="sec-head">
+    <span class="sec-num">08</span>
+    <h2 class="sec-title">🏠 부동산·생활경제</h2>
+    <span class="sec-sub">Real Estate · Living</span>
+  </div>
+  <div class="re-snapshot">
+    <strong>[부동산 한눈에]</strong><br>
+    서울 아파트 매매: <strong>+0.11% WoW</strong> (KB부동산 6월 4주) — 전주 +0.16% 대비 상승률 둔화, 그러나 평소 +0.05% 대비 여전히 2배 페이스<br>
+    강남구 <strong>+0.23%</strong>, 송파구 <strong>+0.31%</strong>, 동작구 <strong>+0.24%</strong>(상위 3구) · 강남 3구 호가 +0.45% 누적<br>
+    평균 평형(84㎡) 매매가 약 <strong>7.32~7.35억</strong> — 사상 최고 갱신 흐름 지속<br>
+    거래량 평소 대비 <strong>+60~80%</strong> 유지, 매도호가 6/16~18 추가 +0.3% 누적<br>
+    DSR 3단계 <strong>D-12</strong> + 양도세 중과 만료 <strong>D-12</strong> 동시 결제 마감 압력
+  </div>
+  <div class="re-grid">
+
+    <div class="re-card">
+      <div class="re-title">1️⃣ DSR 3단계 D-12 — 다음 주(6/22~30) 결제 골든타임의 진짜 마지막 한 주</div>
+      <div class="re-body">
+        <p>7/1 DSR 3단계 시행까지 <strong>D-12</strong>. 다음 주가 결제 골든타임의 마지막 한 주. 매도호가 6/16~18 사이 +0.3% 누적 추가 상승. 강남 3구 호가 +0.45% WoW 가속. 매수인은 7월부터 한 단계 작은 매물만 가능해지므로 6/30 결제로 서두름.</p>
+        <p>연봉 1억원 차주 기준 DSR 3단계 적용 시 대출 한도 <strong>약 4,800만원 감소</strong>. 7월부터는 같은 조건이 같은 매물 못 살 만큼 줄어듦. <strong>6/22~6/30이 마지막 진짜 골든타임</strong> — 그 후 7월은 한도 축소된 시장.</p>
+      </div>
+      <div class="re-sources">📰
+        <a href="https://www.tossbank.com/articles/stressdsr3" target="_blank" rel="noopener">토스뱅크</a> ·
+        <a href="https://www.banksalad.com/articles/%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%8A%A4-DSR-%EA%B7%9C%EC%A0%9C-%EC%A0%84%EC%84%B8%EB%8C%80%EC%B6%9C-%EB%8B%A8%EA%B3%84" target="_blank" rel="noopener">뱅크샐러드</a>
+      </div>
+    </div>
+
+    <div class="re-card">
+      <div class="re-title">2️⃣ 환율 1,530원 -3원 반전 — KOSPI 9,000 + 외국인 매수가 KRW 단기 강세 전환</div>
+      <div class="re-body">
+        <p>USD/KRW 어제 -3원 반전해 <strong>1,530원</strong>까지 후퇴. 어제 +23원(1,533원) 매파 가속 직후 KOSPI 9,000 돌파 + 외국인 5거래일 매수 누적 +7조원+ 자금 유입이 KRW 강세 트리거. 해외 자산 보유자(美 주식·코인)는 단기 원화 환산 평가익 일부 반납, 해외 결제 IT 사업자는 부담 일시 완화.</p>
+        <p>신혼·청년 자산 운용 측면 — 환율이 <strong>1,510원대까지 추가 후퇴하면 신규 해외 자산 진입 좋은 타이밍</strong>. 1,540원+ 재돌파 시 다시 보류. 7/10 한은 금통위가 다음 큰 변수 — 인하 시 KRW 약세, 동결 시 박스.</p>
+      </div>
+      <div class="re-sources">📰
+        <a href="https://www.investing.com/currencies/usd-krw-historical-data" target="_blank" rel="noopener">Investing.com USD/KRW</a> ·
+        <a href="https://tradingeconomics.com/south-korea/currency" target="_blank" rel="noopener">TradingEconomics</a>
+      </div>
+    </div>
+
+    <div class="re-card">
+      <div class="re-title">3️⃣ 7월 1주 분양 5개 단지 — DSR 3단계 적용 첫 시험, 청약 경쟁률 변화 주목</div>
+      <div class="re-body">
+        <p>7월 1주(7/1~7/7) 수도권 분양 5개 단지 확인 — <strong>DSR 3단계 적용 첫 분양</strong>이라 청약 경쟁률 변화가 시장 첫 신호. 평소 두 자릿수 경쟁률이 한 자릿수로 떨어지면 한도 축소 효과 가시화 → 7월 후반 가격 조정 신호. 경쟁률 유지 시 "수요는 단단" 판정으로 가격 추가 상승.</p>
+        <p>7/10 한은 금통위와 동시 모니터링 권장 — 두 시그널 동조 시 시장 방향 명확화. 이재명 정부 두 번째 부동산 패키지(청약 가점제 개편, 무주택 가중치 ↑) 발표도 6월 후반 가능성.</p>
+      </div>
+      <div class="re-sources">📰
+        <a href="https://www.mk.co.kr/news/realestate/" target="_blank" rel="noopener">매일경제 부동산</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== [9] ANALYST VIEW ============== -->
+<section id="analyst">
+  <div class="sec-head">
+    <span class="sec-num">09</span>
+    <h2 class="sec-title">🧠 애널리스트 시각</h2>
+    <span class="sec-sub">Synthesis &amp; Scenarios</span>
+  </div>
+  <div class="analyst-box">
+    <div class="analyst-tag">[종합 분석 — 6/19 KOSPI 9,000 시대 개막 후 첫날 + 美 Juneteenth 휴장]</div>
+    <div class="analyst-body">
+      <p>오늘의 핵심: <strong>"KOSPI 9,000 시대 개막. 매파 점도표 충격은 SK하이닉스 HBM4E 출하 한 방으로 24시간 만에 반전. AI 메모리 사이클이 매크로 충격을 압도하는 패턴 4Q까지 반복 가능"</strong>. ①<strong>KOSPI 어제 9,063.84 +2.25%(+199.60p) 사상 첫 9,000 종가 돌파</strong> + SK하이닉스 +7%대 신고가 + 삼성전자 +5%대 + 외국인 5거래일 누적 +7조원+ 추정. ②<strong>美 V자 반등</strong>: S&amp;P +1.21%, Nasdaq +2.3%, Dow +327p 어제 -1.21% 손실 거의 전부 회복. 2Y -3bp 매파 가격화 일부 되돌림. ③<strong>SK하이닉스 HBM4E 12단 출하</strong>: Samsung 5/29 첫 출하 3주 만 12단 응수, NVIDIA 단독 공급(점유율 58%) 굳히기. ④<strong>Iran-美 평화안 6/19 D-DAY 제네바 서명</strong>: JD Vance + Witkoff + Kushner 참석, 호르무즈 즉시 재개 + WTI $70 시도 가능. ⑤<strong>오늘 6/19 美 Juneteenth 휴장</strong>으로 글로벌 흐름 일시 정지, 한국·일본 단독 결정 구간.</p>
+      <p>오늘 9시 한국 개장의 변수는 다른 차원. <strong>9,000~9,100 박스 안착(메인 55%)</strong> vs <strong>9,100~9,200 추가 강세(상승 30%)</strong> vs <strong>9,000 이탈 차익실현 -1~1.5%(리스크 15%)</strong>. 4거래일 +20% 누적 후 첫 차익실현 일부 출현 가능 — 그러나 외국인 매수 모멘텀과 SK하이닉스 HBM4E 모멘텀이 충분히 클 가능성. 6/25 Micron 실적 D-6이 다음 큰 분수령 — HBM 매출 ~$7.1B 상회 시 SK 추가 +5~10% &amp; KOSPI 9,200 시도. 환율 1,510원대까지 추가 후퇴 시 IT/게임 결제 부담 일시 완화. <strong>다음 주 6/22~30 부동산 결제 골든타임 + Micron 6/25 + 7/1 DSR 3단계 + 7/4 CLARITY Act + 7/10 한은 금통위까지 이벤트 연쇄 시즌</strong>.</p>
+    </div>
+  </div>
+  <div class="scenarios">
+    <div class="sc-card main">
+      <div class="sc-prob">메인 시나리오 · 55%</div>
+      <div class="sc-title">9,000~9,100 박스 안착</div>
+      <div class="sc-body">KOSPI 9,000 직후 차익실현 일부 출회(-0.5~1.0%) → 외국인 추가 매수가 받쳐 <strong>KOSPI 9,030~9,100 마감</strong>, USD/KRW 1,525~1,532원 박스. SK하이닉스 1,980,000~2,030,000원, BTC $63~65K 횡보. 美 Juneteenth로 글로벌 모멘텀 잔잔, 한국 단독 박스 안정.</div>
+    </div>
+    <div class="sc-card main">
+      <div class="sc-prob">상승 시나리오 · 30%</div>
+      <div class="sc-title">9,100~9,200 추가 강세</div>
+      <div class="sc-body">외국인 5거래일째 +1조원+ 추가 매수 + 삼성전자 동조 강세 + 환율 1,520원대 진입 → <strong>KOSPI 9,100~9,200 마감</strong>. Micron 6/25 D-6 사전 모멘텀 가속. SK하이닉스 2,050,000~2,100,000원 추가 상승. 환율 1,515원 후퇴 가능.</div>
+    </div>
+    <div class="sc-card alt">
+      <div class="sc-prob">리스크 시나리오 · 15%</div>
+      <div class="sc-title">9,000 이탈 차익실현 -1~1.5%(8,930~8,970)</div>
+      <div class="sc-body">4거래일 +20% 누적 후 차익실현 본격화 + 외국인 일부 출회(-0.5조+) + 美 Juneteenth 휴장으로 모멘텀 부재 → <strong>KOSPI 8,930~8,970 마감</strong>. SK하이닉스 1,930,000~1,970,000원 일부 반납. 다음 주 6/22 NY 재개까지 추가 변동 위험.</div>
+    </div>
+  </div>
+  <div class="action-box">
+    <div class="action-title">IT/게임 사업자 실용 액션</div>
+    <ul class="action-list">
+      <li>환율 1,530원 -3원 KRW 단기 강세 — <strong>헤지 비중 70~80%로 일부 하향 가능</strong>(1,510원대 추가 후퇴 시 추가 매도)</li>
+      <li>KOSPI 9,000 지지 시 박스 안정, 9,030~9,100 분할 매수 — 추격 매수는 9,200 돌파 이후</li>
+      <li>SK하이닉스 1,950,000~2,000,000원 분할 매수, Micron 6/25 D-6 결과 전 추격 자제</li>
+      <li>K-게임(크래프톤·시프트업·엔씨·카카오게임즈) — KOSPI 9,000 안착 시 낙수효과 시작점 가능성. 이재명 정부 두 번째 패키지 K-게임 지원 6월 후반 발표 변수</li>
+      <li>WTI $75 안착 + Iran 6/19 서명 — 정유주 단기 부담 지속, 항공주 단기 호재, K-방산 -3~5% 조정 가능 → 분할 매수 기회</li>
+      <li>부동산 진입 검토 중이면 <strong>다음 주 6/22~30이 진짜 마지막 한도 확보 기회</strong> — DSR 3단계 적용 전 결제 골든타임</li>
+      <li>BTC $64,200 약보합 — $66K 돌파 + ETF 5거래일 +$300M 동시 확인 시 추세 진입 시그널</li>
+      <li><strong>6/19 美 Juneteenth 휴장 — 글로벌 모멘텀 일시 정지, 한국 단독 박스 안정 예상. 6/22(월) NY 재개 후 첫 반응이 다음 모멘텀</strong></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============== [10] CALENDAR ============== -->
+<section id="calendar">
+  <div class="sec-head">
+    <span class="sec-num">10</span>
+    <h2 class="sec-title">📅 이번 주~다음 달 꼭 봐야 할 일정</h2>
+    <span class="sec-sub">Key Events · 6/19 - 7/30</span>
+  </div>
+  <div class="cal-grid">
+
+    <div class="cal-item warn">
+      <div class="cal-date">6/19 (금) D-DAY</div>
+      <div>
+        <div class="cal-event">Iran-美 평화안 제네바 공식 서명 — 호르무즈 즉시 재개통 ⚠️</div>
+        <div class="cal-desc">JD Vance 부통령 + Witkoff + Kushner 참석. 호르무즈 해협 즉시 재개통 + Iran 석유 제재 즉시 해제 + 60일 핵 협상. WTI $70 시도 가능, 6~7월 CPI 헤드라인 -0.2~0.3%p 자동 둔화.</div>
+      </div>
+    </div>
+
+    <div class="cal-item info">
+      <div class="cal-date">6/19 (금)</div>
+      <div>
+        <div class="cal-event">美 Juneteenth 휴장 — 주식·채권·선물 모두 닫음</div>
+        <div class="cal-desc">NYSE·Nasdaq 모두 종일 휴장, 6/22(월) 재개. 글로벌 자금 흐름 일시 정지. 한국·일본 단독 결정 구간.</div>
+      </div>
+    </div>
+
+    <div class="cal-item warn">
+      <div class="cal-date">6/20 (금)</div>
+      <div>
+        <div class="cal-event">일본은행(BOJ) 6월 회의 ⚠️</div>
+        <div class="cal-desc">추가 인상 시그널 가능성. JPY 강세 시 KRW 동조 + 아시아 자금 흐름 변수. 美 Juneteenth로 글로벌 흐름 잔잔한 가운데 BOJ 시그널이 단일 주목.</div>
+      </div>
+    </div>
+
+    <div class="cal-item warn">
+      <div class="cal-date">6/25 (목) D-6</div>
+      <div>
+        <div class="cal-event">Micron Technology 분기 실적 — 메모리 사이클 분기점 ⚠️</div>
+        <div class="cal-desc">HBM 컨센 분기 ~$7.1B. 상회 시 SK하이닉스 +5~10% &amp; KOSPI 9,200 시도, 하회 시 -10% &amp; KOSPI 8,700~8,800 조정. SK HBM4E 출하 후 첫 외부 검증 신호.</div>
+      </div>
+    </div>
+
+    <div class="cal-item info">
+      <div class="cal-date">6/26 (금) D-7</div>
+      <div>
+        <div class="cal-event">美 5월 PCE 인플레</div>
+        <div class="cal-desc">6/17 FOMC 매파 점도표 후 첫 인플레 신호. 코어 PCE 상회 시 매파 강화, 부합 시 점도표 충격 일부 해소. WTI $75 효과는 7월 PCE부터 본격 반영.</div>
+      </div>
+    </div>
+
+    <div class="cal-item warn">
+      <div class="cal-date">7/1 (D-12)</div>
+      <div>
+        <div class="cal-event">스트레스 DSR 3단계 시행 + 양도세 중과 만료 ⚠️</div>
+        <div class="cal-desc">신용대출+카드론 합산 한도 축소 + 양도세 절감 마감. 6/22~6/30 결제 러시 골든타임 마감 + 7월 후반 가격 조정 첫 시험.</div>
+      </div>
+    </div>
+
+    <div class="cal-item info">
+      <div class="cal-date">7/4 (D-15)</div>
+      <div>
+        <div class="cal-event">CLARITY Act 본회의 표결</div>
+        <div class="cal-desc">통과 확률 75%. 스테이블코인 제도화 + BTC ETF 자금 흐름 본격 회복 시그널 가능. BTC $66K 돌파 + ETF +$300M 동시 확인 시 추세 진입.</div>
+      </div>
+    </div>
+
+    <div class="cal-item warn">
+      <div class="cal-date">7/10 (목) D-21</div>
+      <div>
+        <div class="cal-event">한국은행 7월 금통위 신정부 첫 정책 결정 ⚠️</div>
+        <div class="cal-desc">5/28 8연속 동결 후 첫 결정. 美 FOMC 매파 직후라 한은 신중 가능성 ↑. 인하 시 KOSPI +3~5% 동력, 동결 시 박스 유지.</div>
+      </div>
+    </div>
+
+    <div class="cal-item info">
+      <div class="cal-date">7/30 (수) D-41</div>
+      <div>
+        <div class="cal-event">FOMC 7월 회의 — 6/17 매파 점도표 후속</div>
+        <div class="cal-desc">9명 인상 표시한 위원들이 실제 인상 가는지 변수. 7월 PCE + 고용 데이터 확인 후 톤 변경 가능성. 매파 추가 강화 시 KOSPI 추가 -3% 위험.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ 본 브리핑은 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단의 책임은 본인에게 있습니다. 인용된 수치·뉴스는 발행 시점 기준이며, 시장 상황은 빠르게 변할 수 있어요. 미국 시장 데이터는 6/18 (목) NY 마감 기준 매파 충격 24시간 만 V자 반등(S&amp;P 500 7,510.43 +1.21%, Nasdaq 26,620 +2.3%, Dow 51,820 +327p +0.63%, 2Y 4.18% -3bp, 10Y 4.46% 횡보, DXY 99.6 -0.2%, VIX 17.8 -1.7p) · 칩 섹터 단일 견인(NVIDIA +4~5%, AMD +3%, Micron +5%대) · <strong>오늘 6/19 美 Juneteenth로 NYSE·Nasdaq 주식·채권·선물 모두 종일 휴장, 6/22(월) 재개</strong> · 한국 시장은 6/18 (목) 종가 기준 KOSPI 9,063.84 +2.25% +199.60p 사상 첫 9,000 종가 돌파, SK하이닉스 ~2,030,000원 +7%대 신고가 시총 1,200조 돌파, 삼성전자 ~92,500원 +5%대 동조 · 외국인 6/12 이후 5거래일 연속 매수 누적 +7조원+ 추정 · 환율 USD/KRW 1,530원 -3원 KRW 단기 강세 반전(매파 가격화 일부 해소) · 코인은 6/19 새벽(BTC $64,200 -1.1% 24h 약보합, ETH $1,747 -0.5% 동조 약세) — 매크로 회복에도 자금이 코인보다 칩 섹터로 우선 회귀 · 금 $4,082 +0.4% · WTI $75.05 -0.2% Iran 6/19 D-DAY 가격화 · BTC ETF 6/12 이후 7거래일째 IBIT 주도 순유입 지속 · SK하이닉스 HBM4E 12단 적층 핀당 16Gbps(HBM3E 대비 +67%) 전력 -20% 열저항 +17% 개선 — Samsung 5/29 첫 출하 3주 만 12단 응수, NVIDIA 단독 공급 점유율 58% 굳히기, Vera Rubin 2027 H2 출시 표준 채택 · Iran-美 평화안 6/19(금) 제네바 공식 서명(JD Vance + Witkoff + Kushner 참석) 호르무즈 즉시 재개 + 60일 핵 협상 · 한국 부동산: 서울 아파트 매매 +0.11% WoW 전주 +0.16% 대비 둔화(평소 +0.05% 대비 2배 페이스), 강남구 +0.23%, 송파구 +0.31%, 동작구 +0.24%, 거래량 평소 대비 +60~80% 유지 · D-DAY 6/19 Iran 서명 + 美 Juneteenth · D-1 6/20 BOJ · D-6 6/25 Micron · D-7 6/26 美 5월 PCE · D-12 7/1 DSR 3단계 + 양도세 중과 만료 · D-15 7/4 CLARITY Act · D-21 7/10 한은 7월 금통위 · D-41 7/30 FOMC 7월 회의(매파 후속). 출처 링크는 새 탭으로 열립니다.
+  </div>
+
+</section>
+
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    if (!themeToggle) return;
+
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+  });
+</script>
+
+</body>
+</html>

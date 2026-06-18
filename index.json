@@ -7,12 +7,115 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 178,
+    "total_issues": 179,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-06-18",
+  "latest": "2026-06-19",
   "briefings": [
+    {
+      "date": "2026-06-19",
+      "weekday": "금",
+      "vol": 179,
+      "theme": "KOSPI 9,000 Era Begins — Yesterday 6/18 Closed 9,063.84 +2.25% First-Ever Close Above 9,000 + SK Hynix HBM4E 12-Layer Samples Shipped + US V-Shaped Recovery from Hawkish FOMC Shock (S&P +1.21%, Nasdaq +2.3%, Dow +327p) + Today 6/19 US Juneteenth Holiday Closed + Iran-US Peace MoU Geneva D-DAY Signing",
+      "tagline": "새 챕터예요. 어제 6/18(목) KOSPI가 사상 처음 종가 기준 9,000선을 돌파 — 9,063.84 +2.25%(+199.60p). 새벽 FOMC 매파 충격 갭다운 우려를 완전히 뒤집은 결과. 단일 트리거는 SK하이닉스 HBM4E 12단 적층 샘플을 주요 AI 고객사에 출하 발표 — HBM3E 대비 처리 속도 +67%, 전력 -20%, 열저항 +17% 개선. Samsung 5/29 첫 출하 3주 만 12단으로 응수해 NVIDIA 단독 공급(점유율 58%) 굳히기. SK하이닉스 +7%대 시총 1,200조 돌파, 삼성전자 +5%대 동조. 미국도 V자 반등 — S&P 7,510.43 +1.21%, Nasdaq +2.3%, Dow +327p로 어제 매파 -1.21% 손실 거의 전부 회복. 2Y -3bp(어제 +16bp 일부 되돌림), DXY 99.6으로 100 라인 후퇴. USD/KRW 1,530원 -3원 KRW 단기 강세 반전. 외국인 5거래일 누적 +7조원+ 추정. 오늘 6/19은 美 Juneteenth로 주식·채권·선물 모두 휴장(6/22 재개) — 글로벌 흐름 정지, 한국 단독 결정. Iran-美 평화안 6/19 제네바 D-DAY 공식 서명(JD Vance/Witkoff/Kushner), 호르무즈 즉시 재개 + WTI $70 시도 가능. 코인은 약보합(BTC $64,200 -1.1%) — 매크로 회복에도 자금이 코인보다 칩 섹터로 우선 회귀. 메인 55%: 9,000~9,100 박스 안착. 상승 30%: 9,100~9,200 추가 강세(Micron 6/25 D-6 사전 모멘텀). 리스크 15%: 9,000 이탈 차익실현 -1~1.5%(8,930~8,970).",
+      "tldr_us": "S&P 7,510.43 +1.21%(6/18 목 마감 V자 반등), Nasdaq 26,620 +2.3%, Dow 51,820 +327p(+0.63%). 어제 -1.21% 손실 거의 전부 회복, 칩 섹터 견인(NVDA +4~5%, AMD +3%, MU +5%대). 2Y 4.18% -3bp 매파 가격화 일부 되돌림, 10Y 4.46% 횡보, DXY 99.6 -0.2%, VIX 17.8 -1.7p. 오늘 6/19 美 Juneteenth로 주식·채권·선물 모두 휴장(6/22 재개)",
+      "tldr_kr": "KOSPI 9,063.84 +2.25%(+199.60p) 6/18 사상 첫 9,000 종가 돌파. SK하이닉스 HBM4E 12단 출하 단일 트리거로 +7%대 신고가 시총 1,200조 돌파, 삼성전자 +5%대 동조. 외국인 6/12 이후 5거래일 연속 매수 누적 +7조원+ 추정. USD/KRW 1,530원 -3원 KRW 단기 강세 반전. KOSPI 9,000 시대 개막",
+      "tldr_crypto": "BTC $64,200 -1.1% 24h 약보합, ETH $1,747 -0.5% 동조 약세. 매크로 회복에도 자금이 코인보다 칩 섹터로 우선 회귀. BTC ETF 7거래일째 IBIT 주도 순유입 지속. CLARITY Act 7/4 본회의 표결 통과 확률 75%가 다음 모멘텀. Iran-美 평화안 6/19 제네바 D-DAY 서명 + WTI $75.05 안착",
+      "us_change": "+1.21",
+      "kr_change": "+2.25",
+      "crypto_change": "-1.10",
+      "tags": [
+        "bull",
+        "event"
+      ],
+      "html_path": "2026-06-19-morning.html",
+      "md_path": "2026-06-19-morning.md",
+      "created_at": "2026-06-19T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.46% (0bp, 칩 랠리에도 금리 안정 횡보)",
+        "dxy": "99.6 (-0.2%, 매파 베팅 일부 해소, 100 라인 후퇴)",
+        "wti": "$75.05 (-0.2%, Iran 6/19 D-DAY 서명 가격화, $75 안착)",
+        "gold": "$4,082 (+0.4%, 매파 충격 반등 후 안정)",
+        "usdkrw": "1,530원 (-3원, KOSPI 9,000 + 외국인 매수가 KRW 일부 강세)",
+        "vix": "17.8 (-1.7p, 매파 통과 + 칩 랠리로 정상화)"
+      },
+      "telegram_top3": [
+        {
+          "title": "KOSPI 어제 9,063.84 +2.25% — 사상 첫 9,000 종가 돌파",
+          "body": "매파 충격 갭다운 우려를 완전 뒤집은 결과. SK하이닉스 HBM4E 12단 출하 단일 트리거로 +7%대 신고가 시총 1,200조 돌파, 삼성전자 +5%대 동조. 외국인 5거래일 누적 +7조원+ 추정. USD/KRW 1,530원 -3원 KRW 강세 반전. 메인 55%: 9,000~9,100 박스 안착."
+        },
+        {
+          "title": "SK하이닉스 HBM4E 12단 출하 — NVIDIA 단독 공급 굳히기",
+          "body": "Samsung 5/29 첫 출하 3주 만에 12단 적층 버전으로 응수. HBM3E 대비 처리 속도 +67%(16Gbps), 전력 -20%, 열저항 +17%. SK 글로벌 점유율 58%, NVIDIA Vera Rubin(2027 H2) 표준 채택 확인. 美 칩 섹터 V자 반등 직접 트리거(NVDA +4~5%, AMD +3%, MU +5%대)."
+        },
+        {
+          "title": "오늘 6/19 美 Juneteenth 휴장 + Iran 평화안 제네바 D-DAY 서명",
+          "body": "NYSE·Nasdaq·채권·선물 모두 종일 휴장, 6/22(월) 재개. Iran-美 평화안 6/19 제네바 공식 서명(JD Vance + Witkoff + Kushner 참석), 호르무즈 해협 즉시 재개 + Iran 석유 제재 즉시 해제 + 60일 핵 협상. WTI $70 시도 가능."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "6/19 (금) D-DAY",
+          "event": "Iran-美 평화안 제네바 공식 서명 — 호르무즈 즉시 재개통",
+          "importance": "warning",
+          "consensus": "JD Vance + Witkoff + Kushner 참석, WTI $70 시도 가능"
+        },
+        {
+          "date": "6/19 (금)",
+          "event": "美 Juneteenth 휴장 — 주식·채권·선물 모두 닫음, 6/22(월) 재개",
+          "importance": "info"
+        },
+        {
+          "date": "6/20 (금)",
+          "event": "일본은행(BOJ) 6월 회의 — 추가 인상 시그널 가능성",
+          "importance": "warning"
+        },
+        {
+          "date": "6/25 (목) D-6",
+          "event": "Micron Technology 분기 실적 — 메모리 사이클 분기점",
+          "importance": "warning",
+          "consensus": "HBM 매출 분기 ~$7.1B, 상회 시 SK +5~10% KOSPI 9,200 시도"
+        },
+        {
+          "date": "6/26 (금) D-7",
+          "event": "美 5월 PCE 인플레 — FOMC 매파 점도표 후 첫 인플레 신호",
+          "importance": "info"
+        },
+        {
+          "date": "7/1 (D-12)",
+          "event": "스트레스 DSR 3단계 시행 + 양도세 중과 만료",
+          "importance": "warning"
+        },
+        {
+          "date": "7/4 (D-15)",
+          "event": "CLARITY Act 본회의 표결 — 통과 확률 75%",
+          "importance": "info"
+        },
+        {
+          "date": "7/10 (목) D-21",
+          "event": "한국은행 7월 금통위 신정부 첫 정책 결정",
+          "importance": "warning"
+        },
+        {
+          "date": "7/30 (수) D-41",
+          "event": "FOMC 7월 회의 — 6/17 매파 점도표 후속",
+          "importance": "info"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "9,000~9,100 박스 안착",
+          "description": "KOSPI 9,000 직후 차익실현 일부 출회(-0.5~1.0%) → 외국인 추가 매수 받쳐 9,030~9,100 마감, USD/KRW 1,525~1,532원, SK하이닉스 1,980,000~2,030,000원, BTC $63~65K 횡보"
+        },
+        "risk": {
+          "probability": 45,
+          "title": "9,000 이탈 차익실현 -1~1.5%(8,930~8,970) 또는 9,100~9,200 추가 강세",
+          "description": "리스크 15%: 4거래일 +20% 누적 차익실현 + 美 휴장 모멘텀 부재로 KOSPI 8,930~8,970 / 상승 30%: 외국인 추가 매수 + 환율 1,520원대로 KOSPI 9,100~9,200 마감"
+        }
+      }
+    },
     {
       "date": "2026-06-18",
       "weekday": "목",
