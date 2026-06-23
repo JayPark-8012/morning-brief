@@ -7,12 +7,100 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 182,
+    "total_issues": 183,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-06-23",
+  "latest": "2026-06-24",
   "briefings": [
+    {
+      "date": "2026-06-24",
+      "weekday": "수",
+      "vol": 183,
+      "theme": "Black Tuesday — KOSPI -9.99% Crash 8,203.84 (1st-stage Circuit Breaker + Side Car) — SK Hynix -12.47% (HBM4 Expansion Slowdown Report) / Samsung -12.31% / Kioxia -15% / Foreigners -4.12T + Institutions -4.55T (~8.7T Combined Sell-Off) + US Follow-Through Selling (S&P -1.44% / Nasdaq -2.21% / VIX 19.67 +13.78%) + BofA's Hawkish Outlook (Fed 25bp×3 Hikes Sep/Oct/Dec) + Micron D-DAY Tonight",
+      "tagline": "하루 사이에 분위기가 완전히 뒤집혔어요. 어제 6/23(화) KOSPI -9.99%(-910.71p) 폭락해 8,203.84로 마감, 올해 4번째 1단계 서킷브레이커(20분 매매 중단)와 매도 사이드카가 동시 발동. 정확히 -10%면 2단계 자동 발동인데 종이 한 장 차이로 회피. 트리거는 ①SK하이닉스 HBM4 확장 속도 늦추고 conventional DRAM 비중 늘림 보도(시장은 AI 메모리 슈퍼사이클 정점 신호로 해석) ②BofA 매파 보고서(Fed 9월·10월·12월 25bp×3 인상으로 4.25~4.50% 도달 전망). SK하이닉스 -12.47%, 삼성전자 -12.31%, Kioxia -15%. 외국인 -4.12조 + 기관 -4.55조 약 8.7조 동반 매도. 美 NY 후속 약세 — S&P 7,365 -1.44%, Nasdaq 25,588 -2.21%, Dow -0.09%(방어주). VIX 19.67 +13.78% 5월 이후 처음 18 위. DXY 101.38 1년 최고. 10Y 4.48% 약보합(안전자산 선호). WTI $73.78 -0.1% 3월 이후 최저 부근(美 Iran 60일 라이선스 8/21까지). USD/KRW 1,540원 KRW 약세 유지. BTC $62,256 -2.7%, ETH $1,654 -4.2% 매크로 동조. 오늘 밤 美 마감 후 Micron 분기 실적(한국 시간 6/25 새벽 6시)이 회복 vs 추가 폭락 분기점. 메인 50%: 8,150~8,350 박스 + Micron 호조 시 V자. 리스크 35%: Micron 부진 → 8,000 이탈 추가 -3~5%. 상승 15%: Micron 대폭 상회 → 8,500~8,700 V자.",
+      "tldr_us": "6/23(화) NY 마감 — S&P 7,365.27 -1.44%, Nasdaq 25,588.32 -2.21%, Dow -0.09%(방어주 분산). VIX 19.67 +13.78% 5월 이후 처음 18 위. 10Y 4.48% 약보합(안전자산 선호). DXY 101.38 1년 최고. BofA 매파 시각(Fed 25bp×3 인상). 칩 섹터(NVDA·AMD·MU) 동반 약세. 오늘 밤 Micron 실적이 본 게임",
+      "tldr_kr": "🚨 검은 화요일 — KOSPI 8,203.84 -9.99%(-910.71p, 4번째 서킷브레이커 + 사이드카 동시). SK하이닉스 -12.47%(HBM4 확장 늦춤 보도), 삼성전자 -12.31% 동반 폭락. 외국인 -4.12조 + 기관 -4.55조 약 8.7조 동반 매도. USD/KRW 1,540원 KRW 약세 유지. Micron 6/24 결과가 회복 vs 추락 분기점",
+      "tldr_crypto": "BTC $62,256 -2.7%, ETH $1,654 -4.2% 매크로 동조 약세. 한국 -9.99% 충격 + 美 AI 트레이드 식기 + BofA 매파 동조. 6월 ETF 누적 -$4.21B 유출 지속. WTI $73.78 -0.1% Iran 60일 라이선스 8/21까지. PCE D-2(6/26) + CLARITY Act D-10(7/4) 양대 변수",
+      "us_change": "-1.44",
+      "kr_change": "-9.99",
+      "crypto_change": "-2.70",
+      "tags": [
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-06-24-morning.html",
+      "md_path": "2026-06-24-morning.md",
+      "created_at": "2026-06-24T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.48% (약보합, 안전자산 선호)",
+        "dxy": "101.38 (+0.36%, 2025년 5월 이후 최고)",
+        "wti": "$73.78 (-0.1%, 3월 이후 최저 부근 안착 — Iran 60일 라이선스 8/21까지)",
+        "gold": "$4,150 부근 (약세 지속, 달러 강세)",
+        "usdkrw": "1,540원 (+0.12%, KRW 약세 유지)",
+        "vix": "19.67 (+13.78%, +2.39p — 5월 이후 처음 18 위)"
+      },
+      "telegram_top3": [
+        {
+          "title": "🚨 검은 화요일 — KOSPI -9.99% 서킷브레이커",
+          "body": "어제 KOSPI 8,203.84 -9.99%(-910.71p) 폭락. 올해 4번째 1단계 서킷브레이커(20분 매매 중단) + 매도 사이드카 동시. SK하이닉스 -12.47%(HBM4 확장 속도 늦춤 보도), 삼성전자 -12.31%, Kioxia -15%. 외국인 -4.12조 + 기관 -4.55조 약 8.7조 동반 매도. 단 하루 전 시총 1위 등극의 환호가 공포로."
+        },
+        {
+          "title": "Micron 오늘 밤 D-DAY — 회복 vs 추가 폭락 분기점",
+          "body": "한국 시간 6/25(목) 새벽 6시 발표. HBM 매출 컨센 $7.1B+, EPS $19.95, 매출 $34.66B, 마진 81%. 옵션 IV 17%. 호조+가이던스 견조 시 SK하이닉스 +5~10% & KOSPI 8,300~8,500 V자, 부진 시 8,000 이탈 추가 -3~5% 위험."
+        },
+        {
+          "title": "BofA \"Fed 25bp×3 인상\" 매파 시각 — 동결·인하 한 번에 뒤집힘",
+          "body": "Bank of America 새 기본 전망 — 2026년 9월·10월·12월 각 25bp 총 75bp 인상으로 4.25~4.50% 도달. 케빈 워시 신임 의장 매파 + 점도표 9명 인상 + sticky 인플레 근거. 시장 가격(연내 42bp)의 약 2배 격차. DXY 101.38 1년 최고."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "6/24 (수) D-DAY",
+          "event": "Micron 분기 실적 — 검은 화요일 회복 분기점 (한국 6/25 새벽 6시)",
+          "importance": "warning",
+          "consensus": "HBM 매출 분기 ~$7.1B+, EPS $19.95, 매출 $34.66B, 마진 81%"
+        },
+        {
+          "date": "6/26 (금) D-2",
+          "event": "美 5월 PCE 인플레 — BofA 매파 후 첫 인플레 신호",
+          "importance": "warning",
+          "consensus": "코어 PCE +0.2% MoM, Q2 GDP 최종치"
+        },
+        {
+          "date": "7/1 (수) D-7",
+          "event": "스트레스 DSR 3단계 시행 + 양도세 중과 만료",
+          "importance": "warning"
+        },
+        {
+          "date": "7/4 (금) D-10",
+          "event": "CLARITY Act 본회의 표결 — 통과 확률 50~75%",
+          "importance": "info"
+        },
+        {
+          "date": "7/10 (목) D-16",
+          "event": "한은 7월 금통위 — 신정부 첫 정책 결정 (동결 + 매파 톤 유력)",
+          "importance": "warning"
+        },
+        {
+          "date": "7/30 (수) D-36",
+          "event": "FOMC 7월 회의 — BofA 매파 시각 첫 시험",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 50,
+          "title": "8,150~8,350 박스 + Micron 호조 V자",
+          "description": "Micron 컨센 부합 + 가이던스 견조 → SK +5~7% 일부 회복, KOSPI 8,300~8,500 1차 V자 시도. USD/KRW 1,535~1,545원, BTC $62~64K"
+        },
+        "risk": {
+          "probability": 50,
+          "title": "리스크 35% (Micron 부진 → 8,000 이탈 추가 -3~5%) vs 상승 15% (Micron 대폭 상회 → 8,500~8,700 V자)",
+          "description": "리스크: 컨센 하회/보수 가이던스 → SK 추가 -5~10%, KOSPI 7,800~7,950, USD/KRW 1,550원+, BTC $58~60K / 상승: EPS $20+ + 2027 capex 상향 → SK +10%+, KOSPI 8,500~8,700"
+        }
+      }
+    },
     {
       "date": "2026-06-23",
       "weekday": "화",
