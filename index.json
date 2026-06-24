@@ -7,12 +7,99 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 183,
+    "total_issues": 184,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-06-24",
+  "latest": "2026-06-25",
   "briefings": [
+    {
+      "date": "2026-06-25",
+      "weekday": "목",
+      "vol": 184,
+      "theme": "Micron Blowout — Q3 Revenue $41.46B (+346% YoY, Consensus +16.5% Beat) / EPS $25.11 (Consensus +21.9% Beat) / Margin 84.9% / Q4 Guidance $50B ± $1B (Consensus $42.9B +16.5% Surge) Margin ~86% / HBM Sold-Out Through 2026 / After-Hours +12% (Peak +16%) — SK Hynix $29B Nasdaq ADR July 10 Filing After-Hours +5.5% — KOSPI 8,471 +3.26% V-Shape Recovery (Samsung +9.11%) — Black Tuesday Reversed in 24 Hours",
+      "tagline": "단 하루 만에 분위기가 또 한 번 뒤집혔어요. 한국 시간 오늘 새벽 6시 발표 Micron Q3 실적이 컨센서스를 모든 항목에서 대폭 상회 — 매출 $41.46B(컨센 $35.59B, +16.5% 초과, YoY +346%), 조정 EPS $25.11(컨센 $20.60, +21.9% 초과), 마진 84.9%. 결정적으로 Q4 가이던스가 매출 $50B ± $1B(컨센 $42.9B 대비 +16.5% 초과), 마진 ~86%로 사상 최고 — HBM 2026 완판이 숫자로 증명. Micron 시간외 +12%(장중 +16% 도달). 동시에 SK하이닉스가 어제 6/24 한국 마감 후 $29B(45조원) 나스닥 ADR 신청서 제출(7/10 상장 목표, 주당 255,500원, HBM 캐파 확장 자금) → 시간외 +5.5%. 6/24 KOSPI는 8,471 +3.26%(+267p) V자 회복(장중 8,577 고점, 8,087 일시 저점), 삼성전자 +9.11% 견인, SK하이닉스 +2.74%(장중 +9% 후 진정). 美 NY 마감은 발표 전 패닉 — S&P 7,260 -1.4%, Nasdaq 24,733 -3.3%(MU -13.2%, NVDA -4.2%, AMD -5.8%, Qualcomm -8%, Sandisk -11.2%). 10Y 4.41% -7bp(유가 약세 + 안전 선호), WTI ~$73 pre-war 수준, VIX 19.49. USD/KRW 1,547.52원 +0.96% KRW 추가 약세 1,550원 근접. BTC $59,600 -4.35% YTD 신저($59,018 일중) ETH $1,671 — 칩 V자 반전과 디커플(매크로 단독 영향). 오늘 KOSPI는 Micron 효과 + SK ADR 호재 + 환율 매파 부담 3중 동력으로 강한 갭상 + 변동성 동시 예상. 메인 50%: 8,700~8,900 강한 갭상 + 외국인 매수 전환. 상승 30%: 8,900~9,100 추세 회복 + 9,114 도전. 리스크 20%: 갭상 후 차익 실현 8,500 후퇴.",
+      "tldr_us": "6/24(수) NY 마감 — S&P 7,260 -1.4%, Nasdaq 24,733 -3.3% Micron 발표 전 패닉 매도(MU -13.2%, NVDA -4.2%, AMD -5.8%, Qualcomm -8%, Sandisk -11.2%). 결과는 정반대 — Micron 시간외 +12%(장중 +16%)로 즉시 반전. Q3 매출 $41.46B / EPS $25.11 / 마진 84.9% / Q4 가이던스 $50B 컨센 모두 대폭 상회. 10Y 4.41% -7bp, VIX 19.49",
+      "tldr_kr": "KOSPI 8,471 +3.26%(+267p) V자 회복(장중 8,577 고점). 삼성전자 +9.11% 견인, SK하이닉스 +2.74%(장중 +9% 후). SK하이닉스 시간외 +5.5% — $29B(45조원) 나스닥 ADR 7/10 상장 신청서 한국 마감 후 제출. USD/KRW 1,547원 +0.96% KRW 추가 약세 1,550원 근접. 오늘 Micron 효과 + ADR 호재로 강한 갭상 예상",
+      "tldr_crypto": "BTC $59,600 -4.35% YTD 신저($59,018 일중) + 대규모 청산. ETH $1,671 약보합. Micron V자 효과가 코인까지 전이 안 됨 — 매크로(BofA 매파 + DXY + KRW) 단독 영향. 6월 ETF 누적 -$4.21B 유출 지속, IBIT 단독 -$980M. D-1(6/26) PCE / D-9(7/4) CLARITY Act 양대 변수",
+      "us_change": "-1.40",
+      "kr_change": "+3.26",
+      "crypto_change": "-4.35",
+      "tags": [
+        "bull",
+        "event"
+      ],
+      "html_path": "2026-06-25-morning.html",
+      "md_path": "2026-06-25-morning.md",
+      "created_at": "2026-06-25T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.41% (-7bp, 유가 약세 + 안전 선호)",
+        "dxy": "~101.4 (보합권, 1년 최고 유지)",
+        "wti": "$73 부근 (-4%, pre-war 수준 회귀 — Iran 라이선스 효과 본격)",
+        "gold": "$4,150 부근 (약세 지속, 달러 강세)",
+        "usdkrw": "1,547.52원 (+0.96%, KRW 추가 약세 1,550원 근접)",
+        "vix": "19.49 (-0.18p, 변동성 소폭 완화)"
+      },
+      "telegram_top3": [
+        {
+          "title": "💥 Micron 블로우아웃 — 시간외 +12%",
+          "body": "Q3 매출 $41.46B(컨센 +16.5% 초과 YoY +346%), EPS $25.11(컨센 +21.9% 초과), 마진 84.9%. Q4 가이던스 매출 $50B ± $1B(컨센 $42.9B +16.5% 폭증) 마진 ~86%. HBM 2026 완판 — 검은 화요일 '메모리 정점' 우려 24시간 만 정면 반박."
+        },
+        {
+          "title": "SK하이닉스 $29B 나스닥 ADR 7/10 상장 신청 — 시간외 +5.5%",
+          "body": "6/24 한국 마감 후 금감원 증권신고서 제출. 조달 45조원, 주당 255,500원, 7/10 나스닥 첫 거래 목표. 자금 목적 HBM 캐파 확장 + 핵심 장비. 검은 화요일 'HBM 늦춤' 우려 24시간 만 회사 정면 반박."
+        },
+        {
+          "title": "KOSPI 8,471 +3.26% V자 회복 + 오늘 Micron 갭상 예상",
+          "body": "어제 8,471 +267p V자 회복(8,577 일중 고점), 삼성전자 +9.11% 견인. SK하이닉스 시간외 +5.5% + Micron 효과로 오늘 강한 갭상 예상 — 8,700~8,900 +3~5% 가능. 단 USD/KRW 1,547원 +0.96% KRW 추가 약세 별개 부담."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "6/26 (금) D-1",
+          "event": "美 5월 PCE 인플레 — BofA 매파 시각 첫 점검",
+          "importance": "warning",
+          "consensus": "코어 PCE +0.2% MoM, Q2 GDP 최종치, 일본 도쿄 CPI"
+        },
+        {
+          "date": "7/1 (수) D-6",
+          "event": "스트레스 DSR 3단계 시행 + 양도세 중과 만료",
+          "importance": "warning"
+        },
+        {
+          "date": "7/4 (금) D-9",
+          "event": "CLARITY Act 본회의 표결 — 통과 확률 50~75%",
+          "importance": "info"
+        },
+        {
+          "date": "7/10 (목) D-15",
+          "event": "SK하이닉스 나스닥 ADR 상장 + 한은 7월 금통위 동시 (메가 이벤트)",
+          "importance": "warning"
+        },
+        {
+          "date": "7/30 (수) D-35",
+          "event": "FOMC 7월 회의 — BofA 매파 시각 첫 시험",
+          "importance": "warning"
+        },
+        {
+          "date": "8/21 (금)",
+          "event": "Iran-美 평화 합의 본 게임 60일 시한 마감",
+          "importance": "info"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 50,
+          "title": "8,700~8,900 강한 갭상 + 외국인 매수 전환",
+          "description": "Micron 호조 + SK ADR 호재로 KOSPI +3~5% 갭상. SK +5~8%(2,700,000~2,760,000원), 삼성 +3~5% 추가. USD/KRW 1,540~1,550원, BTC $59~62K"
+        },
+        "risk": {
+          "probability": 50,
+          "title": "상승 30% (8,900~9,100 추세 회복) vs 리스크 20% (갭상 후 8,500 후퇴)",
+          "description": "상승: 외국인 대규모 매수 + PCE 부합 → 9,114 도전, SK +8~12%(2,800,000원+), KRW 1,530원 회귀 / 리스크: 차익 실현 + KRW 1,550원+ + PCE 상회 → 8,500 후퇴, BTC $58K 이탈"
+        }
+      }
+    },
     {
       "date": "2026-06-24",
       "weekday": "수",
