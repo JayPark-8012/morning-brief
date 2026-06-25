@@ -7,12 +7,98 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 184,
+    "total_issues": 185,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-06-25",
+  "latest": "2026-06-26",
   "briefings": [
+    {
+      "date": "2026-06-26",
+      "weekday": "금",
+      "vol": 185,
+      "theme": "KOSPI 8,930 V-Shape Complete (+5.42%, +459p, -2% from Pre-Crash 9,114) — Micron Regular Session +19.2% Full Pricing — US May Core PCE 3.40% Beats Consensus 3.30% by 0.1pp (3-Year High Sticky Inflation) — S&P 7,357.49 -0.01% / Nasdaq 25,358.60 -0.46% 4-Day Losing Streak (First Since Feb) Apple Drag Offset Chip — Dow 51,920.62 Intraday ATH Divergence — WTI Breaks $70 4 Days Hormuz Transit — SK Hynix ADR Confirmed: $29.65B, 17.79M Shares, 1 ADR = 1/10 Common, July 10 Tentative",
+      "tagline": "어제 예상대로 KOSPI는 메인 시나리오 50% 상단까지 도달. 종가 8,930.36 +5.42%(+459p), 검은 화요일 직전 9,114 대비 단 -2% 거리까지 V자 회복. 삼성전자·SK하이닉스 동반 강한 갭상이 주도, 외국인 매수 전환 동조. 한편 미국은 Micron 효과가 정규장에서 실현(MU +19.2% 장중 +24%) 그러나 Nasdaq -0.46% 4일 연속 하락(2월 이후 처음, Apple 약세가 Micron 효과 상쇄), S&P 7,357.49 -0.01% 보합, Dow 51,920.62 +0.14% 장중 신고가 분기 — 메모리·반도체에 집중된 회복이지 시장 전체 V자는 아님. 5월 PCE는 매파에 일부 힘 — 헤드라인 4.10% 부합, 코어 3.40% 컨센 3.30% +0.1%p 상회(3년 만 최고). 그러나 거시 환경 우호 — WTI $70 이탈(호르무즈 통과 본격), 10Y 4.45% +4bp, VIX 18.63 -0.86p(19대 이탈), 금 $4,040 +1.02% 반등. USD/KRW 1,543원 -4원 KRW 소폭 강세(1,550 회피), BTC $59,499 보합 / ETH $1,615은 PCE 매파에도 안정. 오늘 6/26 금요일은 주말 + 7월 캐틸리스트 진입 직전(D-5 7/1 DSR · D-8 7/4 CLARITY · D-14 7/10 ADR+금통위)이라 차익 실현 vs 9,000 재돌파 사이. 메인 45%: 9,000 재돌파 + 9,114 회귀 시도. 상승 25%: 9,100~9,200 추세 회복. 리스크 30%: 주말 진입 차익 실현 + 8,700~8,900 박스 후퇴.",
+      "tldr_us": "6/25(목) NY 마감 — 분기 시장. S&P 7,357.49 -0.01% 보합, Nasdaq 25,358.60 -0.46% 4일 연속 하락(2월 이후 처음), Dow 51,920.62 +0.14% 장중 신고가 분기. Micron +19.2%(장중 +24%) 폭등 매출 $41.46B / Q4 가이던스 $50B 완전 가격화에도 Apple 약세 + AI capex ROI 우려가 칩 효과 상쇄. 5월 PCE 헤드라인 4.10% 부합 / 코어 3.40% 컨센 +0.1%p 상회(3년 만 최고). 10Y 4.45% +4bp, VIX 18.63 -0.86p 19대 이탈",
+      "tldr_kr": "KOSPI 8,930.36 +5.42%(+459p) V자 완성 — 검은 화요일 직전 9,114 대비 단 -2% 거리. 단 2거래일 만 폭락 손실 약 90% 회수. 삼성전자·SK하이닉스 동반 강한 갭상, 외국인 매수 전환(검은 화요일 -4.12조 매도 → 매수 우위). USD/KRW 1,543원 -4원 KRW 강세 1,550 회피. 오늘 9,000 재돌파 vs 주말 차익 실현 분기점",
+      "tldr_crypto": "BTC $59,499 보합 — PCE 매파에도 YTD 저점 $59,018 단단 지지(검은 화요일 폭락 단기 바닥 신호 가능). ETH $1,615 -3% 5월 ETF -$401M 유출 부담. 6월 BTC ETF 누적 -$4.21B 유출 지속. WTI $70 이탈 인플레 자동 둔화는 점진 호재. D-8(7/4) CLARITY Act 본 게임",
+      "us_change": "-0.01",
+      "kr_change": "+5.42",
+      "crypto_change": "+0.10",
+      "tags": [
+        "bull",
+        "event"
+      ],
+      "html_path": "2026-06-26-morning.html",
+      "md_path": "2026-06-26-morning.md",
+      "created_at": "2026-06-26T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.45% (+4bp, PCE 코어 +0.1%p 상회 매파 일부 반영)",
+        "dxy": "101.61 (+0.2%, 1년 최고 유지)",
+        "wti": "$70 이탈 (-4%, 4일 연속 약세 — 호르무즈 통과 본격)",
+        "gold": "$4,040 (+1.02%, 약세 종료 시도)",
+        "usdkrw": "1,543.43원 (-4원, KRW 소폭 강세 1,550 돌파 회피)",
+        "vix": "18.63 (-0.86p, 19대 이탈 변동성 정상화)"
+      },
+      "telegram_top3": [
+        {
+          "title": "🚀 KOSPI 8,930 +5.42% V자 완성",
+          "body": "+459p 강한 갭상으로 단 2거래일 만 검은 화요일 -9.99% 손실의 약 90% 회수. 직전 9,114 종가 대비 -2% 거리. 외국인 매수 전환 동조(-4.12조 → 매수 우위). 9,000 재돌파 vs 주말 차익 실현 분기점."
+        },
+        {
+          "title": "美 시장 분기 — Micron +19.2% 단독, Nasdaq 4일 연속 하락",
+          "body": "Dow 51,920 장중 신고가 분기, Nasdaq -0.46% 4일 연속(2월 이후 처음), S&P -0.01% 보합. Micron 매출 $41.46B / Q4 $50B 완전 가격화도 Apple 약세 상쇄. AI 메모리 vs 빅테크 capex ROI 분기 명확."
+        },
+        {
+          "title": "美 5월 코어 PCE 3.40% +0.1%p 상회 — sticky 인플레",
+          "body": "헤드라인 4.10% 부합, 코어 3.40% 컨센 3.30% +0.1%p 상회 3년 만 최고. BofA 매파 시각 근거 일부 확증. 그러나 시장 반응 약함 — NY Fed Williams '9월부터 인하 가능' 발언 중화. WTI $70 이탈로 6~7월 자동 둔화."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "7/1(수) D-5",
+          "event": "스트레스 DSR 3단계 + 양도세 중과 만료",
+          "importance": "warning"
+        },
+        {
+          "date": "7/3(금) D-7",
+          "event": "美 6월 비농업 고용(NFP)",
+          "importance": "info"
+        },
+        {
+          "date": "7/4(금) D-8",
+          "event": "CLARITY Act 본회의 표결 + 美 독립기념일 휴장",
+          "importance": "info"
+        },
+        {
+          "date": "7/10(목) D-14",
+          "event": "SK하이닉스 나스닥 ADR 상장 + 한은 7월 금통위",
+          "importance": "warning"
+        },
+        {
+          "date": "7/30(수) D-34",
+          "event": "FOMC 7월 회의 — BofA 매파 시각 첫 시험",
+          "importance": "warning"
+        },
+        {
+          "date": "8/21(금)",
+          "event": "Iran-美 평화 합의 60일 시한 마감",
+          "importance": "info"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 45,
+          "title": "9,000 재돌파 + 9,114 회귀 시도",
+          "description": "V자 완성 동력 + 외국인 매수 지속 + Micron 가격화 효과로 KOSPI 9,000~9,100 재도전. SK ADR D-14 호재 누적, USD/KRW 1,535~1,545원 안정, BTC $59~62K."
+        },
+        "risk": {
+          "probability": 30,
+          "title": "주말 차익 실현 + 8,700~8,900 박스 후퇴",
+          "description": "주말 + 7월 캐틸리스트 진입 직전 차익 실현 + 美 Nasdaq 4일 연속 하락 동조 → KOSPI 8,700~8,900 박스. 9,000 재돌파 실패. BTC $58K 이탈 위험."
+        }
+      }
+    },
     {
       "date": "2026-06-25",
       "weekday": "목",
