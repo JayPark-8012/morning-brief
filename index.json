@@ -7,12 +7,99 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 185,
+    "total_issues": 186,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-06-26",
+  "latest": "2026-06-27",
   "briefings": [
+    {
+      "date": "2026-06-27",
+      "weekday": "토",
+      "vol": 186,
+      "theme": "KOSPI -5.81% V-Shape Failed (8,411.21, -519p) — Weekly -7.05% (9,049→8,411) Tue Black Tuesday + Fri Double Crash — OpenAI IPO Delayed to 2027 (NYT Report, Altman Holds $1T Valuation) → SoftBank Tokyo -12% (¥5.6T Wiped) — Apple Raises MacBook/iPad/iPhone Prices Citing Memory Cost — Global Chip Selloff (MU/AMD/INTC/TSM) — Nasdaq 25,297.62 -0.24% 5-Day Losing Streak (Longest Since Feb) — S&P 7,354.02 -0.05% / Dow 51,876.11 -0.09% — VIX 18.66 -1.22% Stays Calm (No Panic, Just AI Re-Pricing) — 10Y 4.39% -6bp Safe Haven — BTC $59,770 Decoupled Macro Selloff — D-6 7/3 NFP Single Biggest Pivot",
+      "tagline": "한 주 롤러코스터의 결정판 — 월 9,049 → 화 검은 화요일 -9.99% → 수 +3.26% → 목 +5.42% V자 완성 8,930 → 금 -5.81% V자 회복 무산 8,411. 주간 -7.05%(-638p). 어제 메인 시나리오 45% 9,000 재돌파는 빗나갔고 리스크 30% 차익 실현 + 박스 후퇴가 상단 폭으로 실현. V자는 데드 캣 바운스로 정정. 트리거 두 가지 결합 — OpenAI IPO 2027 연기 검토 보도(NYT, Sam Altman $1조 평가 고집, SpaceX 첫 거래 부진 영향) → SoftBank 도쿄 -12%(5.6조엔 시총 증발) + Apple MacBook·iPad·iPhone 가격 인상(메모리·스토리지 비용 명시) → 칩 강세가 소비자 수요 깎는 첫 가시화. 글로벌 칩 셀오프 트리거(MU·AMD·INTC·TSM 동반), Nasdaq 25,297.62 -0.24% 5일 연속 하락(2월 이후 최장). 그러나 매크로 환경 자체는 무너지지 않음 — 10Y 4.39% -6bp(안전선호), VIX 18.66 -1.22% 안정, DXY 101.25 -0.19% 약세, BTC $59,770 매크로 디커플, 금 $4,080 +1% 헤지 자금 유입. 즉 패닉 매도가 아닌 AI 평가 재조정 성격. 진짜 분기점은 다음 주 7/3 美 NFP — 둔화 시 9월 인하 베팅 강화 + V자 재시도 가능, 호조 시 매파 강화 + AI 재조정 동시 → 추가 약세. 메인 50%: 8,200~8,500 박스 정착. 상승 25%: 8,700~9,000 V자 재시도. 리스크 25%: 8,000~8,200 진입 + 검은 화요일 종가 8,203 재시험.",
+      "tldr_us": "6/26 (금) NY 마감 — S&P 7,354.02 -0.05%, Nasdaq 25,297.62 -0.24% 5일 연속 하락(2월 이후 최장), Dow 51,876.11 -0.09%. OpenAI IPO 2027 연기 검토(NYT) + SoftBank -12% + Apple 가격 인상이 AI 인프라·메모리 평가 재조정 트리거. 칩 셀오프(MU·AMD·INTC·TSM 동반). 10Y 4.39% -6bp 안전선호, VIX 18.66 -1.22% 안정, DXY 101.25 -0.19% 달러 약세",
+      "tldr_kr": "KOSPI 8,411.21 -5.81%(-519p) V자 회복 무산 — 하루 만 +459p 환호 모두 반납. SK하이닉스 -8.13% 2,700,000원 시총 1위 단 하루 만 반납, 삼성전자 -9.14% 325,750원. 외국인 대규모 매도(약 4.6조원 추정). 주간 KOSPI -7.05%(9,049→8,411) 화·금 더블 폭락의 한 주. V자는 데드 캣 바운스로 정정",
+      "tldr_crypto": "BTC $59,770 매크로 디커플 — 칩 셀오프 글로벌 동조 안 함, YTD 저점 $59,018 위 단단 지지. ETH 약세 지속 $1,600 부근(5월 ETF -$401M 유출 잔존). 6월 BTC ETF 누적 -$4.21B 유출 지속. 금 $4,080 +1% 헤지 자금 유입 동시. D-7(7/4) CLARITY Act 본 게임 카운트다운",
+      "us_change": "-0.05",
+      "kr_change": "-5.81",
+      "crypto_change": "+0.50",
+      "tags": [
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-06-27-morning.html",
+      "md_path": "2026-06-27-morning.md",
+      "created_at": "2026-06-27T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.39% (-6bp, 안전선호 — 칩 셀오프 + AI 회의)",
+        "dxy": "101.25 (-0.19%, 달러 약세 — 매파 시각 후퇴)",
+        "wti": "$71.49 (-0.60%, 호르무즈 통과 본격 $70 일중 재진입 후 $71 정착)",
+        "gold": "$4,080 (+1.0%, 안전자산 헤지 자금 유입)",
+        "usdkrw": "약 1,538원 (-5원 추정, KRW 추가 강세 — DXY 약세 동조)",
+        "vix": "18.66 (-1.22%, 의외로 안정 — 패닉 아닌 차익 실현)"
+      },
+      "telegram_top3": [
+        {
+          "title": "📉 KOSPI -5.81% V자 회복 무산 + 주간 -7.05%",
+          "body": "8,411.21로 하루 만 +5.42% 환호 모두 반납. SK하이닉스 -8.13% 시총 1위 반납, 삼성전자 -9.14% 동조. 외국인 약 4.6조원 매도 추정. 주간 9,049→8,411 -638p, 화·금 더블 폭락의 한 주. V자는 데드 캣 바운스로 정정."
+        },
+        {
+          "title": "🌍 OpenAI IPO 2027 연기 → SoftBank -12%(5.6조엔 증발)",
+          "body": "NYT 보도 — Sam Altman $1조 평가 고집, SpaceX 첫 거래 부진 본 후 연기 검토. SoftBank $65B 노출 도쿄 장중 -14% 종가 -12%. AI 인프라 평가 재조정 본격 신호, 글로벌 칩 셀오프 트리거."
+        },
+        {
+          "title": "🇺🇸 Apple 가격 인상 + Nasdaq 5일 연속 하락",
+          "body": "Apple MacBook·iPad·iPhone 가격 인상(메모리·스토리지 비용 명시) → 칩 강세가 소비자 수요 깎는 첫 가시화. Nasdaq 25,297.62 -0.24% 5일 연속 하락(2월 이후 최장). 그러나 VIX 18.66 -1.22% 안정 — 패닉 아닌 AI 재조정."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "7/1(수) D-4",
+          "event": "스트레스 DSR 3단계 + 양도세 중과 만료",
+          "importance": "warning"
+        },
+        {
+          "date": "7/3(금) D-6",
+          "event": "美 6월 비농업 고용(NFP) — 단일 최대 분기점",
+          "importance": "warning",
+          "consensus": "컨센 -180K (전월 대비 둔화)"
+        },
+        {
+          "date": "7/4(금) D-7",
+          "event": "CLARITY Act 본회의 표결 + 美 독립기념일 휴장",
+          "importance": "warning"
+        },
+        {
+          "date": "7/10(목) D-13",
+          "event": "SK하이닉스 나스닥 ADR 상장 + 한은 7월 금통위",
+          "importance": "warning"
+        },
+        {
+          "date": "7/30(수) D-33",
+          "event": "FOMC 7월 회의 — BofA 매파 첫 시험",
+          "importance": "warning"
+        },
+        {
+          "date": "8/21(금)",
+          "event": "Iran-美 평화 합의 60일 시한 마감",
+          "importance": "info"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 50,
+          "title": "8,200~8,500 박스 정착 + 7/3 NFP 대기",
+          "description": "V자 무산 + 외국인 매도 지속 + 7월 캐틸리스트 4중 대기 모드. KOSPI 8,200~8,500 박스. SK 2,600,000~2,800,000원, USD/KRW 1,535~1,545원, BTC $58~62K. 7/3 NFP 결과 후 방향 결정."
+        },
+        "risk": {
+          "probability": 25,
+          "title": "8,000 재이탈 + 검은 화요일 종가 8,203 재시험",
+          "description": "NFP 호조 + 매파 강화 + AI 평가 재조정 동시 → KOSPI 추가 -3~5% → 8,000~8,200 진입, 검은 화요일 종가 8,203 지지선 재시험. SK ADR 연기/가격 인하 시그널 시 추가 부담. BTC $55K 이탈 위험."
+        }
+      }
+    },
     {
       "date": "2026-06-26",
       "weekday": "금",
