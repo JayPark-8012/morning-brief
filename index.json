@@ -7,12 +7,99 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 186,
+    "total_issues": 187,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-06-27",
+  "latest": "2026-06-29",
   "briefings": [
+    {
+      "date": "2026-06-29",
+      "weekday": "월",
+      "vol": 187,
+      "theme": "Relief Bounce Monday — KOSPI Gap-Up 8,470~8,520 Attempt After V-Shape Failure · D-2 DSR Stage 3 Final Golden Time · D-5 US NFP Countdown (Consensus -180K) · D-6 CLARITY Act + July 4 Holiday · SoftBank Roze AI IPO $100B Digesting (ADR After-Hours +3%) · BTC $59,800 Macro Decoupled Hold · Weekly KOSPI -7.05% Absorbed Over Weekend · OpenAI IPO 2027 Delay Tone Softened (NYT Follow-Up) · Foreign Net Buying Test First Day After 8T Won Sell-Off",
+      "tagline": "주말 동안 V자 무산 충격 일부 흡수. 금요일 KOSPI -5.81% 후 ①OpenAI IPO 연기 보도 톤 차분화(NYT 후속 '검토 단계, 확정 아님'), ②SoftBank Roze AI 상장 $100B 디지팅 → 도쿄 ADR 시간외 +3% 회복, ③KOSPI 야간 선물 +1.5% 회복으로 월 갭상 8,470~8,520 시도 가능성. SK하이닉스 2,720,000원대(+0.7%), 삼성전자 328,000원대(+0.7%) 회복 시도. 외국인 매수 전환 첫 평가일 — 한 주 매도 약 8조원+ 후 첫 시그널이 안도 반등 강도 결정. 진짜 게임은 7월 첫 주 캐틸리스트 3중 — D-2 7/1 DSR 3단계 + 양도세 만료(부동산 한도 -14.7% 컷), D-5 7/3 美 NFP(컨센 -180K, 단일 최대 분기점), D-6 7/4 CLARITY Act + 美 휴장(스테이블코인 본 게임). 부동산(7/1) → 매크로(7/3) → 코인(7/4) 차례차례 3중 시험. 美 7/4 휴장으로 NFP 변동성 평소 대비 2배 압축. 매크로 환경 자체는 무너지지 않은 시그널 유지(10Y 4.39%, VIX 18.66, DXY 101.20, BTC $59.8K 디커플) — AI 평가 재조정 ≠ 위험자산 전체 셀오프. 메인 50%: 8,400~8,600 박스 안도 반등 + NFP 대기. 상승 25%: 외국인 매수 전환 + 8,700~8,900 V자 재시도. 리스크 25%: 갭상 후 차익 실현 + 8,200 재이탈 + 검은 화요일 종가 8,203 시험.",
+      "tldr_us": "6/27 (토)~6/28 (일) 휴장 — 금 마감 유지(S&P 7,354.02, Nasdaq 25,297.62 5일 연속, Dow 51,876.11). 선물(전자거래) +0.2~0.3% 안정. 10Y 4.39% / VIX 18.66 보합. 다음 주 4일 단축(7/4 휴장), 6/30(화) NY 분기 마감 윈도 드레싱 변수, 7/3(목) NFP 단일 최대 분기점",
+      "tldr_kr": "6/29 (월) 개장 전 — 안도 반등 시도. 금 종가 KOSPI 8,411.21 -5.81% 후 야간 선물 +1.5% 회복 → 월 갭상 8,470~8,520 시도. SK하이닉스 2,720,000원대(+0.7%), 삼성전자 328,000원대(+0.7%) 회복 시도. SoftBank Roze AI $100B 디지팅이 글로벌 AI 안도 동력. 외국인 매수 전환 첫 평가일",
+      "tldr_crypto": "BTC $59,800 매크로 디커플 유지 — 주말 동안 YTD 저점 $59,018 위 단단 지지. ETH $1,610 약세 잔존($1,600 지지 시험). D-6(7/4) CLARITY Act 본 게임 카운트다운, 통과 시 $66K+, 부결 시 $55~58K. 통과 확률 50~70%",
+      "us_change": "0.00",
+      "kr_change": "+1.00",
+      "crypto_change": "+0.05",
+      "tags": [
+        "bull",
+        "event"
+      ],
+      "html_path": "2026-06-29-morning.html",
+      "md_path": "2026-06-29-morning.md",
+      "created_at": "2026-06-29T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.39% (보합, 주말 휴장 — 안전선호 유지, 7/3 NFP 대기)",
+        "dxy": "~101.20 (-0.05% 추정, 달러 약세 유지 — KRW 절상 동조)",
+        "wti": "$71.40 (-0.13% 추정, 호르무즈 통과 본격 $71대 정착)",
+        "gold": "$4,085 (+0.12% 추정, 안전자산 수요 미세 유지)",
+        "usdkrw": "약 1,536원 (-2원 추정, KRW 추가 절상 — DXY 약세 동조)",
+        "vix": "18.66 (보합, 주말 — 19대 이탈 유지, 패닉 신호 없음)"
+      },
+      "telegram_top3": [
+        {
+          "title": "🌅 KOSPI 월 갭상 8,470~8,520 시도 — V자 무산 후 자리잡기",
+          "body": "금 -5.81% 충격 주말 일부 흡수 → 월 안도 반등 시도. SoftBank Roze $100B 디지팅 + ADR +3% 회복 + OpenAI IPO 톤 차분화. 외국인 매수 전환 첫 평가일이 안도 반등 강도 결정. SK하이닉스 2,720,000원대 회복 시도."
+        },
+        {
+          "title": "📅 7월 첫 주 캐틸리스트 3중 — D-2 DSR · D-5 NFP · D-6 CLARITY",
+          "body": "D-2 7/1 DSR 3단계 + 양도세 만료(한도 -14.7% 컷), D-5 7/3 美 NFP(컨센 -180K), D-6 7/4 CLARITY Act + 美 휴장(스테이블코인 본 게임). 부동산 → 매크로 → 코인 차례차례 3중 시험. 7/4 휴장으로 NFP 변동성 2배 압축."
+        },
+        {
+          "title": "💼 SoftBank Roze AI $100B 본격 디지팅 — 도쿄 ADR +3% 회복",
+          "body": "금 -12% 후 동시 발표한 Roze AI 상장 $100B 분산 시그널이 주말 사이 곱씹어짐. OpenAI 노출 $65B 헤지, 2026 4분기 추진. 한국 SK하이닉스·삼성전자 동조 회복 동력 제공. 평가가치 합리성에 시장 의문 잔존."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "6/30(화) D-1",
+          "event": "美 2분기 NY 마감 + 한국 반기 마감 — 윈도 드레싱 변수",
+          "importance": "info"
+        },
+        {
+          "date": "7/1(수) D-2",
+          "event": "스트레스 DSR 3단계 시행 + 양도세 중과 만료",
+          "importance": "warning"
+        },
+        {
+          "date": "7/3(금) D-5",
+          "event": "美 6월 비농업 고용(NFP) — 단일 최대 분기점",
+          "importance": "warning",
+          "consensus": "컨센 -180K (전월 +135K 대비 둔화)"
+        },
+        {
+          "date": "7/4(금) D-6",
+          "event": "CLARITY Act 본회의 표결 + 美 독립기념일 휴장",
+          "importance": "warning"
+        },
+        {
+          "date": "7/10(목) D-11",
+          "event": "SK하이닉스 나스닥 ADR 상장 + 한은 7월 금통위",
+          "importance": "warning"
+        },
+        {
+          "date": "7/30(수) D-31",
+          "event": "FOMC 7월 회의 — BofA 매파 첫 시험",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 50,
+          "title": "8,400~8,600 박스 안도 반등 + 7/3 NFP 대기",
+          "description": "월 갭상 +0.7~1.3%(8,470~8,520) 후 박스 정착. 외국인 매도 일부 둔화(완전 매수 전환은 아님). SK 2,700,000~2,750,000원, USD/KRW 1,530~1,540원, BTC $58~62K. 7/3 NFP 결과 후 방향 결정."
+        },
+        "risk": {
+          "probability": 25,
+          "title": "갭상 후 차익 실현 + 8,200 재이탈 + 검은 화요일 8,203 시험",
+          "description": "월 갭상 후 외국인 매도 재개 + 美 분기 마감 윈도 드레싱 추가 매도 + NFP 호조 매파 강화 동시 → KOSPI 추가 -3~5% → 8,000~8,200 진입, 검은 화요일 종가 8,203 지지선 재시험. SK ADR 가격 조정 시그널 시 추가 부담, BTC $55K 이탈 위험."
+        }
+      }
+    },
     {
       "date": "2026-06-27",
       "weekday": "토",
