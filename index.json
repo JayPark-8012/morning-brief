@@ -7,12 +7,99 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 187,
+    "total_issues": 188,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-06-29",
+  "latest": "2026-06-30",
   "briefings": [
+    {
+      "date": "2026-06-30",
+      "weekday": "화",
+      "vol": 188,
+      "theme": "Government 800T KRW Super-Package Late V-Shape — KOSPI Intraday -3.4% → -0.2% Close (Samsung·SK 4 New Fabs + Honam Cluster + 18.4GW AI Data Centers) · US Dow First-Ever 52,000 Breakthrough (52,182.74) + S&P +1.18% + Nasdaq +2.07% V-Shape · Alphabet Dow Debut +3.7% ($350.24) · US-Iran Ceasefire Weekend Crack Then Restart (Time 'Re-Negotiation Agreement') · D-1 DSR Stage 3 Final 12 Hours · D-2 US NFP Date Correction 7/3 → 7/2 (Consensus +130K Capital Economics) · D-4 CLARITY Act Passage Odds 48% Down (Polymarket from 74% Month Ago) · BTC $59,686 Failed to Couple with Macro V-Shape · WTI $69.70 -2.3% Iran Ceasefire Relief",
+      "tagline": "어제 6/29 (월) 두 시장 모두 드라마. 한국 — 개장 직후 외국인·기관 동반 매도로 장중 -3.4% 폭락 → 11시경 산업통상자원부 브리핑에서 정부·삼성·SK 합작 800조원($518B) 반도체 슈퍼 패키지 발표(삼성 2개 fab + SK 2개 fab, 호남권 광주·전남 신규 클러스터, 5년 내 메모리 캐파 2배, AI 데이터센터 18.4GW 추가 2035년까지), 시장 즉시 V자 반전 → KOSPI -0.2% 마감(추정 8,395 부근). 삼성전자 -4.86% 323,000원, SK하이닉스 2,673,000원. 미국 — Iran 휴전 주말 균열(이란 쿠웨이트·바레인 美 기지 보복 발사) → 6/29 NY 개장 한 시간 후 양측 '재논의 합의' 보도(Time) → 리스크온 폭발. Dow 52,182.74 +0.59% 사상 첫 5.2만 돌파, S&P 7,440.43 +1.18%, Nasdaq 25,820.14 +2.07% 5일 연속 하락 마감. Alphabet 정식 Dow 편입 데뷔 +3.7% $350.24(가격 가중치로 즉시 인덱스 영향력 7배). 매크로 — 10Y 4.40% +1bp, DXY 101.37, WTI $69.7 -2.3%(휴전 안도), 금 $4,049 -1.74%(헤지 자금 이탈), USD/KRW ~1,534원. BTC $59,686 -0.2% 매크로 V자에 동조 못함(코인 ETF 누적 유출 + CLARITY Act 통과 확률 48%로 하락 Polymarket 한 달 전 74%, 윤리·법집행 협상 결렬), ETH $1,574 약세. D-1 7/1(수) DSR 3단계 + 양도세 만료 막판 12시간 — 결제·등기 오늘이 마지막 영업일. D-2 7/2(목) 美 NFP(컨센 +130K Capital Economics, 7/3 → 7/2 발표일 정정), D-4 7/4(금) CLARITY Act + 美 휴장. 메인 55%: 8,400~8,600 회복 + 美 V자 일부 유지 + NFP 대기. 상승 25%: 외국인 매수 전환 + 추세 회복 + NFP 둔화 V자 가속. 리스크 20%: 분기 마감 차익 실현 + Iran 재균열 + NFP 호조 매파 결합.",
+      "tldr_us": "6/29 (월) NY V자 폭발 — Dow 52,182.74 +0.59% 사상 첫 5.2만 돌파, S&P 7,440.43 +1.18%, Nasdaq 25,820.14 +2.07% 5일 연속 하락 종료. Alphabet Dow 데뷔 +3.7% $350.24. Iran 휴전 재가동(Time 보도) 단일 트리거. 10Y 4.40% +1bp, VIX 약 16~17 추정 후퇴",
+      "tldr_kr": "6/29 (월) 마감 — 800조원($518B) 정부·삼성·SK 패키지 발표로 KOSPI 장중 -3.4% → -0.2% V자. 삼성·SK 4개 fab + 호남권 + AI 데이터센터 18.4GW. 삼성전자 -4.86% 323,000원, SK하이닉스 2,673,000원. 외국인 매수 전환은 아직 약함이나 정책 동력 본격",
+      "tldr_crypto": "BTC $59,686 -0.2% 매크로 V자에 동조 못함 — ETF 누적 유출 + CLARITY Act 통과 확률 48%로 하락(Polymarket 한 달 전 74%, 윤리·법집행 협상 결렬). ETH $1,574 -2.2%. WTI $69.70 -2.3% Iran 휴전 재가동 안도",
+      "us_change": "+1.18",
+      "kr_change": "-0.20",
+      "crypto_change": "-0.20",
+      "tags": [
+        "bull",
+        "event"
+      ],
+      "html_path": "2026-06-30-morning.html",
+      "md_path": "2026-06-30-morning.md",
+      "created_at": "2026-06-30T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.40% (+1bp, 리스크온에 안전선호 일부 후퇴 — NFP 대기)",
+        "dxy": "101.37 (+0.12% 추정, 달러 강세 미세 — 단기 차익)",
+        "wti": "$69.70 (-2.3%, Iran 휴전 재가동 안도 — 4개월 저점 부근)",
+        "gold": "$4,049 (-1.74%, 헤지 자금 일부 이탈 — 리스크온 동조 약세)",
+        "usdkrw": "약 1,534원 (-2원 추정, KRW 절상 유지 — 800조원 패키지 자본 유입 기대)",
+        "vix": "약 16~17 (FRED 6월 평균 16.41 부근, Iran 휴전 재가동에 패닉 후퇴)"
+      },
+      "telegram_top3": [
+        {
+          "title": "🇰🇷 800조원($518B) 슈퍼 패키지 — KOSPI 장중 -3.4% → -0.2% V자",
+          "body": "정부·삼성·SK 합작 4개 fab + 호남권 클러스터 + AI 데이터센터 18.4GW(2035년까지). 산업부 브리핑 직후 90분 만 V자 반전. 삼성전자 -4.86% 323,000원, SK하이닉스 2,673,000원. 한국 중장기 펀더멘털 개선."
+        },
+        {
+          "title": "🇺🇸 美 Dow 사상 첫 52,000 돌파 + Alphabet Dow 데뷔 +3.7%",
+          "body": "Dow 52,182.74 +0.59%, S&P +1.18%, Nasdaq +2.07% 5일↓ 종료. Iran 휴전 재가동(Time '재논의 합의') 단일 트리거. Alphabet $350.24 Verizon $47 교체로 가격가중 7배 즉시 톱10."
+        },
+        {
+          "title": "📅 D-1 DSR 3단계 + D-2 NFP(7/2 정정) + D-4 CLARITY(48%)",
+          "body": "오늘 결제·등기 마지막 영업일, 한도 1.2억 컷. NFP 7/3 → 7/2 24시간 앞당겨짐(컨센 +130K Capital Economics). CLARITY 통과 확률 48%로 하락(Polymarket, 한 달 전 74%, 윤리·법집행 협상 결렬)."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "6/30(화) D-Day",
+          "event": "한국 반기 마감 + 美 2분기 NY 마감 + DSR 막판 12시간",
+          "importance": "warning"
+        },
+        {
+          "date": "7/1(수) D-1",
+          "event": "스트레스 DSR 3단계 자동 적용 + 양도세 중과 만료",
+          "importance": "warning"
+        },
+        {
+          "date": "7/2(목) D-2",
+          "event": "美 6월 NFP (7/3 → 7/2 정정) — 단일 최대 분기점",
+          "importance": "warning",
+          "consensus": "컨센 +130K (Capital Economics, 전월 +172K 대비 둔화)"
+        },
+        {
+          "date": "7/4(금) D-4",
+          "event": "CLARITY Act 본회의 표결 + 美 독립기념일 휴장 (통과 확률 48%)",
+          "importance": "warning"
+        },
+        {
+          "date": "7/10(목) D-10",
+          "event": "SK하이닉스 나스닥 ADR 상장 + 한은 7월 금통위",
+          "importance": "warning"
+        },
+        {
+          "date": "7/30(수) D-30",
+          "event": "FOMC 7월 회의 — BofA 매파 첫 시험",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "KOSPI 8,400~8,600 회복 + 美 V자 일부 유지 + NFP 대기",
+          "description": "한국 반기 마감 + 800조원 패키지 효과 결합으로 KOSPI 8,400~8,600 회복. 美는 어제 V자 일부 유지 + 분기 마감 차익 혼합, S&P 7,400~7,500 박스. SK 2,650,000~2,750,000원, USD/KRW 1,530~1,540원, BTC $58~62K."
+        },
+        "risk": {
+          "probability": 20,
+          "title": "분기 마감 차익 실현 + Iran 재균열 + NFP 호조 매파 결합",
+          "description": "美 분기 마감 차익 실현 + Iran 휴전 재악화(8/21 시한 전 추가 균열) + NFP 호조(+150K↑) 매파 강화 결합 → KOSPI 추가 -3~5% → 8,100~8,300 진입, 검은 화요일 종가 8,203 재시험. BTC $55K 이탈 위험."
+        }
+      }
+    },
     {
       "date": "2026-06-29",
       "weekday": "월",
