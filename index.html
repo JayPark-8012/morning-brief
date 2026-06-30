@@ -324,6 +324,62 @@
     color: var(--text-primary);
     margin-bottom: 0.75rem;
     letter-spacing: -0.02em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* 월별 그룹 (v3.7) */
+  .month-group {
+    margin-bottom: 1.25rem;
+  }
+  .month-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    width: 100%;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.9rem 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+  }
+  .month-header:hover {
+    background: var(--bg-hover);
+    border-color: var(--border-gold);
+  }
+  .month-header .month-arrow {
+    color: var(--gold);
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+    display: inline-block;
+  }
+  .month-group.collapsed .month-arrow {
+    transform: rotate(-90deg);
+  }
+  .month-header .month-label {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+  }
+  .month-header .month-count {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-tertiary);
+  }
+  .month-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .month-group.collapsed .month-cards {
+    display: none;
   }
 
   .archive-snippet {
@@ -628,6 +684,47 @@
     </a>`;
   }
 
+  // 월별 그룹 렌더링 (v3.7)
+  function renderByMonth(briefings) {
+    const groups = {};
+    const order = [];
+    briefings.forEach(b => {
+      const [y, m] = b.date.split('-');
+      const key = `${y}-${m}`;
+      if (!groups[key]) { groups[key] = []; order.push(key); }
+      groups[key].push(b);
+    });
+    return order.map((key, idx) => {
+      const [y, m] = key.split('-');
+      const label = `${y}년 ${parseInt(m, 10)}월`;
+      const cards = groups[key].map(renderCard).join('');
+      // 최신 월(첫 그룹)만 펼침, 나머지는 접힘
+      const collapsed = idx === 0 ? '' : ' collapsed';
+      return `<div class="month-group${collapsed}" data-month="${key}">
+        <div class="month-header" role="button" tabindex="0" aria-expanded="${idx === 0}">
+          <span class="month-arrow">▼</span>
+          <span class="month-label">${label}</span>
+          <span class="month-count">${groups[key].length}건</span>
+        </div>
+        <div class="month-cards">${cards}</div>
+      </div>`;
+    }).join('');
+  }
+
+  function initMonthToggle() {
+    document.querySelectorAll('.month-header').forEach(header => {
+      const toggle = () => {
+        const group = header.closest('.month-group');
+        group.classList.toggle('collapsed');
+        header.setAttribute('aria-expanded', !group.classList.contains('collapsed'));
+      };
+      header.addEventListener('click', toggle);
+      header.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+    });
+  }
+
   function initFilter() {
     const chips = document.querySelectorAll('.filter-chip');
     const cards = () => document.querySelectorAll('.archive-card');
@@ -641,6 +738,17 @@
           const show = filter === 'all' || (card.dataset.tags || '').split(' ').includes(filter);
           card.style.display = show ? '' : 'none';
           if (show) visible++;
+        });
+        // 필터 시: 보이는 카드가 있는 월 그룹만 펼치고 표시
+        document.querySelectorAll('.month-group').forEach(group => {
+          const shown = group.querySelectorAll('.archive-card').length
+            - Array.from(group.querySelectorAll('.archive-card')).filter(c => c.style.display === 'none').length;
+          if (filter === 'all') {
+            group.style.display = '';
+          } else {
+            group.style.display = shown > 0 ? '' : 'none';
+            if (shown > 0) group.classList.remove('collapsed');
+          }
         });
         document.getElementById('archiveCount').textContent = visible + ' issues';
       });
@@ -663,7 +771,7 @@
         return;
       }
 
-      list.innerHTML = archive.map(renderCard).join('');
+      list.innerHTML = renderByMonth(archive);
 
       const total = archive.length;
       const bullCount = archive.filter(b => b.tags && b.tags.includes('bull')).length;
@@ -676,6 +784,7 @@
       document.getElementById('cnt-bear').textContent = bearCount;
       document.getElementById('cnt-event').textContent = eventCount;
 
+      initMonthToggle();
       initFilter();
     })
     .catch(() => {
