@@ -7,12 +7,99 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 189,
+    "total_issues": 190,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-07-01",
+  "latest": "2026-07-02",
   "briefings": [
+    {
+      "date": "2026-07-02",
+      "weekday": "목",
+      "vol": 190,
+      "theme": "NFP D-Day + Semiconductor Sell-Off",
+      "tagline": "NFP D-Day, KOSPI -2% 되밀림·다우 신고가 냉각",
+      "tldr_us": "7/1(수) NY 마감 — 다우 52,305.24 -0.03% 장중 사상 최고 후 냉각, S&P 7,483.23 -0.22%, 나스닥 26,040.03 -0.66% 반도체 셀오프. 10Y 4.46% +7bp JOLTS 호조에 매파 재부상.",
+      "tldr_kr": "7/1(수) 마감 — KOSPI 8,309.35 -1.97%. 전일 +0.97% 회복분 하루 만 반납. DSR 3단계 시행 첫날 부담 + 외국인 매도 이틀 연속(추정 -6,000억) + 美 반도체 셀오프 동조. USD/KRW 1,558.26원 +0.68% KRW 추가 약세.",
+      "tldr_crypto": "BTC $60K 부근 반등 시도(저점 $57,735에서 +4%), ETH ~$1,585. F&G Extreme Fear 잔존. $60K 회복 유지가 디커플 종료 1차 시그널. CLARITY 통과 확률 Polymarket 55~59%, 7/4 표결 목표.",
+      "us_change": "-0.22",
+      "kr_change": "-1.97",
+      "crypto_change": "+2.50",
+      "tags": [
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-07-02-morning.html",
+      "md_path": "2026-07-02-morning.md",
+      "created_at": "2026-07-02T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.46% (+7bp, JOLTS 호조에 매파 부상 — NFP 대기)",
+        "dxy": "~96대 (하향 추세, 달러 상반기 -10% 후 약세 유지)",
+        "wti": "$68.06 (-2.07%, 호르무즈 우회 항로 진전 반영)",
+        "gold": "$4,020대 (약세 잔존, 10Y 상승에 헤지 자금 이탈)",
+        "usdkrw": "1,558.26원 (+0.68%, 외국인 매도 이틀 연속 반영)",
+        "vix": "~16대 (NFP 대기 옵션 헤지 미세 상승)"
+      },
+      "telegram_top3": [
+        {
+          "title": "🌍 NFP D-Day — 21:30 KST 발표, 컨센 +100K",
+          "body": "7/4 휴장으로 24시간 앞당겨진 발표. 5월 +139K → 6월 +100K 둔화 예상, 실업률 4.3%. ADP -33K 예상 밖 감소 vs JOLTS 7.77M 호조 상충. 호조 시 매파·주식 반납, 둔화 시 리스크온."
+        },
+        {
+          "title": "🇰🇷 KOSPI 8,309.35 -1.97% — 전일 회복분 하루 만 반납",
+          "body": "DSR 3단계 시행 첫날 부담 + 외국인 매도 이틀 연속(추정 -6,000억) + 美 반도체 셀오프 동조. USD/KRW 1,558.26원 +0.68% 추가 약세. 오늘 밤 NFP가 내일 7/3 개장 방향 결정."
+        },
+        {
+          "title": "🇺🇸 다우 52,305.24 사상 최고 후 냉각 · 나스닥 -0.66% 반도체 셀오프",
+          "body": "다우 장중 신고가 갱신 후 -0.03%, S&P -0.22%, 나스닥 -0.66%. 필라델피아 반도체 상반기 +80% 후 첫 차익 실현. 10Y 4.46% +7bp에 밸류에이션 부담 부각."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "7/2(목) D-Day",
+          "event": "美 6월 NFP 21:30 KST — 단축 주간 방향타",
+          "importance": "warning",
+          "consensus": "컨센 +100K (Reuters·Citi 종합), 실업률 4.3%"
+        },
+        {
+          "date": "7/3(금) D-1",
+          "event": "美 주식·채권 조기 마감 (13:00 ET)",
+          "importance": "info"
+        },
+        {
+          "date": "7/4(금) D-2",
+          "event": "CLARITY Act 표결 목표 + 美 독립기념일 휴장 (통과 확률 55~59%)",
+          "importance": "warning"
+        },
+        {
+          "date": "7/8(화) D-6",
+          "event": "美 5월 무역수지 + 한국 6월 외환보유고",
+          "importance": "info"
+        },
+        {
+          "date": "7/10(목) D-8",
+          "event": "SK하이닉스 나스닥 ADR 상장 + 한은 7월 금통위",
+          "importance": "warning"
+        },
+        {
+          "date": "7/30(수) D-28",
+          "event": "FOMC 7월 회의 — 인하 여부 첫 정식 논의",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 50,
+          "title": "NFP 컨센 부합 + KOSPI 박스 정착",
+          "description": "NFP +90~120K 부합 + 실업률 4.3%. 9월 인하 시나리오 유지. S&P 7,450~7,500 보합, KOSPI 8,300~8,400 박스, USD/KRW 1,555~1,562원. BTC $60K 안착 후 CLARITY 시그널 대기."
+        },
+        "risk": {
+          "probability": 25,
+          "title": "NFP 호조 매파 강화 + 반도체 추가 반납",
+          "description": "NFP +130K↑ 또는 실업률 4.2% 유지. 10Y 4.55% 시도, 나스닥·반도체 추가 -1~2%, S&P 7,400 이탈, KOSPI 8,200 재시험, BTC $58K 재하락, KRW 1,565원 이탈."
+        }
+      }
+    },
     {
       "date": "2026-07-01",
       "weekday": "수",
