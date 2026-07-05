@@ -7,12 +7,99 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 192,
+    "total_issues": 193,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-07-04",
+  "latest": "2026-07-06",
   "briefings": [
+    {
+      "date": "2026-07-06",
+      "weekday": "월",
+      "vol": 193,
+      "theme": "Event Week Opens · KOSPI V-Shape First Test",
+      "tagline": "이벤트 몰린 한 주 개막 · KOSPI V자 첫 시험",
+      "tldr_us": "오늘 밤(KST 22:30) 이틀 완전 휴장 후 재개장 — NFP +57K 쇼크 반응 첫 정식 표결. 7/2 종가 유지 다우 52,900.07·S&P 7,478·Nasdaq ~26,180·10Y 4.48%·VIX ~15대. 다우 신고가 유지 vs 차익실현, 10Y 4.5% 위 튀는지가 관전.",
+      "tldr_kr": "오전 9시 개장이 지난 금 V자 회복(8,088.34, +5.76%)의 첫 유지 시험. 8,050 지지·8,150 돌파가 판정선. 삼성 309,500원·SK하이닉스 2,425,000원, 개별 지지선 300K·2.4M. USD/KRW 1,542~1,544원, 1,540 하향 시 원화 강세, 1,555 재이탈 시 리스크오프.",
+      "tldr_crypto": "BTC $62,883 +1.3% 회복($60K 위 안착), ETH $1,730대. BTC ETF +$221.7M 10일 유출 종료(FBTC/ARKB 주도). 다만 F&G 24 Extreme Fear 재악화. CLARITY Act 하원 특별 청문회 7/17 뉴욕 개최 확정, 상원 통합 최종안 주말 발표.",
+      "us_change": "0.00",
+      "kr_change": "0.00",
+      "crypto_change": "+1.30",
+      "tags": [
+        "neutral",
+        "event"
+      ],
+      "html_path": "2026-07-06-morning.html",
+      "md_path": "2026-07-06-morning.md",
+      "created_at": "2026-07-06T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.48% (7/2 종가 유지, 오늘 밤 재점검)",
+        "dxy": "약세 유지 (상반기 -10% 흐름 지속)",
+        "wti": "$68 부근 ($70 아래 안착)",
+        "gold": "$4,100+ (반등 유지)",
+        "usdkrw": "1,542~1,544원 (오늘 개장이 원화 강세 시험)",
+        "vix": "~15대 (이벤트 위크 앞두고 저변동)"
+      },
+      "telegram_top3": [
+        {
+          "title": "🇰🇷 KOSPI 9시 개장 · V자 회복 첫 유지 시험",
+          "body": "지난 금 8,088.34 +5.76% V자 회복 후 첫 세션. 8,050 지지·8,150 돌파가 판정선, 삼성 300,000원·SK 2,400,000원 개별 지지선. 개장 30분 외국인 수급이 이번 주 방향 첫 단서. USD/KRW 1,540 하향 시 원화 강세 확정."
+        },
+        {
+          "title": "🇺🇸 美 오늘 밤 재개장 · NFP 쇼크 첫 정식 표결",
+          "body": "이틀 완전 휴장 종료. 프리마켓 22:30·정규 23:30 KST. 다우 52,900 신고가 유지 vs 차익실현, 10Y 4.48%가 4.5% 위로 튀는지가 관전 포인트. 리스크온 지속 시 KOSPI 화요일 상승, 매파 반응 시 조정 재개."
+        },
+        {
+          "title": "₿ BTC ETF +$221.7M · 10일 연속 유출 종료",
+          "body": "FBTC +$166M · ARKB +$91.8M 주도. BTC $62,883 +1.3% 회복, ETH $1,730대. 다만 F&G 24 Extreme Fear 재악화. CLARITY 하원 특별 청문회 7/17 뉴욕 개최 확정 — 크립토 이벤트 리스크 8월→7/17로 앞당김."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "7/6(월) D-Day",
+          "event": "美 시장 재개장 + KOSPI V자 첫 시험",
+          "importance": "warning"
+        },
+        {
+          "date": "7/8(수) D-2",
+          "event": "FOMC 6월 회의 의사록 (03:00 KST)",
+          "importance": "warning",
+          "consensus": "매파 잔존 vs 완화 뉘앙스"
+        },
+        {
+          "date": "7/10(목) D-4",
+          "event": "SK하이닉스 나스닥 ADR 데뷔 + 한은 7월 금통위",
+          "importance": "warning"
+        },
+        {
+          "date": "7/13(월) D-7",
+          "event": "美 상원 회기 복귀 · CLARITY Act 재추진 시작",
+          "importance": "info"
+        },
+        {
+          "date": "7/17(목) D-11",
+          "event": "CLARITY Act 하원 특별 청문회 (뉴욕)",
+          "importance": "info"
+        },
+        {
+          "date": "7/30(수) D-24",
+          "event": "FOMC 7월 회의 — NFP 쇼크 후 첫 정식 결정",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "V자 유지 · 이벤트 위크 상승 흐름",
+          "description": "KOSPI 8,050~8,200 박스, 삼성 305,000원·SK 2,450,000원 유지. 다우 신고가 유지·10Y 4.4%대 하향. USD/KRW 1,535~1,545원. BTC $62~66K·ETH $1,700~1,850. FOMC 의사록 완화 뉘앙스 + SK ADR 정상 발행 + 한은 동결 조합."
+        },
+        "risk": {
+          "probability": 45,
+          "title": "첫 단추 어긋남 · 조정 재개",
+          "description": "美 재개장 매파 반응 or KOSPI 8,000 이탈 → 10Y 4.5% 위 튐, 다우 -1% 조정, VIX 18+ 상승. KOSPI 7,900대 되밀림, 삼성 295,000원·SK 2,300,000원 시험. BTC $60K 재이탈, KRW 1,555원 재상단. 의사록 매파 잔존 확인 시 확정."
+        }
+      }
+    },
     {
       "date": "2026-07-04",
       "weekday": "토",
