@@ -7,12 +7,99 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 194,
+    "total_issues": 195,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-07-07",
+  "latest": "2026-07-08",
   "briefings": [
+    {
+      "date": "2026-07-08",
+      "weekday": "수",
+      "vol": 195,
+      "theme": "Tariff Letter 25% · KOSPI Sidecar+Circuit",
+      "tagline": "트럼프 25% 관세 서한 · KOSPI 사이드카·서킷",
+      "tldr_us": "Dow 52,925.15(-0.25%), S&P 7,503.85(-0.45%), Nasdaq 25,818.69(-1.16%). DeepSeek 자체 AI 추론 칩 개발 뉴스로 NVDA 프리마켓 -2%, 반도체 셀오프. 10Y 4.48% 반등.",
+      "tldr_kr": "KOSPI 7,656.31(-4.91%, -395.02p). 매도 사이드카 10:23 + 서킷브레이커 13:51 동시 발동. 삼성 89.4조 어닝쇼크가 매출 컨센 미달로 반전, 삼성·SK 8~9% 폭락. USD/KRW 1,522원.",
+      "tldr_crypto": "BTC $63,118(+0.7%), ETH $1,775(+0.8%). 주식 셀오프에도 이틀 연속 강세 개장, 5월 이후 최대 월간 상승 흐름. 관세 리스크가 코인을 대체 안전자산으로 재분류. 오늘 새벽 FOMC 의사록 대기.",
+      "us_change": "-0.45",
+      "kr_change": "-4.91",
+      "crypto_change": "+0.70",
+      "tags": [
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-07-08-morning.html",
+      "md_path": "2026-07-08-morning.md",
+      "created_at": "2026-07-08T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.48% (+2bp, 관세·인플레 우려 재발)",
+        "dxy": "약세 유지 (상반기 -10% 흐름)",
+        "wti": "$69.14 (▲ 1주 최고, 호르무즈 LNG 피격)",
+        "gold": "$4,100+ (안전선호 재부각)",
+        "usdkrw": "1,522원 (-6원, 관세에도 강세 지속)",
+        "vix": "17대 (▲ +2p, 사이드카 여파)"
+      },
+      "telegram_top3": [
+        {
+          "title": "🌍 트럼프 25% 관세 서한 · 한국·일본 8/1 발효 통보",
+          "body": "이재명 대통령 앞 공식 서한. \"미국으로 보낸 모든 한국산에 25% 관세, 품목별과 별도\". 3주 협상 창 유지, 25%는 협상용 최고가일 가능성. 반도체·자동차·2차전지 이익 방정식에 직접 노출."
+        },
+        {
+          "title": "🇰🇷 KOSPI -4.91% 7,656.31 · 사이드카+서킷 동시 발동",
+          "body": "매도 사이드카 10:23 + 서킷브레이커 13:51. 시총 1·2위 삼성·SK 8~9% 폭락. 삼성 89조 어닝쇼크 역설(매출 컨센 미달) + DeepSeek AI 칩 + 25% 관세 서한 3중 방아쇠. 개인 매수 여력 소진 조짐."
+        },
+        {
+          "title": "💼 삼성 Q2 영업이익 89.4조 +1,810% YoY 사상 최대",
+          "body": "잠정 매출 171조·영업이익 89.4조 사상 최대(19배). AI HBM 슈퍼사이클. 그러나 매출 171조가 컨센(180조+) 미달로 peak-out 우려, 주가는 오히려 -8%대 폭락. 7/30 상세 실적이 부문별 마진 확인."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "7/8(수) D-Day",
+          "event": "FOMC 6월 회의 의사록 (03:00 KST)",
+          "importance": "warning",
+          "consensus": "매파 잔존 vs 완화 뉘앙스"
+        },
+        {
+          "date": "7/10(목) D-2",
+          "event": "SK하이닉스 나스닥 ADR 청약 + 한은 7월 금통위",
+          "importance": "warning"
+        },
+        {
+          "date": "7/13(월) D-5",
+          "event": "美 상원 회기 복귀 · CLARITY Act 재추진",
+          "importance": "info"
+        },
+        {
+          "date": "7/17(목) D-9",
+          "event": "CLARITY Act 하원 특별 청문회 (뉴욕)",
+          "importance": "warning"
+        },
+        {
+          "date": "7/30(수) D-22",
+          "event": "삼성전자 Q2 상세 실적 + FOMC 7월 회의",
+          "importance": "warning"
+        },
+        {
+          "date": "8/1(금) D-24",
+          "event": "상호관세 25% 자동 발효 · 협상 마지노선",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "기술적 반등",
+          "description": "FOMC 완화 뉘앙스 + 관세 15~20% 조정 기대 회복 → KOSPI 7,700~7,900, 삼성 320K·SK 2,300K 복귀, BTC $63~66K, USD/KRW 1,515~1,530원."
+        },
+        "risk": {
+          "probability": 45,
+          "title": "하방 재시험",
+          "description": "FOMC 매파 잔존 + 관세 딜 지연 → KOSPI 7,400~7,600 재이탈, 삼성 290K·SK 2,050K 시험, 10Y 4.5% 위 안착, BTC $60K 지지 시험."
+        }
+      }
+    },
     {
       "date": "2026-07-07",
       "weekday": "화",
