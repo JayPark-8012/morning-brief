@@ -7,12 +7,99 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 195,
+    "total_issues": 196,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-07-08",
+  "latest": "2026-07-09",
   "briefings": [
+    {
+      "date": "2026-07-09",
+      "weekday": "목",
+      "vol": 196,
+      "theme": "Hawkish FOMC Minutes · KOSPI 2nd Circuit",
+      "tagline": "FOMC 매파 의사록 · KOSPI 이틀째 서킷",
+      "tldr_us": "Dow 52,348.39(-1.09%, -576.76p), S&P 7,482.87(-0.28%), Nasdaq 25,870.61(+0.20%). 6월 FOMC 의사록 매파 확인 — 18명 중 9명 연내 인상, 점도표 중앙 3.8%, PCE 3.6% 상향. 트럼프 이란 휴전 결렬 선언에 다우 -576p, 나스닥은 NVDA H200 승인에 방어.",
+      "tldr_kr": "KOSPI 7,246.79(-5.35%, -409.52p). 이틀 연속 사이드카·서킷 발동, 외국인 14세션 연속 매도 스트리크. 삼성 298,500원(+0.84%)·SK 2,315,500원(+5.20%) 장중 반등 시도했지만 지수는 되돌림 실패. USD/KRW 1,542원 반락.",
+      "tldr_crypto": "BTC $62,044(-1.7% 되밀림), ETH $1,742(-1.9%). FOMC 매파 + 이란 결렬로 이틀 강세 흐름 종료. 안전자산이 코인 대신 금·달러로 이동. F&G 24 Extreme Fear 지속.",
+      "us_change": "-0.28",
+      "kr_change": "-5.35",
+      "crypto_change": "-1.70",
+      "tags": [
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-07-09-morning.html",
+      "md_path": "2026-07-09-morning.md",
+      "created_at": "2026-07-09T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.50% (+2bp, FOMC 매파 · 2주 최고 재접근)",
+        "dxy": "소폭 반등 (FOMC 매파에 달러 강세 반전)",
+        "wti": "$70대 (▲ 이란 휴전 결렬 반등)",
+        "gold": "$4,100+ (FOMC·지정학 이중 재료 안전선호)",
+        "usdkrw": "1,542원 (+20원, 이틀만에 강세 되돌림)",
+        "vix": "17대 (▲ 지정학 프리미엄 반영)"
+      },
+      "telegram_top3": [
+        {
+          "title": "🇺🇸 6월 FOMC 의사록 매파 확인 · 9명 연내 인상 표시",
+          "body": "18명 중 9명이 연내 추가 인상 표시, 점도표 중앙 3.8%, PCE 3.6% 상향(3월 2.7%). 워시 신임 의장은 자신의 점 미제시 침묵. 9월 인상 확률 50~55% 하락에도 톤은 반등 여지, 10Y 4.50% 2주 최고 재접근."
+        },
+        {
+          "title": "🇰🇷 KOSPI -5.35% 7,246.79 · 이틀 연속 사이드카·서킷",
+          "body": "13:31 KOSPI + 13:33 KOSDAQ 사이드카, 장중 -8% 서킷 다시 발동. 외국인 14세션 연속 매도 스트리크. 삼성·SK 장중 반등 시도했지만 지수는 되돌림. 8,000선 → 7,200선 800p 밀림."
+        },
+        {
+          "title": "🌐 트럼프 \"이란 휴전 사실상 종료\" · WTI $70대 · 다우 -576p",
+          "body": "현지 7/8 오후 트럼프의 재선언에 중동 상호 공격 재확대. 다우 -1.09%, 반면 나스닥은 NVDA H200 중국 승인 소식에 +0.20% 반등. 관세·이란·유가 3중 매크로 부담 지속."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "7/10(금) D-1",
+          "event": "한은 7월 금통위 + SK 하이닉스 ADR 청약",
+          "importance": "warning",
+          "consensus": "동결 2.50%, 5:2 매파 분열 유지 가능성"
+        },
+        {
+          "date": "7/13(월) D-4",
+          "event": "美 상원 회기 복귀 · CLARITY Act 재추진",
+          "importance": "info"
+        },
+        {
+          "date": "7/17(목) D-8",
+          "event": "CLARITY Act 하원 특별 청문회 (뉴욕)",
+          "importance": "warning"
+        },
+        {
+          "date": "7/29(수) D-20",
+          "event": "SK 하이닉스 ADR 상장 예정",
+          "importance": "info"
+        },
+        {
+          "date": "7/30(수) D-21",
+          "event": "삼성전자 Q2 상세 실적 + FOMC 7월 회의",
+          "importance": "warning"
+        },
+        {
+          "date": "8/1(금) D-23",
+          "event": "상호관세 25% 자동 발효 · 협상 마지노선",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "기술적 반등",
+          "description": "외국인 매도 소진 + 한은 동결 + 관세 조정 기대 → KOSPI 7,400~7,600, 삼성 300K·SK 2,200K 회복, 다우 52,800 시도, BTC $62~64K, USD/KRW 1,530~1,545원."
+        },
+        "risk": {
+          "probability": 45,
+          "title": "하방 재시험",
+          "description": "한은 25bp 인상 + FOMC 매파 잔존 → KOSPI 7,000~7,200 방어선 시험, 삼성 280K·SK 2,050K, 10Y 4.55% 안착, BTC $60K 지지 시험, KRW 1,555원 재접근."
+        }
+      }
+    },
     {
       "date": "2026-07-08",
       "weekday": "수",
