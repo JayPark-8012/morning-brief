@@ -7,12 +7,100 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 197,
+    "total_issues": 198,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-07-10",
+  "latest": "2026-07-11",
   "briefings": [
+    {
+      "date": "2026-07-11",
+      "weekday": "토",
+      "vol": 198,
+      "theme": "SKHY Blockbuster Debut & KOSPI V-Rebound",
+      "tagline": "SK하이닉스 나스닥 +13% 데뷔·KOSPI 2.5% 급반등",
+      "tldr_us": "S&P 7,543.64 +0.8%, 나스닥 26,206.89 +1.3%(+336.24p), 다우 +0.3%. SK하이닉스 나스닥 데뷔가 AI 메모리 트레이드 재점화, 테크 주도 신고가 흐름 재개. 10Y 4.55%대 소폭 반락, VIX 16대 안착.",
+      "tldr_kr": "KOSPI 7,475.94(+2.52%, +184.03p), 장중 고가 7,704.93. 기관 +1.13조 견인, 외국인 SK하이닉스 -1.72조 대량매도·삼성 +0.19조 순매수 갈아타기. USD/KRW 1,505.78원 하루만에 -37원 급강세.",
+      "tldr_crypto": "BTC $64,380(주간 +2.8%), ETH $1,795(주간 +2.7%). 이란 완화·SK 데뷔 훈풍에 이틀 반등. 미 BTC 현물 ETF 유출 스트리크 종료 관측, F&G Extreme Fear에서 상승 전환. 다음 촉매 7/17 CLARITY.",
+      "us_change": "+0.80",
+      "kr_change": "+2.52",
+      "crypto_change": "+2.80",
+      "tags": [
+        "bull",
+        "event"
+      ],
+      "html_path": "2026-07-11-morning.html",
+      "md_path": "2026-07-11-morning.md",
+      "created_at": "2026-07-11T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.55%대 (▼ 소폭 반락)",
+        "dxy": "소폭 반락 (SK 데뷔 훈풍·원화 강세 반영)",
+        "wti": "$70대 초반 (이란 긴장 완화 유지)",
+        "gold": "$4,090대 (안전선호 완화)",
+        "usdkrw": "1,505.78원 (▼ -37원 하루 만에 급강세)",
+        "vix": "16대 (▼ 감속 지속)"
+      },
+      "telegram_top3": [
+        {
+          "title": "💼 SK하이닉스 나스닥 +13% 데뷔 · $26.5B 사상 최대",
+          "body": "시가 $170(+14%), 종가 $168.01(+13%). 조달 $26.5B로 외국기업 미국 상장 사상 최대. 청약 7:1 초과. 티커 SKHYV → 7/13 SKHY. 최태원 회장 '수요가 어마어마'. AI 메모리 슈퍼사이클 기관 확신 재확인."
+        },
+        {
+          "title": "🇰🇷 KOSPI +2.52% 7,475.94 · 기관 +1.13조 견인",
+          "body": "이틀 서킷 여진 완전 해소, 장중 고가 7,704.93. 기관 대량 매수가 지수 견인. 외국인은 SK하이닉스 -1.72조 몰빵 매도(ADR 차익)하며 삼성 +0.19조로 갈아타기. 거래대금 31.16조원 급증."
+        },
+        {
+          "title": "🌍 원화 1,505.78원 · 하루 만에 -37원 급강세",
+          "body": "전날 1,543원에서 급락. 이란 완화 + SK 데뷔 성공에 위험선호 재개. 6월 이후 최저 부근. 원화 강세 지속 시 다음 주 한은(7/16) 인상 압박 완화 여지."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "7/13(월)",
+          "event": "SKHY 정규 티커 전환 · 美 상원 회기 복귀",
+          "importance": "info"
+        },
+        {
+          "date": "7/14(화) 21:30",
+          "event": "미 6월 CPI",
+          "importance": "warning",
+          "consensus": "헤드라인 +0.23%m/2.6%y, 코어 +0.30%m/3.0%y"
+        },
+        {
+          "date": "7/15(수)",
+          "event": "미 6월 PPI · 대형 은행 실적 시즌 개막",
+          "importance": "info"
+        },
+        {
+          "date": "7/16(목)",
+          "event": "한은 7월 금통위",
+          "importance": "warning",
+          "consensus": "2.50 → 2.75% 인상 (매파 톤 강도 관건)"
+        },
+        {
+          "date": "7/17(목)",
+          "event": "CLARITY Act 하원 특별 청문회 (뉴욕)",
+          "importance": "warning"
+        },
+        {
+          "date": "8/1(금)",
+          "event": "상호관세 25% 자동 발효 · 협상 마지노선",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 60,
+          "title": "CPI 부합 + 완화적 인상 · 훈풍 지속",
+          "description": "CPI 컨센 부합 + 한은 완화적 인상 → KOSPI 7,500~7,700 안착, S&P 7,600 시도, BTC $65K, USD/KRW 1,500~1,520원."
+        },
+        "risk": {
+          "probability": 40,
+          "title": "CPI 상방 서프라이즈 또는 한은 매파",
+          "description": "CPI 코어 +0.4% 상방 또는 한은 매파 톤 → KOSPI 7,300 재시험, 원화 1,520원 반락, 10Y 4.60% 재접근, BTC $60K 지지 시험."
+        }
+      }
+    },
     {
       "date": "2026-07-10",
       "weekday": "금",
