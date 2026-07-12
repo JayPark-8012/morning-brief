@@ -7,12 +7,105 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 198,
+    "total_issues": 199,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-07-11",
+  "latest": "2026-07-13",
   "briefings": [
+    {
+      "date": "2026-07-13",
+      "weekday": "월",
+      "vol": 199,
+      "theme": "CPI + Warsh Debut Week",
+      "tagline": "CPI·워시 청문 D-1, SKHY 정규 전환일",
+      "tldr_us": "S&P 7,575.39 +0.42%, 나스닥 26,281.61 +0.29%, 다우 52,637.01 +0.29%(+149.60p). 3대 지수 소폭 신고가 마감. SK하이닉스 데뷔·유가 안정이 지속 재료. 10Y 4.53%로 CPI 대기, VIX 17선 이벤트 프리미엄 소폭.",
+      "tldr_kr": "KOSPI 7,475.94(+2.52%, +184.03p) 지난주 급반등. USD/KRW 1,498.87원 심리적 1,500원 선 하향 이탈. 오늘 SK하이닉스 나스닥 정규 티커 SKHY 전환 및 2배 레버리지 ETF SKUU/SKDD 상장 개시.",
+      "tldr_crypto": "BTC $63,845(주말 -0.8%), ETH $1,790(약보합). CPI·워시 청문 대기 관망세로 주말 좁은 박스 횡보. F&G 지수 중립권. 7/14 밤 워시 크립토 톤과 7/17 CLARITY Act 하원 청문회가 이중 촉매.",
+      "us_change": "+0.42",
+      "kr_change": "+2.52",
+      "crypto_change": "-0.80",
+      "tags": [
+        "bull",
+        "event"
+      ],
+      "html_path": "2026-07-13-morning.html",
+      "md_path": "2026-07-13-morning.md",
+      "created_at": "2026-07-13T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.53% (▼ 소폭)",
+        "dxy": "100.87 (▼ 소폭 후퇴)",
+        "wti": "$72.73 (안정권)",
+        "gold": "$4,104 (▼ 소폭)",
+        "usdkrw": "1,498.87원 (▼ 1,500 하향 이탈)",
+        "vix": "17선 (▲ 소폭 · 이벤트 프리미엄)"
+      },
+      "telegram_top3": [
+        {
+          "title": "🇺🇸 CPI·워시 청문 D-1 · 화 밤 이중 관문",
+          "body": "7/14 21:30 미 6월 CPI 컨센 헤드라인 3.8%y(5월 4.2% → 하락, 유가 -10% 효과). 90분 뒤 23:00 워시 신임 연준 의장 첫 하원 청문. 두 이벤트가 한 자리에서 결합돼 결과가 즉시 통화정책 톤으로 이어져요."
+        },
+        {
+          "title": "💼 오늘부터 SKHY 정규 전환 · SKUU/SKDD 상장",
+          "body": "SK하이닉스 임시 티커 SKHYV → 정규 SKHY 전환. GraniteShares 2배 롱 SKUU · 인버스 SKDD ETF 상장 개시. 지난 금 데뷔 +13%($168.01) 여진, 원 주식-ADR 스프레드와 레버리지 수급이 첫 주 관전."
+        },
+        {
+          "title": "🇰🇷 원화 1,498.87원 · 심리선 1,500 하향 이탈",
+          "body": "한 주 사이 최고 1,548.85원(7/5)에서 -50원(-3.2%) 급강세. 이란 완화 + SK 데뷔 훈풍. 1,485원 지지 시 안착, 1,510 복귀 시 되돌림. 7/16 한은 인상 명분은 다소 약화."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "7/13(월)",
+          "event": "SKHY 정규 티커 전환 · SKUU/SKDD ETF 상장",
+          "importance": "info"
+        },
+        {
+          "date": "7/14(화) 21:30",
+          "event": "미 6월 CPI",
+          "importance": "warning",
+          "consensus": "헤드라인 3.8%y (5월 4.2% → 하락)"
+        },
+        {
+          "date": "7/14(화) 23:00",
+          "event": "워시 신임 연준 의장 첫 하원 청문",
+          "importance": "warning"
+        },
+        {
+          "date": "7/15(수)",
+          "event": "워시 상원 청문 · PPI · 대형 은행 실적",
+          "importance": "info"
+        },
+        {
+          "date": "7/16(목)",
+          "event": "한은 7월 금통위",
+          "importance": "warning",
+          "consensus": "2.50 → 2.75% 인상 (톤 강도 관건)"
+        },
+        {
+          "date": "7/17(목)",
+          "event": "CLARITY Act 하원 특별 청문회",
+          "importance": "warning"
+        },
+        {
+          "date": "8/1(금)",
+          "event": "트럼프 상호관세 25% 자동 발효 · 협상 마지노선",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 60,
+          "title": "CPI 부합 + 워시 부드러운 톤 · 훈풍 지속",
+          "description": "CPI 헤드라인 3.8% 부합 + 워시 관세 '일시적' → S&P 7,600 시도, KOSPI 7,500~7,700 안착, USD/KRW 1,485~1,505, BTC $65K 시도, 한은 완화적 인상."
+        },
+        "risk": {
+          "probability": 40,
+          "title": "CPI 상방 또는 워시 매파",
+          "description": "CPI 코어 +0.4% 상방 또는 워시 관세 '지속' 톤 → 10Y 4.60% 재접근, S&P -1~2%, KOSPI 7,300 재시험, 원화 1,510+ 되돌림, BTC $60K 지지 시험."
+        }
+      }
+    },
     {
       "date": "2026-07-11",
       "weekday": "토",
