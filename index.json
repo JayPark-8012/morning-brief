@@ -7,12 +7,103 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 202,
+    "total_issues": 203,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-07-16",
+  "latest": "2026-07-17",
   "briefings": [
+    {
+      "date": "2026-07-17",
+      "weekday": "금",
+      "vol": 203,
+      "theme": "BOK First Hike Shock",
+      "tagline": "한은 첫 인상 쇼크에 KOSPI -6.37% 폭락",
+      "tldr_us": "나스닥 25,884.80(-1.47%), 다우 52,552.97(-0.20%, -105.67), S&P 500 7,533.83(-0.51%). TSMC 어닝 서프라이즈에도 캐펙스 $60~64B + Arizona $100B 확대에 -5%. Netflix Q2 매출 미스 시간외 -8.5%. VIX 17.9(+1.4p). 10Y 4.60%.",
+      "tldr_kr": "KOSPI 6,820.60(-6.37%, -463.80p) 사이드카 조건 초과, KOSDAQ 791.84(-4.53%). SK하이닉스 -11% 폭락. 한은 만장일치 2.75% 첫 인상 + 美 반도체 셀오프 이중 충격. USD/KRW 1,499원(+11원). 오늘 7/17 제헌절 휴장.",
+      "tldr_crypto": "BTC $64,065(-1.4%), ETH $1,877(-0.7%). 위험자산 회피에 어제 랠리 되돌림. 오늘 10AM NY CLARITY Act 하원 청문 방향성 이벤트.",
+      "us_change": "-1.47",
+      "kr_change": "-6.37",
+      "crypto_change": "-1.40",
+      "tags": [
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-07-17-morning.html",
+      "md_path": "2026-07-17-morning.md",
+      "created_at": "2026-07-17T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.60% (▲ +2bp)",
+        "dxy": "100.9 (▲ +0.2)",
+        "wti": "$79.09 (보합)",
+        "gold": "$4,000 (▼ -1.5%)",
+        "usdkrw": "1,499원 (▲ +11원)",
+        "vix": "17.9 (▲ +1.4p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "🇰🇷 한은 첫 인상 쇼크 · KOSPI -6.37% 폭락",
+          "body": "3년 6개월 만 첫 인상(2.50→2.75%) 만장일치. KOSPI 6,820.60(-463.80p), SK하이닉스 -11%. V자 반등 하루 만에 반납. 원화 1,499원(+11원) 오히려 약세."
+        },
+        {
+          "title": "🇺🇸 TSMC 실적 이겨도 -5% · 나스닥 -1.47%",
+          "body": "Q2 어닝 서프라이즈에도 캐펙스 $60~64B + Arizona $100B 확대에 급락. SK하이닉스·ARM·SanDisk 등 반도체 전체 셀오프 확산. Netflix 시간외 -8.5%."
+        },
+        {
+          "title": "₿ CLARITY Act 하원 청문 오늘 10AM NY",
+          "body": "하원 금융서비스위 뉴욕 개최. 8월 상원 표결 조건 확정. 폴리마켓 통과 확률 43%로 하락. 오늘 밤 22:30+ 톤 확인이 크립토 방향성."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "7/17(금) 10:00 NY",
+          "event": "CLARITY Act 하원 특별 청문",
+          "importance": "warning"
+        },
+        {
+          "date": "7/17(금)",
+          "event": "🇰🇷 제헌절 · 한국 시장 휴장",
+          "importance": "info"
+        },
+        {
+          "date": "7/20(월)",
+          "event": "한국 시장 재개장 · 방향성 확정일",
+          "importance": "info"
+        },
+        {
+          "date": "7/23(수)",
+          "event": "한국부동산원 7월 3주 지수",
+          "importance": "info"
+        },
+        {
+          "date": "7/30(수)",
+          "event": "삼성 Q2 잠정 + FOMC 결정",
+          "importance": "info"
+        },
+        {
+          "date": "8/1(금)",
+          "event": "트럼프 상호관세 25% 자동 발효",
+          "importance": "warning"
+        },
+        {
+          "date": "8/12(화)",
+          "event": "미 7월 CPI (관세 반영 첫 지표)",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 60,
+          "title": "냉각기 후 부분 회복",
+          "description": "CLARITY 완만 + 미 반도체 반등 → 월요일 KOSPI 6,900~7,000 시가 회복, BTC $65K 재시도, 원화 1,490원대 안정."
+        },
+        "risk": {
+          "probability": 40,
+          "title": "추가 하락 · 6,700 재시험",
+          "description": "CLARITY 지연 + 미 반도체 추가 하락 → 월요일 KOSPI 6,700 재시험, 원화 1,500원 상단 돌파, 8월 초까지 조정 국면."
+        }
+      }
+    },
     {
       "date": "2026-07-16",
       "weekday": "목",
