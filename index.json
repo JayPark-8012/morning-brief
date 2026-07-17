@@ -7,12 +7,103 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 203,
+    "total_issues": 204,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-07-17",
+  "latest": "2026-07-18",
   "briefings": [
+    {
+      "date": "2026-07-18",
+      "weekday": "토",
+      "vol": 204,
+      "theme": "Semi Bear Week",
+      "tagline": "삼중 쇼크 한 주, 반도체 베어마켓 진입",
+      "tldr_us": "S&P 500 7,457.69(-1.01%, 주간 -1.6%), 나스닥 25,520.24(-1.4%, 주간 -2.9%), 다우 52,146.42(-0.77%, -406.55p, 주간 -0.9%). SMH 주간 -9%, 필라델피아 반도체 지수 공식 베어마켓 진입. 미시간 소비심리 54.4(예상 50.5, +10% MoM) 서프라이즈. VIX 17.8, 10Y 4.55%.",
+      "tldr_kr": "주간 요약 — KOSPI 6,820.60(목 -6.37% 마감). 화(7/14) -8.95% 서킷·수(7/15) +6.24% 회복·목(7/16) 한은 첫 인상 2.75% + TSMC 셀오프에 -6.37% 재폭락 롤러코스터. KOSDAQ 791.84. USD/KRW 1,500원(주간 +12원). 금(7/17) 제헌절 휴장.",
+      "tldr_crypto": "BTC $63,130(주간 -1.5%), ETH $1,832(-2.8% 금). CLARITY Act 하원 청문 결의 없이 상원 이관, 통과 확률 43% 유지. 방향성 이벤트 소멸, 7/30 FOMC가 사실상 크립토 방향 결정.",
+      "us_change": "-1.60",
+      "kr_change": "-6.37",
+      "crypto_change": "-1.50",
+      "tags": [
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-07-18-morning.html",
+      "md_path": "2026-07-18-morning.md",
+      "created_at": "2026-07-18T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.55% (▼ -5bp W)",
+        "dxy": "100.7 (▼ 소폭 W)",
+        "wti": "$80.1 (▲ +10% W)",
+        "gold": "$3,998 (▼ -3% W)",
+        "usdkrw": "1,500원 (▲ +12원 W)",
+        "vix": "17.8 (▲ +1.3p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "🇺🇸 반도체 베어마켓 진입 · S&P 주간 -1.6%",
+          "body": "필라델피아 반도체 지수 고점 대비 -20% 공식 확정. SMH ETF 주간 -9%. TSMC 캐펙스 확대 + Moonshot AI 오픈 웨이트가 트리거. 재진입은 지지선 확정 후."
+        },
+        {
+          "title": "🇰🇷 KOSPI 롤러코스터 주간 · 6,820에서 주말 진입",
+          "body": "화 서킷·수 회복·목 -6.37% 폭락 3연타. 한은 첫 인상 2.75% + TSMC 셀오프 이중 충격. 원화 1,500원 상단. 월(7/20) 개장이 방향 결정일."
+        },
+        {
+          "title": "₿ CLARITY 하원 청문 무결의 · 8월 상원 대기",
+          "body": "청문 종료 후 결의 없이 상원 이관. 폴리마켓 통과 확률 43% 정체. BTC $63,130, ETH $1,832. 7/30 FOMC가 사실상 크립토 방향 결정."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "7/20(월)",
+          "event": "🇰🇷 한국 시장 재개장 · 갭 방향 확인",
+          "importance": "info"
+        },
+        {
+          "date": "7/22(수)",
+          "event": "🇺🇸 Alphabet·MSFT Q2 + 리치먼드 제조업",
+          "importance": "info"
+        },
+        {
+          "date": "7/23(수)",
+          "event": "🇰🇷 부동산원 7월 3주 지수 (한은 인상 후 첫 확인)",
+          "importance": "info"
+        },
+        {
+          "date": "7/24(목)",
+          "event": "🇺🇸 신규 실업수당·내구재 주문",
+          "importance": "info"
+        },
+        {
+          "date": "7/30(수)",
+          "event": "FOMC 결정 + 삼성전자 Q2 잠정",
+          "importance": "warning"
+        },
+        {
+          "date": "8/1(금)",
+          "event": "트럼프 상호관세 25% 자동 발효 D-14",
+          "importance": "warning"
+        },
+        {
+          "date": "8/12(화)",
+          "event": "미 7월 CPI (관세·유가 반영 첫 지표)",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "다음 주 완만 회복 · FOMC 대기",
+          "description": "주말 이란·CLARITY 안정 → 월 KOSPI 6,900~7,000 시가 회복. 미 지수는 7/22~24 지표에 소폭 반등. FOMC 동결 전제. BTC $63~65K 박스."
+        },
+        "risk": {
+          "probability": 45,
+          "title": "스태그플레이션 서사 확산",
+          "description": "이란 확전 지속 + 반도체 추가 하락 → KOSPI 6,700 재시험, 원화 1,510원. FOMC 매파 강화 시 에너지↑·성장주↓ 본격화. BTC $60K 이탈 리스크."
+        }
+      }
+    },
     {
       "date": "2026-07-17",
       "weekday": "금",
