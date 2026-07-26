@@ -7,12 +7,98 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 209,
+    "total_issues": 210,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-07-25",
+  "latest": "2026-07-27",
   "briefings": [
+    {
+      "date": "2026-07-27",
+      "weekday": "월",
+      "vol": 210,
+      "theme": "Super Week Opens",
+      "tagline": "슈퍼위크 개막 · FOMC·빅테크 어닝·삼성 잠정 대기",
+      "tldr_us": "S&P 500 7,411.98(+0.05%, 주 -0.6%), 나스닥 24,975.82(-0.60%, 주 -2%), 다우 51,947.25(+0.46%, +236p). 금 안정 시도에도 나스닥 3월 말 이후 첫 백투백 주간 하락. 이번 주 MS·Meta·Apple·Amazon 실적 랠러시.",
+      "tldr_kr": "KOSPI 6,690.62(-5.72%, -406.27p) 사이드카 발동, 매도 사이드카 10일 연속. 외국인 -2.57조·기관 -1.40조 매도, 개인 +5.18조 방어. 목 +4.40% → 금 -5.72% 롤러코스터. 오늘 시가 갭 반응이 이번 주 첫 시험대.",
+      "tldr_crypto": "BTC $64,502(주 -1.6%), ETH $1,857(주 -2.9%). 주말 이란 대화 재개·유가 되돌림에 소폭 안정. $64K 하단 지지 유지 중, 방향성 트리거는 7/29 FOMC. CLARITY Act 상원 계류.",
+      "us_change": "+0.05",
+      "kr_change": "-5.72",
+      "crypto_change": "-1.60",
+      "tags": [
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-07-27-morning.html",
+      "md_path": "2026-07-27-morning.md",
+      "created_at": "2026-07-27T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.67% (▼ -2bp W)",
+        "dxy": "101.3 (▲ +0.4% W)",
+        "wti": "$88.01 (▼ 금 -2%, 주 +10%)",
+        "gold": "$4,065 (▼ -0.7% W)",
+        "usdkrw": "1,475원 (▲ 재진입)",
+        "vix": "18.9 (▲ +2.1p W)"
+      },
+      "telegram_top3": [
+        {
+          "title": "🗓️ 슈퍼위크 개막 · 5개 대형 이벤트 몰림",
+          "body": "이번 주 FOMC(7/29 수) + MS·Meta(7/29) + Apple·Amazon(7/30) + 삼성 Q2 잠정(7/30) + 트럼프 관세 발효(8/1). 이벤트 5개 통과 전엔 방향성 베팅보다 방어 우선."
+        },
+        {
+          "title": "🇰🇷 KOSPI 6,690에서 첫 개장 · 사이드카 10일 여진",
+          "body": "지난 금 -5.72%(-406p) 사이드카 발동 뒤 첫 개장. 오늘 시가 ±1% 이내 안정이 방어선. 주말 유가 되돌림($88)·10Y 4.67% 진정이 지지 재료."
+        },
+        {
+          "title": "💼 삼성 Q2 잠정(7/30) · HBM 비중 50% 돌파 관건",
+          "body": "컨센 매출 171조·영업이익 89조로 이미 매우 높음. 관전 포인트는 부합 여부보다 HBM 매출 비중이 처음 DRAM의 50%를 넘느냐. HBM4 사전 캐파 완판 상태."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "7/28(월)",
+          "event": "🇺🇸 컨퍼런스보드 소비자신뢰 + 🇰🇷 서울 아파트 4주 지수",
+          "importance": "info"
+        },
+        {
+          "date": "7/29(수)",
+          "event": "🇺🇸 FOMC 결정 + Microsoft Q4 · Meta Q2 (마감 후) + 🇰🇷 코픽스",
+          "importance": "warning"
+        },
+        {
+          "date": "7/30(수)",
+          "event": "🇺🇸 Apple·Amazon·Coinbase·MSTR + 🇰🇷 삼성전자 Q2 잠정",
+          "importance": "warning"
+        },
+        {
+          "date": "7/31(목)",
+          "event": "🇺🇸 미 2Q GDP 잠정 · Employment Cost Index",
+          "importance": "info"
+        },
+        {
+          "date": "8/1(금)",
+          "event": "트럼프 상호관세 25% 자동 발효 D-5",
+          "importance": "warning"
+        },
+        {
+          "date": "8/12(화)",
+          "event": "미 7월 CPI (관세·유가 반영 첫 지표)",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "FOMC 완만 + MS·삼성 해명 → 반등",
+          "description": "KOSPI 6,750~6,950 회복 시도, S&P 7,400~7,500 유지, BTC $65~67K. 유가 $86~90 안정, VIX 17~19 정상화."
+        },
+        "risk": {
+          "probability": 45,
+          "title": "FOMC 매파 + 캐펙스 재확인 → 확산",
+          "description": "KOSPI 6,500대 재확인, S&P 7,300 하방, BTC $62K 재테스트. WTI $92 재돌파·VIX 22 돌파 리스크."
+        }
+      }
+    },
     {
       "date": "2026-07-25",
       "weekday": "토",
