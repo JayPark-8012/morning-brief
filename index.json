@@ -7,12 +7,98 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 210,
+    "total_issues": 211,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-07-27",
+  "latest": "2026-07-28",
   "briefings": [
+    {
+      "date": "2026-07-28",
+      "weekday": "화",
+      "vol": 211,
+      "theme": "Memory Shock",
+      "tagline": "중국 CXMT 상장發 메모리 쇼크, KOSPI 소폭 반등",
+      "tldr_us": "S&P 500 7,413.18(+0.02%, +1.20p), 나스닥 24,932.08(-0.17%, -43.74p), 다우 약 +0.3%. NVDA -5%(2월 이후 최대 낙폭) + 메모리주 동반 급락(SK하이닉스 ADR -8%·마이크론 -5%·샌디스크 -14%). 유가 -8.68% 폭락이 다우·에너지 이외 상쇄.",
+      "tldr_kr": "KOSPI 6,756.11(+0.97%, +65.49p) 소폭 반등, 사이드카 10일 연속 여진 진정. 다만 중국 CXMT 상장 여파로 메모리 낙폭 소화 중. USD/KRW 1,477원 유지, 원화 여전히 약세권.",
+      "tldr_crypto": "BTC $64,869(24h +0.6%), ETH $1,969(24h +6%). 유가 붕괴·9월 인상 확률 82% → 33% 급락에 위험자산 심리 회복. $64K 방어 성공, FOMC 톤이 다음 방향 결정.",
+      "us_change": "+0.02",
+      "kr_change": "+0.97",
+      "crypto_change": "+0.60",
+      "tags": [
+        "event",
+        "bull"
+      ],
+      "html_path": "2026-07-28-morning.html",
+      "md_path": "2026-07-28-morning.md",
+      "created_at": "2026-07-28T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.63% (▼ -4bp)",
+        "dxy": "101.18 (▼ -0.28%)",
+        "wti": "$82.62 (▼ -8.68%)",
+        "gold": "$4,090 (▲ +0.6%)",
+        "usdkrw": "1,477원 (▲ 유지)",
+        "vix": "19.4 (▲ +0.5p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "🇨🇳 중국 CXMT 상장 첫날 +466% · 시총 $487B로 세계 4위 DRAM 등극",
+          "body": "SK하이닉스 ADR -8%·마이크론 -5%·샌디스크 -14% 동반 급락. CXMT가 IPO 조달 $8.6B로 캐파 증설·HBM 진입 가속. 즉시 위협은 아니지만 2027~28년 HBM 프리미엄 압박 리스크."
+        },
+        {
+          "title": "🛢️ WTI $82.62 -8.68% 붕괴 · 9월 FOMC 인상 확률 82% → 33% 급락",
+          "body": "미-이란 이틀 연속 공습 중단·대화 재개 신호. 10Y 4.67% → 4.63% 진정. 매파 톤 완화 기대에 나스닥·크립토 심리 회복. 결렬 시 순식간 재역전 리스크는 상존."
+        },
+        {
+          "title": "🇰🇷 KOSPI 6,756.11 +0.97% 소폭 반등 · 사이드카 10일 여진 진정",
+          "body": "6,690에서 +65p 반등, 유가 완충이 반도체 하방을 이긴 결과. 다만 SK하이닉스 오후 컨콜·내일 FOMC·모레 삼성 잠정·Apple·Amazon 대기로 방어 우선 기조 유효."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "7/28(화)",
+          "event": "🇺🇸 컨퍼런스보드 소비자신뢰 + 🇰🇷 SK하이닉스 Q2 컨콜 + 서울 4주 지수",
+          "importance": "info"
+        },
+        {
+          "date": "7/29(수)",
+          "event": "🇺🇸 FOMC 결정 + Microsoft Q4 · Meta Q2 + 🇰🇷 코픽스",
+          "importance": "warning"
+        },
+        {
+          "date": "7/30(수)",
+          "event": "🇺🇸 Apple·Amazon·Coinbase·MSTR + 🇰🇷 삼성 Q2 잠정 + 관세 딜 마감",
+          "importance": "warning"
+        },
+        {
+          "date": "7/31(목)",
+          "event": "🇺🇸 미 2Q GDP 잠정 · Employment Cost Index",
+          "importance": "info"
+        },
+        {
+          "date": "8/1(금)",
+          "event": "트럼프 상호관세 자동 발효 D-4",
+          "importance": "warning"
+        },
+        {
+          "date": "8/12(화)",
+          "event": "미 7월 CPI (관세·유가 반영 첫 지표)",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 60,
+          "title": "FOMC 비둘기 톤 + MS Azure 유지 → 나스닥 반등",
+          "description": "S&P 7,450~7,550 회복, 나스닥 25,200 재도전, BTC $66~68K. KOSPI 6,800~6,950. 원달러 1,470원대 진입."
+        },
+        "risk": {
+          "probability": 40,
+          "title": "FOMC 매파 유지 + CXMT 여파 확산 → 반도체 재조정",
+          "description": "S&P 7,350 하방, 나스닥 24,500대 재테스트, BTC $63K 재확인. KOSPI 6,600 지지 시험, SK하이닉스·삼성 낙폭 확대."
+        }
+      }
+    },
     {
       "date": "2026-07-27",
       "weekday": "월",
