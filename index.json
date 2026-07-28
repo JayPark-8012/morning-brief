@@ -7,12 +7,93 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 211,
+    "total_issues": 212,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-07-28",
+  "latest": "2026-07-29",
   "briefings": [
+    {
+      "date": "2026-07-29",
+      "weekday": "수",
+      "vol": 212,
+      "theme": "Black Tuesday",
+      "tagline": "KOSPI -10.84% 검은 화요일, 서킷브레이커 발동",
+      "tldr_us": "S&P 500 7,428.78(+0.21%), 나스닥 24,876.91(-0.22%), 다우 52,747.32(+1.03%, +537pt) 사상 최고. 반도체 → 전통주·에너지·항공 로테이션. 유가·금 동반 하락에 매파 리스크 완화 지속.",
+      "tldr_kr": "KOSPI 6,023.66(-10.84%, -732.09p) 검은 화요일. 서킷브레이커·사이드카 동시 발동, 삼전 -13%(222,000원)·SK하이닉스 -14%(1,550,000원). 외국인 -4.49조 순매도. USD/KRW 1,480원 재테스트.",
+      "tldr_crypto": "BTC $63,327(24h -2.5%), ETH $1,877(24h -3.2%). FOMC 앞두고 관망 매도. $64K 이탈, ETH는 $1,900선 하회. 오늘 밤 FOMC + MS·Meta 어닝이 방향키.",
+      "us_change": "+0.21",
+      "kr_change": "-10.84",
+      "crypto_change": "-2.50",
+      "tags": [
+        "event",
+        "bear"
+      ],
+      "html_path": "2026-07-29-morning.html",
+      "md_path": "2026-07-29-morning.md",
+      "created_at": "2026-07-29T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.64% (▲ +1bp)",
+        "dxy": "101.0 (▲ 4주 최고권)",
+        "wti": "$81.16 (▼ -1.76%)",
+        "gold": "$4,026 (▼ -1.25%)",
+        "usdkrw": "1,480원 (▲ +3원)",
+        "vix": "20+ (▲ +1p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "🇰🇷 KOSPI -10.84% 검은 화요일 · 서킷브레이커 발동",
+          "body": "6,023.66(-732.09p) 폭락 마감, 장중 5,992.91 저점. 삼성 -13%·SK하이닉스 -14%. 외국인 -4.49조. CXMT 여파+AI 순환 파이낸싱+레버리지 청산 삼중 겹침."
+        },
+        {
+          "title": "🇺🇸 다우 +537pt(+1.03%) 52,747.32 사상 최고 · 로테이션",
+          "body": "반도체가 CXMT 쇼크에 팔리고 자금이 전통주·에너지·항공으로. S&P +0.21%, 나스닥 -0.22%. 한국-미국 시장 상황 완전 분리 상태."
+        },
+        {
+          "title": "🇰🇷 SK하이닉스 Q2 오늘 오전 9시 · 영업익 64조 사상 최대 예상",
+          "body": "매출 84조·영업익 64조(YoY +600%) 컨센. HBM 매출 비중 50% 돌파 여부가 반도체 방어의 열쇠. 컨센 상회 시 낙폭 절반 회복 가능."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "7/29(수)",
+          "event": "🇰🇷 SK하이닉스 Q2 컨콜(오전) + 🇺🇸 FOMC 결정(밤) + MS·Meta 어닝 + 🇰🇷 코픽스",
+          "importance": "warning"
+        },
+        {
+          "date": "7/30(목)",
+          "event": "🇰🇷 삼성 Q2 잠정 + 🇺🇸 Apple·Amazon·Coinbase·MSTR + 관세 딜 마감",
+          "importance": "warning"
+        },
+        {
+          "date": "7/31(금)",
+          "event": "🇺🇸 미 2Q GDP 잠정 · Employment Cost Index",
+          "importance": "info"
+        },
+        {
+          "date": "8/1(토)",
+          "event": "트럼프 상호관세 자동 발효 D-day",
+          "importance": "warning"
+        },
+        {
+          "date": "8/12(화)",
+          "event": "미 7월 CPI (관세·유가 반영 첫 지표)",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "SK하이닉스 컨센 상회 + FOMC 완만 → KOSPI 반등",
+          "description": "SK하이닉스 영업익 64조·HBM 비중 50%+ 확인, FOMC 매파 톤 완화. KOSPI 6,200~6,400 반등, S&P 7,450 유지, BTC $65K 복귀. 원달러 1,475원대."
+        },
+        "risk": {
+          "probability": 45,
+          "title": "SK하이닉스 미달 or FOMC 매파 → KOSPI 재테스트",
+          "description": "컨센 미달 or 워시 톤 매파 유지. KOSPI 5,900 재테스트, 나스닥 24,500대 이탈, BTC $61K 하방. 원달러 1,485원 진입."
+        }
+      }
+    },
     {
       "date": "2026-07-28",
       "weekday": "화",
