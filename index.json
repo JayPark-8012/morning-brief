@@ -7,12 +7,93 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 212,
+    "total_issues": 213,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-07-29",
+  "latest": "2026-07-30",
   "briefings": [
+    {
+      "date": "2026-07-30",
+      "weekday": "목",
+      "vol": 213,
+      "theme": "Hawkish Hold",
+      "tagline": "매파 FOMC 충격에 다우 -1,153pt 급락",
+      "tldr_us": "S&P 500 7,316.15(-1.52%), 나스닥 24,442.94(-1.74%), 다우 51,594.14(-2.19%, -1,153pt). 워시 FOMC 5회 연속 동결(3.50~3.75%)했으나 3명 인상 반대표 매파 서프라이즈. 시장 즉시 9월·12월 25bp 인상 프라이싱 전환. WTI +6.2% 중동 재긴장.",
+      "tldr_kr": "KOSPI 5,663(-5.98%) 이틀째 급락, 6월 고점 대비 -40% 베어마켓 진입. 이틀 연속 서킷브레이커 사상 첫 기록. 코스닥 662.68(-6.12%) 신저가. 오늘 오전 삼성전자 Q2 정식 컨콜(10시)이 반등 여부의 열쇠. USD/KRW 1,478원(-6원).",
+      "tldr_crypto": "BTC $63,800선(24h +0.5%), ETH $1,900 하회(24h -1%대). 매파 FOMC 통과 후 $63K 지지선 방어. 오늘 저녁 Coinbase 실적(EPS $0.15·매출 $1.31B YoY -12.8%)이 크립토 심리 방향키.",
+      "us_change": "-1.52",
+      "kr_change": "-5.98",
+      "crypto_change": "+0.50",
+      "tags": [
+        "event",
+        "bear"
+      ],
+      "html_path": "2026-07-30-morning.html",
+      "md_path": "2026-07-30-morning.md",
+      "created_at": "2026-07-30T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.63% (▲ +2bp)",
+        "dxy": "101 중반 (▲ 매파 반영)",
+        "wti": "$84.18 (▲ +6.20%)",
+        "gold": "$4,049 (▲ +0.27%)",
+        "usdkrw": "1,478원 (▼ -6원)",
+        "vix": "20.66 (▲ +13.45%)"
+      },
+      "telegram_top3": [
+        {
+          "title": "🇺🇸 매파 FOMC · 다우 -1,153pt(-2.19%) 51,594.14",
+          "body": "워시 FOMC 5회 연속 동결이지만 3명 인상 반대표 매파 서프라이즈. 시장이 즉시 9월·12월 25bp 인상 프라이싱으로 전환. 2주 전 인하 1~2회 예상에서 하루 만에 인상 2회로 컨센 반전, 2023년 3월 이후 최대."
+        },
+        {
+          "title": "🇰🇷 KOSPI 5,663(-5.98%) 이틀째 급락 · 6월 고점 대비 -40%",
+          "body": "이틀 연속 서킷브레이커 사상 첫 기록. 코스닥도 -6.12% 662.68 신저가. 반도체 매도가 진정되지 않고 확산. 오늘 오전 10시 삼성전자 Q2 정식 컨콜의 HBM 세부·하반기 톤이 유일한 반등 카드."
+        },
+        {
+          "title": "🇰🇷 오늘 삼성 Q2 정식 + Apple·Amazon 실적 + 관세 딜 D-day",
+          "body": "삼성 89.4조 잠정에 HBM·DRAM 배분 세부 공개. 저녁 Apple(EPS $1.86·매출 $109B) + Amazon(EPS $1.85·AWS 관건) + Coinbase. 한미 15% 관세 딜 마감 D-day, 결렬 시 8/1 25% 자동 발효."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "7/30(목)",
+          "event": "🇰🇷 삼성전자 Q2 정식(오전) + 🇺🇸 Apple·Amazon·Coinbase + 한미 관세 딜 마감",
+          "importance": "warning"
+        },
+        {
+          "date": "7/31(금)",
+          "event": "🇺🇸 미 2Q GDP 잠정 · Employment Cost Index",
+          "importance": "info"
+        },
+        {
+          "date": "8/1(토)",
+          "event": "트럼프 상호관세 자동 발효 D-day",
+          "importance": "warning"
+        },
+        {
+          "date": "8/5(화)",
+          "event": "🇺🇸 미 7월 ISM 서비스업 PMI",
+          "importance": "info"
+        },
+        {
+          "date": "8/12(화)",
+          "event": "미 7월 CPI (관세·유가 반영 첫 지표)",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "삼성 컨콜 양호 + Apple·Amazon 수용 → 낙폭 되돌림",
+          "description": "삼성 HBM 비중·하반기 우호적, Apple iPhone +20%·Amazon AWS 25%+ 확인. KOSPI 5,800~5,900 반등, S&P 7,350 회복, 나스닥 24,700 복귀, BTC $65K 시도. 원달러 1,475원대."
+        },
+        "risk": {
+          "probability": 45,
+          "title": "삼성 실망 or Apple·Amazon 미달 → 하방 재확대",
+          "description": "HBM 비중 시장 기대 하단 or Apple 미달. KOSPI 5,500 재테스트, 나스닥 24,000 하회, BTC $62K 이탈, VIX 22+. 원달러 1,485원 진입. 8/12 CPI까지 방어."
+        }
+      }
+    },
     {
       "date": "2026-07-29",
       "weekday": "수",
