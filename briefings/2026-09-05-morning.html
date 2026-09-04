@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0F1115">
+<title>2026년 9월 5일 (토) 데일리 브리핑 — 고용 16만 명 쇼크에 월러 피벗 하루 만에 반납</title>
+<meta name="description" content="2026년 9월 5일 (토) 데일리 브리핑 — 美 8월 비농업 고용 +16만 2,000명(컨센 5만 3,000명)에 9월 인상 확률 49%→58%. S&amp;P 500 7,718.60(-0.38%), 나스닥 26,506.99(-0.29%), 다우 53,414.25(-0.51%). 코스피 6,687.21(+1.64%), 코스닥 813.50(+2.95%), USD/KRW 1,350.4원, BTC $79,581.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg-primary: #0F1115;
+    --bg-elevated: #1A1D24;
+    --bg-card: #1F232C;
+    --bg-hover: #252932;
+    --bg-deeper: #0A0C10;
+    --text-primary: #F0EAE0;
+    --text-secondary: #A8A29A;
+    --text-tertiary: #6B6862;
+    --gold: #D4A857;
+    --gold-bright: #E8C078;
+    --gold-glow: rgba(212,168,87,0.15);
+    --bull: #26A69A;
+    --bear: #EF5350;
+    --bull-bg: rgba(38,166,154,0.1);
+    --bear-bg: rgba(239,83,80,0.1);
+    --border: #2D3138;
+    --border-strong: #3A3F49;
+    --border-gold: rgba(212,168,87,0.3);
+    --info-bg: rgba(91,155,213,0.1);
+    --info-border: #5B9BD5;
+    --warn-bg: rgba(232,192,120,0.12);
+    --warn-border: #E8C078;
+    --font-body: 'Pretendard', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  [data-theme="light"] {
+    --bg-primary: #FAF8F3;
+    --bg-elevated: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-hover: #F5F1E8;
+    --bg-deeper: #F0EBE0;
+    --text-primary: #1A1D24;
+    --text-secondary: #4A4843;
+    --text-tertiary: #6B6862;
+    --gold: #A07F3F;
+    --gold-bright: #7A5F2F;
+    --gold-glow: rgba(160,127,63,0.1);
+    --border: #E5DFD0;
+    --border-strong: #C9C2B0;
+    --border-gold: rgba(160,127,63,0.4);
+    --info-bg: rgba(91,155,213,0.08);
+    --warn-bg: rgba(160,127,63,0.1);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { background: var(--bg-primary); color: var(--text-primary); font-family: var(--font-body); font-size: 16px; line-height: 1.7; transition: background .3s, color .3s; }
+  a { color: var(--gold-bright); text-decoration: none; border-bottom: 1px dotted var(--gold); }
+  a:hover { color: var(--gold); border-bottom-style: solid; }
+  strong { color: var(--gold-bright); font-weight: 700; }
+  .top-header { position: sticky; top: 0; z-index: 100; background: rgba(15,17,21,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+  [data-theme="light"] .top-header { background: rgba(250,248,243,0.9); }
+  .header-inner { max-width: 920px; margin: 0 auto; padding: .75rem 1.25rem; display: flex; align-items: center; justify-content: space-between; }
+  .header-brand { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; text-decoration: none; }
+  .brand-mark { font-weight: 800; font-size: 1.25rem; color: var(--gold); line-height: 1; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .brand-text .ko { font-size: 0.7rem; color: var(--text-tertiary); letter-spacing: 0.15em; margin-top: 2px; }
+  .brand-text .en { font-size: 0.95rem; color: var(--text-primary); font-weight: 600; }
+  .header-actions { display: flex; gap: 0.5rem; }
+  .icon-btn { width: 36px; height: 36px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+  .icon-btn:hover { border-color: var(--gold); color: var(--gold); }
+  main { max-width: 920px; margin: 0 auto; padding: 0 1.25rem; }
+  section { padding: 2.5rem 0; border-bottom: 1px dashed var(--border); }
+  section:last-child { border-bottom: none; }
+  .hero { padding-top: 2.5rem; }
+  .hero-meta { font-family: var(--font-mono); font-size: .8rem; color: var(--text-tertiary); letter-spacing: .12em; margin-bottom: 1.25rem; }
+  .hero-meta .vol { color: var(--gold); }
+  .hero-title { font-weight: 800; font-size: clamp(1.7rem, 4.5vw, 2.3rem); line-height: 1.3; margin-bottom: .8rem; }
+  .hero-sub { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; max-width: 680px; }
+  .tldr-grid { display: grid; gap: .75rem; margin-top: 2rem; }
+  .tldr-card { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1rem; padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 4px; }
+  .tldr-flag { font-size: 1.6rem; }
+  .tldr-label { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); letter-spacing: .1em; margin-bottom: .2rem; }
+  .tldr-text { font-size: .95rem; line-height: 1.5; }
+  .tldr-change { font-family: var(--font-mono); font-size: 1.05rem; font-weight: 700; padding: .35rem .65rem; border-radius: 4px; }
+  .change-bull { color: var(--bull); background: var(--bull-bg); }
+  .change-bear { color: var(--bear); background: var(--bear-bg); }
+  .change-neutral { color: var(--text-secondary); background: var(--bg-deeper); }
+  .sec-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.5rem; padding-bottom: .8rem; border-bottom: 1px solid var(--border); }
+  .sec-num { font-family: var(--font-mono); font-weight: 700; font-size: .78rem; color: var(--gold); padding: .25rem .5rem; background: var(--gold-glow); border-radius: 3px; }
+  .sec-title { font-weight: 700; font-size: 1.35rem; }
+  .sec-sub { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); margin-left: auto; letter-spacing: .12em; text-transform: uppercase; }
+  .macro-table { width: 100%; border-collapse: collapse; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; font-size: .92rem; }
+  .macro-table th, .macro-table td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+  .macro-table thead th { background: var(--bg-deeper); font-family: var(--font-mono); font-size: .75rem; color: var(--text-tertiary); letter-spacing: .1em; text-transform: uppercase; }
+  .macro-table tbody tr:last-child td { border-bottom: none; }
+  .macro-name { font-weight: 700; color: var(--gold-bright); font-family: var(--font-mono); font-size: .88rem; }
+  .macro-value { font-family: var(--font-mono); font-weight: 600; }
+  .macro-chg { font-family: var(--font-mono); font-weight: 600; font-size: .88rem; }
+  .macro-up { color: var(--bear); }
+  .macro-down { color: var(--bull); }
+  .macro-flat { color: var(--text-secondary); }
+  .macro-note { font-size: .85rem; color: var(--text-secondary); }
+  .macro-summary { margin-top: 1rem; padding: .9rem 1.1rem; background: var(--info-bg); border-left: 3px solid var(--info-border); border-radius: 4px; font-size: .9rem; line-height: 1.65; }
+  .deep { background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 10px; padding: 1.8rem 1.6rem; }
+  .deep-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .18em; margin-bottom: 1rem; }
+  .deep-title { font-weight: 800; font-size: 1.35rem; line-height: 1.4; margin-bottom: 1.2rem; }
+  .deep-body { font-size: .96rem; line-height: 1.8; margin-bottom: 1.2rem; }
+  .deep-body p { margin-bottom: 1rem; }
+  .stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .6rem; margin: 1.3rem 0; }
+  .stat-card { padding: .9rem 1rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 6px; }
+  .stat-label { font-family: var(--font-mono); font-size: .68rem; color: var(--text-tertiary); letter-spacing: .1em; margin-bottom: .3rem; }
+  .stat-value { font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700; color: var(--gold-bright); }
+  .stat-note { font-size: .75rem; color: var(--text-secondary); margin-top: .3rem; line-height: 1.4; }
+  .domino { display: grid; gap: .5rem; margin: 1.3rem 0; }
+  .domino-row { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; padding: .7rem .9rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 6px; font-size: .88rem; }
+  .domino-box { font-family: var(--font-mono); font-size: .8rem; font-weight: 600; color: var(--gold-bright); padding: .2rem .55rem; background: var(--gold-glow); border-radius: 3px; white-space: nowrap; }
+  .domino-arrow { color: var(--gold); font-weight: 700; }
+  .so-what { padding: 1rem 1.2rem; background: var(--info-bg); border-left: 3px solid var(--info-border); border-radius: 4px; margin-top: 1rem; font-size: .92rem; line-height: 1.65; }
+  .so-what::before { content: '🎯 그래서 나한테 무슨 의미?'; display: block; font-weight: 700; color: var(--info-border); margin-bottom: .4rem; font-size: .82rem; }
+  .term-box { padding: .95rem 1.15rem; background: var(--warn-bg); border-left: 3px solid var(--warn-border); border-radius: 4px; margin: 1.1rem 0; font-size: .89rem; line-height: 1.65; }
+  .term-box .term-title { display: block; font-weight: 700; color: var(--gold-bright); margin-bottom: .35rem; font-size: .86rem; }
+  .deep-sources { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; margin-top: 1.2rem; padding-top: 1rem; border-top: 1px dashed var(--border); font-size: .82rem; color: var(--text-tertiary); }
+  .source-chip { display: inline-block; padding: .25rem .65rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); font-size: .72rem; color: var(--text-secondary) !important; border-bottom: none !important; }
+  .source-chip:hover { border-color: var(--gold); color: var(--gold) !important; }
+  .five { display: grid; gap: 1rem; }
+  .news-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.4rem 1.5rem; }
+  .news-meta { display: flex; align-items: center; gap: .6rem; margin-bottom: .7rem; font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .news-rank { color: var(--gold); font-weight: 700; padding: .2rem .45rem; background: var(--gold-glow); border-radius: 3px; }
+  .news-cat { color: var(--text-secondary); letter-spacing: .08em; }
+  .news-time { margin-left: auto; }
+  .news-headline { font-weight: 700; font-size: 1.1rem; line-height: 1.45; margin-bottom: .8rem; }
+  .news-body { font-size: .93rem; line-height: 1.8; }
+  .news-body p { margin-bottom: .7rem; }
+  .news-conclusion { margin-top: 1rem; padding: .8rem 1rem; background: var(--bg-deeper); border-left: 3px solid var(--gold); border-radius: 4px; font-size: .9rem; line-height: 1.55; }
+  .news-conclusion::before { content: '→ 그래서 뭐? '; color: var(--gold); font-weight: 700; }
+  .news-sources { margin-top: .9rem; padding-top: .7rem; border-top: 1px dashed var(--border); font-size: .8rem; color: var(--text-tertiary); }
+  .news-sources a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; }
+  .markets { display: grid; gap: 1.2rem; }
+  .market-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; padding: 1.3rem 1.4rem; }
+  .market-card.us { border-top: 3px solid #5B9BD5; }
+  .market-card.kr { border-top: 3px solid #D4A857; }
+  .market-card.crypto { border-top: 3px solid #F7931A; }
+  .market-head { display: flex; align-items: baseline; gap: .6rem; margin-bottom: .9rem; }
+  .market-flag { font-size: 1.4rem; }
+  .market-title { font-weight: 700; font-size: 1.05rem; }
+  .market-time { margin-left: auto; font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .mkt-table { width: 100%; border-collapse: collapse; font-size: .9rem; margin-bottom: .8rem; }
+  .mkt-table th, .mkt-table td { padding: .55rem .7rem; text-align: left; border-bottom: 1px solid var(--border); }
+  .mkt-table thead th { font-family: var(--font-mono); font-size: .7rem; color: var(--text-tertiary); letter-spacing: .08em; text-transform: uppercase; background: var(--bg-deeper); }
+  .mkt-table tbody tr:last-child td { border-bottom: none; }
+  .mkt-table .mkt-name { font-weight: 600; }
+  .mkt-table .mkt-val { font-family: var(--font-mono); font-weight: 600; }
+  .mkt-table .mkt-chg { font-family: var(--font-mono); font-weight: 700; }
+  .mkt-flow { font-size: .85rem; color: var(--text-secondary); padding: .55rem .8rem; background: var(--bg-deeper); border-radius: 4px; margin-bottom: .7rem; line-height: 1.55; }
+  .mkt-comment { padding: .7rem .9rem; background: var(--gold-glow); border-left: 3px solid var(--gold); border-radius: 4px; font-size: .88rem; line-height: 1.6; }
+  .mkt-comment::before { content: '💬 '; }
+  .filter-bar { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.2rem; font-size: .8rem; color: var(--text-tertiary); }
+  .filter-chip { padding: .3rem .7rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 99px; font-family: var(--font-mono); }
+  .headline-list { display: grid; gap: .7rem; }
+  .h-item { padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 6px; }
+  .h-title { font-weight: 600; font-size: .98rem; margin-bottom: .4rem; line-height: 1.4; }
+  .h-desc { font-size: .87rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: .5rem; }
+  .h-meta { font-family: var(--font-mono); font-size: .72rem; color: var(--text-tertiary); }
+  .h-meta a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; font-size: .72rem; }
+  .re-snapshot { padding: 1.1rem 1.3rem; background: var(--bg-deeper); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 1.2rem; font-size: .9rem; line-height: 1.7; }
+  .re-snapshot strong { color: var(--gold-bright); }
+  .re-grid { display: grid; gap: 1rem; }
+  .re-card { padding: 1.3rem 1.4rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; }
+  .re-title { font-weight: 700; font-size: 1.02rem; margin-bottom: .6rem; }
+  .re-body { font-size: .92rem; line-height: 1.75; }
+  .re-body p { margin-bottom: .55rem; }
+  .re-sources { margin-top: .8rem; padding-top: .7rem; border-top: 1px dashed var(--border); font-size: .78rem; color: var(--text-tertiary); }
+  .re-sources a { color: var(--text-secondary); border-bottom-style: dotted; margin: 0 .15rem; }
+  .analyst-box { padding: 1.5rem 1.6rem; background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated)); border: 1px solid var(--border-gold); border-radius: 8px; margin-bottom: 1.2rem; }
+  .analyst-tag { font-family: var(--font-mono); font-size: .72rem; color: var(--gold); letter-spacing: .15em; margin-bottom: .8rem; }
+  .analyst-body { font-size: .96rem; line-height: 1.85; }
+  .analyst-body p { margin-bottom: .8rem; }
+  .scenarios { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem; }
+  .sc-card { padding: 1.4rem 1.5rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 8px; }
+  .sc-card.main { border-left: 3px solid var(--bull); }
+  .sc-card.alt { border-left: 3px solid var(--bear); }
+  .sc-prob { font-family: var(--font-mono); font-size: .8rem; color: var(--gold); letter-spacing: .1em; margin-bottom: .5rem; }
+  .sc-title { font-weight: 700; font-size: 1.05rem; margin-bottom: .7rem; }
+  .sc-body { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+  .action-box { padding: 1.1rem 1.3rem; background: var(--bg-deeper); border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 6px; }
+  .action-title { font-weight: 700; font-size: .92rem; color: var(--gold); margin-bottom: .6rem; }
+  .action-list { list-style: none; padding: 0; margin: 0; }
+  .action-list li { padding: .35rem 0; padding-left: 1.2rem; position: relative; font-size: .9rem; line-height: 1.6; }
+  .action-list li::before { content: '▸'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+  .cal-grid { display: grid; gap: .7rem; }
+  .cal-item { display: grid; grid-template-columns: 110px 1fr; gap: 1rem; padding: 1rem 1.2rem; background: var(--bg-elevated); border: 1px solid var(--border); border-left: 3px solid var(--info-border); border-radius: 6px; align-items: center; }
+  .cal-item.warn { border-left-color: var(--warn-border); background: var(--warn-bg); }
+  .cal-item.info { border-left-color: var(--info-border); background: var(--info-bg); }
+  .cal-date { font-family: var(--font-mono); font-size: .85rem; font-weight: 700; color: var(--gold-bright); }
+  .cal-event { font-weight: 600; margin-bottom: .25rem; font-size: .98rem; }
+  .cal-desc { font-size: .85rem; color: var(--text-secondary); line-height: 1.55; }
+  .disclaimer { margin-top: 2rem; padding: 1rem 1.2rem; background: var(--bg-deeper); border: 1px dashed var(--border); border-radius: 6px; font-size: .78rem; color: var(--text-tertiary); line-height: 1.6; }
+  @media (max-width: 720px) {
+    .scenarios { grid-template-columns: 1fr; }
+    .tldr-card { grid-template-columns: auto 1fr; }
+    .tldr-change { grid-column: 2; justify-self: start; margin-top: .3rem; }
+    .cal-item { grid-template-columns: 1fr; gap: .3rem; }
+    .macro-table th, .macro-table td { padding: .6rem .55rem; font-size: .82rem; }
+    .mkt-table th, .mkt-table td { padding: .45rem .5rem; font-size: .82rem; }
+  }
+</style>
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+</head>
+<body>
+
+<header class="top-header">
+  <div class="header-inner">
+    <a href="/index.html" class="header-brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-text">
+        <div class="en">Morning Brief</div>
+        <div class="ko">데일리 경제 브리핑</div>
+      </div>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" title="테마 변경">🌙</button>
+      <button class="icon-btn" title="공유" onclick="navigator.share &amp;&amp; navigator.share({title: document.title, url: location.href})">↗</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- [1] HERO -->
+<section class="hero">
+  <div class="hero-meta">
+    <span class="vol">Vol.244</span> · 2026.09.05 (토) · 📖 12분 읽기 · v3.7 · weekend
+  </div>
+  <h1 class="hero-title">고용 16만 명 쇼크에 월러 피벗 하루 만에 반납</h1>
+  <p class="hero-sub">9월 인상 확률 49%에서 58%로 되돌림</p>
+
+  <div class="tldr-grid">
+    <div class="tldr-card">
+      <div class="tldr-flag">🇺🇸</div>
+      <div>
+        <div class="tldr-label">미국 (9/4 금 NY 마감)</div>
+        <div class="tldr-text">S&amp;P <strong>7,718.60</strong>. 고용이 예상의 세 배로 나왔어요.</div>
+      </div>
+      <div class="tldr-change change-bear">-0.38%</div>
+    </div>
+    <div class="tldr-card">
+      <div class="tldr-flag">🇰🇷</div>
+      <div>
+        <div class="tldr-label">한국 (9/4 금 마감)</div>
+        <div class="tldr-text">코스피 <strong>6,687.21</strong>. 고용 발표 전에 닫혀서 웃었습니다.</div>
+      </div>
+      <div class="tldr-change change-bull">+1.64%</div>
+    </div>
+    <div class="tldr-card">
+      <div class="tldr-flag">₿</div>
+      <div>
+        <div class="tldr-label">코인 (9/5 토 아침 KST)</div>
+        <div class="tldr-text">BTC <strong>$79,581</strong>, ETH <strong>$2,502</strong>. $80,000을 다시 내줬어요.</div>
+      </div>
+      <div class="tldr-change change-bear">-2.5%</div>
+    </div>
+  </div>
+</section>
+
+<!-- [3] MACRO -->
+<section id="macro">
+  <div class="sec-head">
+    <span class="sec-num">03</span>
+    <h2 class="sec-title">📊 거시 환경 표</h2>
+    <span class="sec-sub">9/4 NY Close</span>
+  </div>
+  <table class="macro-table">
+    <thead>
+      <tr><th>지표</th><th>현재값</th><th>전일 대비</th><th>시사점</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="macro-name">美 10Y</td><td class="macro-value">4.79%</td><td class="macro-chg macro-up">▲ +3bp</td><td class="macro-note">이틀 하락분 반납</td></tr>
+      <tr><td class="macro-name">DXY</td><td class="macro-value">약 99.0</td><td class="macro-chg">보합권</td><td class="macro-note">고용에 달러 지지</td></tr>
+      <tr><td class="macro-name">WTI</td><td class="macro-value">약 $91.20</td><td class="macro-chg macro-down">▼ -0.1%</td><td class="macro-note">주간으로는 +9%</td></tr>
+      <tr><td class="macro-name">금 (현물)</td><td class="macro-value">$4,470.66</td><td class="macro-chg macro-down">▼ -0.07%</td><td class="macro-note">$4,500 문턱에서 멈춤</td></tr>
+      <tr><td class="macro-name">USD/KRW</td><td class="macro-value">1,350.4원</td><td class="macro-chg macro-down">▼ -8.9원</td><td class="macro-note">13개월 최저권</td></tr>
+      <tr><td class="macro-name">VIX</td><td class="macro-value">14.32</td><td class="macro-chg macro-down">▼ 소폭</td><td class="macro-note">25거래일째 14~17</td></tr>
+    </tbody>
+  </table>
+  <div class="macro-summary">
+    금리는 튀었는데 <strong>겁을 재는 지표는 그대로</strong>였습니다. 국채 금리가 이틀 치 하락을 하루에 반납했는데도 VIX는 14대에 머물렀어요. 이번 주 가장 크게 움직인 건 주식도 금리도 아닌 <strong>기름값</strong>이에요. WTI가 한 주 9% 올라 7월 중순 이후 최대 상승폭입니다. <span style="color:var(--text-secondary)">(달러 인덱스는 9/3 종가 99.00 기준의 근사값으로, 9/4 확정 종가는 출처별 편차가 있어 근사 표기합니다.)</span>
+  </div>
+</section>
+
+<!-- [4] DEEP DIVE -->
+<section id="deep-dive">
+  <div class="sec-head">
+    <span class="sec-num">04</span>
+    <h2 class="sec-title">⭐ 오늘의 깊은 이야기</h2>
+    <span class="sec-sub">The Payroll Reversal</span>
+  </div>
+  <div class="deep">
+    <div class="deep-tag">[DEEP DIVE] · 미국 고용 · 🕒 9/4 (금) 21:30 KST 발표</div>
+    <div class="deep-title">예상의 세 배, 하루 만에 원위치</div>
+    <div class="deep-body">
+      <p>미국 8월 <strong>비농업 고용(NFP, 농업을 뺀 미국 일자리 증감)</strong>이 <strong>16만 2,000명</strong> 늘었습니다. 예상은 5만 3,000명, <strong>세 배가 넘습니다.</strong> 블룸버그 설문에 참여한 이코노미스트 중 이 숫자를 맞힌 사람은 <strong>한 명도 없었어요.</strong> 실업률은 4.1%로 그대로였습니다.</p>
+      <p>목요일에 연준 이사 월러가 "한 번은 기다릴 수 있다"고 말하며 붙인 조건이 <strong>"지표가 받쳐준다면"</strong>이었죠. 하루 만에 그 조건이 깨진 겁니다. 9월 인상 확률은 <strong>49.4%에서 58%</strong>로 하루 만에 되올라갔어요.</p>
+
+      <div class="stat-cards">
+        <div class="stat-card">
+          <div class="stat-label">8월 비농업 고용</div>
+          <div class="stat-value">+16.2만</div>
+          <div class="stat-note">컨센 +5.3만의 3배</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">9월 인상 확률</div>
+          <div class="stat-value">49% → 58%</div>
+          <div class="stat-note">하루 만에 9%p 상승</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">美 10년물</div>
+          <div class="stat-value">4.79%</div>
+          <div class="stat-note">+3bp, 이틀 치 반납</div>
+        </div>
+      </div>
+
+      <div class="term-box">
+        <span class="term-title">💡 잠깐, 일자리가 늘면 왜 주식이 빠지나요</span>
+        일자리가 늘면 사람들이 돈을 더 쓰고, 물가가 오릅니다. 연준은 물가를 잡는 게 일이니 <strong>금리를 올릴 이유가 생기죠.</strong> 금리가 오르면 안전한 국채 이자만으로 수익이 나서, 위험한 주식이나 코인을 들고 있을 이유가 줄어듭니다. <strong>경제가 좋은 게 주식엔 나쁜</strong> 구조가 지금 시장의 기본 문법이에요.
+      </div>
+
+      <div class="domino">
+        <div class="domino-row"><span class="domino-box">고용 +16.2만 (예상의 3배)</span><span class="domino-arrow">→</span><span>9월 인상 확률 49% → 58%</span></div>
+        <div class="domino-row"><span class="domino-box">인상 기대 ↑</span><span class="domino-arrow">→</span><span>美 10년물 4.79%, 달러 지지</span></div>
+        <div class="domino-row"><span class="domino-box">금리 ↑</span><span class="domino-arrow">→</span><span>목요일에 튀었던 자산부터 되돌림</span></div>
+        <div class="domino-row"><span class="domino-box">위험선호 후퇴</span><span class="domino-arrow">→</span><span>비트코인 $80,000 이탈, 3대 지수 동반 하락</span></div>
+      </div>
+
+      <p>그런데 <strong>되돌림의 크기</strong>가 흥미롭습니다. 채권은 이틀 치 하락을 하루에 다 반납했는데, 주식 낙폭은 <strong>0.3~0.5%</strong>에 그쳤어요. 겁을 재는 VIX도 14대 그대로였습니다. 주식은 이 숫자를 <strong>추세가 아니라 한 번 튄 값</strong>으로 본다는 뜻이에요. 7월 -2만 3,000명에서 8월 +16만 2,000명, 두 달 사이 18만 명이 오간 지표로 방향을 단정하긴 어렵죠.</p>
+
+      <div class="deep-sources">
+        📰 출처:
+        <a href="https://www.cnbc.com/2026/09/03/stock-market-today-live-updates.html" target="_blank" rel="noopener" class="source-chip">CNBC</a>
+        <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-04-2026" target="_blank" rel="noopener" class="source-chip">TheStreet</a>
+        <a href="https://finance.yahoo.com/markets/live/stock-market-today-friday-september-3-dow-sp-500-nasdaq-august-jobs-report-081005475.html" target="_blank" rel="noopener" class="source-chip">Yahoo Finance</a>
+        <a href="https://www.kiplinger.com/investing/economy/jobs-report-august-2026-what-to-expect" target="_blank" rel="noopener" class="source-chip">Kiplinger</a>
+        <a href="https://tradingeconomics.com/united-states/government-bond-yield" target="_blank" rel="noopener" class="source-chip">TradingEconomics</a>
+      </div>
+
+      <div class="so-what">
+        🎯 그래서 나한테 무슨 의미?<br>
+        이번 주는 <strong>목요일에 오르고 금요일에 반납한</strong> 한 주였습니다. 남은 건 원점이 아니라 <strong>확률이 다시 반반이 됐다</strong>는 사실이에요. 고용은 두 달 사이 18만 명이 오갈 만큼 흔들리는 지표라 방향을 못 만듭니다. 진짜 심판대는 <strong>9월 11일 미국 8월 소비자물가</strong>예요. 지금 포지션을 크게 바꾸기보다, 그날까지는 현금 비중을 남겨두는 편이 낫습니다.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- [5] FIVE THINGS -->
+<section id="five-things">
+  <div class="sec-head">
+    <span class="sec-num">05</span>
+    <h2 class="sec-title">📌 오늘의 5가지</h2>
+    <span class="sec-sub">Five Things</span>
+  </div>
+  <div class="five">
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">01</span>
+        <span class="news-cat">💹 시장·매크로 (한국)</span>
+        <span class="news-time">🕒 9/4 (금) 15:30 KST</span>
+      </div>
+      <h3 class="news-headline">한국 장은 고용 발표 전에 닫혔다</h3>
+      <div class="news-body">
+        <p>코스피가 <strong>6,687.21(+107.73p, +1.64%)</strong>, 코스닥이 <strong>813.50(+2.95%)</strong>로 800선을 되찾았습니다. 외국인 <strong>+4,798억</strong>, 기관 <strong>+1조 6,692억</strong>의 쌍끌이 매수였어요. 환율도 <strong>1,350.4원</strong>으로 8.9원 더 내렸습니다.</p>
+        <p>다만 이 상승의 재료는 <strong>목요일 월러 발언</strong>이었습니다. 고용은 한국 장이 닫힌 뒤에 나왔어요. 즉 금요일 상승분은 <strong>깨져버린 전제 위에서 만들어진 것</strong>입니다.</p>
+        <p>한 주로 보면 롤러코스터였어요. 8/31 6,820.02에서 9/2 <strong>-3.99%</strong> 급락, 이후 이틀 반등해 <strong>주간 -1.9%</strong>. 낙폭의 절반쯤을 되찾은 V자입니다.</p>
+      </div>
+      <div class="news-conclusion">월요일 개장 때 <strong>고용을 뒤늦게 반영</strong>할 차례입니다. 이번 주 반등을 이끈 게 실적이 아니라 금리 기대였던 만큼, 되밀릴 여지를 열어두는 게 안전해요.</div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.newspim.com/news/view/20260904000860" target="_blank" rel="noopener">뉴스핌</a> ·
+        <a href="https://www.mt.co.kr/stock/2026/09/04/2026090415282496905" target="_blank" rel="noopener">머니투데이</a> ·
+        <a href="https://data.krx.co.kr/contents/MDC/MAIN/main/index.cmd" target="_blank" rel="noopener">KRX</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">02</span>
+        <span class="news-cat">💼 기업·산업</span>
+        <span class="news-time">🕒 9/3 실적 발표 · 9/4 주가 반영</span>
+      </div>
+      <h3 class="news-headline">룰루레몬 8년 만에 $100 아래로</h3>
+      <div class="news-body">
+        <p>요가복으로 유명한 룰루레몬 주가가 <strong>$100.61(-17.38%)</strong>로 무너졌습니다. 장중 <strong>$99.97</strong>까지 밀려 <strong>2018년 이후 처음</strong>으로 세 자릿수를 내줬어요.</p>
+        <p>2분기 매출은 <strong>24억 달러(-4%)</strong>, 같은 매장끼리 비교한 매출은 <strong>-9%</strong>, 북미는 <strong>-12%</strong>였습니다. 핵심 상품인 여성 레깅스가 <strong>20%</strong> 줄었어요. 연간 전망도 <strong>또</strong> 낮췄습니다.</p>
+        <p>회사는 4월에 새 최고경영자를 발표해 놓고 취임일을 <strong>9월 8일</strong>로 잡았습니다. 다섯 달 가까운 공백 동안 결정이 미뤄졌다는 지적이 나와요. 올해 들어 주가는 이미 <strong>42%</strong> 빠져 있었습니다.</p>
+      </div>
+      <div class="news-conclusion">브랜드 프리미엄은 <strong>한 번 금이 가면 실적보다 먼저 무너집니다.</strong> 미국 소비 관련주를 보고 있다면, 이건 금리 이야기가 아니라 <strong>소비자가 지갑을 닫고 있다는 신호</strong>로 읽는 편이 맞아요.</div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.cnbc.com/2026/09/03/lululemon-lulu-q2-2026-earnings.html" target="_blank" rel="noopener">CNBC</a> ·
+        <a href="https://www.fool.com/coverage/stock-market-today/2026/09/04/stock-market-today-sept-4-lululemon-plummets-17-after-slashing-guidance/" target="_blank" rel="noopener">Motley Fool</a> ·
+        <a href="https://finance.yahoo.com/markets/article/lululemon-sinks-after-cutting-forecast-as-revenue-declines-210101310.html" target="_blank" rel="noopener">Yahoo Finance</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">03</span>
+        <span class="news-cat">🌍 정책·규제·정부</span>
+        <span class="news-time">🕒 9/3 (목) 국회 제출</span>
+      </div>
+      <h3 class="news-headline">장기보유공제가 거주 중심으로 바뀐다</h3>
+      <div class="news-body">
+        <p>정부의 <strong>2026년 세제개편안</strong>이 입법예고를 거쳐 9월 3일까지 국회에 제출됐습니다. 부동산 쪽 핵심은 <strong>장기보유특별공제</strong> 개편이에요.</p>
+        <p>지금은 1가구 1주택자가 집을 오래 <strong>갖고만 있어도</strong> 양도세를 깎아줍니다. 이 '보유' 공제를 단계적으로 줄여 <strong>2029년에는 실제로 산 기간</strong>에만 연 8%씩 최대 80%를 적용하기로 했어요.</p>
+        <p>방향은 분명해요. 실거주 1주택자 부담은 낮추고 <strong>고가·비거주·다주택</strong>엔 세게 물리겠다는 겁니다.</p>
+      </div>
+      <div class="news-conclusion">국회 통과가 남았지만 <strong>방향은 이미 정해졌다</strong>고 봐야 합니다. 안 살면서 보유만 하는 집이 있다면 <strong>2029년 전에 정리할지</strong>를 지금부터 계산해 둘 필요가 있어요.</div>
+      <div class="news-sources">
+        📰
+        <a href="https://nsp.nanet.go.kr/plan/subject/detail.do?nationalPlanControlNo=PLAN0000065941" target="_blank" rel="noopener">기획재정부 세제개편안</a> ·
+        <a href="https://www.korea.kr/news/policyNewsView.do?newsId=156722073" target="_blank" rel="noopener">대한민국 정책브리핑</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">04</span>
+        <span class="news-cat">🌐 글로벌·지정학</span>
+        <span class="news-time">🕒 9/1~9/4 한 주간</span>
+      </div>
+      <h3 class="news-headline">호르무즈 교전 재개, 유가 주간 +9%</h3>
+      <div class="news-body">
+        <p>미군이 화요일부터 이란 혁명수비대 표적을 다시 때렸습니다. 약 한 달 만의 교전 재개예요. 8월 한 달간 이란이 <strong>상선 13척</strong>을 공격했고, 월요일엔 원유운반선 피격으로 <strong>선원 2명이 숨졌습니다.</strong></p>
+        <p>숫자로 보면 더 뚜렷해요. <strong>호르무즈 해협</strong>을 지나는 원자재 운반선이 하루 11척에서 <strong>6척</strong>으로 줄었습니다. 최근 10일 평균 13척의 절반도 안 됩니다.</p>
+        <p>그 결과 WTI가 한 주 <strong>+9%</strong>로 7월 중순 이후 최대 상승, 브렌트는 <strong>$95.23(주간 +6.1%)</strong>였어요. 경유 가격은 <strong>사상 최고</strong>를 찍었습니다.</p>
+      </div>
+      <div class="news-conclusion">경유는 트럭·건설장비·농기계 연료라 <strong>물류비에 바로 붙습니다.</strong> 이게 다음 달 물가 지표로 넘어가면 금리 인하 기대가 더 밀려요. <strong>9/6 산유국 회의</strong>가 다음 분수령입니다.</div>
+      <div class="news-sources">
+        📰
+        <a href="https://news.usni.org/2026/09/04/u-s-iran-trade-strikes-in-strait-of-hormuz-as-both-battle-on-social-media" target="_blank" rel="noopener">USNI News</a> ·
+        <a href="https://www.cnbc.com/2026/09/01/us-strikes-iran-after-new-hormuz-strait-shipping-attacks-centcom.html" target="_blank" rel="noopener">CNBC</a> ·
+        <a href="https://finance.yahoo.com/energy/articles/oil-set-steepest-weekly-gain-043839818.html" target="_blank" rel="noopener">Reuters/Yahoo</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-rank">05</span>
+        <span class="news-cat">₿ 디지털자산·신기술</span>
+        <span class="news-time">🕒 9/3 (목) 공개 · 9/5 일반 개방</span>
+      </div>
+      <h3 class="news-headline">오픈AI가 GPT-6 애스트라를 냈다</h3>
+      <div class="news-body">
+        <p>오픈AI가 목요일 새 모델 <strong>GPT-6 애스트라</strong>를 제한 공개했습니다. 사장 그렉 브록먼은 <strong>"세대적 도약"</strong>이라고 부르며, 훗날 <strong>AGI(사람 수준의 범용 인공지능)</strong>의 도착점으로 기록될 수 있다고 말했어요.</p>
+        <p>회사가 내세운 강점은 성능 점수보다 <strong>일 처리</strong>예요. 지시 범위를 지키고 <strong>여러 단계로 이어지는 작업</strong>을 끝까지 해낸다는 겁니다.</p>
+        <p>가격은 <strong>입력 100만 토큰당 $10, 출력 $50</strong>입니다. 보안 프로그램 참여 기업이 먼저 쓰고, 유료 요금제와 API로 순차 개방돼요.</p>
+      </div>
+      <div class="news-conclusion">출력 $50는 <strong>가볍게 쓸 가격이 아닙니다.</strong> 기존 파이프라인을 통째로 갈아엎기보다, 실패 비용이 큰 <strong>고난도 작업에만 선별 적용</strong>하고 나머지는 저가 모델에 남기는 조합이 현실적이에요.</div>
+      <div class="news-sources">
+        📰
+        <a href="https://www.cnbc.com/2026/09/03/open-ai-astra-gpt-6-cyber.html" target="_blank" rel="noopener">CNBC</a> ·
+        <a href="https://www.axios.com/2026/09/03/openai-astra-gpt-6-agi-brockman" target="_blank" rel="noopener">Axios</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- [6] MARKETS -->
+<section id="markets">
+  <div class="sec-head">
+    <span class="sec-num">06</span>
+    <h2 class="sec-title">📈 시장별 스냅샷</h2>
+    <span class="sec-sub">Snapshot</span>
+  </div>
+  <div class="markets">
+
+    <div class="market-card us">
+      <div class="market-head">
+        <span class="market-flag">🇺🇸</span>
+        <span class="market-title">미국 시장</span>
+        <span class="market-time">9/4 (금) NY 마감</span>
+      </div>
+      <table class="mkt-table">
+        <thead><tr><th>지수</th><th>종가</th><th>변동</th></tr></thead>
+        <tbody>
+          <tr><td class="mkt-name">S&amp;P 500</td><td class="mkt-val">7,718.60</td><td class="mkt-chg" style="color:var(--bear)">-0.38%</td></tr>
+          <tr><td class="mkt-name">Nasdaq</td><td class="mkt-val">26,506.99</td><td class="mkt-chg" style="color:var(--bear)">-0.29%</td></tr>
+          <tr><td class="mkt-name">Dow</td><td class="mkt-val">53,414.25</td><td class="mkt-chg" style="color:var(--bear)">-0.51%</td></tr>
+          <tr><td class="mkt-name">美 10Y</td><td class="mkt-val">4.79%</td><td class="mkt-chg" style="color:var(--bear)">▲ +3bp</td></tr>
+          <tr><td class="mkt-name">VIX</td><td class="mkt-val">14.32</td><td class="mkt-chg">—</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-comment">3대 지수 동반 하락, 낙폭은 모두 1% 미만</div>
+    </div>
+
+    <div class="market-card kr">
+      <div class="market-head">
+        <span class="market-flag">🇰🇷</span>
+        <span class="market-title">한국 시장</span>
+        <span class="market-time">9/4 (금) 마감</span>
+      </div>
+      <table class="mkt-table">
+        <thead><tr><th>지수/환율</th><th>종가</th><th>변동</th></tr></thead>
+        <tbody>
+          <tr><td class="mkt-name">KOSPI</td><td class="mkt-val">6,687.21</td><td class="mkt-chg" style="color:var(--bull)">+1.64%</td></tr>
+          <tr><td class="mkt-name">KOSDAQ</td><td class="mkt-val">813.50</td><td class="mkt-chg" style="color:var(--bull)">+2.95%</td></tr>
+          <tr><td class="mkt-name">USD/KRW</td><td class="mkt-val">1,350.4원</td><td class="mkt-chg" style="color:var(--bull)">▼ -8.9원</td></tr>
+          <tr><td class="mkt-name">코스피 주간</td><td class="mkt-val">8/31 대비</td><td class="mkt-chg" style="color:var(--bear)">-1.9%</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-supply">수급 (유가증권시장) — 외국인 <strong>+4,798억</strong> · 기관 <strong>+1조 6,692억</strong> · 개인 <strong>-3조 7,231억</strong></div>
+      <div class="mkt-comment">코스닥 800선 회복, 외국인·기관 쌍끌이</div>
+    </div>
+
+    <div class="market-card crypto">
+      <div class="market-head">
+        <span class="market-flag">₿</span>
+        <span class="market-title">디지털 자산</span>
+        <span class="market-time">9/5 (토) 아침 KST</span>
+      </div>
+      <table class="mkt-table">
+        <thead><tr><th>자산</th><th>현재가</th><th>변동(24h)</th></tr></thead>
+        <tbody>
+          <tr><td class="mkt-name">BTC</td><td class="mkt-val">$79,581</td><td class="mkt-chg" style="color:var(--bear)">-2.5%</td></tr>
+          <tr><td class="mkt-name">ETH</td><td class="mkt-val">$2,502</td><td class="mkt-chg" style="color:var(--bear)">-0.5%</td></tr>
+          <tr><td class="mkt-name">9/4 저점</td><td class="mkt-val">$78,649</td><td class="mkt-chg">—</td></tr>
+          <tr><td class="mkt-name">공포·탐욕 지수</td><td class="mkt-val">75</td><td class="mkt-chg">탐욕</td></tr>
+          <tr><td class="mkt-name">전체 시가총액</td><td class="mkt-val">약 2.67조 달러</td><td class="mkt-chg">—</td></tr>
+        </tbody>
+      </table>
+      <div class="mkt-supply">현물 BTC 상장지수펀드(ETF) 9/3 순유입 <strong>+7억 3,080만 달러</strong> — 1월 이후 최대</div>
+      <div class="mkt-comment">$80,000선 재이탈, 그런데 ETF 자금은 들어왔다</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- [7] HEADLINES -->
+<section id="headlines">
+  <div class="sec-head">
+    <span class="sec-num">07</span>
+    <h2 class="sec-title">📰 헤드라인 더보기</h2>
+    <span class="sec-sub">8 Stories</span>
+  </div>
+  <div class="filter-bar">
+    <span class="filter-chip">전체 8</span>
+    <span class="filter-chip">🇺🇸 2</span>
+    <span class="filter-chip">🇰🇷 2</span>
+    <span class="filter-chip">💼 2</span>
+    <span class="filter-chip">🌍 1</span>
+    <span class="filter-chip">₿ 1</span>
+  </div>
+  <div class="headline-list">
+
+    <div class="h-item">
+      <div class="h-title">🇺🇸 일자리는 세 배인데 실업률은 그대로</div>
+      <div class="h-desc">고용이 <strong>16만 2,000명</strong> 늘었는데 실업률은 <strong>4.1%</strong> 그대로였습니다. 일할 사람도 같이 늘었다는 뜻이라, 임금이 치솟는 국면은 아직 아니에요.</div>
+      <div class="h-meta">🕒 9/4 21:30 KST ·
+        <a href="https://www.cnbc.com/2026/09/03/stock-market-today-live-updates.html" target="_blank" rel="noopener">CNBC</a>,
+        <a href="https://www.ibtimes.co.uk/us-jobs-surge-august-fed-rate-hike-speculation-1817972" target="_blank" rel="noopener">IBTimes</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇺🇸 VIX가 25거래일째 14~17 안에 갇혔다</div>
+      <div class="h-desc">겁먹은 정도를 재는 <strong>VIX</strong>가 <strong>14.32</strong>로 25거래일째 14~17 안에 갇혔습니다. <strong>1992년 기록(26일)에 하루 차</strong>예요. 이런 정적은 깨질 때 크게 깨집니다.</div>
+      <div class="h-meta">🕒 9/4 NY 마감 ·
+        <a href="https://investrade.com/market-review-september-04-2026/" target="_blank" rel="noopener">Investrade</a>,
+        <a href="https://www.cboe.com/tradable-products/vix/" target="_blank" rel="noopener">Cboe</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇰🇷 9월 반도체 대형주 변수는 자사주다</div>
+      <div class="h-desc">외국인이 반도체 대형주에서 발을 빼고 개인이 받고 있어요. 그 사이 두 회사가 <strong>대규모 자사주 매입</strong>을 예고했습니다. 회사가 자기 주식을 사면 유통 물량이 줄어 가격을 떠받쳐요.</div>
+      <div class="h-meta">🕒 9/4 ·
+        <a href="https://www.ebn.co.kr/news/articleView.html?idxno=1722408" target="_blank" rel="noopener">EBN</a>,
+        <a href="https://data.krx.co.kr/contents/MDC/MAIN/main/index.cmd" target="_blank" rel="noopener">KRX</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🇰🇷 게임주 강세, 펄어비스 13%대 급등</div>
+      <div class="h-desc">코스닥 <strong>+2.95%</strong>에는 게임주 몫이 있었습니다. 장중 펄어비스 <strong>13%</strong>대 급등, NHN <strong>+3.49%</strong>, 카카오게임즈 <strong>+3.06%</strong>. 금리가 풀릴 때 <strong>중소형 성장주가 먼저 튀는</strong> 패턴이에요.</div>
+      <div class="h-meta">🕒 9/4 장중 ·
+        <a href="https://www.cbci.co.kr/news/articleView.html?idxno=603934" target="_blank" rel="noopener">CBC뉴스</a>,
+        <a href="https://data.krx.co.kr/contents/MDC/MAIN/main/index.cmd" target="_blank" rel="noopener">KRX</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">💼 카카오게임즈, 2분기도 적자였다</div>
+      <div class="h-desc">2분기 매출 <strong>약 750억 원</strong>, 영업손실 <strong>약 230억 원</strong>. 매출이 1년 전보다 <strong>35%</strong> 줄었어요. 원인은 단순합니다. <strong>새 게임이 없었어요.</strong></div>
+      <div class="h-meta">🕒 9/4 ·
+        <a href="https://www.newsworks.co.kr/news/articleView.html?idxno=849461" target="_blank" rel="noopener">뉴스웍스</a>,
+        <a href="https://www.kakaocorp.com/ir/referenceRoom/earningsAnnouncement" target="_blank" rel="noopener">카카오 IR</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">💼 삼성 370억 달러, SK하이닉스 40억 달러 미국행</div>
+      <div class="h-desc">삼성전자가 텍사스 테일러에 <strong>370억 달러 이상</strong>, SK하이닉스가 인디애나에 <strong>40억 달러</strong>를 넣어 <strong>고대역폭 메모리(HBM, AI 칩용 고속 메모리)</strong> 후공정 공장을 짓습니다. 관세·환율 위험을 현지 생산으로 덮는 구조예요.</div>
+      <div class="h-meta">🕒 9/4 ·
+        <a href="https://www.sptatimeskorea.com/post/%EC%A0%9C20260904-ti-01%ED%98%B8-2026%EB%85%84-9%EC%9B%94-4%EC%9D%BC-%EA%B8%80%EB%A1%9C%EB%B2%8C-%EB%B0%98%EB%8F%84%EC%B2%B4-%EC%82%B0%EC%97%85-%EA%B4%80%EB%A0%A8-%EC%A3%BC%EC%9A%94-%EB%89%B4%EC%8A%A4-%EC%9A%94%EC%95%BD" target="_blank" rel="noopener">SPTA 타임스</a>,
+        <a href="https://news.skhynix.co.kr/" target="_blank" rel="noopener">SK하이닉스 뉴스룸</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">₿ 가격은 빠졌는데 ETF엔 7억 달러가 들어왔다</div>
+      <div class="h-desc">비트코인이 <strong>$78,649</strong>까지 밀린 날, 현물 비트코인 상장지수펀드(ETF)엔 <strong>7억 3,080만 달러</strong>가 들어왔습니다. <strong>1월 이후 최대</strong>예요. 하루 시세를 보는 돈과 몇 달을 보는 돈이 <strong>갈라섰습니다.</strong></div>
+      <div class="h-meta">🕒 9/3~9/4 ·
+        <a href="https://decrypt.co/377414/bitcoin-slides-blowout-jobs-report-fed-hike-odds" target="_blank" rel="noopener">Decrypt</a>,
+        <a href="https://www.bloomberg.com/news/articles/2026-09-04/bitcoin-drops-below-80-000-as-hot-jobs-data-spurs-fed-hike-bets" target="_blank" rel="noopener">Bloomberg</a>
+      </div>
+    </div>
+
+    <div class="h-item">
+      <div class="h-title">🌍 경유 가격이 사상 최고를 찍었다</div>
+      <div class="h-desc">원유만 오른 게 아닙니다. <strong>경유(디젤)</strong>가 사상 최고를 찍었어요. 트럭·선박·건설장비가 쓰는 연료라 <strong>물류비와 식품 원가에 곧바로 붙습니다.</strong></div>
+      <div class="h-meta">🕒 9/4 ·
+        <a href="https://finance.yahoo.com/energy/articles/oil-set-steepest-weekly-gain-043839818.html" target="_blank" rel="noopener">Reuters/Yahoo</a>,
+        <a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank" rel="noopener">TradingEconomics</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- [8] REAL ESTATE -->
+<section id="realestate">
+  <div class="sec-head">
+    <span class="sec-num">08</span>
+    <h2 class="sec-title">🏠 부동산·생활경제</h2>
+    <span class="sec-sub">Real Estate</span>
+  </div>
+
+  <div class="re-snapshot">
+    <strong>[부동산 한눈에 · 8월 5주(8/31 기준) · 한국부동산원 9/3 발표]</strong><br>
+    서울 아파트 매매 <strong>+0.22%</strong> · 강남구 <span style="color:var(--bear)">-0.41%</span> · 서초구 <span style="color:var(--bear)">-0.23%</span><br>
+    강북 14개구 평균 <span style="color:var(--bull)">+0.36%</span> · 강북구 전세가율 <strong>63.8%</strong>(81개월 만의 최고)
+  </div>
+
+  <div class="re-grid">
+
+    <div class="re-card">
+      <div class="re-title">1️⃣ 서울 안에서 방향이 갈라졌다</div>
+      <div class="re-body">
+        <p>서울 전체는 <strong>+0.22%</strong>로 오르는데, 강남구는 8월 첫 주 +0.01%에서 시작해 <strong>-0.41%</strong>까지 넉 주 연속 낙폭을 키웠습니다. 서초구도 <strong>-0.23%</strong>로 돌아섰어요.</p>
+        <p>반대편에선 강북 14개 구가 평균 <strong>+0.36%</strong> 올랐어요. <strong>같은 서울인데 방향이 정반대</strong>입니다. 세금 부담이 커진 고가 단지에서 호가를 낮춘 거래가 나오는 동안, 수요는 <strong>역세권 중소형</strong>으로 옮겨간 거죠.</p>
+      </div>
+      <div class="re-sources">📰
+        <a href="https://biz.heraldcorp.com/article/10854211" target="_blank" rel="noopener">헤럴드경제</a> ·
+        <a href="https://www.reb.or.kr/r-one/" target="_blank" rel="noopener">한국부동산원</a>
+      </div>
+    </div>
+
+    <div class="re-card">
+      <div class="re-title">2️⃣ 강북구 전세가율이 81개월 만에 최고</div>
+      <div class="re-body">
+        <p>강북구 아파트 <strong>전세가율</strong>이 <strong>63.8%</strong>로 6년 9개월 만의 최고를 찍었습니다. 전세가율은 <strong>매매가 대비 전세가 비율</strong>이에요. 4억짜리 집의 전세가 2억 5,500만 원이라는 뜻이죠.</p>
+        <p>이 비율이 오른다는 건 <strong>사겠다는 사람보다 살겠다는 사람이 많다</strong>는 신호예요. 노원·도봉도 6~7년 만의 최고 수준입니다. 9월 입주 물량이 <strong>6년 5개월 만에 최저</strong>인데 가을 이사철까지 겹쳐요.</p>
+      </div>
+      <div class="re-sources">📰
+        <a href="https://www.ajunews.com/view/20260821113357883" target="_blank" rel="noopener">아주경제</a> ·
+        <a href="https://data.kbland.kr/kbstats/wmh" target="_blank" rel="noopener">KB부동산</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- [9] ANALYST -->
+<section id="analyst">
+  <div class="sec-head">
+    <span class="sec-num">09</span>
+    <h2 class="sec-title">🧠 애널리스트 시각</h2>
+    <span class="sec-sub">Analyst View</span>
+  </div>
+
+  <div class="analyst-box">
+    <div class="analyst-tag">[종합 — 한 주 동안 답을 세 번 바꿨다]</div>
+    <div class="analyst-body">
+      <p>화요일엔 금리와 기름값에 코스피가 4% 가까이 무너졌고, 목요일엔 연준 이사 한 마디에 안도했고, 금요일엔 고용 하나에 다시 원위치했습니다. <strong>같은 질문에 시장이 세 번 답을 바꾼 한 주</strong>였어요.</p>
+      <p>남은 건 방향이 아니라 <strong>확률이 반반으로 돌아왔다</strong>는 사실입니다. 그런데 진짜 추세를 만든 건 따로 있어요. <strong>기름값이 조용히 9% 올랐습니다.</strong></p>
+      <p>그래서 <strong>9월 11일 물가</strong>가 이번 달의 심판대입니다. 고용은 두 달 사이 18만 명이 오갈 만큼 흔들려서 방향을 못 만들지만, 물가는 만들거든요.</p>
+    </div>
+  </div>
+
+  <div class="scenarios">
+    <div class="sc-card main">
+      <div class="sc-prob">📈 메인 시나리오 · 55%</div>
+      <div class="sc-title">확률 반반인 채로 박스권</div>
+      <div class="sc-body">8월 물가가 예상 범위에 들면 인상 확률이 50%대에 머물고, 코스피 <strong>6,550~6,800</strong> · S&amp;P 500 <strong>7,650~7,800</strong> 사이 눈치보기.</div>
+    </div>
+    <div class="sc-card alt">
+      <div class="sc-prob">📉 리스크 시나리오 · 45%</div>
+      <div class="sc-title">유가가 물가로 넘어간다</div>
+      <div class="sc-body">주간 +9% 오른 기름값이 물가에 반영되면 인상 확률 <strong>70%대</strong> 복귀 · 美 10년물 <strong>4.9%</strong> 시도 · 코스피 <strong>6,400선</strong> 재시험.</div>
+    </div>
+  </div>
+
+  <div class="action-box">
+    <div class="action-title">💼 IT/게임 사업자 액션</div>
+    <ul class="action-list">
+      <li>환율 <strong>1,350.4원</strong>은 13개월 최저권입니다. 다만 이 값에는 <strong>금요일 밤 고용 호조가 안 들어가 있어요.</strong> 월요일 개장 때 되밀릴 수 있으니 달러 결제분은 한 번에 말고 나눠서 잡는 게 낫습니다.</li>
+      <li><strong>GPT-6 애스트라</strong> 출력이 100만 토큰당 $50입니다. 전면 교체는 비용이 급증해요. 실패 비용이 큰 작업에만 붙이고 나머지는 저가 모델로 남기는 <strong>이중 구성</strong>을 먼저 시험해 보세요.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- [10] CALENDAR -->
+<section id="calendar">
+  <div class="sec-head">
+    <span class="sec-num">10</span>
+    <h2 class="sec-title">📅 꼭 봐야 할 일정</h2>
+    <span class="sec-sub">Key Events · 9월</span>
+  </div>
+  <div class="cal-grid">
+
+    <div class="cal-item info">
+      <div class="cal-date">9/6 (일)</div>
+      <div>
+        <div class="cal-event">🌍 OPEC+ 산유국 회의</div>
+        <div class="cal-desc">자발적 감산을 모두 되돌린 뒤 열리는 첫 회의입니다. 연말까지 생산량을 묶어두리란 관측이 우세해요. WTI가 주간 9% 오른 직후라 <strong>월요일 아시아 개장</strong>부터 반영됩니다.</div>
+      </div>
+    </div>
+
+    <div class="cal-item secondary">
+      <div class="cal-date">9/8 (화)</div>
+      <div>
+        <div class="cal-event">💼 룰루레몬 신임 최고경영자 취임</div>
+        <div class="cal-desc">4월에 발표해 놓고 다섯 달 가까이 비워둔 자리입니다. 주가가 8년 만에 $100을 내준 직후 시작하는 만큼 첫 메시지가 관건이에요.</div>
+      </div>
+    </div>
+
+    <div class="cal-item info">
+      <div class="cal-date">9/10 (목) 21:30</div>
+      <div>
+        <div class="cal-event">🇺🇸 8월 생산자물가 (PPI)</div>
+        <div class="cal-desc">기업이 물건을 팔 때 받는 가격입니다. 다음 날 소비자물가의 예고편이에요. 이번엔 <strong>기름값 상승분이 어디까지 묻어났는지</strong>가 관전 포인트입니다.</div>
+      </div>
+    </div>
+
+    <div class="cal-item warn">
+      <div class="cal-date">9/11 (금) 21:30 ⚠️</div>
+      <div>
+        <div class="cal-event">🇺🇸 8월 소비자물가 (CPI)</div>
+        <div class="cal-desc">이번 달 최대 이벤트. 연준 회의 직전 마지막 물가 지표예요. 월러가 말한 "두 달 연속 개선"이 석 달째 이어지는지가 여기서 갈립니다. 고용이 못 만든 방향을 <strong>이 지표가 만들어요.</strong></div>
+      </div>
+    </div>
+
+    <div class="cal-item warn">
+      <div class="cal-date">9/15~16 (화~수) ⚠️</div>
+      <div>
+        <div class="cal-event">🇺🇸 FOMC 금리 결정</div>
+        <div class="cal-desc">인상 확률 약 58%로 사실상 동전 던지기입니다. 열흘 사이 <strong>66% → 49% → 58%</strong>로 출렁였어요. 결과보다 <strong>이후 방향을 가리키는 문구</strong>가 더 중요합니다.</div>
+      </div>
+    </div>
+
+    <div class="cal-item info">
+      <div class="cal-date">9월 중순</div>
+      <div>
+        <div class="cal-event">🇯🇵 일본은행 금융정책결정회의</div>
+        <div class="cal-desc">우에다 총재가 인상 논의를 시사한 회의입니다. 저금리 엔화로 빌려 투자한 거래가 풀리는 흐름이 아시아 증시로 번질지 여기서 갈려요.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ 본 브리핑은 정보 제공 목적이며 투자 권유가 아닙니다. 모든 투자 판단의 책임은 본인에게 있습니다. 인용된 수치·뉴스는 발행 시점 기준이며, 시장 상황은 빠르게 변할 수 있어요. 미국 시장 <strong>9/4(금) NY 마감</strong> — S&amp;P 500 <strong>7,718.60</strong>(-0.38%), 나스닥 <strong>26,506.99</strong>(-0.29%), 다우 <strong>53,414.25</strong>(-0.51%, -271.86p) · 고용 — 美 8월 비농업 고용 <strong>+16만 2,000명</strong>(컨센 5만 3,000명, 일부 5만 6,000명, 7월 -2만 3,000명), 실업률 <strong>4.1%</strong> 유지, CME 페드워치 9/16 인상 확률 <strong>49.4% → 58%</strong>(다른 집계 60.2%, 8/31 시점 66% — 출처별 기준 시점이 달라 함께 표기) · 거시(9/4) — 美 10Y <strong>4.79%</strong>(+3bp, 9/3 4.78%), DXY <strong>약 99.0</strong>(9/3 종가 99.00 기준 근사), WTI <strong>약 $91.20</strong>(-0.11%, 주간 <strong>+9%</strong>로 7월 중순 이후 최대), 브렌트 <strong>$95.23</strong>(-0.31%, 주간 +6.1%), 금 현물 <strong>$4,470.66</strong>(-0.07%), VIX <strong>14.32</strong>(25거래일 연속 14~17, 1992년 5월 26일 기록에 하루 차), USD/KRW <strong>1,350.4원</strong>(-8.9원, 9/4 15:30 기준) · 한국 시장 <strong>9/4(금) 마감</strong> — KOSPI <strong>6,687.21</strong>(+1.64%, +107.73p), KOSDAQ <strong>813.50</strong>(+2.95%, +23.29p), 수급(유가증권시장) 외국인 <strong>+4,798억</strong>·기관 <strong>+1조 6,692억</strong>·개인 <strong>-3조 7,231억</strong>, 주간 코스피 8/31 6,820.02 → 9/4 6,687.21로 <strong>-1.9%</strong>(9/2 -3.99% 급락 후 이틀 반등), 장중 SK하이닉스 약 1,633,000원(+2.32%)·삼성전자 약 254,250원(+1.70%)·펄어비스 13%대·NHN 68,200원(+3.49%)·카카오게임즈 9,100원(+3.06%) — 장중 시세라 종가와 다를 수 있음 · 기업 — 룰루레몬 <strong>$100.61</strong>(-17.38%, 장중 저점 $99.97로 2018년 이후 첫 $100 이탈), 2분기 매출 <strong>24억 달러</strong>(-4%), 동일점포 매출 -9%(북미 -12%, 핵심 여성 레깅스 약 -20%), 연간 가이던스 <strong>103.5억~105억 달러</strong>(-5~7%)·조정 EPS $9.48~$9.73로 하향, 연초 이후 -42%, 신임 CEO 9/8 취임(4/22 발표) · 카카오게임즈 2분기 매출 <strong>약 750억 원</strong>·영업손실 <strong>약 230억 원</strong>(매출 YoY 약 -35%) · 삼성전자 텍사스 테일러 <strong>370억 달러 이상</strong>, SK하이닉스 인디애나 <strong>40억 달러</strong> HBM 후공정 투자 · 정책 — 2026년 세제개편안 8/3 발표, 8/20 입법예고 종료, <strong>9/3까지 국회 제출</strong>, 1가구 1주택 장기보유특별공제에서 보유공제를 단계 축소해 <strong>2029년 거주공제만 연 8%·최대 80%</strong> 적용, 고가·비거주·다주택 과세 강화 · 글로벌 — 미군 <strong>9/1</strong> 이란 혁명수비대 표적 공습 재개(약 한 달 만), 8월 중 이란의 상선 공격 <strong>13척</strong>·원유운반선 MT Sidr 피격으로 선원 2명 사망, 호르무즈 통과 원자재 운반선 <strong>11척 → 6척</strong>(최근 10일 평균 약 13척), 경유 가격 <strong>사상 최고</strong> · 코인 — BTC <strong>$79,581</strong>(코인게코 9/5 기준, 같은 페이지 다른 시점 $80,920.54, 9/4 장중 저점 <strong>$78,649</strong>, 장중 -3.5%), ETH <strong>$2,502</strong>(코인마켓캡 $2,502.48·코인게코 $2,502.20으로 두 출처 일치), 전체 시가총액 <strong>약 2.67조 달러</strong>, 공포·탐욕 지수 <strong>75</strong>(탐욕), 현물 BTC ETF 9/3 순유입 <strong>7억 3,080만 달러</strong>(1월 이후 최대) · AI — 오픈AI <strong>GPT-6 애스트라</strong> 9/3 제한 공개·9/5 일반 개방 예정, API 입력 100만 토큰당 <strong>$10</strong>·출력 <strong>$50</strong>, 사장 그렉 브록먼 "세대적 도약"·AGI 가능성 언급 · 부동산 — 한국부동산원 8월 5주(8/31 기준, 9/3 발표) 서울 아파트 매매 <strong>+0.22%</strong>, 강남구 <strong>-0.41%</strong>(8월 첫주 +0.01% → -0.02% → -0.05% → -0.11% → -0.41%), 서초구 <strong>-0.23%</strong>, 강북 14개구 평균 <strong>+0.36%</strong>, 강북구 전세가율 <strong>63.8%</strong>(81개월 만의 최고), 노원·도봉 6~7년 만의 최고 수준, 9월 전국 아파트 입주 예정 <strong>1만 4,174가구</strong>(2021년 4월 이후 최저) · 일정 — OPEC+ 회의 <strong>9/6</strong>, 룰루레몬 신임 CEO 취임 <strong>9/8</strong>, 미 8월 PPI <strong>9/10</strong>, 미 8월 CPI <strong>9/11</strong>, FOMC <strong>9/15~16</strong>, 일본은행 금정위 <strong>9월 중순</strong>, 한국은행 금통위 <strong>10/22</strong>. 출처 링크는 새 탭으로 열립니다.
+  </div>
+
+</section>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
+    if (!themeToggle) return;
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
+    });
+  });
+</script>
+
+</body>
+</html>
