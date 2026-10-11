@@ -7,12 +7,101 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 271,
+    "total_issues": 272,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-10-10",
+  "latest": "2026-10-12",
   "briefings": [
+    {
+      "date": "2026-10-12",
+      "weekday": "월",
+      "vol": 272,
+      "theme": "Hormuz Oil Jitters",
+      "tagline": "호르무즈 주말 공격에 유가 긴장, 물가 발표 주간 개막",
+      "tldr_us": "S&P 7,811.54(+0.59%)·나스닥 27,366.17(+0.64%)·다우 51,654.95(+0.83%). 신고가 문턱서 14일 CPI(예상 3.6%) 대기.",
+      "tldr_kr": "코스피 6,625.93(10/8, -2.62%), 오늘 나흘 만에 재개. 휴장 중 美 반도체 -3.4% 반영 부담, 한은 국정감사.",
+      "tldr_crypto": "BTC $83,447(+0.55%), ETH $2,526(+0.74%). 지난주 코인 ETF 12억 달러 유출, 공포·탐욕 61.",
+      "us_change": "+0.59",
+      "kr_change": "-2.62",
+      "crypto_change": "+0.55",
+      "tags": [
+        "bull",
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-10-12-morning.html",
+      "md_path": "2026-10-12-morning.md",
+      "created_at": "2026-10-12T07:00:00+09:00",
+      "macro": {
+        "us_10y": "5.24% (+1bp)",
+        "dxy": "102.23 (+0.1%)",
+        "wti": "$91.85 (+0.4%)",
+        "gold": "$4,220 (+1.5%)",
+        "usdkrw": "1,338.5원 (-1.9원)",
+        "vix": "14.84 (-0.57p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "호르무즈 기뢰·피격, 유가 긴장",
+          "body": "주말 유조선 기뢰 화재·발사체 피격, 미군은 봉쇄 돌파선 폭격. 유가 미반영 상태. 14일 CPI(예상 3.6%)의 휘발유 변수 커져."
+        },
+        {
+          "title": "코스피 재개, 반도체 악재 반영",
+          "body": "휴장 중 美 반도체 -3.4%(오픈AI 매출 논란). LS증권 이번 주 6,600~7,100. 선행 PER 5.26배로 저평가 반론도."
+        },
+        {
+          "title": "애플 아이폰18 프로 주문 15% 감축",
+          "body": "메모리값 상승에 가격 100달러 인상 뒤 수요 부진(닛케이). 삼성·하이닉스엔 가격 강세와 수요 둔화 양날의 검."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "10/12(월)",
+          "event": "한국 증시 재개 · 한은 국정감사 · 10월 초순 수출",
+          "importance": "info"
+        },
+        {
+          "date": "10/13(화) 밤",
+          "event": "JP모건·골드만·씨티·웰스파고 실적",
+          "importance": "info"
+        },
+        {
+          "date": "10/14(수) 21:30",
+          "event": "美 9월 소비자물가(CPI)",
+          "importance": "warning",
+          "consensus": "전년비 3.6%, 근원 2.5%"
+        },
+        {
+          "date": "10/15(목)",
+          "event": "TSMC 3분기 실적 · 美 PPI·소매판매",
+          "importance": "warning"
+        },
+        {
+          "date": "10/22(목)",
+          "event": "한국은행 금통위 금리 결정",
+          "importance": "info",
+          "consensus": "기준금리 3.00% 동결 전망"
+        },
+        {
+          "date": "10/27~28(화~수)",
+          "event": "美 FOMC 금리 결정",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "물가 부합, 실적이 버팀목",
+          "description": "CPI 3.6% 부합 + 은행·TSMC 호실적 → S&P 7,780~7,950, 코스피 6,550~6,950"
+        },
+        "risk": {
+          "probability": 45,
+          "title": "유가 급등에 금리 재상승",
+          "description": "호르무즈 확전 + CPI 3.7%↑ → S&P 7,600~7,780, 코스피 6,300~6,550"
+        }
+      }
+    },
     {
       "date": "2026-10-10",
       "weekday": "토",
