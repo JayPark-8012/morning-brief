@@ -7,12 +7,101 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 272,
+    "total_issues": 273,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-10-12",
+  "latest": "2026-10-13",
   "briefings": [
+    {
+      "date": "2026-10-13",
+      "weekday": "화",
+      "vol": 273,
+      "theme": "China DRAM Shock",
+      "tagline": "중국 D램 추격 공포에 코스피 3.6% 급락",
+      "tldr_us": "S&P 7,807.24(-0.06%)·나스닥 27,245.90(-0.44%)·다우 51,850.55(+0.38%). 기술주 약세, 에너지 강세.",
+      "tldr_kr": "코스피 6,384.24(-3.65%), 두 달 만에 6,400 하회. 中 CXMT 쇼크에 외국인 2조 매도.",
+      "tldr_crypto": "BTC $82,624(-0.99%), ETH $2,491(-1.39%). 8만 2천 달러대 후퇴, 공포·탐욕 69.",
+      "us_change": "-0.06",
+      "kr_change": "-3.65",
+      "crypto_change": "-0.99",
+      "tags": [
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-10-13-morning.html",
+      "md_path": "2026-10-13-morning.md",
+      "created_at": "2026-10-13T07:00:00+09:00",
+      "macro": {
+        "us_10y": "5.24% (보합, 휴장)",
+        "dxy": "102.58 (+0.4%)",
+        "wti": "$93.16 (+1.4%)",
+        "gold": "$4,196 (-0.5%)",
+        "usdkrw": "1,335.1원 (-7.7원)",
+        "vix": "15.21 (+0.37p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "中 D램 추격에 코스피 3.6% 급락",
+          "body": "CXMT가 차세대 D램(4F²) 진전 발표. 외국인 2조 매도에 코스피 6,384, 삼성·하이닉스 4%대 급락. 실적·수출은 역대급인데 미래 경쟁 우려가 앞섰어요."
+        },
+        {
+          "title": "후티, 리야드 공항 공격에 유가↑",
+          "body": "최소 12명 사망·300여 명 부상. 브렌트 장중 $106대 2주 고점, WTI $93. 트럼프는 美의 후티 공격 동참 가능성 시사."
+        },
+        {
+          "title": "오늘 밤 美 대형은행 실적 개막",
+          "body": "JP모건·골드만·씨티·웰스파고 발표. 은행주 한 달 새 6~13% 하락해 기대는 낮은 상태. 수요일 CPI와 함께 이번 주 분수령."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "10/13(화) 밤",
+          "event": "美 JP모건·골드만·씨티·웰스파고 실적 · IMF 세계경제전망",
+          "importance": "info"
+        },
+        {
+          "date": "10/14(수) 21:30",
+          "event": "美 9월 소비자물가(CPI) · ASML 실적",
+          "importance": "warning",
+          "consensus": "헤드라인 3.6%, 근원 2.5%"
+        },
+        {
+          "date": "10/15(목)",
+          "event": "TSMC 3분기 실적 · 美 PPI·소매판매",
+          "importance": "warning",
+          "consensus": "소매판매 +0.3%"
+        },
+        {
+          "date": "10/16(금)",
+          "event": "美 9월 산업생산 · 수입물가",
+          "importance": "secondary"
+        },
+        {
+          "date": "10/22(목)",
+          "event": "한국은행 금통위 금리 결정",
+          "importance": "info",
+          "consensus": "기준금리 3.00% 동결 예상"
+        },
+        {
+          "date": "10/27~28(화~수)",
+          "event": "美 FOMC 금리 결정",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "매도 진정, 기술적 반등",
+          "description": "은행 실적 무난 + CPI 3.6% 부합 → S&P 7,750~7,900, 코스피 6,300~6,650"
+        },
+        "risk": {
+          "probability": 45,
+          "title": "메모리 우려에 물가 충격",
+          "description": "CPI 3.7%+ + 외국인 매도 지속 → S&P 7,600~7,750, 코스피 6,100~6,300"
+        }
+      }
+    },
     {
       "date": "2026-10-12",
       "weekday": "월",
