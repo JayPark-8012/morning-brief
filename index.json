@@ -7,12 +7,101 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 273,
+    "total_issues": 274,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-10-13",
+  "latest": "2026-10-14",
   "briefings": [
+    {
+      "date": "2026-10-14",
+      "weekday": "수",
+      "vol": 274,
+      "theme": "Foreign Exodus Sidecar",
+      "tagline": "외국인 4조 매도에 코스피 5% 급락, 6,000선 위태",
+      "tldr_us": "S&P 7,805.45(-0.02%)·나스닥 27,204.38(-0.15%)·다우 51,670.10(-0.35%). 골드만 호실적, JP모건 부진.",
+      "tldr_kr": "코스피 6,035.35(-5.46%), 사이드카 발동. 외국인 4.5조 매도, SK하이닉스 -10%.",
+      "tldr_crypto": "BTC $83,444(+0.99%), ETH $2,511(+0.79%). CPI 앞 소폭 반등, 공포탐욕 57.",
+      "us_change": "-0.02",
+      "kr_change": "-5.46",
+      "crypto_change": "+0.99",
+      "tags": [
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-10-14-morning.html",
+      "md_path": "2026-10-14-morning.md",
+      "created_at": "2026-10-14T07:00:00+09:00",
+      "macro": {
+        "us_10y": "5.22% (-2bp)",
+        "dxy": "102.24 (-0.3%)",
+        "wti": "$94.14 (+0.4%)",
+        "gold": "$4,184 (-0.3%)",
+        "usdkrw": "1,345.1원 (+10.0원)",
+        "vix": "15.27 (+0.06p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "외국인 4.5조 매도, 코스피 -5.5%",
+          "body": "中 CXMT 충격 이틀째에 사이드카 발동, 장중 5,911까지. SK하이닉스 -10%, 삼성 -7%. 삼성 자사주 매입 종료로 받쳐 줄 매수가 사라진 게 낙폭을 키웠어요."
+        },
+        {
+          "title": "오늘 밤 美 9월 CPI 발표",
+          "body": "예상 3.6~3.7%(8월 3.4%), 근원 2.4~2.5%. 근원이 예상보다 높으면 10월 말 FOMC 인상 우려가 다시 커질 수 있어요."
+        },
+        {
+          "title": "후티 미사일, 아람코 본사 겨냥",
+          "body": "블룸버그 \"다란 본사 단지 일부 피격, 화재 진화\". 아람코는 미확인. 브렌트 $105.7, WTI $94.1로 3주 만의 최고 마감."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "10/14(수) 21:30",
+          "event": "美 9월 CPI · BofA·모건스탠리·ASML 실적",
+          "importance": "warning",
+          "consensus": "전년비 3.6~3.7%, 근원 2.4~2.5%"
+        },
+        {
+          "date": "10/15(목)",
+          "event": "TSMC 3분기 실적 · 美 PPI·소매판매",
+          "importance": "warning",
+          "consensus": "소매판매 +0.3%"
+        },
+        {
+          "date": "10/16(금)",
+          "event": "美 9월 산업생산 · 수입물가",
+          "importance": "secondary"
+        },
+        {
+          "date": "10/22(목)",
+          "event": "한국은행 금통위 금리 결정",
+          "importance": "info",
+          "consensus": "기준금리 3.00% 동결 무게"
+        },
+        {
+          "date": "10/27~28(화~수)",
+          "event": "美 FOMC 금리 결정",
+          "importance": "warning"
+        },
+        {
+          "date": "10/29(목)",
+          "event": "삼성전자 3분기 실적 컨퍼런스콜",
+          "importance": "info"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "물가 무난, 낙폭 일부 회복",
+          "description": "근원 CPI 2.5% 이하 + 외국인 매도 둔화 → S&P 7,750~7,900, 코스피 5,900~6,300"
+        },
+        "risk": {
+          "probability": 45,
+          "title": "물가 충격에 2차 하락",
+          "description": "근원 CPI 2.6%+ + 10년물 5.3% 돌파 → S&P 7,550~7,750, 코스피 5,650~5,900"
+        }
+      }
+    },
     {
       "date": "2026-10-13",
       "weekday": "화",
