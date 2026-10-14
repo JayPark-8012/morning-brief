@@ -7,12 +7,94 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 274,
+    "total_issues": 275,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-10-14",
+  "latest": "2026-10-15",
   "briefings": [
+    {
+      "date": "2026-10-15",
+      "weekday": "목",
+      "vol": 275,
+      "theme": "Hot CPI Hike Fears",
+      "tagline": "뜨거운 美 물가에 나스닥 1.9% 하락, 10월 금리 인상설 부활",
+      "tldr_us": "S&P 7,718.94(-1.11%)·나스닥 26,692.87(-1.88%)·다우 51,621.48(-0.09%). CPI 3.7%·근원 2.6% 예상 상회.",
+      "tldr_kr": "코스피 6,008.81(-0.44%), 6거래일 연속 하락. 외국인 1.2조 매도, 장중 6,191서 반납.",
+      "tldr_crypto": "BTC $81,740(-2.02%), ETH $2,418(-3.67%). 물가 충격에 $82K 아래로.",
+      "us_change": "-1.11",
+      "kr_change": "-0.44",
+      "crypto_change": "-2.02",
+      "tags": [
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-10-15-morning.html",
+      "md_path": "2026-10-15-morning.md",
+      "created_at": "2026-10-15T07:00:00+09:00",
+      "macro": {
+        "us_10y": "5.19% (-3bp)",
+        "dxy": "102.55 (+0.3%)",
+        "wti": "$95.09 (+1.0%)",
+        "gold": "$4,127 (-1.2%)",
+        "usdkrw": "1,338.3원 (-6.8원)",
+        "vix": "16.87 (+1.60p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "美 물가 3.7%, 인상설 부활",
+          "body": "9월 CPI 3.7%·근원 2.6% 모두 예상 상회. 10월 금리 인상 확률이 22%에서 40~50%대로 뛰며 나스닥 -1.9%."
+        },
+        {
+          "title": "코어위브 채권 15%, AI 빚 경보",
+          "body": "AI 데이터센터 기업 코어위브 주가 16% 안팎 급락, 회사채 금리 15% 육박. 오라클도 7~9% 하락하며 'AI 빚' 우려 확산."
+        },
+        {
+          "title": "ASML 사상 최대 매출, 전망 상향",
+          "body": "3분기 매출 117억 유로로 분기 최대, 연간 전망 440억~450억 유로로 상향. 2027~28년 장비 공급 부족 언급, 오늘 TSMC 실적이 확인 무대."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "10/15(목) 15:00",
+          "event": "TSMC 3분기 실적 발표",
+          "importance": "warning"
+        },
+        {
+          "date": "10/15(목) 21:30",
+          "event": "美 9월 PPI·소매판매",
+          "importance": "warning"
+        },
+        {
+          "date": "10/22(목)",
+          "event": "한국은행 금통위 금리 결정 (현 3.00%)",
+          "importance": "info"
+        },
+        {
+          "date": "10/27~28(화~수)",
+          "event": "美 FOMC 금리 결정 (현 3.75~4.00%)",
+          "importance": "warning",
+          "consensus": "인상 확률 40~50%"
+        },
+        {
+          "date": "10/29(목)",
+          "event": "삼성전자 3분기 확정 실적",
+          "importance": "info"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "TSMC가 받쳐 주는 숨 고르기",
+          "description": "TSMC 호실적 + PPI 무난 → S&P 7,650~7,850, 코스피 5,850~6,200"
+        },
+        "risk": {
+          "probability": 45,
+          "title": "물가·AI 빚 겹쳐 2차 조정",
+          "description": "PPI도 뜨겁고 인상 확률 60%+ → S&P 7,500~7,650, 코스피 5,600~5,850"
+        }
+      }
+    },
     {
       "date": "2026-10-14",
       "weekday": "수",
