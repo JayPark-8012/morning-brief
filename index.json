@@ -7,12 +7,100 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 280,
+    "total_issues": 281,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-10-23",
+  "latest": "2026-10-24",
   "briefings": [
+    {
+      "date": "2026-10-24",
+      "weekday": "토",
+      "vol": 281,
+      "theme": "Oil Shock Returns",
+      "tagline": "중동 긴장에 브렌트 6개월 최고, 美 증시 2주째 하락",
+      "tldr_us": "S&P 7,623.68(-0.52%)·나스닥 25,955.34(-0.21%)·다우 52,215.16(-1.23%). 유가 급등에 2주 연속 주간 하락.",
+      "tldr_kr": "코스피 5,550.30(+0.30%). 장중 -4% 딛고 기관 매수에 반등, 주간 -2.1%.",
+      "tldr_crypto": "BTC $81,254(-0.10%), ETH $2,396(+0.29%). ETF 6.4억 달러 유출에도 8만 1천 달러대 유지.",
+      "us_change": "-0.52",
+      "kr_change": "+0.30",
+      "crypto_change": "-0.10",
+      "tags": [
+        "bear"
+      ],
+      "html_path": "2026-10-24-morning.html",
+      "md_path": "2026-10-24-morning.md",
+      "created_at": "2026-10-24T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.99% (+3.5bp)",
+        "dxy": "101.71 (+0.1%)",
+        "wti": "$103.27 (+3.8%)",
+        "gold": "$4,008 (-1.3%)",
+        "usdkrw": "1,324.6원 (+0.4원)",
+        "vix": "19.45 (+0.4p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "브렌트 $116, 6개월 만에 최고",
+          "body": "이란 재공습설·후티 공격에 브렌트 주간 +6.2%, WTI $103. 美 기대물가 4.7%로 올라 금리 인하 기대 후퇴, 다우 -1.2%."
+        },
+        {
+          "title": "코스피, 장중 -4% 딛고 반등",
+          "body": "5,306까지 밀렸다가 SK하이닉스 +4.4%·기관 8,700억 매수에 5,550(+0.30%) 마감. 주간으로는 -2.1%."
+        },
+        {
+          "title": "SK하이닉스, 솔리다임 상장 철회",
+          "body": "약 100억 달러 미국 상장 추진을 중복상장 논란·당국 우려에 중단. 자회사 별도 상장 문턱이 높아지는 신호."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "10/27(화)",
+          "event": "한국 3분기 GDP 속보치",
+          "importance": "info",
+          "consensus": "전기 대비 +0.8% (ING)"
+        },
+        {
+          "date": "10/28(수) 09:00",
+          "event": "SK하이닉스 3분기 실적",
+          "importance": "info",
+          "consensus": "영업이익 약 77조 원"
+        },
+        {
+          "date": "10/29(목) 03:00",
+          "event": "美 FOMC 금리 결정 + 워시 의장 회견",
+          "importance": "warning",
+          "consensus": "동결 확률 90% 이상"
+        },
+        {
+          "date": "10/29(목) 새벽",
+          "event": "마이크로소프트·알파벳 실적",
+          "importance": "warning"
+        },
+        {
+          "date": "10/29(목) 21:30",
+          "event": "美 3분기 GDP 속보치 + 9월 PCE 물가",
+          "importance": "warning"
+        },
+        {
+          "date": "10/30(금) 새벽",
+          "event": "아마존 실적 · 일본은행 회의",
+          "importance": "secondary"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "실적·FOMC 무난히 통과",
+          "description": "빅테크 매출로 투자비 설명 + 연준 동결 → 코스피 5,450~5,850, S&P 7,550~7,800"
+        },
+        "risk": {
+          "probability": 45,
+          "title": "유가·투자비 부담 동시 확대",
+          "description": "브렌트 $120 근접 + 투자비 추가 상향 → 코스피 5,150~5,450, S&P 7,400~7,550"
+        }
+      }
+    },
     {
       "date": "2026-10-23",
       "weekday": "금",
