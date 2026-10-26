@@ -7,12 +7,103 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 282,
+    "total_issues": 283,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-10-26",
+  "latest": "2026-10-27",
   "briefings": [
+    {
+      "date": "2026-10-27",
+      "weekday": "화",
+      "vol": 283,
+      "theme": "Anthropic IPO Lift",
+      "tagline": "앤트로픽 상장 신청에 美 기술주 반등",
+      "tldr_us": "S&P 7,676.77(+0.70%)·나스닥 26,169.38(+0.82%). 앤트로픽 상장 신청에 반도체 반등.",
+      "tldr_kr": "코스피 5,469.47(-1.46%), 7개월 최저. 외국인 6,955억 순매도, 코스닥 -3.26%.",
+      "tldr_crypto": "BTC $80,021(-0.30%), ETH $2,310(-1.00%). 스트래티지 매수 멈춤, 8만 달러 공방.",
+      "us_change": "+0.70",
+      "kr_change": "-1.46",
+      "crypto_change": "-0.30",
+      "tags": [
+        "bull",
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-10-27-morning.html",
+      "md_path": "2026-10-27-morning.md",
+      "created_at": "2026-10-27T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.99% (-0.2bp)",
+        "dxy": "101.61 (-0.2%)",
+        "wti": "$101.76 (-1.5%)",
+        "gold": "$4,031 (+0.6%)",
+        "usdkrw": "1,323.1원 (-1.5원)",
+        "vix": "18.39 (-1.06p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "앤트로픽, 사상 최대 IPO 신청",
+          "body": "나스닥 상장 신청서 공개(티커 ANT). 상반기 매출 163억 달러로 작년 연간의 3.5배. 몸값 1.5~2조 달러 거론에 엔비디아·마이크론 2~3% 반등."
+        },
+        {
+          "title": "코스피 5,500 내줘, 7개월 최저",
+          "body": "외국인 6,955억 순매도에 -1.46%, 4월 이후 최저. 전 업종 하락, 코스닥 -3.26%. 미국 반도체 반등은 오늘 장에 첫 반영."
+        },
+        {
+          "title": "룰라 깜짝 4선, 브라질 증시 폭락",
+          "body": "예측시장 예상 뒤집고 룰라 승리. 상파울루 증시 팬데믹 후 첫 거래정지, 브라질 ETF -21%. 보우소나루 측 결과 불복."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "10/27(화) 08:00",
+          "event": "한국 3분기 GDP 속보치 · 이스라엘 총선",
+          "importance": "info",
+          "consensus": "전기 대비 0%대 후반 기대"
+        },
+        {
+          "date": "10/28(수)",
+          "event": "SK하이닉스 3분기 실적",
+          "importance": "info",
+          "consensus": "영업이익 약 77조 원"
+        },
+        {
+          "date": "10/29(목) 03:00",
+          "event": "美 FOMC 금리 결정 + 워시 의장 회견",
+          "importance": "warning",
+          "consensus": "동결 확률 약 90%"
+        },
+        {
+          "date": "10/29(목) 새벽",
+          "event": "마이크로소프트·알파벳 실적",
+          "importance": "warning"
+        },
+        {
+          "date": "10/29(목) 21:30",
+          "event": "美 3분기 GDP + 9월 PCE · ECB 결정",
+          "importance": "warning",
+          "consensus": "근원 PCE 전월 +0.2~0.3%"
+        },
+        {
+          "date": "10/30(금) 새벽",
+          "event": "아마존 실적 · 일본은행 회의",
+          "importance": "secondary"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "동결 속 AI 실적 안도",
+          "description": "연준 동결 + 클라우드 성장 확인 → 코스피 5,400~5,800, S&P 7,600~7,850"
+        },
+        "risk": {
+          "probability": 45,
+          "title": "매파 동결에 재하락",
+          "description": "12월 인상 시사 또는 투자비 경계 재점화 → 코스피 5,100~5,400, S&P 7,400~7,600"
+        }
+      }
+    },
     {
       "date": "2026-10-26",
       "weekday": "월",
