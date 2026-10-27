@@ -7,12 +7,101 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 283,
+    "total_issues": 284,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-10-27",
+  "latest": "2026-10-28",
   "briefings": [
+    {
+      "date": "2026-10-28",
+      "weekday": "수",
+      "vol": 284,
+      "theme": "Chip-Led GDP Surprise",
+      "tagline": "코스피 3% 반등, 3분기 성장률도 깜짝 1%",
+      "tldr_us": "S&P 7,722.60(+0.60%)·나스닥 26,477.81(+1.18%). 반도체 주도 이틀 연속 상승.",
+      "tldr_kr": "코스피 5,638.34(+3.09%), 외국인 5,927억 순매수. 3분기 GDP 1.0% 깜짝 성장.",
+      "tldr_crypto": "BTC $80,885(+1.11%), ETH $2,351(+1.81%). ETF 유입 재개, 8만 달러 회복.",
+      "us_change": "+0.60",
+      "kr_change": "+3.09",
+      "crypto_change": "+1.11",
+      "tags": [
+        "bull",
+        "event"
+      ],
+      "html_path": "2026-10-28-morning.html",
+      "md_path": "2026-10-28-morning.md",
+      "created_at": "2026-10-28T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.99% (+0.7bp)",
+        "dxy": "102.36 (+0.4%)",
+        "wti": "$99.90 (-1.8%)",
+        "gold": "$4,073 (+0.9%)",
+        "usdkrw": "1,323.7원 (+0.6원)",
+        "vix": "17.52 (-0.87p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "3분기 성장률 1.0% 깜짝",
+          "body": "한은 전망 0.3%의 3배. 반도체 설비투자·수출이 끌었지만 민간소비는 4년 만에 감소. 11/26 금리 인상 기대 커져."
+        },
+        {
+          "title": "코스피 3% 급등, 5,600 회복",
+          "body": "외국인 5,927억·기관 2,821억 동반 매수. 삼성전자 +4.2%, SK하이닉스 +5.2%. 오늘 하이닉스 실적·주주환원 발표."
+        },
+        {
+          "title": "오늘 새벽 연준 결정",
+          "body": "한국시간 29일 03:00. 동결 확률 90% 이상, 12월 인상 확률 80%대. '매파적 동결'의 강도가 관건."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "10/28(수) 오전",
+          "event": "SK하이닉스 3분기 실적 + 추가 주주환원",
+          "importance": "info",
+          "consensus": "영업이익 약 77조 원"
+        },
+        {
+          "date": "10/29(목) 03:00",
+          "event": "美 FOMC 금리 결정 + 워시 의장 회견",
+          "importance": "warning",
+          "consensus": "동결 확률 90% 이상"
+        },
+        {
+          "date": "10/29(목) 새벽",
+          "event": "마이크로소프트·알파벳 실적",
+          "importance": "warning"
+        },
+        {
+          "date": "10/29(목) 21:30",
+          "event": "美 3분기 GDP + 9월 PCE · ECB · 삼성전자 확정 실적",
+          "importance": "warning",
+          "consensus": "근원 PCE 전월 +0.2~0.3%"
+        },
+        {
+          "date": "10/30(금)",
+          "event": "아마존 실적 · 일본은행 회의",
+          "importance": "info"
+        },
+        {
+          "date": "11/3(화)",
+          "event": "美 중간선거 (이란 공습 재개 변수)",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 60,
+          "title": "매파 동결, 반등 연장",
+          "description": "예상 수준 동결 + 클라우드 성장 확인 → 코스피 5,550~5,900, S&P 7,650~7,900"
+        },
+        "risk": {
+          "probability": 40,
+          "title": "강한 매파 신호에 되돌림",
+          "description": "12월 인상 사실상 예고 또는 투자비 경계 → 코스피 5,300~5,550, S&P 7,450~7,650"
+        }
+      }
+    },
     {
       "date": "2026-10-27",
       "weekday": "화",
