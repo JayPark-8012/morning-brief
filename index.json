@@ -7,12 +7,100 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 289,
+    "total_issues": 290,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-11-03",
+  "latest": "2026-11-04",
   "briefings": [
+    {
+      "date": "2026-11-04",
+      "weekday": "수",
+      "vol": 290,
+      "theme": "AI Debt Jitters Hit KOSPI",
+      "tagline": "AI 빚 걱정에 코스피 5,650선 내줬다",
+      "tldr_us": "S&P 7,568.92(+0.36%). 반도체 반등에 사흘 하락 마침, AMD 시간외 7~8% 상승.",
+      "tldr_kr": "코스피 5,648.79(-3.59%). AI 자금 조달 걱정에 외국인 1.5조 매도.",
+      "tldr_crypto": "BTC $77,836(+1.41%), ETH $2,293(+1.74%). ETF 유출 지속.",
+      "us_change": "+0.36",
+      "kr_change": "-3.59",
+      "crypto_change": "+1.41",
+      "tags": [
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-11-04-morning.html",
+      "md_path": "2026-11-04-morning.md",
+      "created_at": "2026-11-04T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.95% (+6bp)",
+        "dxy": "101.87 (+0.1%)",
+        "wti": "$96.09 (-0.4%)",
+        "gold": "$3,939 (-0.8%)",
+        "usdkrw": "1,341.0원 (-2.8원)",
+        "vix": "20.83 (-0.32p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "AI 빚 걱정에 코스피 3.6% 하락",
+          "body": "오라클 등 빅테크 자금 조달 부담에 외국인 1.5조 매도. 코스피 5,648.79, 하이닉스 -5%, 삼성전자 -4%. 환율은 오히려 1,341원으로 안정적이었어요."
+        },
+        {
+          "title": "AMD, 데이터센터 97% 급증",
+          "body": "매출 134억 달러(+45%), 4분기 전망 170억 달러로 예상 162억 달러 상회. 시간외 7~8% 상승했어요. 게임 부문은 40% 줄었어요."
+        },
+        {
+          "title": "미국 증시 반등, 선거 결과 대기",
+          "body": "S&P +0.36%, 나스닥 +0.83%로 사흘 하락을 끝냈어요. 구인 건수 호조에 10년 금리는 4.95%. 상·하원 결과는 발행 시점 미확정이에요."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "11/4(수) 08:00~",
+          "event": "🇺🇸 중간선거 개표",
+          "importance": "warning"
+        },
+        {
+          "date": "11/4(수)",
+          "event": "🎮 카카오게임즈 실적 · 🇺🇸 민간 고용(ADP) 22:15",
+          "importance": "info"
+        },
+        {
+          "date": "11/5(목)",
+          "event": "🎮 넷마블 실적 · 🏠 부동산원 주간 시세",
+          "importance": "info"
+        },
+        {
+          "date": "11/5(목) 21:00",
+          "event": "🇬🇧 영란은행 금리 결정",
+          "importance": "warning",
+          "consensus": "3.75%→4.00% 인상"
+        },
+        {
+          "date": "11/6(금) 22:30",
+          "event": "🇺🇸 10월 고용보고서",
+          "importance": "warning",
+          "consensus": "+5.9만, 실업률 4.2%"
+        },
+        {
+          "date": "11/10(화)",
+          "event": "🎮 크래프톤·넥슨·시프트업 실적 · 🇺🇸 10월 CPI",
+          "importance": "info"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 60,
+          "title": "반도체 중심 기술적 반등",
+          "description": "AMD 효과 + 선거 충격 제한 → 코스피 5,700~5,950, S&P 7,500~7,650."
+        },
+        "risk": {
+          "probability": 40,
+          "title": "금리 5% 돌파에 재하락",
+          "description": "민주 동반 승리 충격 또는 고용 서프라이즈로 10년 금리 5% 돌파 → 코스피 5,400~5,600."
+        }
+      }
+    },
     {
       "date": "2026-11-03",
       "weekday": "화",
