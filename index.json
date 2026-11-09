@@ -7,12 +7,95 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 292,
+    "total_issues": 293,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-11-06",
+  "latest": "2026-11-10",
   "briefings": [
+    {
+      "date": "2026-11-10",
+      "weekday": "화",
+      "vol": 293,
+      "theme": "Oil Relief Rally",
+      "tagline": "유가 급락에 다우 1,100포인트 반등",
+      "tldr_us": "S&P 7,549.94(+2.35%). 유가 급락에 4월 이후 최고의 하루, 나스닥 조정 탈출.",
+      "tldr_kr": "코스피 5,018.85(-0.81%). 외국인 7일째 매도에 9개월 만의 최저.",
+      "tldr_crypto": "BTC $74,931(+1.24%), ETH $2,128. 주식 반등에도 7만 5천 달러 아래.",
+      "us_change": "+2.35",
+      "kr_change": "-0.81",
+      "crypto_change": "+1.24",
+      "tags": [
+        "bull",
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-11-10-morning.html",
+      "md_path": "2026-11-10-morning.md",
+      "created_at": "2026-11-10T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.86% (0bp)",
+        "dxy": "101.68 (-0.6%)",
+        "wti": "$86.85 (-4.4%)",
+        "gold": "$4,146 (+1.7%)",
+        "usdkrw": "1,347.1원 (-9.5원)",
+        "vix": "19.92 (-5.72p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "유가 급락에 美 증시 2% 반등",
+          "body": "트럼프의 이란 공습 자제 발언에 WTI -4.4%. S&P +2.35%로 4월 이후 최고의 하루, 나스닥은 조정 구간 탈출. 오늘 밤 CPI가 시험대."
+        },
+        {
+          "title": "코스피 5,018, 9개월 만의 최저",
+          "body": "외국인 7거래일 연속 매도, 누적 13조 원 넘어. 밤사이 한국 ETF(EWY) +3.7%로 오늘 출발은 나아 보이지만 외국인 매도 멈춤이 먼저."
+        },
+        {
+          "title": "엔비디아, CEO 조사에 4% 하락",
+          "body": "이사회가 젠슨 황 CEO의 중국 측 인물 관계를 독립 조사. 반도체 +6.85% 날 홀로 -4.27%. 11/18 실적 전 새 변수."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "11/10(화) 22:30",
+          "event": "🇺🇸 10월 소비자물가지수(CPI)",
+          "importance": "warning",
+          "consensus": "전월비 +0.3%, 근원 +0.2%"
+        },
+        {
+          "date": "11/11(수) 새벽",
+          "event": "💼 코어위브 3분기 실적",
+          "importance": "info"
+        },
+        {
+          "date": "11/13(금) 22:30",
+          "event": "🇺🇸 10월 생산자물가(PPI)",
+          "importance": "info"
+        },
+        {
+          "date": "다음 주",
+          "event": "🌐 APEC 정상회의, 시진핑·트럼프 회동",
+          "importance": "warning"
+        },
+        {
+          "date": "11/18(수) 07:00",
+          "event": "💼 엔비디아 3분기 실적 발표회",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "안도 랠리 이어짐",
+          "description": "CPI가 예상(전월비 +0.3%) 수준이면 코스피 5,050~5,250, S&P 7,500~7,650."
+        },
+        "risk": {
+          "probability": 45,
+          "title": "물가 쇼크 재발",
+          "description": "CPI가 뜨겁거나 이란 협상이 틀어지면 코스피 5,000 아래, S&P 7,450 아래."
+        }
+      }
+    },
     {
       "date": "2026-11-06",
       "weekday": "금",
