@@ -7,12 +7,99 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 293,
+    "total_issues": 294,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-11-10",
+  "latest": "2026-11-11",
   "briefings": [
+    {
+      "date": "2026-11-11",
+      "weekday": "수",
+      "vol": 294,
+      "theme": "Hot CPI Hike Bets",
+      "tagline": "뜨거운 물가에 12월 금리 인상 굳어졌다",
+      "tldr_us": "S&P 7,520.93(-0.38%). 10월 CPI +0.4% 예상 상회, 10년 금리 4.98%로 급등.",
+      "tldr_kr": "코스피 5,239.13(+4.39%). 외국인 8거래일 만에 순매수, 반도체 투톱 급반등.",
+      "tldr_crypto": "BTC $73,774(-1.59%), ETH $2,055. ETF 자금 이탈에 주식과 따로 약세.",
+      "us_change": "-0.38",
+      "kr_change": "+4.39",
+      "crypto_change": "-1.59",
+      "tags": [
+        "bull",
+        "event"
+      ],
+      "html_path": "2026-11-11-morning.html",
+      "md_path": "2026-11-11-morning.md",
+      "created_at": "2026-11-11T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.98% (+12bp)",
+        "dxy": "102.25 (+0.6%)",
+        "wti": "$86.48 (-0.4%)",
+        "gold": "$4,038 (-1.9%)",
+        "usdkrw": "1,337.5원 (-9.6원)",
+        "vix": "19.46 (-0.46p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "美 10월 물가 예상 상회, 인상 굳어져",
+          "body": "CPI 전월비 +0.4%(예상 +0.3%), 근원 +0.3%. 12월 금리 인상이 사실상 굳어지고 10년 금리는 4.98%로 급등. 나스닥 -0.74%."
+        },
+        {
+          "title": "코스피 4.4% 급반등, 외국인 귀환",
+          "body": "5,239.13 마감, 양 시장 매수 사이드카. 외국인 8거래일 만에 약 3,500억 순매수. 밤사이 EWY -2.1%로 오늘은 숨 고르기 가능성."
+        },
+        {
+          "title": "한은 의사록, 추가 인상 시기 저울질",
+          "body": "10월 만장일치 동결(3.00%)에도 추가 인상 시기·속도를 판단하겠다는 기조. 다음 금통위는 11/26."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "11/12(목)",
+          "event": "🎮 엔씨 3분기 실적 · 주간 아파트값",
+          "importance": "info"
+        },
+        {
+          "date": "11/13(금) 22:30",
+          "event": "🇺🇸 10월 생산자물가(PPI)",
+          "importance": "warning"
+        },
+        {
+          "date": "11/13(금)",
+          "event": "🏠 전세사기 최소보장제 시행",
+          "importance": "secondary"
+        },
+        {
+          "date": "11/18(수) 07:00",
+          "event": "💼 엔비디아 3분기 실적 발표회",
+          "importance": "warning"
+        },
+        {
+          "date": "11/18(수)~19(목)",
+          "event": "🌐 APEC 선전 정상회의",
+          "importance": "warning"
+        },
+        {
+          "date": "11/26(목)",
+          "event": "🇰🇷 한국은행 금통위 기준금리 결정",
+          "importance": "warning",
+          "consensus": "현재 3.00%"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "반등 뒤 숨 고르기",
+          "description": "10년 금리가 5% 아래면 코스피 5,150~5,350, S&P 7,450~7,600 박스."
+        },
+        "risk": {
+          "probability": 45,
+          "title": "금리 5% 돌파 충격",
+          "description": "PPI까지 뜨거워 10년 금리 5% 돌파 시 코스피 5,100 아래, S&P 7,400 아래."
+        }
+      }
+    },
     {
       "date": "2026-11-10",
       "weekday": "화",
