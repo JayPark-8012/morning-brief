@@ -7,12 +7,98 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 294,
+    "total_issues": 295,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-11-11",
+  "latest": "2026-11-12",
   "briefings": [
+    {
+      "date": "2026-11-12",
+      "weekday": "목",
+      "vol": 295,
+      "theme": "AI Trade Revival",
+      "tagline": "코어위브가 되살린 AI 랠리, 반도체 5.7% 급등",
+      "tldr_us": "S&P 7,619.38(+1.31%). 코어위브 실적에 반도체지수 +5.7%, AI주 급반등.",
+      "tldr_kr": "코스피 5,375.36(+2.60%), 코스닥 +5.6%. 외국인 이틀째 순매수.",
+      "tldr_crypto": "BTC $74,383(+0.83%), ETH $2,072. ETF 4일째 유출에 제자리.",
+      "us_change": "+1.31",
+      "kr_change": "+2.60",
+      "crypto_change": "+0.83",
+      "tags": [
+        "bull",
+        "event"
+      ],
+      "html_path": "2026-11-12-morning.html",
+      "md_path": "2026-11-12-morning.md",
+      "created_at": "2026-11-12T07:00:00+09:00",
+      "macro": {
+        "us_10y": "4.98% (휴장)",
+        "dxy": "102.92 (+0.7%)",
+        "wti": "$86.53 (+0.6%)",
+        "gold": "$3,992 (-0.9%)",
+        "usdkrw": "1,333.6원 (-3.9원)",
+        "vix": "17.49 (-1.97p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "코어위브 실적에 AI주 부활",
+          "body": "코어위브가 연간 매출 전망을 올리자 주가 20%대 급등. 필라델피아 반도체 +5.7%, 마이크론 +11.9%. 12월 인상 확률 88.8%에도 나스닥 +1.6%."
+        },
+        {
+          "title": "코스닥 5.6% 급등, 외국인 매수",
+          "body": "코스피 5,375.36(+2.6%), 코스닥 이틀 연속 매수 사이드카. 외국인 약 6,500억 순매수. 밤사이 EWY +6.2%로 오늘 출발도 우호적."
+        },
+        {
+          "title": "엔씨 3분기 흑자 전환",
+          "body": "매출 6,865억(+91%), 영업이익 1,196억. 누적 2조 원 돌파로 연간 목표 2.8조로 상향, 내년 3.2~3.4조 제시. 아이온2 동접 41만."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "11/12(목) 오후",
+          "event": "🏠 부동산원 11월 둘째 주 아파트값",
+          "importance": "secondary"
+        },
+        {
+          "date": "11/13(금) 22:30",
+          "event": "🇺🇸 10월 생산자물가(PPI)",
+          "importance": "warning"
+        },
+        {
+          "date": "11/18(수) 07:00",
+          "event": "💼 엔비디아 3분기 실적",
+          "importance": "warning"
+        },
+        {
+          "date": "11/18(수)~19(목)",
+          "event": "🌐 APEC 선전 정상회의",
+          "importance": "warning"
+        },
+        {
+          "date": "11월 중하순",
+          "event": "🤖 앤트로픽 나스닥 상장 (일정 미정)",
+          "importance": "info"
+        },
+        {
+          "date": "11/26(목)",
+          "event": "🇰🇷 한은 금통위 기준금리 결정",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 60,
+          "title": "AI 반등 이어가기",
+          "description": "PPI 예상 수준 → 코스피 5,300~5,500, S&P 7,550~7,700에서 엔비디아 실적 대기"
+        },
+        "risk": {
+          "probability": 40,
+          "title": "PPI 쇼크로 반납",
+          "description": "PPI도 뜨거워 10년 금리 5% 돌파 → 코스피 5,200 아래, S&P 7,500 아래"
+        }
+      }
+    },
     {
       "date": "2026-11-11",
       "weekday": "수",
