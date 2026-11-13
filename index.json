@@ -7,12 +7,98 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 296,
+    "total_issues": 297,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-11-13",
+  "latest": "2026-11-14",
   "briefings": [
+    {
+      "date": "2026-11-14",
+      "weekday": "토",
+      "vol": 297,
+      "theme": "Rates 5% Crypto Break",
+      "tagline": "美 증시 한 주 2% 올랐지만, 비트코인 7만 달러 붕괴",
+      "tldr_us": "S&P 7,561.67(-0.40%). 반도체 약세에 하락, 주간으론 +2.5%.",
+      "tldr_kr": "코스피 5,290.53(-0.98%). 장중 5,500 찍고 외국인 매도에 밀림.",
+      "tldr_crypto": "BTC $68,337(-4.46%), ETH $1,927. 3개월 만에 7만 달러 붕괴.",
+      "us_change": "-0.40",
+      "kr_change": "-0.98",
+      "crypto_change": "-4.46",
+      "tags": [
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-11-14-morning.html",
+      "md_path": "2026-11-14-morning.md",
+      "created_at": "2026-11-14T07:00:00+09:00",
+      "macro": {
+        "us_10y": "5.15% (+5bp)",
+        "dxy": "103.43 (+0.3%)",
+        "wti": "$88.56 (-0.2%)",
+        "gold": "$3,879 (-0.2%)",
+        "usdkrw": "1,336.7원 (+6.0원)",
+        "vix": "19.30 (+0.60p)"
+      },
+      "telegram_top3": [
+        {
+          "title": "美 10년 금리 5.15%, 한 주 +29bp",
+          "body": "PPI 전년비 6.5%로 약 4년 만의 최고. 12월 인상 사실상 확정 분위기에도 S&P는 주간 +2.5%로 버텼어요."
+        },
+        {
+          "title": "비트코인 7만 달러 붕괴",
+          "body": "3개월 만에 $68K대로. 하루 10억 달러 넘는 강제 청산, 공포·탐욕 지수 20(극단적 공포). 다음 지지선 $65K."
+        },
+        {
+          "title": "코스피 5,500 찍고 1% 하락",
+          "body": "외국인 오후 매도 전환, 하이닉스만 4,700억 팔아. 그래도 주간 코스피 +4.6%, 코스닥 +8.6%."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "11/17(화) 22:30",
+          "event": "🇺🇸 10월 소매판매",
+          "importance": "info"
+        },
+        {
+          "date": "11/18(수) 07:00",
+          "event": "💼 엔비디아 3분기 실적 (황 사임 후 첫 발표)",
+          "importance": "warning"
+        },
+        {
+          "date": "11/18(수)~19(목)",
+          "event": "🌐 APEC 선전 정상회의 (트럼프·시진핑)",
+          "importance": "warning"
+        },
+        {
+          "date": "11/19(목) 04:00",
+          "event": "🇺🇸 연준 10월 회의록",
+          "importance": "info"
+        },
+        {
+          "date": "11/26(목)",
+          "event": "🇰🇷 한국은행 금통위",
+          "importance": "warning"
+        },
+        {
+          "date": "11/26(목)",
+          "event": "🇺🇸 추수감사절 휴장",
+          "importance": "secondary"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "실적 확인 후 박스권 유지",
+          "description": "엔비디아 전망 유지·APEC 무난하면 코스피 5,200~5,500, S&P 7,450~7,700"
+        },
+        "risk": {
+          "probability": 45,
+          "title": "실적 실망·금리 추가 상승",
+          "description": "전망 하향이나 10년 금리 5.25% 돌파 시 코스피 5,100 아래, S&P 7,400 아래"
+        }
+      }
+    },
     {
       "date": "2026-11-13",
       "weekday": "금",
