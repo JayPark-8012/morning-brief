@@ -7,12 +7,93 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 299,
+    "total_issues": 300,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-11-18",
+  "latest": "2026-11-19",
   "briefings": [
+    {
+      "date": "2026-11-19",
+      "weekday": "목",
+      "vol": 300,
+      "theme": "Hawkish Minutes",
+      "tagline": "연준 '더 올린다' 의사록에 엔비디아 안도 사라졌다",
+      "tldr_us": "S&P 7,323.63(-0.23%). 5일 연속 하락, 엔비디아 -2.9% 반전. 나스닥만 +0.42%.",
+      "tldr_kr": "코스피 5,067.44(+1.99%). 엔비디아 효과에 하루 만에 5,000 탈환.",
+      "tldr_crypto": "BTC 약 $62,450(-2.4%). 연준 의사록 뒤 6.3만 이탈, 공포지수 11.",
+      "us_change": "-0.23",
+      "kr_change": "+1.99",
+      "crypto_change": "-2.40",
+      "tags": [
+        "bull",
+        "event"
+      ],
+      "html_path": "2026-11-19-morning.html",
+      "md_path": "2026-11-19-morning.md",
+      "created_at": "2026-11-19T07:00:00+09:00",
+      "macro": {
+        "us_10y": "약 5.07% (-3.5bp)",
+        "dxy": "약 103.9 (+0.25%)",
+        "wti": "약 $83.3 (-3.2%)",
+        "gold": "약 $3,780 (-1.9%)",
+        "usdkrw": "1,333.0원 (-5.2원)",
+        "vix": "약 25.5 (-4.6%)"
+      },
+      "telegram_top3": [
+        {
+          "title": "연준 '거의 전원' 추가 인상 지지",
+          "body": "10월 의사록 공개. 12월 0.5%p 인상도 논의 대상. AI 투자 붐을 물가·금융 위험으로 지목하자 엔비디아 실적 효과가 사라졌어요."
+        },
+        {
+          "title": "코스피, 하루 만에 5,000 탈환",
+          "body": "엔비디아 호실적에 +2.0% 오른 5,067. SK하이닉스 +4.2%, 삼성전자 +2.3%. 외국인 매도는 2,600억으로 크게 줄었어요."
+        },
+        {
+          "title": "앤트로픽, 공모가 83달러로 상향",
+          "body": "희망 범위(70~78달러) 위에서 확정. 오늘 밤 나스닥 'ANT' 첫 거래. 공모가를 지키면 AI 투자 심리에 숨통이 트일 수 있어요."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "11/19(목)",
+          "event": "트럼프·시진핑 회담 + 美·中·러 3자 회동",
+          "importance": "warning"
+        },
+        {
+          "date": "11/19(목) 밤",
+          "event": "앤트로픽 나스닥 첫 거래 (ANT, 공모가 $83)",
+          "importance": "warning"
+        },
+        {
+          "date": "11/21(토) 00:00",
+          "event": "美 11월 미시간대 소비자심리 확정치",
+          "importance": "secondary"
+        },
+        {
+          "date": "11/25(수) 22:30",
+          "event": "美 3분기 GDP 잠정치 · 10월 PCE 물가",
+          "importance": "warning"
+        },
+        {
+          "date": "11/26(목)",
+          "event": "한국은행 금통위 · 美 추수감사절 휴장",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "금리 눈치 보며 박스권",
+          "description": "ANT 상장·미중 회담 무난 시 코스피 5,000~5,150, S&P 7,250~7,400 등락"
+        },
+        "risk": {
+          "probability": 45,
+          "title": "0.5%p 인상 공포 확산",
+          "description": "칩 규제 강화·ANT 공모가 하회 시 코스피 4,900 재이탈, S&P 7,200, BTC 6만"
+        }
+      }
+    },
     {
       "date": "2026-11-18",
       "weekday": "수",
