@@ -7,12 +7,93 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 300,
+    "total_issues": 301,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-11-19",
+  "latest": "2026-11-20",
   "briefings": [
+    {
+      "date": "2026-11-20",
+      "weekday": "금",
+      "vol": 301,
+      "theme": "Anthropic IPO Selloff",
+      "tagline": "앤트로픽 상장 축포에도 美 증시 2% 급락",
+      "tldr_us": "S&P 7,175.83(-2.02%). 6일 연속 하락, 다우 5만 붕괴. 앤트로픽 상장 첫날 +17%.",
+      "tldr_kr": "코스피 5,137.89(+1.39%). 외국인 4,036억 매도에도 수출 1조 달러에 이틀째 상승.",
+      "tldr_crypto": "BTC 약 $62,200(-1.0%). 200주 평균선 아래, 공포·탐욕 지수 11.",
+      "us_change": "-2.02",
+      "kr_change": "+1.39",
+      "crypto_change": "-1.00",
+      "tags": [
+        "bear",
+        "event"
+      ],
+      "html_path": "2026-11-20-morning.html",
+      "md_path": "2026-11-20-morning.md",
+      "created_at": "2026-11-20T07:00:00+09:00",
+      "macro": {
+        "us_10y": "약 5.08% (+2bp)",
+        "dxy": "약 104 (소폭 상승)",
+        "wti": "$83.21 (-0.06%)",
+        "gold": "약 $3,720 (-1.5%)",
+        "usdkrw": "1,330.0원 (-3.0원)",
+        "vix": "약 27.9 (+14%)"
+      },
+      "telegram_top3": [
+        {
+          "title": "역대 최대 상장도 AI 매도 못 막았다",
+          "body": "앤트로픽이 공모가 83달러 대비 17% 오른 97.17달러로 첫날 마감. 하지만 AI주 매도에 나스닥 -2.2%, 다우 1,100p 급락으로 5만 선 붕괴."
+        },
+        {
+          "title": "한국 수출, 사상 첫 1조 달러",
+          "body": "독일·미국·중국에 이어 세계 4번째. 반도체가 1~10월 수출의 43%를 차지. 코스피는 이 소식에 외국인 매도를 뚫고 5,137로 상승."
+        },
+        {
+          "title": "AMD, 공매도 보고서에 7.7% 급락",
+          "body": "헌터브룩이 중국 매출·블랙리스트 업체 펌웨어 의혹 제기. AMD는 부인. 중국 규제 리스크가 엔비디아 밖으로 번지는 공포."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "11/21(토) 00:00",
+          "event": "美 11월 미시간대 소비자심리 확정치",
+          "importance": "secondary"
+        },
+        {
+          "date": "11/25(수) 22:30",
+          "event": "美 3분기 GDP 잠정치 · 10월 PCE 물가",
+          "importance": "warning"
+        },
+        {
+          "date": "11/26(목)",
+          "event": "한국은행 금통위 · 美 추수감사절 휴장",
+          "importance": "warning"
+        },
+        {
+          "date": "12/1(화) 09:00",
+          "event": "한국 11월 수출입동향",
+          "importance": "info"
+        },
+        {
+          "date": "12/8(화)~9(수)",
+          "event": "美 FOMC 금리 결정 (0.25%p 인상 약 95% 반영)",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "5,000선 지키는 눈치장",
+          "description": "코스피 하락 출발 후 5,000~5,100 등락, S&P 낙폭 과대 반발로 7,100~7,250"
+        },
+        "risk": {
+          "probability": 45,
+          "title": "AI 매도 한국 전이",
+          "description": "반도체 매도 확산 시 코스피 4,900 이탈, S&P 7,000 시험, BTC 6만 달러 붕괴"
+        }
+      }
+    },
     {
       "date": "2026-11-19",
       "weekday": "목",
