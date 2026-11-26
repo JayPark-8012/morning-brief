@@ -7,12 +7,93 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 302,
+    "total_issues": 303,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-11-26",
+  "latest": "2026-11-27",
   "briefings": [
+    {
+      "date": "2026-11-27",
+      "weekday": "금",
+      "vol": 303,
+      "theme": "BOK Hike Caps Rebound",
+      "tagline": "한은 금리 인상에 코스피 반등 힘 잃었다",
+      "tldr_us": "美 추수감사절 휴장, S&P 7,182.78 유지. 선물 +0.5~0.8% 반등, 오늘 현지 13시 조기 폐장.",
+      "tldr_kr": "코스피 4,711.21(+0.29%). 한은 3.25% 인상 뒤 외국인 매도 전환, 장중 4,817 찍고 반납.",
+      "tldr_crypto": "BTC 약 $60,600(약 +3.5%). 6만 달러 회복했지만 공포·탐욕 지수 11, ETF 유출 지속.",
+      "us_change": "0.00",
+      "kr_change": "+0.29",
+      "crypto_change": "+3.50",
+      "tags": [
+        "neutral",
+        "event"
+      ],
+      "html_path": "2026-11-27-morning.html",
+      "md_path": "2026-11-27-morning.md",
+      "created_at": "2026-11-27T07:00:00+09:00",
+      "macro": {
+        "us_10y": "약 4.85% (-6bp, 11/25)",
+        "dxy": "약 103.75 (보합)",
+        "wti": "약 $83~85 (+3%)",
+        "gold": "약 $3,530~3,570 (혼조)",
+        "usdkrw": "1,342.7원 (-0.5원)",
+        "vix": "28.29 (+1.93, 11/25)"
+      },
+      "telegram_top3": [
+        {
+          "title": "한은 기준금리 3.25% 인상",
+          "body": "올해 세 번째 인상, 5대 2 표결. 성장률 전망 올해 3.9%·내년 4.1%로 상향. 점도표도 높아져 추가 인상 여지."
+        },
+        {
+          "title": "코스피 4,800 찍고 4,711 마감",
+          "body": "폭락 다음 날 장중 +2% 반등했지만 금리 발표 뒤 외국인 매도 전환. 기관 7,500억 매수로 +0.29% 마감."
+        },
+        {
+          "title": "후티, 사우디 정유시설 공격",
+          "body": "라스타누라·지잔 정유소 피격 주장, 쿠웨이트 드론 공격도. WTI 81달러대→83~85달러로 상승."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "11/27(금)",
+          "event": "美 블랙프라이데이 조기 폐장 (현지 13시 = 한국 28일 03시)",
+          "importance": "secondary"
+        },
+        {
+          "date": "12/1(화)",
+          "event": "한국 11월 수출입·美 ISM 제조업·젠슨 황 하원 조사",
+          "importance": "info"
+        },
+        {
+          "date": "12/3(목)",
+          "event": "젠슨 황 美 상원 공개 청문회",
+          "importance": "info"
+        },
+        {
+          "date": "12/4(금) 22:30",
+          "event": "美 11월 고용보고서",
+          "importance": "warning"
+        },
+        {
+          "date": "12/8(화)~9(수)",
+          "event": "美 FOMC 금리 결정 (0.25%p 인상 유력)",
+          "importance": "warning"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "바닥 다지기",
+          "description": "美 선물 반등·증안펀드 기대 반영, 코스피 4,650~4,900 박스권"
+        },
+        "risk": {
+          "probability": 45,
+          "title": "유가발 재하락",
+          "description": "중동 공격 확대로 WTI 90달러 근접, 외국인 매도 재개 시 코스피 4,600 이탈"
+        }
+      }
+    },
     {
       "date": "2026-11-26",
       "weekday": "목",
