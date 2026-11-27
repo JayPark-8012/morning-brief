@@ -7,12 +7,94 @@
     "publish_time": "07:00 KST"
   },
   "stats": {
-    "total_issues": 303,
+    "total_issues": 304,
     "avg_read_minutes": 5,
     "data_sources": 15
   },
-  "latest": "2026-11-27",
+  "latest": "2026-11-28",
   "briefings": [
+    {
+      "date": "2026-11-28",
+      "weekday": "토",
+      "vol": 304,
+      "theme": "AI Rebound Week",
+      "tagline": "美 증시 19개월 만의 최고 한 주, 코스피도 4% 급등",
+      "tldr_us": "S&P 7,297.49(+1.60%). 블프 반나절 장도 상승, 주간 +5.6%로 19개월 만의 최고 한 주.",
+      "tldr_kr": "코스피 4,915.68(+4.34%). 외국인 1조 1천억 순매수, 코스닥은 +8% 사이드카.",
+      "tldr_crypto": "BTC 약 $59,900(약 -1.2%). 주식 랠리에도 6만 이탈, 11월 ETF 유출 사상 최대.",
+      "us_change": "+1.60",
+      "kr_change": "+4.34",
+      "crypto_change": "-1.20",
+      "tags": [
+        "bull"
+      ],
+      "html_path": "2026-11-28-morning.html",
+      "md_path": "2026-11-28-morning.md",
+      "created_at": "2026-11-28T07:00:00+09:00",
+      "macro": {
+        "us_10y": "약 4.85~4.94% (출처별 엇갈림)",
+        "dxy": "약 103.9 (+0.2%)",
+        "wti": "약 $83~85 (보합권)",
+        "gold": "약 $3,670 (+3%)",
+        "usdkrw": "1,337.9원 (-4.8원)",
+        "vix": "23.81 (-4.48)"
+      },
+      "telegram_top3": [
+        {
+          "title": "美 증시 19개월 만의 최고 한 주",
+          "body": "S&P 주간 +5.6%, 나스닥 +6.7%. 지지난주 -10% 폭락 뒤 젠슨 황 복귀와 칩주 저가 매수로 V자 반등. VIX 36→24."
+        },
+        {
+          "title": "외국인 1조 귀환, 코스피 4,915",
+          "body": "코스피 +4.34%, 코스닥 +8.13%. 외국인 조 단위 순매수는 9월 이후 처음. 주말 증안펀드 긴급회의가 다음 변수."
+        },
+        {
+          "title": "비트코인, 주식 랠리 속 6만 이탈",
+          "body": "$62,000에서 몇 분 만에 $59,000대로. 11월 BTC ETF 유출 약 54억 달러로 월간 사상 최대."
+        }
+      ],
+      "calendar": [
+        {
+          "date": "11/29(일)",
+          "event": "OPEC+ 장관회의 · 증안펀드 투자관리위",
+          "importance": "info"
+        },
+        {
+          "date": "11/30(월)",
+          "event": "금융권 시장안정 긴급 점검회의",
+          "importance": "info"
+        },
+        {
+          "date": "12/1(화)",
+          "event": "한국 11월 수출 · 美 ISM 제조업 · 젠슨 황 하원 조사",
+          "importance": "info"
+        },
+        {
+          "date": "12/4(금) 22:30",
+          "event": "美 11월 고용보고서",
+          "importance": "warning",
+          "consensus": "+9만 명, 실업률 4.1%"
+        },
+        {
+          "date": "12/8(화)~9(수)",
+          "event": "美 FOMC 금리 결정",
+          "importance": "warning",
+          "consensus": "0.25%p 인상 유력"
+        }
+      ],
+      "scenarios": {
+        "main": {
+          "probability": 55,
+          "title": "반등 이어가기",
+          "description": "증안펀드 집행 윤곽 + 고용 무난 → 코스피 4,800~5,100, S&P 7,200~7,450"
+        },
+        "risk": {
+          "probability": 45,
+          "title": "반등 되돌림",
+          "description": "고용 과열로 추가 인상 공포 또는 브렌트 100달러 → 코스피 4,700 이탈"
+        }
+      }
+    },
     {
       "date": "2026-11-27",
       "weekday": "금",
